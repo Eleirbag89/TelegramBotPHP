@@ -12,8 +12,8 @@ $text = $result["message"] ["text"];
 $chat_id = $result["message"] ["chat"]["id"];
 
 
-if ($text == "/help") {
-	$reply = "Comandi: /proroga /appuntamento /orario /pappy /fefy /derp /help";
+if ($text == "/git") {
+	$reply = "Check me on GitHub: https://github.com/Eleirbag89/TelegramBotPHP";
 	$content = array('chat_id' => $chat_id, 'text' => $reply);
     $telegram->sendMessage($content);
 }
