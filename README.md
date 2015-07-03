@@ -32,3 +32,7 @@ $content = array('chat_id' => $chat_id, 'text' => "Test");
 $telegram->sendMessage($content);
 ```
 See update.php for the complete example.
+
+Contact me
+------------
+You can contact me [via Telegram](https://telegram.me/ggrillo) but if you have an issue please [open](https://github.com/Eleirbag89/TelegramBotPHP/issues) one.
