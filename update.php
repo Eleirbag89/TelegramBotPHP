@@ -1,4 +1,8 @@
 <?php
+/**
+ * Telegram Bot example.
+ * @author Gabriele Grillo <gabry.grillo@alice.it>
+ */
 include("Telegram.php");
 
 // Set the bot TOKEN
