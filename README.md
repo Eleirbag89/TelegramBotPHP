@@ -1,5 +1,5 @@
 # TelegramBotPHP
-> A very simple PHP [Telegram Bot API](https://core.telegram.org/bots)
+> A very simple PHP [Telegram Bot API](https://core.telegram.org/bots) for sending messages.
 
 Requirements
 ---------
