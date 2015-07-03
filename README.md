@@ -12,7 +12,7 @@ Requirements
 Installation
 ---------
 
-* Copy the php files into your (virtual)server
+* Copy the php files into your server
 
 Configuration
 ---------
