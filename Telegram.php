@@ -1,4 +1,8 @@
 <?php
+/**
+ * Telegram Bot Class.
+ * @author Gabriele Grillo <gabry.grillo@alice.it>
+ */
 class Telegram {
 	private $bot_id = "";
 	
