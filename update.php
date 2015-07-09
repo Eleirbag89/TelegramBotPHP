@@ -17,6 +17,15 @@ $text = $result["message"] ["text"];
 $chat_id = $result["message"] ["chat"]["id"];
 
 // Check if the text is a command
+if ($text == "/test") {
+	if ($telegram->messageFromGroup($result)) {
+		$reply = "Chat Group";
+	} else {
+		$reply = "Private Chat";
+	}
+	$content = array('chat_id' => $chat_id, 'text' => $reply);
+	$telegram->sendMessage($content);
+}
 if ($text == "/git") {
     $reply = "Check me on GitHub: https://github.com/Eleirbag89/TelegramBotPHP";
     // Build the reply array
