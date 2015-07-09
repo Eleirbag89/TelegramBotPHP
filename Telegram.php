@@ -19,6 +19,12 @@ class Telegram {
 		$rawData = file_get_contents("php://input");
 		return json_decode($rawData,true);
 	}
+        public function messageFromGroup($data) {
+		if ($data["message"]["chat"]["title"] == "") {
+			return false;
+		}
+		return true;
+	}
 	private function sendAPIRequest($url, array $content) {
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
