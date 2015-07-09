@@ -18,7 +18,7 @@ Configuration
 ---------
 
 Navigate to 
-https://api.telegram.org/bot<BOT_ID>/setWebhook?url=https://yoursite.com/your_update.php
+https://api.telegram.org/bot(BOT_ID)/setWebhook?url=https://yoursite.com/your_update.php
 
 Example
 ---------
