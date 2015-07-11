@@ -33,6 +33,11 @@ $telegram->sendMessage($content);
 ```
 See update.php for the complete example.
 
+Emoticons
+------------
+For a list of emoticons to use in your bot messages, please refer to the column Bytes of this table:
+http://apps.timwhitlock.info/emoji/tables/unicode
+
 Contact me
 ------------
 You can contact me [via Telegram](https://telegram.me/ggrillo) but if you have an issue please [open](https://github.com/Eleirbag89/TelegramBotPHP/issues) one.
