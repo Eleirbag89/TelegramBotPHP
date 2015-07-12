@@ -23,7 +23,11 @@ if ($text == "/test") {
 	} else {
 		$reply = "Private Chat";
 	}
-	$content = array('chat_id' => $chat_id, 'text' => $reply);
+        // Create option for the custom keyboard. Array of array string
+        $option = array( array("A", "B"), array("C", "D") );
+        // Get the keyboard
+	$keyb = $telegram->buildKeyBoard($option);
+	$content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => $reply);
 	$telegram->sendMessage($content);
 }
 if ($text == "/git") {
