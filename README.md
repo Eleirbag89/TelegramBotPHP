@@ -33,6 +33,13 @@ $telegram->sendMessage($content);
 ```
 See update.php for the complete example.
 
+Build keyboard parameters
+------------
+```php
+function buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true)
+```
+Check [ReplyKeyBoardMarkUp] (https://core.telegram.org/bots/api#replykeyboardmarkup) for more info.
+
 Emoticons
 ------------
 For a list of emoticons to use in your bot messages, please refer to the column Bytes of this table:
