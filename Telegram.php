@@ -19,11 +19,23 @@ class Telegram {
 		$rawData = file_get_contents("php://input");
 		return json_decode($rawData,true);
 	}
-        public function messageFromGroup($data) {
+	
+	public function messageFromGroup($data) {
 		if ($data["message"]["chat"]["title"] == "") {
 			return false;
 		}
 		return true;
+	}
+        
+	public function buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true) {
+		$replyMarkup = array(
+			'keyboard' => $options,
+			'one_time_keyboard' => $onetime,
+			'resize_keyboard' => $resize,
+			'selective'		=> $selective
+		);
+		$encodedMarkup = json_encode($replyMarkup,true);
+		return $encodedMarkup;
 	}
 	private function sendAPIRequest($url, array $content) {
 		$ch = curl_init();
