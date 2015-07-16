@@ -69,7 +69,7 @@ Build keyboard parameters
 ```php
 buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true)
 ```
-Send a custome keyboard. $option is an array of array string.
+Send a custome keyboard. $option is an array of array string.  
 Check [ReplyKeyBoardMarkUp] (https://core.telegram.org/bots/api#replykeyboardmarkup) for more info.
 
 Emoticons
