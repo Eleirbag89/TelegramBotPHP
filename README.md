@@ -30,7 +30,7 @@ $content = array('chat_id' => $chat_id, 'text' => "Test");
 $telegram->sendMessage($content);
 ```
 
-If you want to use some specific parameter from the Telegram response:
+If you want to get some specific parameter from the Telegram response:
 ```php
 $telegram = new Telegram($bot_id);
 $result = $telegram->getData();
@@ -42,11 +42,51 @@ $telegram->sendMessage($content);
 
 See update.php for the complete example.
 
+Functions
+------------
+```php
+sendMessage(array $content)
+```
+Send a message. $content is an array with at least chat_id and text.
+```php
+getData()
+```
+Return the user request as array
+```php
+Text()
+```
+Return the Text of the user message
+```php
+ChatID()
+```
+Return the id of the chat
+```php
+Date() {
+```
+Return the date of the mesage (Timestamp)
+```php
+FirstName()
+```
+Return the user first name
+```php
+LastName()
+```
+Return the user last name
+```php
+Username()
+```
+Return the user username
+```php
+messageFromGroup()
+```
+Check if the message is sent from a group chat (boolean)
+
 Build keyboard parameters
 ------------
 ```php
-function buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true)
+buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true)
 ```
+Send a custome keyboard. $option is an array of array string.
 Check [ReplyKeyBoardMarkUp] (https://core.telegram.org/bots/api#replykeyboardmarkup) for more info.
 
 Emoticons
