@@ -44,13 +44,10 @@ See update.php for the complete example.
 
 Functions
 ------------
-```php
-sendMessage(array $content)
-```
+
+* sendMessage(array $content)
 Send a message. $content is an array with at least chat_id and text.
-```php
-getData()
-```
+* getData()
 Return the user request as array
 ```php
 Text()
