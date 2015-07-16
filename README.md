@@ -49,33 +49,19 @@ Functions
 Send a message. $content is an array with at least chat_id and text.
 * getData()  
 Return the user request as array
-```php
-Text()
-```
+* Text()  
 Return the Text of the user message
-```php
-ChatID()
-```
+* ChatID()  
 Return the id of the chat
-```php
-Date() {
-```
+* Date()  
 Return the date of the mesage (Timestamp)
-```php
-FirstName()
-```
+*FirstName()  
 Return the user first name
-```php
-LastName()
-```
+* LastName()  
 Return the user last name
-```php
-Username()
-```
+* Username()  
 Return the user username
-```php
-messageFromGroup()
-```
+* messageFromGroup()  
 Check if the message is sent from a group chat (boolean)
 
 Build keyboard parameters
