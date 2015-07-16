@@ -9,16 +9,20 @@ include("Telegram.php");
 $bot_id = "bot_token";
 // Instances the class
 $telegram = new Telegram($bot_id);
-// Get the data from Telegram
-$result = $telegram->getData();
+
+/* If you need to manually take some parameters
+*  $result = $telegram->getData();
+*  $text = $result["message"] ["text"];
+*  $chat_id = $result["message"] ["chat"]["id"];
+*/
 
 // Take text and chat_id from the message
-$text = $result["message"] ["text"];
-$chat_id = $result["message"] ["chat"]["id"];
+$text = $telegram->Text();
+$chat_id = $telegram->ChatID();
 
 // Check if the text is a command
 if ($text == "/test") {
-	if ($telegram->messageFromGroup($result)) {
+	if ($telegram->messageFromGroup()) {
 		$reply = "Chat Group";
 	} else {
 		$reply = "Private Chat";
