@@ -30,6 +30,18 @@ class Telegram {
 	public function ChatID() {
 		return $this->data["message"]["chat"]["id"];
 	}
+	public function Date() {
+		return $this->data["message"]["date"];
+	}
+	public function FirstName() {
+		return $this->data["message"]["from"]["first_name"];
+	}
+	public function LastName() {
+		return $this->data["message"]["from"]["last_name"];
+	}
+	public function Username() {
+		return $this->data["message"]["from"]["username"];
+	}
 	public function messageFromGroup() {
 		if ($this->data["message"]["chat"]["title"] == "") {
 			return false;
