@@ -5,10 +5,11 @@
  */
 class Telegram {
 	private $bot_id = "";
+	private $data = array();
 	
-	public function __construct($bot_id) {
-            //inizializzazione della proprietà $name    
+	public function __construct($bot_id) {  
             $this->bot_id = $bot_id;
+            $this->data = $this->getData();
 	}
 	public function sendMessage(array $content) {
 		$url = 'https://api.telegram.org/bot' . $this->bot_id . '/sendMessage';
@@ -16,17 +17,25 @@ class Telegram {
 
 	}
 	public function getData() {
-		$rawData = file_get_contents("php://input");
-		return json_decode($rawData,true);
+		if ( empty($this->data)) {
+			$rawData = file_get_contents("php://input");
+			return json_decode($rawData,true);
+		}else {
+			return $this->data;
+		}
 	}
-	
-	public function messageFromGroup($data) {
-		if ($data["message"]["chat"]["title"] == "") {
+	public function Text() {
+		return $this->data["message"] ["text"];
+	}
+	public function ChatID() {
+		return $this->data["message"]["chat"]["id"];
+	}
+	public function messageFromGroup() {
+		if ($this->data["message"]["chat"]["title"] == "") {
 			return false;
 		}
 		return true;
 	}
-        
 	public function buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true) {
 		$replyMarkup = array(
 			'keyboard' => $options,
