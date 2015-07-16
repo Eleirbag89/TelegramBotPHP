@@ -25,12 +25,21 @@ Example
 
 ```php
 $telegram = new Telegram($bot_id);
-$result = $telegram->getData();
+$chat_id = $telegram->ChatID();
+$content = array('chat_id' => $chat_id, 'text' => "Test");
+$telegram->sendMessage($content);
+```
 
+If you want to use some specific parameter from the Telegram response:
+```php
+$telegram = new Telegram($bot_id);
+$result = $telegram->getData();
+$text = $result["message"] ["text"];
 $chat_id = $result["message"] ["chat"]["id"];
 $content = array('chat_id' => $chat_id, 'text' => "Test");
 $telegram->sendMessage($content);
 ```
+
 See update.php for the complete example.
 
 Build keyboard parameters
