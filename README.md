@@ -40,7 +40,8 @@ $content = array('chat_id' => $chat_id, 'text' => "Test");
 $telegram->sendMessage($content);
 ```
 
-See update.php for the complete example.
+See update.php or update cowsay.php for the complete example.
+If you wanna see the CowSay Bot in action [add it] (https://telegram.me/cowmooobot).
 
 Functions
 ------------
