@@ -58,11 +58,11 @@ Return the id of the chat
 * Date()  
 Return the date of the mesage (Timestamp)
 * FirstName()  
-Return the user first name
+Return the user's first name
 * LastName()  
-Return the user last name
+Return the user's last name
 * Username()  
-Return the user username
+Return the user's username
 * messageFromGroup()  
 Check if the message is sent from a group chat (boolean)
 
