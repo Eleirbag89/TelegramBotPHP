@@ -57,7 +57,7 @@ Return the Text of the user message
 Return the id of the chat
 * Date()  
 Return the date of the mesage (Timestamp)
-*FirstName()  
+* FirstName()  
 Return the user first name
 * LastName()  
 Return the user last name
