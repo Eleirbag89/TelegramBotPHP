@@ -23,7 +23,7 @@ $chat_id = $telegram->ChatID();
 
 if ($text == "/start") {
     $option = array( array("\xF0\x9F\x90\xAE"), array("Git", "Credit") );
-    // Create a permanent custon keyboard
+    // Create a permanent custom keyboard
     $keyb = $telegram->buildKeyBoard($option, $onetime=false);
     $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "Welcome to CowBot \xF0\x9F\x90\xAE \nPlease type /cowsay or click the Cow button !");
     $telegram->sendMessage($content);
