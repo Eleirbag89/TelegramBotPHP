@@ -92,9 +92,9 @@ Get the updates. If $update = true confirm the update to Telegram in order to av
 See [Telegram doc] (https://core.telegram.org/bots/api#getting-updates)  for the other parameters.
 * serveUpdate($update)
 Set the current message to the one with index $update.
-* UpdateID()
+* UpdateID()  
 Get the message's Update ID.
-* UpdateCount()
+* UpdateCount()  
 Return the GetUpdates messages count.
 
 Build keyboard parameters
