@@ -6,15 +6,17 @@ Requirements
 
 * PHP5
 * Curl for PHP5 must be enabled.
+For the WebHook;
 * An SSL certificate (Telegram API requires this). You can use [Cloudflare's Free Flexible SSL](https://www.cloudflare.com/ssl) which crypts the web traffic from end user to their proxies if you're using CloudFlare DNS.
 * Telegram API key, you can get one simply with [@BotFather](https://core.telegram.org/bots#botfather) with simple commands right after creating your bot.
-
+For the GetUpdates
+* Some way to execute the script in order to serve messages (for example cronjob)
 Installation
 ---------
 
 * Copy the php files into your server
 
-Configuration
+Configuration (WebHook)
 ---------
 
 Navigate to 
@@ -43,6 +45,25 @@ $telegram->sendMessage($content);
 See update.php or update cowsay.php for the complete example.
 If you wanna see the CowSay Bot in action [add it] (https://telegram.me/cowmooobot).
 
+If you want to use GetUpdates instead of the WebHook you need to call the the serveUpdate function inside a for cycle.
+```php
+$req = $telegram->getUpdates();
+for ($i = 0; $i < $telegram-> UpdateCount(); $i++) {
+	// You NEED to call serveUpdate before accessing the values of message in Telegram Class
+	$telegram->serveUpdate($i);
+	$text = $telegram->Text();
+	$chat_id = $telegram->ChatID();
+
+	if ($text == "/start") {
+		$reply = "Working";
+		$content = array('chat_id' => $chat_id, 'text' => $reply);
+		$telegram->sendMessage($content);
+	}
+	// DO OTHER STUFF
+}
+```
+See getUpdates.php for the complete example.
+
 Functions
 ------------
 
@@ -65,6 +86,15 @@ Return the user's last name
 Return the user's username
 * messageFromGroup()  
 Check if the message is sent from a group chat (boolean)
+* getUpdates($offset = 0, $limit = 100, $timeout = 0, $update = true)
+Get the updates. If $update = true confirm the update to Telegram in order to avoid duplicate replies.
+See [Telegram doc] (https://core.telegram.org/bots/api#getting-updates)  for the other parameters.
+* serveUpdate($update)
+Set the current message to the one with index $update.
+* UpdateID()
+Get the message's Update ID.
+* UpdateCount()
+Return the GetUpdates messages count.
 
 Build keyboard parameters
 ------------
