@@ -41,4 +41,17 @@ if ($text == "/git") {
     $telegram->sendMessage($content);
 }
 
+if ($text == "/img") {
+    // Load a local file to upload. If is already on Telegram's Servers just pass the resource id
+    $img = curl_file_create('test.png','image/png'); 
+    $content = array('chat_id' => $chat_id, 'photo' => $img );
+    $telegram->sendPhoto($content);
+}
+
+if ($text == "/where") {
+    // Send the Catania's coordinate
+    $content = array('chat_id' => $chat_id, 'latitude' => "37.5", 'longitude' => "15.1" );
+    $telegram->sendLocation($content);
+}
+
 ?>
