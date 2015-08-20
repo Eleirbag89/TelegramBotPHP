@@ -44,6 +44,14 @@ $content = array('chat_id' => $chat_id, 'text' => "Test");
 $telegram->sendMessage($content);
 ```
 
+To upload a Photo, you need to load it with CurlFile:
+```php
+// Load a local file to upload. If is already on Telegram's Servers just pass the resource id
+$img = curl_file_create('test.png','image/png'); 
+$content = array('chat_id' => $chat_id, 'photo' => $img );
+$telegram->sendPhoto($content);
+```
+
 See update.php or update cowsay.php for the complete example.
 If you wanna see the CowSay Bot in action [add it] (https://telegram.me/cowmooobot).
 
@@ -70,8 +78,32 @@ Functions
 ------------
 
 * sendMessage(array $content)  
-Send a message.  
+[Send a message] (https://core.telegram.org/bots/api#sendmessage).  
 $content is an array with at least chat_id and text.
+* sendPhoto(array $content)  
+[Send a photo] (https://core.telegram.org/bots/api#sendphoto).  
+$content is an array with at least chat_id and photo.
+* sendAudio(array $content)  
+[Send an audio] (https://core.telegram.org/bots/api#sendaudio).  
+$content is an array with at least chat_id and audio.
+* sendDocument(array $content)  
+[Send a document] (https://core.telegram.org/bots/api#senddocument).  
+$content is an array with at least chat_id and document.
+* sendSticker(array $content)  
+[Send a sticker] (https://core.telegram.org/bots/api#sendsticker).  
+$content is an array with at least chat_id and sticker.
+* sendVideo(array $content)  
+[Send a video] (https://core.telegram.org/bots/api#sendvideo).  
+$content is an array with at least chat_id and video.
+* sendVoice(array $content)  
+[Send a voice message] (https://core.telegram.org/bots/api#sendvoice).  
+$content is an array with at least chat_id and audio.
+* sendLocation(array $content)  
+[Send a location] (https://core.telegram.org/bots/api#sendlocation).  
+$content is an array with at least chat_id, latitude and longitude.
+* sendChatAction(array $content)  
+[Send a chat action] (https://core.telegram.org/bots/api#sendchataction).  
+$content is an array with at least chat_id and action.
 * getData()  
 Return the user request as array
 * Text()  
