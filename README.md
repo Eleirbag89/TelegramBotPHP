@@ -127,7 +127,7 @@ Return the user's last name
 Return the user's username
 * messageFromGroup()  
 Check if the message is sent from a group chat (boolean)    
-* getUpdates($offset = 0, $limit = 100, $timeout = 0, $update = true)
+* getUpdates($offset = 0, $limit = 100, $timeout = 0, $update = true)    
 Get the updates. If $update = true confirm the update to Telegram in order to avoid duplicate replies.
 See [Telegram doc] (https://core.telegram.org/bots/api#getting-updates)  for the other parameters.
 * serveUpdate($update)
