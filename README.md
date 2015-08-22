@@ -111,6 +111,9 @@ $content is an array with at least chat_id, latitude and longitude.
 * sendChatAction(array $content)  
 [Send a chat action] (https://core.telegram.org/bots/api#sendchataction).  
 $content is an array with at least chat_id and action.
+* setWebHook($url)  
+[Set a WebHook for the bot] (https://core.telegram.org/bots/api#setwebhook).  
+$content is an array with at least chat_id and action.
 * getData()  
 Return the user request as array
 * Text()  
