@@ -13,10 +13,15 @@ For the WebHook:
 
 For the GetUpdates:
 * Some way to execute the script in order to serve messages (for example cronjob)
+
 Installation
 ---------
 
-* Copy the php files into your server
+* Copy Telegram.php into your server and create and include it in your new bot script
+```php
+include("Telegram.php");
+$telegram = new Telegram($bot_id);
+```
 
 Configuration (WebHook)
 ---------
@@ -44,7 +49,7 @@ $content = array('chat_id' => $chat_id, 'text' => "Test");
 $telegram->sendMessage($content);
 ```
 
-To upload a Photo, you need to load it with CurlFile:
+To upload a Photo or some other files, you need to load it with CurlFile:
 ```php
 // Load a local file to upload. If is already on Telegram's Servers just pass the resource id
 $img = curl_file_create('test.png','image/png'); 
@@ -77,6 +82,8 @@ See getUpdates.php for the complete example.
 Functions
 ------------
 
+* getMe()  
+[A method for testing your bot] (https://core.telegram.org/bots/api#getme).  
 * sendMessage(array $content)  
 [Send a message] (https://core.telegram.org/bots/api#sendmessage).  
 $content is an array with at least chat_id and text.
@@ -119,7 +126,7 @@ Return the user's last name
 * Username()  
 Return the user's username
 * messageFromGroup()  
-Check if the message is sent from a group chat (boolean)
+Check if the message is sent from a group chat (boolean)    
 * getUpdates($offset = 0, $limit = 100, $timeout = 0, $update = true)
 Get the updates. If $update = true confirm the update to Telegram in order to avoid duplicate replies.
 See [Telegram doc] (https://core.telegram.org/bots/api#getting-updates)  for the other parameters.
