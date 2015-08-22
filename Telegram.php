@@ -63,6 +63,11 @@ class Telegram {
         return $this->endpoint("sendChatAction", $content);
     }
 
+    public function setWebhook($url) {
+        $content = array('url' => $url);
+        return $this->endpoint("setWebhook", $content);
+    }
+
     public function getData() {
         if (empty($this->data)) {
             $rawData = file_get_contents("php://input");
