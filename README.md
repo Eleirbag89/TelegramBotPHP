@@ -17,7 +17,7 @@ For the GetUpdates:
 Installation
 ---------
 
-* Copy Telegram.php into your server and create and include it in your new bot script
+* Copy Telegram.php into your server and include it in your new bot script
 ```php
 include("Telegram.php");
 $telegram = new Telegram($bot_id);
