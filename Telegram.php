@@ -4,7 +4,6 @@
  * Telegram Bot Class.
  * @author Gabriele Grillo <gabry.grillo@alice.it>
  */
-
 class Telegram {
 
     private $bot_id = "";
@@ -16,46 +15,52 @@ class Telegram {
         $this->data = $this->getData();
     }
 
-    public function sendMessage(array $content) {
-        $url = 'https://api.telegram.org/bot' . $this->bot_id . '/sendMessage';
-        $this->sendAPIRequest($url, $content);
+    public function getMe() {
+        return $this->endpoint("getMe", array(), false);
     }
 
-    public function endpoint($api, array $content) {
+    public function sendMessage(array $content) {
+        return $this->endpoint("sendMessage", $content);
+    }
+
+    public function endpoint($api, array $content, $post = true) {
         $url = 'https://api.telegram.org/bot' . $this->bot_id . '/' . $api;
-        $this->sendAPIRequest($url, $content);
+        if ($post)
+            return $this->sendAPIRequest($url, $content);
+        else
+            return $this->sendAPIRequest($url, array(), false);
     }
 
     public function sendPhoto(array $content) {
-        $this->endpoint("sendPhoto", $content);
+        return $this->endpoint("sendPhoto", $content);
     }
 
     public function sendAudio(array $content) {
-        $this->endpoint("sendAudio", $content);
+        return $this->endpoint("sendAudio", $content);
     }
 
     public function sendDocument(array $content) {
-        $this->endpoint("sendDocument", $content);
+        return $this->endpoint("sendDocument", $content);
     }
 
     public function sendSticker(array $content) {
-        $this->endpoint("sendSticker", $content);
+        return $this->endpoint("sendSticker", $content);
     }
 
     public function sendVideo(array $content) {
-        $this->endpoint("sendVideo", $content);
+        return $this->endpoint("sendVideo", $content);
     }
 
     public function sendVoice(array $content) {
-        $this->endpoint("sendVoice", $content);
+        return $this->endpoint("sendVoice", $content);
     }
 
     public function sendLocation(array $content) {
-        $this->endpoint("sendLocation", $content);
+        return $this->endpoint("sendLocation", $content);
     }
 
     public function sendChatAction(array $content) {
-        $this->endpoint("sendChatAction", $content);
+        return $this->endpoint("sendChatAction", $content);
     }
 
     public function getData() {
@@ -126,15 +131,14 @@ class Telegram {
     }
 
     public function getUpdates($offset = 0, $limit = 100, $timeout = 0, $update = true) {
-        $url = 'https://api.telegram.org/bot' . $this->bot_id . '/getUpdates?offset=' . $offset . '&limit=' . $limit . '&timeout=' . $timeout;
-        $reply = $this->getAPIUpdates($url);
+        $content = array('offset' => $offset, 'limit' => $limit, 'timeout' => $timeot);
+        $reply = $this->endpoint("getUpdates", $content);
         $this->updates = json_decode($reply, true);
         if ($update) {
             $last_element_id = $this->updates["result"][count($this->updates["result"]) - 1]["update_id"] + 1;
-            $url = 'https://api.telegram.org/bot' . $this->bot_id . '/getUpdates?offset=' . $last_element_id . '&limit=1&timeout=' . $timeout;
-            $this->getAPIUpdates($url);
+            $content = array('offset' => $last_element_id, 'limit' => "1", 'timeout' => $timeot);
+            $this->endpoint("getUpdates", $content);
         }
-
         return $this->updates;
     }
 
@@ -142,25 +146,16 @@ class Telegram {
         $this->data = $this->updates["result"][$update];
     }
 
-    private function sendAPIRequest($url, array $content) {
+    private function sendAPIRequest($url, array $content, $post = true) {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        //curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($content));
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
+        if ($post) {
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
+        }
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        $result = curl_exec($ch);
-        curl_close($ch);
-        return $result;
-    }
-
-    private function getAPIUpdates($url) {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_HEADER, false);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $result = curl_exec($ch);
         curl_close($ch);
         return $result;
