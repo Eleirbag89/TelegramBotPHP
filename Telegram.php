@@ -15,6 +15,14 @@ class Telegram {
         $this->data = $this->getData();
     }
 
+    public function endpoint($api, array $content, $post = true) {
+        $url = 'https://api.telegram.org/bot' . $this->bot_id . '/' . $api;
+        if ($post)
+            return $this->sendAPIRequest($url, $content);
+        else
+            return $this->sendAPIRequest($url, array(), false);
+    }
+
     public function getMe() {
         return $this->endpoint("getMe", array(), false);
     }
@@ -23,12 +31,8 @@ class Telegram {
         return $this->endpoint("sendMessage", $content);
     }
 
-    public function endpoint($api, array $content, $post = true) {
-        $url = 'https://api.telegram.org/bot' . $this->bot_id . '/' . $api;
-        if ($post)
-            return $this->sendAPIRequest($url, $content);
-        else
-            return $this->sendAPIRequest($url, array(), false);
+    public function forwardMessage(array $content) {
+        return $this->endpoint("forwardMessage", $content);
     }
 
     public function sendPhoto(array $content) {
@@ -63,8 +67,16 @@ class Telegram {
         return $this->endpoint("sendChatAction", $content);
     }
 
-    public function setWebhook($url) {
-        $content = array('url' => $url);
+    public function getUserProfilePhotos(array $content) {
+        return $this->endpoint("getUserProfilePhotos", $content);
+    }
+
+    public function setWebhook($url, $certificate = "") {
+        if ($certificate == "") {
+            $content = array('url' => $url);
+        } else {
+            $content = array('url' => $url, 'certificate' => $certificate);
+        }
         return $this->endpoint("setWebhook", $content);
     }
 
@@ -129,6 +141,24 @@ class Telegram {
             'keyboard' => $options,
             'one_time_keyboard' => $onetime,
             'resize_keyboard' => $resize,
+            'selective' => $selective
+        );
+        $encodedMarkup = json_encode($replyMarkup, true);
+        return $encodedMarkup;
+    }
+
+    public function buildKeyBoardHide($selective = true) {
+        $replyMarkup = array(
+            'hide_keyboard' => true,
+            'selective' => $selective
+        );
+        $encodedMarkup = json_encode($replyMarkup, true);
+        return $encodedMarkup;
+    }
+
+    public function buildForceReply($selective = true) {
+        $replyMarkup = array(
+            'force_reply' => true,
             'selective' => $selective
         );
         $encodedMarkup = json_encode($replyMarkup, true);
