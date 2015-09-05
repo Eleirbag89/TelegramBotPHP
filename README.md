@@ -176,3 +176,9 @@ http://apps.timwhitlock.info/emoji/tables/unicode
 Contact me
 ------------
 You can contact me [via Telegram](https://telegram.me/ggrillo) but if you have an issue please [open](https://github.com/Eleirbag89/TelegramBotPHP/issues) one.
+
+Support me
+------------
+You can support me using Flattr.    
+
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=eleirbag89&url=https://github.com/Eleirbag89/TelegramBotPHP&title=TelegramBotPHP&language=&tags=github&category=software) 
