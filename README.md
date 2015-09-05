@@ -1,6 +1,6 @@
 # TelegramBotPHP
 > A very simple PHP [Telegram Bot API](https://core.telegram.org/bots) for sending messages.
-> August 29, 2015
+> Compliant with the August 29, 2015 Telegram Bot API update.
 
 Requirements
 ---------
@@ -29,6 +29,7 @@ Configuration (WebHook)
 
 Navigate to 
 https://api.telegram.org/bot(BOT_ID)/setWebhook?url=https://yoursite.com/your_update.php
+Or use the Telegram class setWebhook method.
 
 Example
 ---------
@@ -88,6 +89,9 @@ Functions
 * sendMessage(array $content)  
 [Send a message] (https://core.telegram.org/bots/api#sendmessage).  
 $content is an array with at least chat_id and text.
+* forwardMessage(array $content)  
+[Forward a message] (https://core.telegram.org/bots/api#forwardmessage).  
+$content is an array with chat_id, from_chat_id and message_id.
 * sendPhoto(array $content)  
 [Send a photo] (https://core.telegram.org/bots/api#sendphoto).  
 $content is an array with at least chat_id and photo.
@@ -112,7 +116,10 @@ $content is an array with at least chat_id, latitude and longitude.
 * sendChatAction(array $content)  
 [Send a chat action] (https://core.telegram.org/bots/api#sendchataction).  
 $content is an array with at least chat_id and action.
-* setWebHook($url)  
+* getUserProfilePhotos(array $content)  
+[Get a list of profile pictures for a user] (https://core.telegram.org/bots/api#getuserprofilephotos).  
+$content is an array with at least user_id.
+* setWebHook($url, $certificate)  
 [Set a WebHook for the bot] (https://core.telegram.org/bots/api#setwebhook).  
 * getData()  
 Return the user request as array
@@ -133,7 +140,7 @@ Check if the message is sent from a group chat (boolean)
 * getUpdates($offset = 0, $limit = 100, $timeout = 0, $update = true)    
 Get the updates. If $update = true confirm the update to Telegram in order to avoid duplicate replies.
 See [Telegram doc] (https://core.telegram.org/bots/api#getting-updates)  for the other parameters.
-* serveUpdate($update)
+* serveUpdate($update)    
 Set the current message to the one with index $update.
 * UpdateID()  
 Get the message's Update ID.
@@ -146,7 +153,19 @@ Build keyboard parameters
 buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true)
 ```
 Send a custom keyboard. $option is an array of array string.  
-Check [ReplyKeyBoardMarkUp] (https://core.telegram.org/bots/api#replykeyboardmarkup) for more info.
+Check [ReplyKeyBoardMarkUp] (https://core.telegram.org/bots/api#replykeyboardmarkup) for more info.    
+
+```php
+buildKeyBoardHide($selective=true)
+```
+Hide a custom keyboard.  
+Check [ReplyKeyBoarHide] (https://core.telegram.org/bots/api#replykeyboardhide) for more info.    
+
+```php
+buildKeyBoardHide($selective=true)
+```
+Show a Reply interface to the user.  
+Check [ForceReply] (https://core.telegram.org/bots/api#forcereply) for more info.
 
 Emoticons
 ------------
