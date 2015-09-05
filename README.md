@@ -163,7 +163,7 @@ Hide a custom keyboard.
 Check [ReplyKeyBoarHide] (https://core.telegram.org/bots/api#replykeyboardhide) for more info.    
 
 ```php
-buildKeyBoardHide($selective=true)
+buildForceReply($selective=true)
 ```
 Show a Reply interface to the user.  
 Check [ForceReply] (https://core.telegram.org/bots/api#forcereply) for more info.
