@@ -18,9 +18,10 @@ class Telegram {
     public function endpoint($api, array $content, $post = true) {
         $url = 'https://api.telegram.org/bot' . $this->bot_id . '/' . $api;
         if ($post)
-            return $this->sendAPIRequest($url, $content);
+            $reply = $this->sendAPIRequest($url, $content);
         else
-            return $this->sendAPIRequest($url, array(), false);
+            $reply = $this->sendAPIRequest($url, array(), false);
+        return json_decode($reply, true);
     }
 
     public function getMe() {
@@ -69,6 +70,23 @@ class Telegram {
 
     public function getUserProfilePhotos(array $content) {
         return $this->endpoint("getUserProfilePhotos", $content);
+    }
+
+    public function getFile($file_id) {
+        $content = array('file_id' => $file_id);
+        return $this->endpoint("getFile", $content);
+    }
+
+    public function downloadFile($url, $path) {
+        $file_url = "https://api.telegram.org/file/bot" . $bot_id . "/" . $url;
+        $in = fopen($file_url . $url, "rb");
+        $out = fopen($path, "wb");
+
+        while ($chunk = fread($in, 8192)) {
+            fwrite($out, $chunk, 8192);
+        }
+        fclose($in);
+        fclose($out);
     }
 
     public function setWebhook($url, $certificate = "") {
