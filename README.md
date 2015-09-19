@@ -32,7 +32,7 @@ Navigate to
 https://api.telegram.org/bot(BOT_ID)/setWebhook?url=https://yoursite.com/your_update.php
 Or use the Telegram class setWebhook method.
 
-Example
+Examples
 ---------
 
 ```php
@@ -58,6 +58,12 @@ To upload a Photo or some other files, you need to load it with CurlFile:
 $img = curl_file_create('test.png','image/png'); 
 $content = array('chat_id' => $chat_id, 'photo' => $img );
 $telegram->sendPhoto($content);
+```
+
+To download a file on the Telegram's servers
+```php
+$file = $telegram->getFile($file_id);
+$telegram->downloadFile($file["file_path"], "./my_downloaded_file_on_local_server.png");
 ```
 
 See update.php or update cowsay.php for the complete example.
@@ -120,6 +126,10 @@ $content is an array with at least chat_id and action.
 * getUserProfilePhotos(array $content)  
 [Get a list of profile pictures for a user] (https://core.telegram.org/bots/api#getuserprofilephotos).  
 $content is an array with at least user_id.
+* getFile($file_id)  
+[Use this method to get basic info about a file and prepare it for downloading] (https://core.telegram.org/bots/api#getfile).  
+* downloadFile($telegram_file_path, $local_file_path)  
+Download a File using the Thelegram's file_path returned from getFile() and save it in $local_file_path. 
 * setWebHook($url, $certificate)  
 [Set a WebHook for the bot] (https://core.telegram.org/bots/api#setwebhook).  
 * getData()  
