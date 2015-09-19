@@ -49,7 +49,7 @@ if ($text == "/img") {
     //Download the file just sended
     $file_id = $message["photo"][0]["file_id"];
     $file = $telegram->getFile($file_id);
-    $telegram->downloadFile($file["file_path"], "./test2.png");
+    $telegram->downloadFile($file["file_path"], "./test_download.png");
 }
 
 if ($text == "/where") {
