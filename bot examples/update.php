@@ -46,6 +46,10 @@ if ($text == "/img") {
     $img = curl_file_create('test.png','image/png'); 
     $content = array('chat_id' => $chat_id, 'photo' => $img );
     $telegram->sendPhoto($content);
+    //Download the file just sended
+    $file_id = $message["photo"][0]["file_id"];
+    $file = $telegram->getFile($file_id);
+    $telegram->downloadFile($file["file_path"], "./test2.png");
 }
 
 if ($text == "/where") {
