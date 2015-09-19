@@ -77,10 +77,10 @@ class Telegram {
         return $this->endpoint("getFile", $content);
     }
 
-    public function downloadFile($url, $path) {
-        $file_url = "https://api.telegram.org/file/bot" . $bot_id . "/" . $url;
+    public function downloadFile($telegram_file_path, $local_file_path) {
+        $file_url = "https://api.telegram.org/file/bot" . $bot_id . "/" . $telegram_file_path;
         $in = fopen($file_url . $url, "rb");
-        $out = fopen($path, "wb");
+        $out = fopen($local_file_path, "wb");
 
         while ($chunk = fread($in, 8192)) {
             fwrite($out, $chunk, 8192);
