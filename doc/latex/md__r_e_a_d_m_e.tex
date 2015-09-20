@@ -1,0 +1,164 @@
+\begin{quote}
+A very simple P\+H\+P \href{https://core.telegram.org/bots}{\tt Telegram Bot A\+P\+I} for sending messages. Compliant with the September 18, 2015 \hyperlink{class_telegram}{Telegram} Bot A\+P\+I update. \end{quote}
+
+
+\subsection*{Requirements }
+
+
+\begin{DoxyItemize}
+\item P\+H\+P5
+\item Curl for P\+H\+P5 must be enabled.
+\item \hyperlink{class_telegram}{Telegram} A\+P\+I key, you can get one simply with \href{https://core.telegram.org/bots#botfather}{\tt } with simple commands right after creating your bot.
+\end{DoxyItemize}
+
+For the Web\+Hook\+:
+\begin{DoxyItemize}
+\item An S\+S\+L certificate (\hyperlink{class_telegram}{Telegram} A\+P\+I requires this). You can use \href{https://www.cloudflare.com/ssl}{\tt Cloudflare\textquotesingle{}s Free Flexible S\+S\+L} which crypts the web traffic from end user to their proxies if you\textquotesingle{}re using Cloud\+Flare D\+N\+S. Since the August 29 update you can use a self-\/signed ssl certificate.
+\end{DoxyItemize}
+
+For the Get\+Updates\+:
+\begin{DoxyItemize}
+\item Some way to execute the script in order to serve messages (for example cronjob)
+\end{DoxyItemize}
+
+\subsection*{Installation }
+
+
+\begin{DoxyItemize}
+\item Copy Telegram.\+php into your server and include it in your new bot script 
+\begin{DoxyCode}
+include(\textcolor{stringliteral}{"Telegram.php"});
+$telegram = \textcolor{keyword}{new} \hyperlink{class_telegram}{Telegram}($bot\_id);
+\end{DoxyCode}
+
+\end{DoxyItemize}
+
+\subsection*{Configuration (Web\+Hook) }
+
+Navigate to \href{https://api.telegram.org/bot(BOT_ID)/setWebhook?url=https://yoursite.com/your_update.php}{\tt https\+://api.\+telegram.\+org/bot(\+B\+O\+T\+\_\+\+I\+D)/set\+Webhook?url=https\+://yoursite.\+com/your\+\_\+update.\+php} Or use the \hyperlink{class_telegram}{Telegram} class set\+Webhook method.
+
+\subsection*{Examples }
+
+
+\begin{DoxyCode}
+$telegram = \textcolor{keyword}{new} \hyperlink{class_telegram}{Telegram}($bot\_id);
+$chat\_id = $telegram->ChatID();
+$content = array(\textcolor{stringliteral}{'chat\_id'} => $chat\_id, \textcolor{stringliteral}{'text'} => \textcolor{stringliteral}{"Test"});
+$telegram->sendMessage($content);
+\end{DoxyCode}
+
+
+If you want to get some specific parameter from the \hyperlink{class_telegram}{Telegram} response\+: 
+\begin{DoxyCode}
+$telegram = \textcolor{keyword}{new} \hyperlink{class_telegram}{Telegram}($bot\_id);
+$result = $telegram->getData();
+$text = $result[\textcolor{stringliteral}{"message"}] [\textcolor{stringliteral}{"text"}];
+$chat\_id = $result[\textcolor{stringliteral}{"message"}] [\textcolor{stringliteral}{"chat"}][\textcolor{stringliteral}{"id"}];
+$content = array(\textcolor{stringliteral}{'chat\_id'} => $chat\_id, \textcolor{stringliteral}{'text'} => \textcolor{stringliteral}{"Test"});
+$telegram->sendMessage($content);
+\end{DoxyCode}
+
+
+To upload a Photo or some other files, you need to load it with Curl\+File\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Load a local file to upload. If is already on Telegram's Servers just pass the resource id}
+$img = curl\_file\_create(\textcolor{stringliteral}{'test.png'},\textcolor{stringliteral}{'image/png'}); 
+$content = array(\textcolor{stringliteral}{'chat\_id'} => $chat\_id, \textcolor{stringliteral}{'photo'} => $img );
+$telegram->sendPhoto($content);
+\end{DoxyCode}
+
+
+To download a file on the \hyperlink{class_telegram}{Telegram}\textquotesingle{}s servers 
+\begin{DoxyCode}
+$file = $telegram->getFile($file\_id);
+$telegram->downloadFile($file[\textcolor{stringliteral}{"file\_path"}], \textcolor{stringliteral}{"./my\_downloaded\_file\_on\_local\_server.png"});
+\end{DoxyCode}
+
+
+See update.\+php or update cowsay.\+php for the complete example. If you wanna see the Cow\+Say Bot in action \href{https://telegram.me/cowmooobot}{\tt add it}.
+
+If you want to use Get\+Updates instead of the Web\+Hook you need to call the the serve\+Update function inside a for cycle. 
+\begin{DoxyCode}
+$req = $telegram->getUpdates();
+\textcolor{keywordflow}{for} ($i = 0; $i < $telegram-> UpdateCount(); $i++) \{
+    \textcolor{comment}{// You NEED to call serveUpdate before accessing the values of message in Telegram Class}
+    $telegram->serveUpdate($i);
+    $text = $telegram->Text();
+    $chat\_id = $telegram->ChatID();
+
+    \textcolor{keywordflow}{if} ($text == \textcolor{stringliteral}{"/start"}) \{
+        $reply = \textcolor{stringliteral}{"Working"};
+        $content = array(\textcolor{stringliteral}{'chat\_id'} => $chat\_id, \textcolor{stringliteral}{'text'} => $reply);
+        $telegram->sendMessage($content);
+    \}
+    \textcolor{comment}{// DO OTHER STUFF}
+\}
+\end{DoxyCode}
+ See get\+Updates.\+php for the complete example.
+
+\subsection*{Functions }
+
+
+\begin{DoxyItemize}
+\item get\+Me() \href{https://core.telegram.org/bots/api#getme}{\tt A method for testing your bot}.
+\item send\+Message(array \$content) \href{https://core.telegram.org/bots/api#sendmessage}{\tt Send a message}. \$content is an array with at least chat\+\_\+id and text.
+\item forward\+Message(array \$content) \href{https://core.telegram.org/bots/api#forwardmessage}{\tt Forward a message}. \$content is an array with chat\+\_\+id, from\+\_\+chat\+\_\+id and message\+\_\+id.
+\item send\+Photo(array \$content) \href{https://core.telegram.org/bots/api#sendphoto}{\tt Send a photo}. \$content is an array with at least chat\+\_\+id and photo.
+\item send\+Audio(array \$content) \href{https://core.telegram.org/bots/api#sendaudio}{\tt Send an audio}. \$content is an array with at least chat\+\_\+id and audio.
+\item send\+Document(array \$content) \href{https://core.telegram.org/bots/api#senddocument}{\tt Send a document}. \$content is an array with at least chat\+\_\+id and document.
+\item send\+Sticker(array \$content) \href{https://core.telegram.org/bots/api#sendsticker}{\tt Send a sticker}. \$content is an array with at least chat\+\_\+id and sticker.
+\item send\+Video(array \$content) \href{https://core.telegram.org/bots/api#sendvideo}{\tt Send a video}. \$content is an array with at least chat\+\_\+id and video.
+\item send\+Voice(array \$content) \href{https://core.telegram.org/bots/api#sendvoice}{\tt Send a voice message}. \$content is an array with at least chat\+\_\+id and audio.
+\item send\+Location(array \$content) \href{https://core.telegram.org/bots/api#sendlocation}{\tt Send a location}. \$content is an array with at least chat\+\_\+id, latitude and longitude.
+\item send\+Chat\+Action(array \$content) \href{https://core.telegram.org/bots/api#sendchataction}{\tt Send a chat action}. \$content is an array with at least chat\+\_\+id and action.
+\item get\+User\+Profile\+Photos(array \$content) \href{https://core.telegram.org/bots/api#getuserprofilephotos}{\tt Get a list of profile pictures for a user}. \$content is an array with at least user\+\_\+id.
+\item get\+File(\$file\+\_\+id) \href{https://core.telegram.org/bots/api#getfile}{\tt Use this method to get basic info about a file and prepare it for downloading}.
+\item download\+File(\$telegram\+\_\+file\+\_\+path, \$local\+\_\+file\+\_\+path) Download a File using the Thelegram\textquotesingle{}s file\+\_\+path returned from get\+File() and save it in \$local\+\_\+file\+\_\+path.
+\item set\+Web\+Hook(\$url, \$certificate) \href{https://core.telegram.org/bots/api#setwebhook}{\tt Set a Web\+Hook for the bot}.
+\item get\+Data() Return the user request as array
+\item Text() Return the Text of the user message
+\item Chat\+I\+D() Return the id of the chat
+\item Date() Return the date of the mesage (Timestamp)
+\item First\+Name() Return the user\textquotesingle{}s first name
+\item Last\+Name() Return the user\textquotesingle{}s last name
+\item Username() Return the user\textquotesingle{}s username
+\item message\+From\+Group() Check if the message is sent from a group chat (boolean)
+\item get\+Updates(\$offset = 0, \$limit = 100, \$timeout = 0, \$update = true) Get the updates. If \$update = true confirm the update to \hyperlink{class_telegram}{Telegram} in order to avoid duplicate replies. See \href{https://core.telegram.org/bots/api#getting-updates}{\tt Telegram doc} for the other parameters.
+\item serve\+Update(\$update) Set the current message to the one with index \$update.
+\item Update\+I\+D() Get the message\textquotesingle{}s Update I\+D.
+\item Update\+Count() Return the Get\+Updates messages count.
+\end{DoxyItemize}
+
+\subsection*{Build keyboard parameters }
+
+
+\begin{DoxyCode}
+buildKeyBoard(array $options, $onetime=\textcolor{keyword}{true}, $resize=\textcolor{keyword}{true}, $selective=\textcolor{keyword}{true})
+\end{DoxyCode}
+ Send a custom keyboard. \$option is an array of array string. Check \href{https://core.telegram.org/bots/api#replykeyboardmarkup}{\tt Reply\+Key\+Board\+Mark\+Up} for more info.
+
+
+\begin{DoxyCode}
+buildKeyBoardHide($selective=\textcolor{keyword}{true})
+\end{DoxyCode}
+ Hide a custom keyboard. Check \href{https://core.telegram.org/bots/api#replykeyboardhide}{\tt Reply\+Key\+Boar\+Hide} for more info.
+
+
+\begin{DoxyCode}
+buildForceReply($selective=\textcolor{keyword}{true})
+\end{DoxyCode}
+ Show a Reply interface to the user. Check \href{https://core.telegram.org/bots/api#forcereply}{\tt Force\+Reply} for more info.
+
+\subsection*{Emoticons }
+
+For a list of emoticons to use in your bot messages, please refer to the column Bytes of this table\+: \href{http://apps.timwhitlock.info/emoji/tables/unicode}{\tt http\+://apps.\+timwhitlock.\+info/emoji/tables/unicode}
+
+\subsection*{Contact me }
+
+You can contact me \href{https://telegram.me/ggrillo}{\tt via Telegram} but if you have an issue please \href{https://github.com/Eleirbag89/TelegramBotPHP/issues}{\tt open} one.
+
+\subsection*{Support me }
+
+You can support me using Flattr.
+
+\href{https://flattr.com/submit/auto?user_id=eleirbag89&url=https://github.com/Eleirbag89/TelegramBotPHP&title=TelegramBotPHP&language=&tags=github&category=software}{\tt !\mbox{[}Flattr this git repo\mbox{]}(http\+://api.\+flattr.\+com/button/flattr-\/badge-\/large.\+png)} 

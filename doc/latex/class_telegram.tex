@@ -1,0 +1,731 @@
+\hypertarget{class_telegram}{}\section{Telegram Class Reference}
+\label{class_telegram}\index{Telegram@{Telegram}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_telegram_a340324043882a7c5e432ba045425f49a}{\+\_\+\+\_\+construct} (\$bot\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a9241a37baf9b641df49a377c34bbdd59}{endpoint} (\$api, array \$content, \$post=true)
+\begin{DoxyCompactList}\small\item\em Do requests to \hyperlink{class_telegram}{Telegram} Bot A\+P\+I. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a6bc057a9b0c03f8147a4294936b2494b}{get\+Me} ()
+\begin{DoxyCompactList}\small\item\em A method for testing your bot. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_af1369d6caab77f71a051ab73fa642a3f}{send\+Message} (array \$content)
+\begin{DoxyCompactList}\small\item\em Send a message. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_aebf3d567e947a457971c1501be7fc1fe}{forward\+Message} (array \$content)
+\begin{DoxyCompactList}\small\item\em Forward a message. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_ac7adcbd9f46b77664f8b738b84f290e7}{send\+Photo} (array \$content)
+\begin{DoxyCompactList}\small\item\em Send a photo. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a178b081bbab51f83caa31e554b3e2ffe}{send\+Audio} (array \$content)
+\begin{DoxyCompactList}\small\item\em Send an audio. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a25569ca763bd149891d86b89bc66cf54}{send\+Document} (array \$content)
+\begin{DoxyCompactList}\small\item\em Send a document. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a0a176d232d8e7941184698447902beb6}{send\+Sticker} (array \$content)
+\begin{DoxyCompactList}\small\item\em Send a sticker. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a789f27ed21d8a1232cc60832efdab17f}{send\+Video} (array \$content)
+\begin{DoxyCompactList}\small\item\em Send a video. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a4faab9f92639453b851912d41ca1a3ca}{send\+Voice} (array \$content)
+\begin{DoxyCompactList}\small\item\em Send a voice message. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_ac395e843f13d36d70f57c2d26868a33f}{send\+Location} (array \$content)
+\begin{DoxyCompactList}\small\item\em Send a location. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_aa8c4c54f8f2fcbb53de050458fb176b7}{send\+Chat\+Action} (array \$content)
+\begin{DoxyCompactList}\small\item\em Send a chat action. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_af2245dc488830eb7add02c35e8dcf492}{get\+User\+Profile\+Photos} (array \$content)
+\begin{DoxyCompactList}\small\item\em Get a list of profile pictures for a user. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_acb201ffc034063cfd347962c49ad5ad9}{get\+File} (\$file\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Use this method to get basic info about a file and prepare it for downloading. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_af08c6bc7982d71857f05c0756221a703}{download\+File} (\$telegram\+\_\+file\+\_\+path, \$local\+\_\+file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Use this method to download a file. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_ae94b55864cae3e7751e7293585eec9f5}{set\+Webhook} (\$url, \$certificate=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Set a Web\+Hook for the bot. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a81a67162a6288d78fc4c55283325f0b4}{get\+Data} ()
+\begin{DoxyCompactList}\small\item\em Get the data of the current message. \end{DoxyCompactList}\item 
+\hypertarget{class_telegram_a87449bdd364c33ff024d32896342bf31}{}\hyperlink{class_telegram_a87449bdd364c33ff024d32896342bf31}{set\+Data} (array \$data)\label{class_telegram_a87449bdd364c33ff024d32896342bf31}
+
+\begin{DoxyCompactList}\small\item\em Set the data currently used. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a950a98ae75562dc9c6a458acbd330143}{Text} ()
+\begin{DoxyCompactList}\small\item\em Get the text of the current message. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a4b624bab3560ed1e761aba1e7431cb6e}{Chat\+I\+D} ()
+\begin{DoxyCompactList}\small\item\em Get the chati\+\_\+id of the current message. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_aff49fc2cda4491ff4457ca481bb8edf9}{Date} ()
+\begin{DoxyCompactList}\small\item\em Get the date of the current message. \end{DoxyCompactList}\item 
+\hypertarget{class_telegram_a0e3e32188dd1631ed1ed673ac844d999}{}\hyperlink{class_telegram_a0e3e32188dd1631ed1ed673ac844d999}{First\+Name} ()\label{class_telegram_a0e3e32188dd1631ed1ed673ac844d999}
+
+\begin{DoxyCompactList}\small\item\em Get the first name of the user. \end{DoxyCompactList}\item 
+\hypertarget{class_telegram_acf2c54b7fd06550cd64cf72194709a2c}{}\hyperlink{class_telegram_acf2c54b7fd06550cd64cf72194709a2c}{Last\+Name} ()\label{class_telegram_acf2c54b7fd06550cd64cf72194709a2c}
+
+\begin{DoxyCompactList}\small\item\em Get the last name of the user. \end{DoxyCompactList}\item 
+\hypertarget{class_telegram_a2521c81c6e75e23a361cc5a8a146f9c9}{}\hyperlink{class_telegram_a2521c81c6e75e23a361cc5a8a146f9c9}{Username} ()\label{class_telegram_a2521c81c6e75e23a361cc5a8a146f9c9}
+
+\begin{DoxyCompactList}\small\item\em Get the username of the user. \end{DoxyCompactList}\item 
+\hypertarget{class_telegram_aae456ae24175445c9c797b0d58d5716b}{}\hyperlink{class_telegram_aae456ae24175445c9c797b0d58d5716b}{Location} ()\label{class_telegram_aae456ae24175445c9c797b0d58d5716b}
+
+\begin{DoxyCompactList}\small\item\em Get the location in the message. \end{DoxyCompactList}\item 
+\hypertarget{class_telegram_a596f610d501cd48e6c20ec65dd9c3b34}{}\hyperlink{class_telegram_a596f610d501cd48e6c20ec65dd9c3b34}{Update\+I\+D} ()\label{class_telegram_a596f610d501cd48e6c20ec65dd9c3b34}
+
+\begin{DoxyCompactList}\small\item\em Get the update\+\_\+id of the message. \end{DoxyCompactList}\item 
+\hypertarget{class_telegram_a330b2888bb21d6c182534021a797103b}{}\hyperlink{class_telegram_a330b2888bb21d6c182534021a797103b}{Update\+Count} ()\label{class_telegram_a330b2888bb21d6c182534021a797103b}
+
+\begin{DoxyCompactList}\small\item\em Get the number of updates. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a59b7bf91ea3b26d732f7536c2d65da19}{message\+From\+Group} ()
+\begin{DoxyCompactList}\small\item\em Tell if a message is from a group or user chat. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a5c9619923ae1810aa340fa0e9acc1744}{build\+Key\+Board} (array \$options, \$onetime=false, \$resize=false, \$selective=true)
+\begin{DoxyCompactList}\small\item\em Set a custom keyboard. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a3a02a8bbaf6021f98871752bfd32de97}{build\+Key\+Board\+Hide} (\$selective=true)
+\begin{DoxyCompactList}\small\item\em Hide a custom keyboard. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a34cfc8575c348ca3dd168b9611af4f1c}{build\+Force\+Reply} (\$selective=true)
+\begin{DoxyCompactList}\small\item\em Display a reply interface to the user. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_adb467486d3d5e83ce21a03e00f17b16c}{get\+Updates} (\$offset=0, \$limit=100, \$timeout=0, \$update=true)
+\begin{DoxyCompactList}\small\item\em Receive incoming messages using polling. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a57e6066940e4cca7310cfd5c45fd8510}{serve\+Update} (\$update)
+\begin{DoxyCompactList}\small\item\em Serve an update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_telegram}{Telegram} Bot Class. \begin{DoxyAuthor}{Author}
+Gabriele Grillo \href{mailto:gabry.grillo@alice.it}{\tt gabry.\+grillo@alice.\+it} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_telegram_a340324043882a7c5e432ba045425f49a}{}\index{Telegram@{Telegram}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Telegram@{Telegram}}
+\subsubsection[{\+\_\+\+\_\+construct(\$bot\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+\_\+construct (
+\begin{DoxyParamCaption}
+\item[{}]{\$bot\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a340324043882a7c5e432ba045425f49a}
+
+
+Class constructor. 
+
+Create a \hyperlink{class_telegram}{Telegram} instance from the bot token 
+\begin{DoxyParams}{Parameters}
+{\em bot\+\_\+id} & the bot token \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an instance of the class 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Test(), $\sim$\+Test(), test\+Me\+Too() and public\+Var() 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_telegram_a34cfc8575c348ca3dd168b9611af4f1c}{}\index{Telegram@{Telegram}!build\+Force\+Reply@{build\+Force\+Reply}}
+\index{build\+Force\+Reply@{build\+Force\+Reply}!Telegram@{Telegram}}
+\subsubsection[{build\+Force\+Reply(\$selective=true)}]{\setlength{\rightskip}{0pt plus 5cm}build\+Force\+Reply (
+\begin{DoxyParamCaption}
+\item[{}]{\$selective = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a34cfc8575c348ca3dd168b9611af4f1c}
+
+
+Display a reply interface to the user. 
+
+Upon receiving a message with this object, \hyperlink{class_telegram}{Telegram} clients will display a reply interface to the user (act as if the user has selected the bot‘s message and tapped ’\+Reply\textquotesingle{}). This can be extremely useful if you want to create user-\/friendly step-\/by-\/step interfaces without having to sacrifice privacy mode. 
+\begin{DoxyParams}{Parameters}
+{\em \$selective} & Boolean Use this parameter if you want to show the keyboard to specific users only. Targets\+: 1) users that are  in the text of the Message object; 2) if the bot\textquotesingle{}s message is a reply (has reply\+\_\+to\+\_\+message\+\_\+id), sender of the original message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the requested force reply as Array 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a5c9619923ae1810aa340fa0e9acc1744}{}\index{Telegram@{Telegram}!build\+Key\+Board@{build\+Key\+Board}}
+\index{build\+Key\+Board@{build\+Key\+Board}!Telegram@{Telegram}}
+\subsubsection[{build\+Key\+Board(array \$options, \$onetime=false, \$resize=false, \$selective=true)}]{\setlength{\rightskip}{0pt plus 5cm}build\+Key\+Board (
+\begin{DoxyParamCaption}
+\item[{array}]{\$options, }
+\item[{}]{\$onetime = {\ttfamily false}, }
+\item[{}]{\$resize = {\ttfamily false}, }
+\item[{}]{\$selective = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a5c9619923ae1810aa340fa0e9acc1744}
+
+
+Set a custom keyboard. 
+
+This object represents a custom keyboard with reply options 
+\begin{DoxyParams}{Parameters}
+{\em \$options} & Array of Array of String; Array of button rows, each represented by an Array of Strings \\
+\hline
+{\em \$onetime} & Boolean Requests clients to hide the keyboard as soon as it\textquotesingle{}s been used. Defaults to false. \\
+\hline
+{\em \$resize} & Boolean Requests clients to resize the keyboard vertically for optimal fit (e.\+g., make the keyboard smaller if there are just two rows of buttons). Defaults to false, in which case the custom keyboard is always of the same height as the app\textquotesingle{}s standard keyboard. \\
+\hline
+{\em \$selective} & Boolean Use this parameter if you want to show the keyboard to specific users only. Targets\+: 1) users that are  in the text of the Message object; 2) if the bot\textquotesingle{}s message is a reply (has reply\+\_\+to\+\_\+message\+\_\+id), sender of the original message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the requested keyboard as Array 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a3a02a8bbaf6021f98871752bfd32de97}{}\index{Telegram@{Telegram}!build\+Key\+Board\+Hide@{build\+Key\+Board\+Hide}}
+\index{build\+Key\+Board\+Hide@{build\+Key\+Board\+Hide}!Telegram@{Telegram}}
+\subsubsection[{build\+Key\+Board\+Hide(\$selective=true)}]{\setlength{\rightskip}{0pt plus 5cm}build\+Key\+Board\+Hide (
+\begin{DoxyParamCaption}
+\item[{}]{\$selective = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a3a02a8bbaf6021f98871752bfd32de97}
+
+
+Hide a custom keyboard. 
+
+Upon receiving a message with this object, \hyperlink{class_telegram}{Telegram} clients will hide the current custom keyboard and display the default letter-\/keyboard. By default, custom keyboards are displayed until a new keyboard is sent by a bot. An exception is made for one-\/time keyboards that are hidden immediately after the user presses a button. 
+\begin{DoxyParams}{Parameters}
+{\em \$selective} & Boolean Use this parameter if you want to show the keyboard to specific users only. Targets\+: 1) users that are  in the text of the Message object; 2) if the bot\textquotesingle{}s message is a reply (has reply\+\_\+to\+\_\+message\+\_\+id), sender of the original message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the requested keyboard hide as Array 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a4b624bab3560ed1e761aba1e7431cb6e}{}\index{Telegram@{Telegram}!Chat\+I\+D@{Chat\+I\+D}}
+\index{Chat\+I\+D@{Chat\+I\+D}!Telegram@{Telegram}}
+\subsubsection[{Chat\+I\+D()}]{\setlength{\rightskip}{0pt plus 5cm}Chat\+I\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a4b624bab3560ed1e761aba1e7431cb6e}
+
+
+Get the chati\+\_\+id of the current message. 
+
+\begin{DoxyReturn}{Returns}
+the String users\textquotesingle{}s chat\+\_\+id 
+\end{DoxyReturn}
+\hypertarget{class_telegram_aff49fc2cda4491ff4457ca481bb8edf9}{}\index{Telegram@{Telegram}!Date@{Date}}
+\index{Date@{Date}!Telegram@{Telegram}}
+\subsubsection[{Date()}]{\setlength{\rightskip}{0pt plus 5cm}Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_telegram_aff49fc2cda4491ff4457ca481bb8edf9}
+
+
+Get the date of the current message. 
+
+\begin{DoxyReturn}{Returns}
+the String message\textquotesingle{}s date 
+\end{DoxyReturn}
+\hypertarget{class_telegram_af08c6bc7982d71857f05c0756221a703}{}\index{Telegram@{Telegram}!download\+File@{download\+File}}
+\index{download\+File@{download\+File}!Telegram@{Telegram}}
+\subsubsection[{download\+File(\$telegram\+\_\+file\+\_\+path, \$local\+\_\+file\+\_\+path)}]{\setlength{\rightskip}{0pt plus 5cm}download\+File (
+\begin{DoxyParamCaption}
+\item[{}]{\$telegram\+\_\+file\+\_\+path, }
+\item[{}]{\$local\+\_\+file\+\_\+path}
+\end{DoxyParamCaption}
+)}\label{class_telegram_af08c6bc7982d71857f05c0756221a703}
+
+
+Use this method to download a file. 
+
+Use this method to to download a file from the \hyperlink{class_telegram}{Telegram} servers. 
+\begin{DoxyParams}{Parameters}
+{\em \$telegram\+\_\+file\+\_\+path} & String File path on \hyperlink{class_telegram}{Telegram} servers \\
+\hline
+{\em \$local\+\_\+file\+\_\+path} & String File path where save the file \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_telegram_a9241a37baf9b641df49a377c34bbdd59}{}\index{Telegram@{Telegram}!endpoint@{endpoint}}
+\index{endpoint@{endpoint}!Telegram@{Telegram}}
+\subsubsection[{endpoint(\$api, array \$content, \$post=true)}]{\setlength{\rightskip}{0pt plus 5cm}endpoint (
+\begin{DoxyParamCaption}
+\item[{}]{\$api, }
+\item[{array}]{\$content, }
+\item[{}]{\$post = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a9241a37baf9b641df49a377c34bbdd59}
+
+
+Do requests to \hyperlink{class_telegram}{Telegram} Bot A\+P\+I. 
+
+Contacts the various A\+P\+I\textquotesingle{}s endpoints 
+\begin{DoxyParams}{Parameters}
+{\em api} & the A\+P\+I endpoint \\
+\hline
+{\em \$content} & the request parameters as array \\
+\hline
+{\em \$post} & boolean tells if \$content needs to be sends \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_aebf3d567e947a457971c1501be7fc1fe}{}\index{Telegram@{Telegram}!forward\+Message@{forward\+Message}}
+\index{forward\+Message@{forward\+Message}!Telegram@{Telegram}}
+\subsubsection[{forward\+Message(array \$content)}]{\setlength{\rightskip}{0pt plus 5cm}forward\+Message (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}\label{class_telegram_aebf3d567e947a457971c1501be7fc1fe}
+
+
+Forward a message. 
+
+Use this method to forward messages of any kind. On success, the sent Message is returned~\newline
+Values inside \$content\+:~\newline
+ \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\+\_\+id &Integer &Yes &Unique identifier for the message recipient — User or Group\+Chat id  \\\cline{1-4}
+from\+\_\+chat\+\_\+id &Integer &Yes &Unique identifier for the chat where the original message was sent — User or Group\+Chat id  \\\cline{1-4}
+message\+\_\+id &Integer &Yes &Unique message identifier  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a81a67162a6288d78fc4c55283325f0b4}{}\index{Telegram@{Telegram}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Telegram@{Telegram}}
+\subsubsection[{get\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}get\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a81a67162a6288d78fc4c55283325f0b4}
+
+
+Get the data of the current message. 
+
+Get the P\+O\+S\+T request of a user in a Webhook or the message actually processed in a \hyperlink{class_telegram_adb467486d3d5e83ce21a03e00f17b16c}{get\+Updates()} enviroment. \begin{DoxyReturn}{Returns}
+the J\+S\+O\+N users\textquotesingle{}s message 
+\end{DoxyReturn}
+\hypertarget{class_telegram_acb201ffc034063cfd347962c49ad5ad9}{}\index{Telegram@{Telegram}!get\+File@{get\+File}}
+\index{get\+File@{get\+File}!Telegram@{Telegram}}
+\subsubsection[{get\+File(\$file\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}get\+File (
+\begin{DoxyParamCaption}
+\item[{}]{\$file\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_telegram_acb201ffc034063cfd347962c49ad5ad9}
+
+
+Use this method to get basic info about a file and prepare it for downloading. 
+
+Use this method to get basic info about a file and prepare it for downloading. For the moment, bots can download files of up to 20\+M\+B in size. On success, a File object is returned. The file can then be downloaded via the link \href{https://api.telegram.org/file/bot}{\tt https\+://api.\+telegram.\+org/file/bot}$<$token$>$/$<$file\+\_\+path$>$, where $<$file\+\_\+path$>$ is taken from the response. It is guaranteed that the link will be valid for at least 1 hour. When the link expires, a new one can be requested by calling get\+File again. 
+\begin{DoxyParams}{Parameters}
+{\em \$file\+\_\+id} & String File identifier to get info about \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a6bc057a9b0c03f8147a4294936b2494b}{}\index{Telegram@{Telegram}!get\+Me@{get\+Me}}
+\index{get\+Me@{get\+Me}!Telegram@{Telegram}}
+\subsubsection[{get\+Me()}]{\setlength{\rightskip}{0pt plus 5cm}get\+Me (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a6bc057a9b0c03f8147a4294936b2494b}
+
+
+A method for testing your bot. 
+
+A simple method for testing your bot\textquotesingle{}s auth token. Requires no parameters. Returns basic information about the bot in form of a User object. \begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_adb467486d3d5e83ce21a03e00f17b16c}{}\index{Telegram@{Telegram}!get\+Updates@{get\+Updates}}
+\index{get\+Updates@{get\+Updates}!Telegram@{Telegram}}
+\subsubsection[{get\+Updates(\$offset=0, \$limit=100, \$timeout=0, \$update=true)}]{\setlength{\rightskip}{0pt plus 5cm}get\+Updates (
+\begin{DoxyParamCaption}
+\item[{}]{\$offset = {\ttfamily 0}, }
+\item[{}]{\$limit = {\ttfamily 100}, }
+\item[{}]{\$timeout = {\ttfamily 0}, }
+\item[{}]{\$update = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_telegram_adb467486d3d5e83ce21a03e00f17b16c}
+
+
+Receive incoming messages using polling. 
+
+Use this method to receive incoming updates using long polling. 
+\begin{DoxyParams}{Parameters}
+{\em \$offset} & Integer Identifier of the first update to be returned. Must be greater by one than the highest among the identifiers of previously received updates. By default, updates starting with the earliest unconfirmed update are returned. An update is considered confirmed as soon as get\+Updates is called with an offset higher than its update\+\_\+id. \\
+\hline
+{\em \$limit} & Integer Limits the number of updates to be retrieved. Values between 1—100 are accepted. Defaults to 100 \\
+\hline
+{\em \$timeout} & Integer Timeout in seconds for long polling. Defaults to 0, i.\+e. usual short polling \\
+\hline
+{\em \$update} & Boolean If true updates the pending message list to the last update received. Default to true. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the updates as Array 
+\end{DoxyReturn}
+\hypertarget{class_telegram_af2245dc488830eb7add02c35e8dcf492}{}\index{Telegram@{Telegram}!get\+User\+Profile\+Photos@{get\+User\+Profile\+Photos}}
+\index{get\+User\+Profile\+Photos@{get\+User\+Profile\+Photos}!Telegram@{Telegram}}
+\subsubsection[{get\+User\+Profile\+Photos(array \$content)}]{\setlength{\rightskip}{0pt plus 5cm}get\+User\+Profile\+Photos (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}\label{class_telegram_af2245dc488830eb7add02c35e8dcf492}
+
+
+Get a list of profile pictures for a user. 
+
+Use this method to get a list of profile pictures for a user. Returns a User\+Profile\+Photos object.~\newline
+Values inside \$content\+:~\newline
+ \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+user\+\_\+id &Integer &Yes &Unique identifier of the target user  \\\cline{1-4}
+offset &Integer &Optional &Sequential number of the first photo to be returned. By default, all photos are returned.  \\\cline{1-4}
+limit &Integer &Optional &Limits the number of photos to be retrieved. Values between 1—100 are accepted. Defaults to 100.  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a59b7bf91ea3b26d732f7536c2d65da19}{}\index{Telegram@{Telegram}!message\+From\+Group@{message\+From\+Group}}
+\index{message\+From\+Group@{message\+From\+Group}!Telegram@{Telegram}}
+\subsubsection[{message\+From\+Group()}]{\setlength{\rightskip}{0pt plus 5cm}message\+From\+Group (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a59b7bf91ea3b26d732f7536c2d65da19}
+
+
+Tell if a message is from a group or user chat. 
+
+\begin{DoxyReturn}{Returns}
+B\+O\+O\+L\+E\+A\+N true if the message is from a Group chat, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a178b081bbab51f83caa31e554b3e2ffe}{}\index{Telegram@{Telegram}!send\+Audio@{send\+Audio}}
+\index{send\+Audio@{send\+Audio}!Telegram@{Telegram}}
+\subsubsection[{send\+Audio(array \$content)}]{\setlength{\rightskip}{0pt plus 5cm}send\+Audio (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a178b081bbab51f83caa31e554b3e2ffe}
+
+
+Send an audio. 
+
+Use this method to send audio files, if you want \hyperlink{class_telegram}{Telegram} clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 M\+B in size, this limit may be changed in the future.
+
+For backward compatibility, when the fields title and performer are both empty and the mime-\/type of the file to be sent is not audio/mpeg, the file will be sent as a playable voice message. For this to work, the audio must be in an .ogg file encoded with O\+P\+U\+S. This behavior will be phased out in the future. For sending voice messages, use the send\+Voice method instead.~\newline
+Values inside \$content\+:~\newline
+ \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\+\_\+id &Integer &Yes &Unique identifier for the message recipient — User or Group\+Chat id  \\\cline{1-4}
+audio &\href{#inputfile}{\tt Input\+File} or String &Yes &Audio file to send. You can either pass a {\itshape file\+\_\+id} as String to resend an audio that is already on the \hyperlink{class_telegram}{Telegram} servers, or upload a new audio file using {\bfseries multipart/form-\/data}.  \\\cline{1-4}
+duration &Integer &Optional &Duration of the audio in seconds  \\\cline{1-4}
+performer &String &Optional &Performer  \\\cline{1-4}
+title &String &Optional &Track name  \\\cline{1-4}
+reply\+\_\+to\+\_\+message\+\_\+id &Integer &Optional &If the message is a reply, I\+D of the original message  \\\cline{1-4}
+reply\+\_\+markup &Reply\+Keyboard\+Markup or Reply\+Keyboard\+Hide or Force\+Reply &Optional &Additional interface options. A J\+S\+O\+N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_aa8c4c54f8f2fcbb53de050458fb176b7}{}\index{Telegram@{Telegram}!send\+Chat\+Action@{send\+Chat\+Action}}
+\index{send\+Chat\+Action@{send\+Chat\+Action}!Telegram@{Telegram}}
+\subsubsection[{send\+Chat\+Action(array \$content)}]{\setlength{\rightskip}{0pt plus 5cm}send\+Chat\+Action (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}\label{class_telegram_aa8c4c54f8f2fcbb53de050458fb176b7}
+
+
+Send a chat action. 
+
+Use this method when you need to tell the user that something is happening on the bot\textquotesingle{}s side. The status is set for 5 seconds or less (when a message arrives from your bot, \hyperlink{class_telegram}{Telegram} clients clear its typing status).
+
+Example\+: The Image\+Bot needs some time to process a request and upload the image. Instead of sending a text message along the lines of “\+Retrieving image, please wait…”, the bot may use send\+Chat\+Action with action = upload\+\_\+photo. The user will see a “sending photo” status for the bot.
+
+We only recommend using this method when a response from the bot will take a noticeable amount of time to arrive.~\newline
+Values inside \$content\+:~\newline
+ \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\+\_\+id &Integer &Yes &Unique identifier for the message recipient — User or Group\+Chat id  \\\cline{1-4}
+action &String &Yes &Type of action to broadcast. Choose one, depending on what the user is about to receive\+: {\itshape typing} for text messages, {\itshape upload\+\_\+photo} for photos, {\itshape record\+\_\+video} or {\itshape upload\+\_\+video} for videos, {\itshape record\+\_\+audio} or {\itshape upload\+\_\+audio} for audio files, {\itshape upload\+\_\+document} for general files, {\itshape find\+\_\+location} for location data.  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a25569ca763bd149891d86b89bc66cf54}{}\index{Telegram@{Telegram}!send\+Document@{send\+Document}}
+\index{send\+Document@{send\+Document}!Telegram@{Telegram}}
+\subsubsection[{send\+Document(array \$content)}]{\setlength{\rightskip}{0pt plus 5cm}send\+Document (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a25569ca763bd149891d86b89bc66cf54}
+
+
+Send a document. 
+
+Use this method to send general files. On success, the sent Message is returned. Bots can currently send files of any type of up to 50 M\+B in size, this limit may be changed in the future.~\newline
+Values inside \$content\+:~\newline
+ \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\+\_\+id &Integer &Yes &Unique identifier for the message recipient — User or Group\+Chat id  \\\cline{1-4}
+document &Input\+File or String &Yes &File to send. You can either pass a {\itshape file\+\_\+id} as String to resend a file that is already on the \hyperlink{class_telegram}{Telegram} servers, or upload a new file using {\bfseries multipart/form-\/data}.  \\\cline{1-4}
+reply\+\_\+to\+\_\+message\+\_\+id &Integer &Optional &If the message is a reply, I\+D of the original message  \\\cline{1-4}
+reply\+\_\+markup &Reply\+Keyboard\+Markup or Reply\+Keyboard\+Hide or Force\+Reply &Optional &Additional interface options. A J\+S\+O\+N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_ac395e843f13d36d70f57c2d26868a33f}{}\index{Telegram@{Telegram}!send\+Location@{send\+Location}}
+\index{send\+Location@{send\+Location}!Telegram@{Telegram}}
+\subsubsection[{send\+Location(array \$content)}]{\setlength{\rightskip}{0pt plus 5cm}send\+Location (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}\label{class_telegram_ac395e843f13d36d70f57c2d26868a33f}
+
+
+Send a location. 
+
+Use this method to send point on the map. On success, the sent Message is returned.~\newline
+Values inside \$content\+:~\newline
+ \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\+\_\+id &Integer &Yes &Unique identifier for the message recipient — User or Group\+Chat id  \\\cline{1-4}
+latitude &Float number &Yes &Latitude of location  \\\cline{1-4}
+longitude &Float number &Yes &Longitude of location  \\\cline{1-4}
+reply\+\_\+to\+\_\+message\+\_\+id &Integer &Optional &If the message is a reply, I\+D of the original message  \\\cline{1-4}
+reply\+\_\+markup &Reply\+Keyboard\+Markup or Reply\+Keyboard\+Hide or Force\+Reply &Optional &Additional interface options. A J\+S\+O\+N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_af1369d6caab77f71a051ab73fa642a3f}{}\index{Telegram@{Telegram}!send\+Message@{send\+Message}}
+\index{send\+Message@{send\+Message}!Telegram@{Telegram}}
+\subsubsection[{send\+Message(array \$content)}]{\setlength{\rightskip}{0pt plus 5cm}send\+Message (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}\label{class_telegram_af1369d6caab77f71a051ab73fa642a3f}
+
+
+Send a message. 
+
+Contacts the various A\+P\+I\textquotesingle{}s endpoints~\newline
+Values inside \$content\+:~\newline
+ \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\+\_\+id &Integer &Yes &Unique identifier for the message recipient — User or Group\+Chat id  \\\cline{1-4}
+text &String &Yes &Text of the message to be sent  \\\cline{1-4}
+parse\+\_\+mode &String &Optional &Send {\itshape Markdown}, if you want \hyperlink{class_telegram}{Telegram} apps to show bold, italic and inline U\+R\+Ls in your bot\textquotesingle{}s message. For the moment, only \hyperlink{class_telegram}{Telegram} for Android supports this.  \\\cline{1-4}
+disable\+\_\+web\+\_\+page\+\_\+preview &Boolean &Optional &Disables link previews for links in this message  \\\cline{1-4}
+reply\+\_\+to\+\_\+message\+\_\+id &Integer &Optional &If the message is a reply, I\+D of the original message  \\\cline{1-4}
+reply\+\_\+markup &Reply\+Keyboard\+Markup or Reply\+Keyboard\+Hide or Force\+Reply &Optional &Additional interface options. A J\+S\+O\+N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_ac7adcbd9f46b77664f8b738b84f290e7}{}\index{Telegram@{Telegram}!send\+Photo@{send\+Photo}}
+\index{send\+Photo@{send\+Photo}!Telegram@{Telegram}}
+\subsubsection[{send\+Photo(array \$content)}]{\setlength{\rightskip}{0pt plus 5cm}send\+Photo (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}\label{class_telegram_ac7adcbd9f46b77664f8b738b84f290e7}
+
+
+Send a photo. 
+
+Use this method to send photos. On success, the sent Message is returned.~\newline
+Values inside \$content\+:~\newline
+ \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\+\_\+id &Integer &Yes &Unique identifier for the message recipient — User or Group\+Chat id  \\\cline{1-4}
+photo &\href{#inputfile}{\tt Input\+File} or String &Yes &Photo to send. You can either pass a {\itshape file\+\_\+id} as String to resend a photo that is already on the \hyperlink{class_telegram}{Telegram} servers, or upload a new photo using multipart/form-\/data.  \\\cline{1-4}
+caption &String &Optional &Photo caption (may also be used when resending photos by {\itshape file\+\_\+id}).  \\\cline{1-4}
+reply\+\_\+to\+\_\+message\+\_\+id &Integer &Optional &If the message is a reply, I\+D of the original message  \\\cline{1-4}
+reply\+\_\+markup &Reply\+Keyboard\+Markup or $>$Reply\+Keyboard\+Hide or Force\+Reply &Optional &Additional interface options. A J\+S\+O\+N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a0a176d232d8e7941184698447902beb6}{}\index{Telegram@{Telegram}!send\+Sticker@{send\+Sticker}}
+\index{send\+Sticker@{send\+Sticker}!Telegram@{Telegram}}
+\subsubsection[{send\+Sticker(array \$content)}]{\setlength{\rightskip}{0pt plus 5cm}send\+Sticker (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a0a176d232d8e7941184698447902beb6}
+
+
+Send a sticker. 
+
+Use this method to send .webp stickers. On success, the sent Message is returned.~\newline
+Values inside \$content\+:~\newline
+ \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\+\_\+id &Integer &Yes &Unique identifier for the message recipient — User or Group\+Chat id  \\\cline{1-4}
+sticker &\href{#inputfile}{\tt Input\+File} or String &Yes &Sticker to send. You can either pass a {\itshape file\+\_\+id} as String to resend a sticker that is already on the \hyperlink{class_telegram}{Telegram} servers, or upload a new sticker using {\bfseries multipart/form-\/data}.  \\\cline{1-4}
+reply\+\_\+to\+\_\+message\+\_\+id &Integer &Optional &If the message is a reply, I\+D of the original message  \\\cline{1-4}
+reply\+\_\+markup &Reply\+Keyboard\+Markup or Reply\+Keyboard\+Hide or Force\+Reply &Optional &Additional interface options. A J\+S\+O\+N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a789f27ed21d8a1232cc60832efdab17f}{}\index{Telegram@{Telegram}!send\+Video@{send\+Video}}
+\index{send\+Video@{send\+Video}!Telegram@{Telegram}}
+\subsubsection[{send\+Video(array \$content)}]{\setlength{\rightskip}{0pt plus 5cm}send\+Video (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a789f27ed21d8a1232cc60832efdab17f}
+
+
+Send a video. 
+
+Use this method to send video files, \hyperlink{class_telegram}{Telegram} clients support mp4 videos (other formats may be sent as Document). On success, the sent Message is returned. Bots can currently send video files of up to 50 M\+B in size, this limit may be changed in the future.~\newline
+Values inside \$content\+:~\newline
+ \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\+\_\+id &Integer &Yes &Unique identifier for the message recipient — User or Group\+Chat id  \\\cline{1-4}
+video &\href{#inputfile}{\tt Input\+File} or String &Yes &Video to send. You can either pass a {\itshape file\+\_\+id} as String to resend a video that is already on the \hyperlink{class_telegram}{Telegram} servers, or upload a new video file using {\bfseries multipart/form-\/data}.  \\\cline{1-4}
+duration &Integer &Optional &Duration of sent video in seconds  \\\cline{1-4}
+caption &String &Optional &Video caption (may also be used when resending videos by {\itshape file\+\_\+id}).  \\\cline{1-4}
+reply\+\_\+to\+\_\+message\+\_\+id &Integer &Optional &If the message is a reply, I\+D of the original message  \\\cline{1-4}
+reply\+\_\+markup &Reply\+Keyboard\+Markup or Reply\+Keyboard\+Hide or Force\+Reply &Optional &Additional interface options. A J\+S\+O\+N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a4faab9f92639453b851912d41ca1a3ca}{}\index{Telegram@{Telegram}!send\+Voice@{send\+Voice}}
+\index{send\+Voice@{send\+Voice}!Telegram@{Telegram}}
+\subsubsection[{send\+Voice(array \$content)}]{\setlength{\rightskip}{0pt plus 5cm}send\+Voice (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a4faab9f92639453b851912d41ca1a3ca}
+
+
+Send a voice message. 
+
+Use this method to send audio files, if you want \hyperlink{class_telegram}{Telegram} clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with O\+P\+U\+S (other formats may be sent as Audio or Document). On success, the sent Message is returned. Bots can currently send voice messages of up to 50 M\+B in size, this limit may be changed in the future.~\newline
+Values inside \$content\+:~\newline
+ \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\+\_\+id &Integer &Yes &Unique identifier for the message recipient — User or Group\+Chat id  \\\cline{1-4}
+voice &\href{#inputfile}{\tt Input\+File} or String &Yes &Audio file to send. You can either pass a {\itshape file\+\_\+id} as String to resend an audio that is already on the \hyperlink{class_telegram}{Telegram} servers, or upload a new audio file using {\bfseries multipart/form-\/data}.  \\\cline{1-4}
+duration &Integer &Optional &Duration of sent audio in seconds  \\\cline{1-4}
+reply\+\_\+to\+\_\+message\+\_\+id &Integer &Optional &If the message is a reply, I\+D of the original message  \\\cline{1-4}
+reply\+\_\+markup &Reply\+Keyboard\+Markup or Reply\+Keyboard\+Hide or Force\+Reply &Optional &Additional interface options. A J\+S\+O\+N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a57e6066940e4cca7310cfd5c45fd8510}{}\index{Telegram@{Telegram}!serve\+Update@{serve\+Update}}
+\index{serve\+Update@{serve\+Update}!Telegram@{Telegram}}
+\subsubsection[{serve\+Update(\$update)}]{\setlength{\rightskip}{0pt plus 5cm}serve\+Update (
+\begin{DoxyParamCaption}
+\item[{}]{\$update}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a57e6066940e4cca7310cfd5c45fd8510}
+
+
+Serve an update. 
+
+Use this method to use the bultin function like \hyperlink{class_telegram_a950a98ae75562dc9c6a458acbd330143}{Text()} or \hyperlink{class_telegram_a2521c81c6e75e23a361cc5a8a146f9c9}{Username()} on a specific update. 
+\begin{DoxyParams}{Parameters}
+{\em \$update} & Integer The index of the update in the updates array. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_telegram_ae94b55864cae3e7751e7293585eec9f5}{}\index{Telegram@{Telegram}!set\+Webhook@{set\+Webhook}}
+\index{set\+Webhook@{set\+Webhook}!Telegram@{Telegram}}
+\subsubsection[{set\+Webhook(\$url, \$certificate="""")}]{\setlength{\rightskip}{0pt plus 5cm}set\+Webhook (
+\begin{DoxyParamCaption}
+\item[{}]{\$url, }
+\item[{}]{\$certificate = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_telegram_ae94b55864cae3e7751e7293585eec9f5}
+
+
+Set a Web\+Hook for the bot. 
+
+Use this method to specify a url and receive incoming updates via an outgoing webhook. Whenever there is an update for the bot, we will send an H\+T\+T\+P\+S P\+O\+S\+T request to the specified url, containing a J\+S\+O\+N-\/serialized Update. In case of an unsuccessful request, we will give up after a reasonable amount of attempts.
+
+If you\textquotesingle{}d like to make sure that the Webhook request comes from \hyperlink{class_telegram}{Telegram}, we recommend using a secret path in the U\+R\+L, e.\+g. \href{https://www.example.com/}{\tt https\+://www.\+example.\+com/}$<$token$>$. Since nobody else knows your bot‘s token, you can be pretty sure it’s us. 
+\begin{DoxyParams}{Parameters}
+{\em \$url} & String H\+T\+T\+P\+S url to send updates to. Use an empty string to remove webhook integration \\
+\hline
+{\em \$certificate} & Input\+File Upload your public key certificate so that the root certificate in use can be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a950a98ae75562dc9c6a458acbd330143}{}\index{Telegram@{Telegram}!Text@{Text}}
+\index{Text@{Text}!Telegram@{Telegram}}
+\subsubsection[{Text()}]{\setlength{\rightskip}{0pt plus 5cm}Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a950a98ae75562dc9c6a458acbd330143}
+
+
+Get the text of the current message. 
+
+\begin{DoxyReturn}{Returns}
+the String users\textquotesingle{}s text 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Telegram.\+php\end{DoxyCompactItemize}
