@@ -91,6 +91,7 @@ See getUpdates.php for the complete example.
 Functions
 ------------
 
+For a complete documentation check http://eleirbag89.github.io/TelegramBotPHP/
 * getMe()  
 [A method for testing your bot] (https://core.telegram.org/bots/api#getme).  
 * sendMessage(array $content)  
