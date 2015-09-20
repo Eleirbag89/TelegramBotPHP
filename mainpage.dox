@@ -1,0 +1,10 @@
+
+/**
+  \mainpage TelegramBotPHP documentation
+
+  This is the API documentation of the TelegramBotPHP project.<br/>
+  For see a bot in action, using this API, add [CowBot] (https://telegram.me/cowmooobot).<br/>
+  Pages:<br/>
+  * Telegram Class API <br/>
+  * [Readme] (md__r_e_a_d_m_e.html)
+ */
