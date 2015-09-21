@@ -545,9 +545,9 @@ class Telegram {
      * <td>Optional</td>
      * <td>Limits the number of photos to be retrieved. Values between 1—100 are accepted. Defaults to 100.</td>
      * </tr>
-      </table>
+     * </table>
      * \param $content the request parameters as array 
-      \return the JSON Telegram's reply
+     * \return the JSON Telegram's reply
      */
     public function getUserProfilePhotos(array $content) {
         return $this->endpoint("getUserProfilePhotos", $content);
