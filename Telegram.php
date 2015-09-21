@@ -15,7 +15,6 @@ class Telegram {
      * Create a Telegram instance from the bot token
      * \param bot_id the bot token
      * \return an instance of the class
-     * \sa Test(), ~Test(), testMeToo() and publicVar()
      */
     public function __construct($bot_id) {
         $this->bot_id = $bot_id;
