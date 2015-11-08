@@ -62,8 +62,8 @@ class Telegram {
      * <td>chat_id</td>
      * <td>Integer</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the message recipient — User or GroupChat id</td>
-     * * </tr>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
+     * </tr>
      * <tr>
      * <td>text</td>
      * <td>String</td>
@@ -116,13 +116,13 @@ class Telegram {
      * <td>chat_id</td>
      * <td>Integer</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the message recipient — User or GroupChat id</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>from_chat_id</td>
      * <td>Integer</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the chat where the original message was sent — User or GroupChat id</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>message_id</td>
@@ -758,6 +758,8 @@ class Telegram {
     }
 
     private function sendAPIRequest($url, array $content, $post = true) {
+        $url = $url . "?chat_id=" . $content['chat_id'];
+	unset($content['chat_id']);
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HEADER, false);

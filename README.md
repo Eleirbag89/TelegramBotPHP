@@ -1,6 +1,6 @@
 # TelegramBotPHP
 > A very simple PHP [Telegram Bot API](https://core.telegram.org/bots) for sending messages.    
-> Compliant with the September 18, 2015 Telegram Bot API update.
+> Compliant with the October 28, 2015 Telegram Bot API update.
 
 Requirements
 ---------
