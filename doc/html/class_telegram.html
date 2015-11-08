@@ -191,8 +191,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a02a8bbaf6021f98871752bfd32de97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a3a02a8bbaf6021f98871752bfd32de97">buildKeyBoardHide</a> ($selective=true)</td></tr>
 <tr class="memdesc:a3a02a8bbaf6021f98871752bfd32de97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide a custom keyboard.  <a href="#a3a02a8bbaf6021f98871752bfd32de97">More...</a><br /></td></tr>
 <tr class="separator:a3a02a8bbaf6021f98871752bfd32de97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34cfc8575c348ca3dd168b9611af4f1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a34cfc8575c348ca3dd168b9611af4f1c">buildForceReply</a> ($selective=true)</td></tr>
-<tr class="memdesc:a34cfc8575c348ca3dd168b9611af4f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a reply interface to the user.  <a href="#a34cfc8575c348ca3dd168b9611af4f1c">More...</a><br /></td></tr>
+<tr class="memitem:a34cfc8575c348ca3dd168b9611af4f1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34cfc8575c348ca3dd168b9611af4f1c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a34cfc8575c348ca3dd168b9611af4f1c">buildForceReply</a> ($selective=true)</td></tr>
+<tr class="memdesc:a34cfc8575c348ca3dd168b9611af4f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a reply interface to the user. <br /></td></tr>
 <tr class="separator:a34cfc8575c348ca3dd168b9611af4f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb467486d3d5e83ce21a03e00f17b16c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#adb467486d3d5e83ce21a03e00f17b16c">getUpdates</a> ($offset=0, $limit=100, $timeout=0, $update=true)</td></tr>
 <tr class="memdesc:adb467486d3d5e83ce21a03e00f17b16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive incoming messages using polling.  <a href="#adb467486d3d5e83ce21a03e00f17b16c">More...</a><br /></td></tr>
@@ -226,36 +227,10 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an instance of the class </dd></dl>
-<dl class="section see"><dt>See also</dt><dd>Test(), ~Test(), testMeToo() and publicVar() </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a34cfc8575c348ca3dd168b9611af4f1c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">buildForceReply </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$selective</em> = <code>true</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Display a reply interface to the user. </p>
-<p>Upon receiving a message with this object, <a class="el" href="class_telegram.html">Telegram</a> clients will display a reply interface to the user (act as if the user has selected the bot‘s message and tapped ’Reply'). This can be extremely useful if you want to create user-friendly step-by-step interfaces without having to sacrifice privacy mode. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">$selective</td><td>Boolean Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are  in the text of the Message object; 2) if the bot's message is a reply (has reply_to_message_id), sender of the original message. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the requested force reply as Array </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a5c9619923ae1810aa340fa0e9acc1744"></a>
 <div class="memitem">
 <div class="memproto">
@@ -466,9 +441,9 @@ Values inside $content:<br />
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the message recipient — User or GroupChat id  </td></tr>
+<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)  </td></tr>
 <tr>
-<td>from_chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the chat where the original message was sent — User or GroupChat id  </td></tr>
+<td>from_chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)  </td></tr>
 <tr>
 <td>message_id </td><td>Integer </td><td>Yes </td><td>Unique message identifier  </td></tr>
 </table>
@@ -832,7 +807,7 @@ Values inside $content:<br />
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the message recipient — User or GroupChat id  </td></tr>
+<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)  </td></tr>
 <tr>
 <td>text </td><td>String </td><td>Yes </td><td>Text of the message to be sent  </td></tr>
 <tr>

@@ -72,7 +72,8 @@
 \begin{DoxyCompactList}\small\item\em Set a custom keyboard. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a3a02a8bbaf6021f98871752bfd32de97}{build\+Key\+Board\+Hide} (\$selective=true)
 \begin{DoxyCompactList}\small\item\em Hide a custom keyboard. \end{DoxyCompactList}\item 
-\hyperlink{class_telegram_a34cfc8575c348ca3dd168b9611af4f1c}{build\+Force\+Reply} (\$selective=true)
+\hypertarget{class_telegram_a34cfc8575c348ca3dd168b9611af4f1c}{}\hyperlink{class_telegram_a34cfc8575c348ca3dd168b9611af4f1c}{build\+Force\+Reply} (\$selective=true)\label{class_telegram_a34cfc8575c348ca3dd168b9611af4f1c}
+
 \begin{DoxyCompactList}\small\item\em Display a reply interface to the user. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_adb467486d3d5e83ce21a03e00f17b16c}{get\+Updates} (\$offset=0, \$limit=100, \$timeout=0, \$update=true)
 \begin{DoxyCompactList}\small\item\em Receive incoming messages using polling. \end{DoxyCompactList}\item 
@@ -106,31 +107,9 @@ Create a \hyperlink{class_telegram}{Telegram} instance from the bot token
 \begin{DoxyReturn}{Returns}
 an instance of the class 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
-Test(), $\sim$\+Test(), test\+Me\+Too() and public\+Var() 
-\end{DoxySeeAlso}
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_telegram_a34cfc8575c348ca3dd168b9611af4f1c}{}\index{Telegram@{Telegram}!build\+Force\+Reply@{build\+Force\+Reply}}
-\index{build\+Force\+Reply@{build\+Force\+Reply}!Telegram@{Telegram}}
-\subsubsection[{build\+Force\+Reply(\$selective=true)}]{\setlength{\rightskip}{0pt plus 5cm}build\+Force\+Reply (
-\begin{DoxyParamCaption}
-\item[{}]{\$selective = {\ttfamily true}}
-\end{DoxyParamCaption}
-)}\label{class_telegram_a34cfc8575c348ca3dd168b9611af4f1c}
-
-
-Display a reply interface to the user. 
-
-Upon receiving a message with this object, \hyperlink{class_telegram}{Telegram} clients will display a reply interface to the user (act as if the user has selected the bot‘s message and tapped ’\+Reply\textquotesingle{}). This can be extremely useful if you want to create user-\/friendly step-\/by-\/step interfaces without having to sacrifice privacy mode. 
-\begin{DoxyParams}{Parameters}
-{\em \$selective} & Boolean Use this parameter if you want to show the keyboard to specific users only. Targets\+: 1) users that are  in the text of the Message object; 2) if the bot\textquotesingle{}s message is a reply (has reply\+\_\+to\+\_\+message\+\_\+id), sender of the original message. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-the requested force reply as Array 
-\end{DoxyReturn}
 \hypertarget{class_telegram_a5c9619923ae1810aa340fa0e9acc1744}{}\index{Telegram@{Telegram}!build\+Key\+Board@{build\+Key\+Board}}
 \index{build\+Key\+Board@{build\+Key\+Board}!Telegram@{Telegram}}
 \subsubsection[{build\+Key\+Board(array \$options, \$onetime=false, \$resize=false, \$selective=true)}]{\setlength{\rightskip}{0pt plus 5cm}build\+Key\+Board (
@@ -266,8 +245,8 @@ Values inside \$content\+:~\newline
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\+\_\+id &Integer &Yes &Unique identifier for the message recipient — User or Group\+Chat id  \\\cline{1-4}
-from\+\_\+chat\+\_\+id &Integer &Yes &Unique identifier for the chat where the original message was sent — User or Group\+Chat id  \\\cline{1-4}
+chat\+\_\+id &Integer &Yes &Unique identifier for the target chat or username of the target channel (in the format @channelusername)  \\\cline{1-4}
+from\+\_\+chat\+\_\+id &Integer &Yes &Unique identifier for the target chat or username of the target channel (in the format @channelusername)  \\\cline{1-4}
 message\+\_\+id &Integer &Yes &Unique message identifier  \\\cline{1-4}
 \end{TabularC}
 
@@ -535,7 +514,7 @@ Values inside \$content\+:~\newline
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\+\_\+id &Integer &Yes &Unique identifier for the message recipient — User or Group\+Chat id  \\\cline{1-4}
+chat\+\_\+id &Integer &Yes &Unique identifier for the target chat or username of the target channel (in the format @channelusername)  \\\cline{1-4}
 text &String &Yes &Text of the message to be sent  \\\cline{1-4}
 parse\+\_\+mode &String &Optional &Send {\itshape Markdown}, if you want \hyperlink{class_telegram}{Telegram} apps to show bold, italic and inline U\+R\+Ls in your bot\textquotesingle{}s message. For the moment, only \hyperlink{class_telegram}{Telegram} for Android supports this.  \\\cline{1-4}
 disable\+\_\+web\+\_\+page\+\_\+preview &Boolean &Optional &Disables link previews for links in this message  \\\cline{1-4}
