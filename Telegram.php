@@ -62,8 +62,8 @@ class Telegram {
      * <td>chat_id</td>
      * <td>Integer</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
-     * </tr>
+     * <td>Unique identifier for the message recipient — User or GroupChat id</td>
+     * * </tr>
      * <tr>
      * <td>text</td>
      * <td>String</td>
@@ -102,6 +102,42 @@ class Telegram {
         return $this->endpoint("sendMessage", $content);
     }
 
+    /// Answer a callback Query
+    /**
+     * Use this method to send answers to callback queries sent from inline keyboards. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, <em>True</em> is returned.<br/>Values inside $content:<br/>
+     * <table>
+     * <tr>
+     * <td><strong>Parameters</strong></td>
+     * <td><strong>Type</strong></td>
+     * <td><strong>Required</strong></td>
+     * <td><strong>Description</strong></td>
+     * </tr>
+     * <tr>
+     * <td>callback_query_id</td>
+     * <td>String</td>
+     * <td>Yes</td>
+     * <td>Unique identifier for the query to be answered</td>
+     * </tr>
+     * <tr>
+     * <td>text</td>
+     * <td>String</td>
+     * <td>Optional</td>
+     * <td>Text of the notification. If not specified, nothing will be shown to the user</td>
+     * </tr>
+     * <tr>
+     * <td>show_alert</td>
+     * <td>Boolean</td>
+     * <td>Optional</td>
+     * <td>If <em>true</em>, an alert will be shown by the client instead of a notification at the top of the chat screen. Defaults to <em>false</em>.</td>
+     * </tr>
+     * </table>
+     * \param $content the request parameters as array 
+     * \return the JSON Telegram's reply
+     */
+    public function answerCallbackQuery(array $content) {
+        return $this->endpoint("answerCallbackQuery", $content);
+    }
+
     /// Forward a message
     /**
      * Use this method to forward messages of any kind. On success, the sent Message is returned<br/>Values inside $content:<br/>
@@ -116,13 +152,13 @@ class Telegram {
      * <td>chat_id</td>
      * <td>Integer</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
+     * <td>Unique identifier for the message recipient — User or GroupChat id</td>
      * </tr>
      * <tr>
      * <td>from_chat_id</td>
      * <td>Integer</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
+     * <td>Unique identifier for the chat where the original message was sent — User or GroupChat id</td>
      * </tr>
      * <tr>
      * <td>message_id</td>
@@ -625,12 +661,52 @@ class Telegram {
         return $this->data["message"] ["text"];
     }
 
-    /// Get the chati_id of the current message
+    /// Get the chat_id of the current message
     /**
      * \return the String users's chat_id
      */
     public function ChatID() {
         return $this->data["message"]["chat"]["id"];
+    }
+
+    /// Get the callback_query of the current update
+    /**
+     * \return the String callback_query
+     */
+    public function Callback_Query() {
+        return $this->data["callback_query"];
+    }
+
+    /// Get the callback_query id of the current update
+    /**
+     * \return the String callback_query id
+     */
+    public function Callback_ID() {
+        return $this->data["callback_query"]["id"];
+    }
+
+    /// Get the Get the data of the current callback
+    /**
+     * \return the String callback_data
+     */
+    public function Callback_Data() {
+        return $this->data["callback_query"]["data"];
+    }
+
+    /// Get the Get the message of the current callback
+    /**
+     * \return the Message
+     */
+    public function Callback_Message() {
+        return $this->data["callback_query"]["message"];
+    }
+
+    /// Get the Get the chati_id of the current callback
+    /**
+     * \return the String callback_query
+     */
+    public function Callback_ChatID() {
+        return $this->data["callback_query"]["message"]["chat"]["id"];
     }
 
     /// Get the date of the current message
@@ -689,7 +765,7 @@ class Telegram {
      * \param $onetime Boolean Requests clients to hide the keyboard as soon as it's been used. Defaults to false.
      * \param $resize Boolean Requests clients to resize the keyboard vertically for optimal fit (e.g., make the keyboard smaller if there are just two rows of buttons). Defaults to false, in which case the custom keyboard is always of the same height as the app's standard keyboard.
      * \param $selective Boolean Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's message is a reply (has reply_to_message_id), sender of the original message.
-     * \return the requested keyboard as Array
+     * \return the requested keyboard as Json
      */
     public function buildKeyBoard(array $options, $onetime = false, $resize = false, $selective = true) {
         $replyMarkup = array(
@@ -700,6 +776,64 @@ class Telegram {
         );
         $encodedMarkup = json_encode($replyMarkup, true);
         return $encodedMarkup;
+    }
+
+    /// Set an InlineKeyBoard
+    /** This object represents an inline keyboard that appears right next to the message it belongs to.
+     * \param $options Array of Array of InlineKeyboardButton; Array of button rows, each represented by an Array of InlineKeyboardButton
+     * \return the requested keyboard as Json
+     */
+    public function buildInlineKeyBoard(array $options) {
+        $replyMarkup = array(
+            'inline_keyboard' => $options,
+        );
+        $encodedMarkup = json_encode($replyMarkup, true);
+        return $encodedMarkup;
+    }
+
+    /// Create an InlineKeyboardButton
+    /** This object represents one button of an inline keyboard. You must use exactly one of the optional fields.
+     * \param $text String; Array of button rows, each represented by an Array of Strings
+     * \param $url String Optional. HTTP url to be opened when button is pressed
+     * \param $callback_data String Optional. Data to be sent in a callback query to the bot when button is pressed
+     * \param $switch_inline_query String Optional. If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted.
+     * \return the requested button as Array
+     */
+    public function buildInlineKeyboardButton($text, $url = "", $callback_data = "", $switch_inline_query = "") {
+        $replyMarkup = array(
+            'text' => $text
+        );
+        if ($url != "") {
+            $replyMarkup['url'] = $url;
+        } else if ($callback_data != "") {
+            $replyMarkup['callback_data'] = $callback_data;
+        } else if ($switch_inline_query != "") {
+            $replyMarkup['switch_inline_query'] = $switch_inline_query;
+        }
+        return $replyMarkup;
+    }
+
+    /// Create a KeyboardButton
+    /** This object represents one button of an inline keyboard. You must use exactly one of the optional fields.
+     * \param $text String; Array of button rows, each represented by an Array of Strings
+     * \param $request_contact Boolean Optional. If True, the user's phone number will be sent as a contact when the button is pressed. Available in private chats only
+     * \param $request_location Boolean Optional. If True, the user's current location will be sent when the button is pressed. Available in private chats only
+     * \return the requested button as Array
+     */
+    public function buildKeyboardButton($text, $request_contact = false, $request_location = false) {
+        $replyMarkup = array(
+            'text' => $text,
+            'request_contact' => $request_contact,
+            'request_location' => $request_location
+        );
+        if ($url != "") {
+            $replyMarkup['url'] = $url;
+        } else if ($callback_data != "") {
+            $replyMarkup['callback_data'] = $callback_data;
+        } else if ($switch_inline_query != "") {
+            $replyMarkup['switch_inline_query'] = $switch_inline_query;
+        }
+        return $replyMarkup;
     }
 
     /// Hide a custom keyboard
@@ -741,7 +875,7 @@ class Telegram {
     public function getUpdates($offset = 0, $limit = 100, $timeout = 0, $update = true) {
         $content = array('offset' => $offset, 'limit' => $limit, 'timeout' => $timeout);
         $this->updates = $this->endpoint("getUpdates", $content);
-        if ($update AND count($this->updates["result"]) > 0) {
+        if ($update) {
             $last_element_id = $this->updates["result"][count($this->updates["result"]) - 1]["update_id"] + 1;
             $content = array('offset' => $last_element_id, 'limit' => "1", 'timeout' => $timeout);
             $this->endpoint("getUpdates", $content);
@@ -758,12 +892,15 @@ class Telegram {
     }
 
     private function sendAPIRequest($url, array $content, $post = true) {
-        $url = $url . "?chat_id=" . $content['chat_id'];
-	unset($content['chat_id']);
+        if (isset($content['chat_id'])) {
+            $url = $url . "?chat_id=" . $content['chat_id'];
+            unset($content['chat_id']);
+        }
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_VERBOSE, true);
         if ($post) {
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
