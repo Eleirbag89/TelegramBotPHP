@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['endpoint',['endpoint',['../class_telegram.html#a9241a37baf9b641df49a377c34bbdd59',1,'Telegram']]]
+  ['date',['Date',['../class_telegram.html#aff49fc2cda4491ff4457ca481bb8edf9',1,'Telegram']]],
+  ['downloadfile',['downloadFile',['../class_telegram.html#af08c6bc7982d71857f05c0756221a703',1,'Telegram']]]
 ];

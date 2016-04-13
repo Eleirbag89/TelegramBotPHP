@@ -11,6 +11,8 @@
 \begin{DoxyCompactList}\small\item\em A method for testing your bot. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_af1369d6caab77f71a051ab73fa642a3f}{send\+Message} (array \$content)
 \begin{DoxyCompactList}\small\item\em Send a message. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a55fa1d6bbcca385e333b402894e8ca37}{answer\+Callback\+Query} (array \$content)
+\begin{DoxyCompactList}\small\item\em Answer a callback Query. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_aebf3d567e947a457971c1501be7fc1fe}{forward\+Message} (array \$content)
 \begin{DoxyCompactList}\small\item\em Forward a message. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_ac7adcbd9f46b77664f8b738b84f290e7}{send\+Photo} (array \$content)
@@ -45,7 +47,17 @@
 \hyperlink{class_telegram_a950a98ae75562dc9c6a458acbd330143}{Text} ()
 \begin{DoxyCompactList}\small\item\em Get the text of the current message. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a4b624bab3560ed1e761aba1e7431cb6e}{Chat\+I\+D} ()
-\begin{DoxyCompactList}\small\item\em Get the chati\+\_\+id of the current message. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get the chat\+\_\+id of the current message. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a891f961aa0d3272c01ac9fe64f10a714}{Callback\+\_\+\+Query} ()
+\begin{DoxyCompactList}\small\item\em Get the callback\+\_\+query of the current update. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a61006cd19798be37ae51af5bc405ec71}{Callback\+\_\+\+I\+D} ()
+\begin{DoxyCompactList}\small\item\em Get the callback\+\_\+query id of the current update. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a0df77a257a02ef572ca7d745f659e98d}{Callback\+\_\+\+Data} ()
+\begin{DoxyCompactList}\small\item\em Get the Get the data of the current callback. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_ad72a9632c75419625e9f194f400a31c9}{Callback\+\_\+\+Message} ()
+\begin{DoxyCompactList}\small\item\em Get the Get the message of the current callback. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a848317ddda1c61f7173e55e0253b12e0}{Callback\+\_\+\+Chat\+I\+D} ()
+\begin{DoxyCompactList}\small\item\em Get the Get the chati\+\_\+id of the current callback. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_aff49fc2cda4491ff4457ca481bb8edf9}{Date} ()
 \begin{DoxyCompactList}\small\item\em Get the date of the current message. \end{DoxyCompactList}\item 
 \hypertarget{class_telegram_a0e3e32188dd1631ed1ed673ac844d999}{}\hyperlink{class_telegram_a0e3e32188dd1631ed1ed673ac844d999}{First\+Name} ()\label{class_telegram_a0e3e32188dd1631ed1ed673ac844d999}
@@ -70,6 +82,12 @@
 \begin{DoxyCompactList}\small\item\em Tell if a message is from a group or user chat. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a5c9619923ae1810aa340fa0e9acc1744}{build\+Key\+Board} (array \$options, \$onetime=false, \$resize=false, \$selective=true)
 \begin{DoxyCompactList}\small\item\em Set a custom keyboard. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a81212e5e1fe0b3f72dd503a71577bbc4}{build\+Inline\+Key\+Board} (array \$options)
+\begin{DoxyCompactList}\small\item\em Set an Inline\+Key\+Board. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_acb9d27401f6095212d6baf7d40ee1981}{build\+Inline\+Keyboard\+Button} (\$text, \$url=\char`\"{}\char`\"{}, \$callback\+\_\+data=\char`\"{}\char`\"{}, \$switch\+\_\+inline\+\_\+query=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Create an Inline\+Keyboard\+Button. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a611a52a2e9be838207b3943007a76b6c}{build\+Keyboard\+Button} (\$text, \$request\+\_\+contact=false, \$request\+\_\+location=false)
+\begin{DoxyCompactList}\small\item\em Create a Keyboard\+Button. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a3a02a8bbaf6021f98871752bfd32de97}{build\+Key\+Board\+Hide} (\$selective=true)
 \begin{DoxyCompactList}\small\item\em Hide a custom keyboard. \end{DoxyCompactList}\item 
 \hypertarget{class_telegram_a34cfc8575c348ca3dd168b9611af4f1c}{}\hyperlink{class_telegram_a34cfc8575c348ca3dd168b9611af4f1c}{build\+Force\+Reply} (\$selective=true)\label{class_telegram_a34cfc8575c348ca3dd168b9611af4f1c}
@@ -110,6 +128,81 @@ an instance of the class
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_telegram_a55fa1d6bbcca385e333b402894e8ca37}{}\index{Telegram@{Telegram}!answer\+Callback\+Query@{answer\+Callback\+Query}}
+\index{answer\+Callback\+Query@{answer\+Callback\+Query}!Telegram@{Telegram}}
+\subsubsection[{answer\+Callback\+Query(array \$content)}]{\setlength{\rightskip}{0pt plus 5cm}answer\+Callback\+Query (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a55fa1d6bbcca385e333b402894e8ca37}
+
+
+Answer a callback Query. 
+
+Use this method to send answers to callback queries sent from inline keyboards. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, {\itshape True} is returned.~\newline
+Values inside \$content\+:~\newline
+ \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+callback\+\_\+query\+\_\+id &String &Yes &Unique identifier for the query to be answered  \\\cline{1-4}
+text &String &Optional &Text of the notification. If not specified, nothing will be shown to the user  \\\cline{1-4}
+show\+\_\+alert &Boolean &Optional &If {\itshape true}, an alert will be shown by the client instead of a notification at the top of the chat screen. Defaults to {\itshape false}.  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\+S\+O\+N \hyperlink{class_telegram}{Telegram}\textquotesingle{}s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a81212e5e1fe0b3f72dd503a71577bbc4}{}\index{Telegram@{Telegram}!build\+Inline\+Key\+Board@{build\+Inline\+Key\+Board}}
+\index{build\+Inline\+Key\+Board@{build\+Inline\+Key\+Board}!Telegram@{Telegram}}
+\subsubsection[{build\+Inline\+Key\+Board(array \$options)}]{\setlength{\rightskip}{0pt plus 5cm}build\+Inline\+Key\+Board (
+\begin{DoxyParamCaption}
+\item[{array}]{\$options}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a81212e5e1fe0b3f72dd503a71577bbc4}
+
+
+Set an Inline\+Key\+Board. 
+
+This object represents an inline keyboard that appears right next to the message it belongs to. 
+\begin{DoxyParams}{Parameters}
+{\em \$options} & Array of Array of Inline\+Keyboard\+Button; Array of button rows, each represented by an Array of Inline\+Keyboard\+Button \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the requested keyboard as Json 
+\end{DoxyReturn}
+\hypertarget{class_telegram_acb9d27401f6095212d6baf7d40ee1981}{}\index{Telegram@{Telegram}!build\+Inline\+Keyboard\+Button@{build\+Inline\+Keyboard\+Button}}
+\index{build\+Inline\+Keyboard\+Button@{build\+Inline\+Keyboard\+Button}!Telegram@{Telegram}}
+\subsubsection[{build\+Inline\+Keyboard\+Button(\$text, \$url="""", \$callback\+\_\+data="""", \$switch\+\_\+inline\+\_\+query="""")}]{\setlength{\rightskip}{0pt plus 5cm}build\+Inline\+Keyboard\+Button (
+\begin{DoxyParamCaption}
+\item[{}]{\$text, }
+\item[{}]{\$url = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{}]{\$callback\+\_\+data = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{}]{\$switch\+\_\+inline\+\_\+query = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_telegram_acb9d27401f6095212d6baf7d40ee1981}
+
+
+Create an Inline\+Keyboard\+Button. 
+
+This object represents one button of an inline keyboard. You must use exactly one of the optional fields. 
+\begin{DoxyParams}{Parameters}
+{\em \$text} & String; Array of button rows, each represented by an Array of Strings \\
+\hline
+{\em \$url} & String Optional. H\+T\+T\+P url to be opened when button is pressed \\
+\hline
+{\em \$callback\+\_\+data} & String Optional. Data to be sent in a callback query to the bot when button is pressed \\
+\hline
+{\em \$switch\+\_\+inline\+\_\+query} & String Optional. If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the requested button as Array 
+\end{DoxyReturn}
 \hypertarget{class_telegram_a5c9619923ae1810aa340fa0e9acc1744}{}\index{Telegram@{Telegram}!build\+Key\+Board@{build\+Key\+Board}}
 \index{build\+Key\+Board@{build\+Key\+Board}!Telegram@{Telegram}}
 \subsubsection[{build\+Key\+Board(array \$options, \$onetime=false, \$resize=false, \$selective=true)}]{\setlength{\rightskip}{0pt plus 5cm}build\+Key\+Board (
@@ -136,7 +229,32 @@ This object represents a custom keyboard with reply options
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the requested keyboard as Array 
+the requested keyboard as Json 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a611a52a2e9be838207b3943007a76b6c}{}\index{Telegram@{Telegram}!build\+Keyboard\+Button@{build\+Keyboard\+Button}}
+\index{build\+Keyboard\+Button@{build\+Keyboard\+Button}!Telegram@{Telegram}}
+\subsubsection[{build\+Keyboard\+Button(\$text, \$request\+\_\+contact=false, \$request\+\_\+location=false)}]{\setlength{\rightskip}{0pt plus 5cm}build\+Keyboard\+Button (
+\begin{DoxyParamCaption}
+\item[{}]{\$text, }
+\item[{}]{\$request\+\_\+contact = {\ttfamily false}, }
+\item[{}]{\$request\+\_\+location = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a611a52a2e9be838207b3943007a76b6c}
+
+
+Create a Keyboard\+Button. 
+
+This object represents one button of an inline keyboard. You must use exactly one of the optional fields. 
+\begin{DoxyParams}{Parameters}
+{\em \$text} & String; Array of button rows, each represented by an Array of Strings \\
+\hline
+{\em \$request\+\_\+contact} & Boolean Optional. If True, the user\textquotesingle{}s phone number will be sent as a contact when the button is pressed. Available in private chats only \\
+\hline
+{\em \$request\+\_\+location} & Boolean Optional. If True, the user\textquotesingle{}s current location will be sent when the button is pressed. Available in private chats only \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the requested button as Array 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a3a02a8bbaf6021f98871752bfd32de97}{}\index{Telegram@{Telegram}!build\+Key\+Board\+Hide@{build\+Key\+Board\+Hide}}
 \index{build\+Key\+Board\+Hide@{build\+Key\+Board\+Hide}!Telegram@{Telegram}}
@@ -157,6 +275,76 @@ Upon receiving a message with this object, \hyperlink{class_telegram}{Telegram} 
 \begin{DoxyReturn}{Returns}
 the requested keyboard hide as Array 
 \end{DoxyReturn}
+\hypertarget{class_telegram_a848317ddda1c61f7173e55e0253b12e0}{}\index{Telegram@{Telegram}!Callback\+\_\+\+Chat\+I\+D@{Callback\+\_\+\+Chat\+I\+D}}
+\index{Callback\+\_\+\+Chat\+I\+D@{Callback\+\_\+\+Chat\+I\+D}!Telegram@{Telegram}}
+\subsubsection[{Callback\+\_\+\+Chat\+I\+D()}]{\setlength{\rightskip}{0pt plus 5cm}Callback\+\_\+\+Chat\+I\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a848317ddda1c61f7173e55e0253b12e0}
+
+
+Get the Get the chati\+\_\+id of the current callback. 
+
+\begin{DoxyReturn}{Returns}
+the String callback\+\_\+query 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a0df77a257a02ef572ca7d745f659e98d}{}\index{Telegram@{Telegram}!Callback\+\_\+\+Data@{Callback\+\_\+\+Data}}
+\index{Callback\+\_\+\+Data@{Callback\+\_\+\+Data}!Telegram@{Telegram}}
+\subsubsection[{Callback\+\_\+\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}Callback\+\_\+\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a0df77a257a02ef572ca7d745f659e98d}
+
+
+Get the Get the data of the current callback. 
+
+\begin{DoxyReturn}{Returns}
+the String callback\+\_\+data 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a61006cd19798be37ae51af5bc405ec71}{}\index{Telegram@{Telegram}!Callback\+\_\+\+I\+D@{Callback\+\_\+\+I\+D}}
+\index{Callback\+\_\+\+I\+D@{Callback\+\_\+\+I\+D}!Telegram@{Telegram}}
+\subsubsection[{Callback\+\_\+\+I\+D()}]{\setlength{\rightskip}{0pt plus 5cm}Callback\+\_\+\+I\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a61006cd19798be37ae51af5bc405ec71}
+
+
+Get the callback\+\_\+query id of the current update. 
+
+\begin{DoxyReturn}{Returns}
+the String callback\+\_\+query id 
+\end{DoxyReturn}
+\hypertarget{class_telegram_ad72a9632c75419625e9f194f400a31c9}{}\index{Telegram@{Telegram}!Callback\+\_\+\+Message@{Callback\+\_\+\+Message}}
+\index{Callback\+\_\+\+Message@{Callback\+\_\+\+Message}!Telegram@{Telegram}}
+\subsubsection[{Callback\+\_\+\+Message()}]{\setlength{\rightskip}{0pt plus 5cm}Callback\+\_\+\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_telegram_ad72a9632c75419625e9f194f400a31c9}
+
+
+Get the Get the message of the current callback. 
+
+\begin{DoxyReturn}{Returns}
+the Message 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a891f961aa0d3272c01ac9fe64f10a714}{}\index{Telegram@{Telegram}!Callback\+\_\+\+Query@{Callback\+\_\+\+Query}}
+\index{Callback\+\_\+\+Query@{Callback\+\_\+\+Query}!Telegram@{Telegram}}
+\subsubsection[{Callback\+\_\+\+Query()}]{\setlength{\rightskip}{0pt plus 5cm}Callback\+\_\+\+Query (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_telegram_a891f961aa0d3272c01ac9fe64f10a714}
+
+
+Get the callback\+\_\+query of the current update. 
+
+\begin{DoxyReturn}{Returns}
+the String callback\+\_\+query 
+\end{DoxyReturn}
 \hypertarget{class_telegram_a4b624bab3560ed1e761aba1e7431cb6e}{}\index{Telegram@{Telegram}!Chat\+I\+D@{Chat\+I\+D}}
 \index{Chat\+I\+D@{Chat\+I\+D}!Telegram@{Telegram}}
 \subsubsection[{Chat\+I\+D()}]{\setlength{\rightskip}{0pt plus 5cm}Chat\+I\+D (
@@ -166,7 +354,7 @@ the requested keyboard hide as Array
 )}\label{class_telegram_a4b624bab3560ed1e761aba1e7431cb6e}
 
 
-Get the chati\+\_\+id of the current message. 
+Get the chat\+\_\+id of the current message. 
 
 \begin{DoxyReturn}{Returns}
 the String users\textquotesingle{}s chat\+\_\+id 
@@ -245,8 +433,8 @@ Values inside \$content\+:~\newline
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\+\_\+id &Integer &Yes &Unique identifier for the target chat or username of the target channel (in the format @channelusername)  \\\cline{1-4}
-from\+\_\+chat\+\_\+id &Integer &Yes &Unique identifier for the target chat or username of the target channel (in the format @channelusername)  \\\cline{1-4}
+chat\+\_\+id &Integer &Yes &Unique identifier for the message recipient — User or Group\+Chat id  \\\cline{1-4}
+from\+\_\+chat\+\_\+id &Integer &Yes &Unique identifier for the chat where the original message was sent — User or Group\+Chat id  \\\cline{1-4}
 message\+\_\+id &Integer &Yes &Unique message identifier  \\\cline{1-4}
 \end{TabularC}
 
@@ -514,7 +702,10 @@ Values inside \$content\+:~\newline
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\+\_\+id &Integer &Yes &Unique identifier for the target chat or username of the target channel (in the format @channelusername)  \\\cline{1-4}
+chat\+\_\+id &Integer &Yes &Unique identifier for the message recipient — User or Group\+Chat id
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}\\\cline{1-4}
 text &String &Yes &Text of the message to be sent  \\\cline{1-4}
 parse\+\_\+mode &String &Optional &Send {\itshape Markdown}, if you want \hyperlink{class_telegram}{Telegram} apps to show bold, italic and inline U\+R\+Ls in your bot\textquotesingle{}s message. For the moment, only \hyperlink{class_telegram}{Telegram} for Android supports this.  \\\cline{1-4}
 disable\+\_\+web\+\_\+page\+\_\+preview &Boolean &Optional &Disables link previews for links in this message  \\\cline{1-4}
