@@ -147,6 +147,16 @@ Return the user's first name
 Return the user's last name
 * Username()  
 Return the user's username
+* Callback_Query()  
+Return the Callback_Query
+* Callback_ID()  
+Return the Callback_Query ID
+* Callback_Data()  
+Return the Callback_Query data
+* Callback_Message()  
+Return the Callback_Query message
+* Callback_ChatID()  
+Return the Callback_Query message chat id
 * messageFromGroup()  
 Check if the message is sent from a group chat (boolean)    
 * getUpdates($offset = 0, $limit = 100, $timeout = 0, $update = true)    
@@ -166,6 +176,25 @@ buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true)
 ```
 Send a custom keyboard. $option is an array of array string.  
 Check [ReplyKeyBoardMarkUp] (https://core.telegram.org/bots/api#replykeyboardmarkup) for more info.    
+
+```php
+buildInlineKeyBoard(array $inline_keyboard)
+```
+Send a custom keyboard. $inline_keyboard is an array of array InlineKeyboardButton.  
+Check [InlineKeyboardMarkup] (https://core.telegram.org/bots/api#inlinekeyboardmarkup) for more info.    
+
+```php
+buildInlineKeyBoardButton($text, $url, $callback_data, $switch_inline_query)
+```
+Create an InlineKeyboardButton.    
+Check [InlineKeyBoardButton] (https://core.telegram.org/bots/api#inlinekeyboardbutton) for more info.    
+
+```php
+buildKeyBoardButton($text, $url, $request_contact, $request_location)
+```
+Create a KeyboardButton.    
+Check [KeyBoardButton] (https://core.telegram.org/bots/api#keyboardbutton) for more info.    
+
 
 ```php
 buildKeyBoardHide($selective=true)
