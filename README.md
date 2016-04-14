@@ -174,7 +174,7 @@ Build keyboard parameters
 ```php
 buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true)
 ```
-Send a custom keyboard. $option is an array of array string.  
+Send a custom keyboard. $option is an array of array KeyboardButton.  
 Check [ReplyKeyBoardMarkUp] (https://core.telegram.org/bots/api#replykeyboardmarkup) for more info.    
 
 ```php
