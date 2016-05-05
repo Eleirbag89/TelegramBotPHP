@@ -650,7 +650,7 @@ class Telegram {
 
     /// Set the data currently used
     public function setData(array $data) {
-        $this->data = data;
+        $this->data = $data;
     }
 
     /// Get the text of the current message
@@ -876,9 +876,11 @@ class Telegram {
         $content = array('offset' => $offset, 'limit' => $limit, 'timeout' => $timeout);
         $this->updates = $this->endpoint("getUpdates", $content);
         if ($update) {
-            $last_element_id = $this->updates["result"][count($this->updates["result"]) - 1]["update_id"] + 1;
-            $content = array('offset' => $last_element_id, 'limit' => "1", 'timeout' => $timeout);
-            $this->endpoint("getUpdates", $content);
+            if(count($this->updates["result"]) >= 1) { //for CLI working.
+                $last_element_id = $this->updates["result"][count($this->updates["result"]) - 1]["update_id"] + 1;
+                $content = array('offset' => $last_element_id, 'limit' => "1", 'timeout' => $timeout);
+                $this->endpoint("getUpdates", $content);
+            }
         }
         return $this->updates;
     }
@@ -900,7 +902,6 @@ class Telegram {
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_VERBOSE, true);
         if ($post) {
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
