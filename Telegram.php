@@ -759,6 +759,13 @@ class Telegram {
         return true;
     }
 
+    public function messageFromGroupTitle() {
+        if ($this->data["message"]["chat"]["type"] != "private") {
+            return $this->data["message"]["chat"]["title"];
+        }
+        return null;
+    }
+
     /// Set a custom keyboard
     /** This object represents a custom keyboard with reply options
      * \param $options Array of Array of String; Array of button rows, each represented by an Array of Strings
