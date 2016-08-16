@@ -753,7 +753,7 @@ class Telegram {
      *  \return BOOLEAN true if the message is from a Group chat, false otherwise
      */
     public function messageFromGroup() {
-        if ($this->data["message"]["chat"]["title"] == "") {
+        if ($this->data["message"]["chat"]["type"] == "private") {
             return false;
         }
         return true;
