@@ -1187,6 +1187,14 @@ class Telegram {
     public function ChatID() {
         return $this->data["message"]["chat"]["id"];
     }
+	
+		/// Get the message_id of the current message
+	/**
+	 * \return the String message_id
+	 */
+	public function MessageID() {
+		return $this->data["message"]["message_id"];
+	}
 
     /// Get the callback_query of the current update
     /**
