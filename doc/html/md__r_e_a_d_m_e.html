@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><blockquote class="doxtable">
-<p>A very simple PHP <a href="https://core.telegram.org/bots">Telegram Bot API</a> for sending messages. Compliant with the October 28, 2015 <a class="el" href="class_telegram.html">Telegram</a> Bot API update. </p>
+<p>A very simple PHP <a href="https://core.telegram.org/bots">Telegram Bot API</a> for sending messages. (Almost) Compliant with the November 21, 2016 <a class="el" href="class_telegram.html">Telegram</a> Bot API update. </p>
 </blockquote>
 <h2>Requirements </h2>
 <ul>
@@ -159,6 +159,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>FirstName() Return the user's first name</li>
 <li>LastName() Return the user's last name</li>
 <li>Username() Return the user's username</li>
+<li>Callback_Query() Return the Callback_Query</li>
+<li>Callback_ID() Return the Callback_Query ID</li>
+<li>Callback_Data() Return the Callback_Query data</li>
+<li>Callback_Message() Return the Callback_Query message</li>
+<li>Callback_ChatID() Return the Callback_Query message chat id</li>
 <li>messageFromGroup() Check if the message is sent from a group chat (boolean)</li>
 <li>getUpdates($offset = 0, $limit = 100, $timeout = 0, $update = true) Get the updates. If $update = true confirm the update to <a class="el" href="class_telegram.html">Telegram</a> in order to avoid duplicate replies. See <a href="https://core.telegram.org/bots/api#getting-updates">Telegram doc</a> for the other parameters.</li>
 <li>serveUpdate($update) Set the current message to the one with index $update.</li>
@@ -167,7 +172,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 <h2>Build keyboard parameters </h2>
 <div class="fragment"><div class="line">buildKeyBoard(array $options, $onetime=<span class="keyword">true</span>, $resize=<span class="keyword">true</span>, $selective=<span class="keyword">true</span>)</div>
-</div><!-- fragment --><p> Send a custom keyboard. $option is an array of array string. Check <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyBoardMarkUp</a> for more info.</p>
+</div><!-- fragment --><p> Send a custom keyboard. $option is an array of array KeyboardButton. Check <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyBoardMarkUp</a> for more info.</p>
+<div class="fragment"><div class="line">buildInlineKeyBoard(array $inline_keyboard)</div>
+</div><!-- fragment --><p> Send a custom keyboard. $inline_keyboard is an array of array InlineKeyboardButton. Check <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> for more info.</p>
+<div class="fragment"><div class="line">buildInlineKeyBoardButton($text, $url, $callback_data, $switch_inline_query)</div>
+</div><!-- fragment --><p> Create an InlineKeyboardButton. Check <a href="https://core.telegram.org/bots/api#inlinekeyboardbutton">InlineKeyBoardButton</a> for more info.</p>
+<div class="fragment"><div class="line">buildKeyBoardButton($text, $url, $request_contact, $request_location)</div>
+</div><!-- fragment --><p> Create a KeyboardButton. Check <a href="https://core.telegram.org/bots/api#keyboardbutton">KeyBoardButton</a> for more info.</p>
 <div class="fragment"><div class="line">buildKeyBoardHide($selective=<span class="keyword">true</span>)</div>
 </div><!-- fragment --><p> Hide a custom keyboard. Check <a href="https://core.telegram.org/bots/api#replykeyboardhide">ReplyKeyBoarHide</a> for more info.</p>
 <div class="fragment"><div class="line">buildForceReply($selective=<span class="keyword">true</span>)</div>

@@ -13,7 +13,7 @@ class Telegram {
     /// Class constructor
     /**
      * Create a Telegram instance from the bot token
-     * \param bot_id the bot token
+     * \param $bot_id the bot token
      * \return an instance of the class
      */
     public function __construct($bot_id) {
@@ -24,7 +24,7 @@ class Telegram {
     /// Do requests to Telegram Bot API
     /**
      * Contacts the various API's endpoints
-     * \param api the API endpoint
+     * \param $api the API endpoint
      * \param $content the request parameters as array
      * \param $post boolean tells if $content needs to be sends
      * \return the JSON Telegram's reply
@@ -934,6 +934,65 @@ class Telegram {
         return $this->endpoint("answerInlineQuery", $content);
     }
 
+     /// Set Game Score
+    /**
+    * Use this method to set the score of the specified user in a game. On success, if the message was sent by the bot, returns the edited Message, otherwise returns <em>True</em>. Returns an error, if the new score is not greater than the user&#39;s current score in the chat and <em>force</em> is <em>False</em>.<br/>
+    * <table>
+    * <tr>
+    * <td><strong>Parameters</strong></td>
+    * <td><strong>Type</strong></td>
+    * <td><strong>Required</strong></td>
+    * <td><strong>Description</strong></td>
+    * </tr>
+    * <tr>
+    * <td>user_id</td>
+    * <td>Integer</td>
+    * <td>Yes</td>
+    * <td>User identifier</td>
+    * </tr>
+    * <tr>
+    * <td>score</td>
+    * <td>Integer</td>
+    * <td>Yes</td>
+    * <td>New score, must be non-negative</td>
+    * </tr>
+    * <tr>
+    * <td>force</td>
+    * <td>Boolean</td>
+    * <td>Optional</td>
+    * <td>Pass True, if the high score is allowed to decrease. This can be useful when fixing mistakes or banning cheaters</td>
+    * </tr>
+    * <tr>
+    * <td>disable_edit_message</td>
+    * <td>Boolean</td>
+    * <td>Optional</td>
+    * <td>Pass True, if the game message should not be automatically edited to include the current scoreboard</td>
+    * </tr>
+    * <tr>
+    * <td>chat_id</td>
+    * <td>Integer</td>
+    * <td>Optional</td>
+    * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat</td>
+    * </tr>
+    * <tr>
+    * <td>message_id</td>
+    * <td>Integer</td>
+    * <td>Optional</td>
+    * <td>Required if <em>inline_message_id</em> is not specified. Identifier of the sent message</td>
+    * </tr>
+    * <tr>
+    * <td>inline_message_id</td>
+    * <td>String</td>
+    * <td>Optional</td>
+    * <td>Required if <em>chat_id</em> and <em>message_id</em> are not specified. Identifier of the inline message</td>
+    * </tr>
+    * </table>
+     * \param $content the request parameters as array 
+     * \return the JSON Telegram's reply
+     */
+    public function setGameScore(array $content) {
+        return $this->endpoint("setGameScore", $content);
+    }
 
      /// Answer a callback Query
     /**
@@ -1196,6 +1255,13 @@ class Telegram {
 		return $this->data["message"]["message_id"];
 	}
 
+     /// Get the inline_query of the current update
+    /**
+     * \return the Array inline_query
+     */
+    public function Inline_Query() {
+        return $this->data["inline_query"];
+    }
     /// Get the callback_query of the current update
     /**
      * \return the String callback_query
@@ -1286,6 +1352,11 @@ class Telegram {
         return true;
     }
 
+    /// Get the title of the group chat
+    /**
+     *  
+     *  \return a String of the title chat
+     */
     public function messageFromGroupTitle() {
         if ($this->data["message"]["chat"]["type"] != "private") {
             return $this->data["message"]["chat"]["title"];

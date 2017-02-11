@@ -1,5 +1,5 @@
 \begin{quote}
-A very simple P\+H\+P \href{https://core.telegram.org/bots}{\tt Telegram Bot A\+P\+I} for sending messages. Compliant with the October 28, 2015 \hyperlink{class_telegram}{Telegram} Bot A\+P\+I update. \end{quote}
+A very simple P\+H\+P \href{https://core.telegram.org/bots}{\tt Telegram Bot A\+P\+I} for sending messages. (Almost) Compliant with the November 21, 2016 \hyperlink{class_telegram}{Telegram} Bot A\+P\+I update. \end{quote}
 
 
 \subsection*{Requirements }
@@ -122,6 +122,11 @@ For a complete documentation check \href{http://eleirbag89.github.io/TelegramBot
 \item First\+Name() Return the user\textquotesingle{}s first name
 \item Last\+Name() Return the user\textquotesingle{}s last name
 \item Username() Return the user\textquotesingle{}s username
+\item Callback\+\_\+\+Query() Return the Callback\+\_\+\+Query
+\item Callback\+\_\+\+I\+D() Return the Callback\+\_\+\+Query I\+D
+\item Callback\+\_\+\+Data() Return the Callback\+\_\+\+Query data
+\item Callback\+\_\+\+Message() Return the Callback\+\_\+\+Query message
+\item Callback\+\_\+\+Chat\+I\+D() Return the Callback\+\_\+\+Query message chat id
 \item message\+From\+Group() Check if the message is sent from a group chat (boolean)
 \item get\+Updates(\$offset = 0, \$limit = 100, \$timeout = 0, \$update = true) Get the updates. If \$update = true confirm the update to \hyperlink{class_telegram}{Telegram} in order to avoid duplicate replies. See \href{https://core.telegram.org/bots/api#getting-updates}{\tt Telegram doc} for the other parameters.
 \item serve\+Update(\$update) Set the current message to the one with index \$update.
@@ -135,7 +140,25 @@ For a complete documentation check \href{http://eleirbag89.github.io/TelegramBot
 \begin{DoxyCode}
 buildKeyBoard(array $options, $onetime=\textcolor{keyword}{true}, $resize=\textcolor{keyword}{true}, $selective=\textcolor{keyword}{true})
 \end{DoxyCode}
- Send a custom keyboard. \$option is an array of array string. Check \href{https://core.telegram.org/bots/api#replykeyboardmarkup}{\tt Reply\+Key\+Board\+Mark\+Up} for more info.
+ Send a custom keyboard. \$option is an array of array Keyboard\+Button. Check \href{https://core.telegram.org/bots/api#replykeyboardmarkup}{\tt Reply\+Key\+Board\+Mark\+Up} for more info.
+
+
+\begin{DoxyCode}
+buildInlineKeyBoard(array $inline\_keyboard)
+\end{DoxyCode}
+ Send a custom keyboard. \$inline\+\_\+keyboard is an array of array Inline\+Keyboard\+Button. Check \href{https://core.telegram.org/bots/api#inlinekeyboardmarkup}{\tt Inline\+Keyboard\+Markup} for more info.
+
+
+\begin{DoxyCode}
+buildInlineKeyBoardButton($text, $url, $callback\_data, $switch\_inline\_query)
+\end{DoxyCode}
+ Create an Inline\+Keyboard\+Button. Check \href{https://core.telegram.org/bots/api#inlinekeyboardbutton}{\tt Inline\+Key\+Board\+Button} for more info.
+
+
+\begin{DoxyCode}
+buildKeyBoardButton($text, $url, $request\_contact, $request\_location)
+\end{DoxyCode}
+ Create a Keyboard\+Button. Check \href{https://core.telegram.org/bots/api#keyboardbutton}{\tt Key\+Board\+Button} for more info.
 
 
 \begin{DoxyCode}
