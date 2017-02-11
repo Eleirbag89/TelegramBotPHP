@@ -118,7 +118,7 @@
 \begin{DoxyCompactList}\small\item\em Set a custom keyboard. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a81212e5e1fe0b3f72dd503a71577bbc4}{build\+Inline\+Key\+Board} (array \$options)
 \begin{DoxyCompactList}\small\item\em Set an Inline\+Key\+Board. \end{DoxyCompactList}\item 
-\hyperlink{class_telegram_acb9d27401f6095212d6baf7d40ee1981}{build\+Inline\+Keyboard\+Button} (\$text, \$url=\char`\"{}\char`\"{}, \$callback\+\_\+data=\char`\"{}\char`\"{}, \$switch\+\_\+inline\+\_\+query=\char`\"{}\char`\"{})
+\hyperlink{class_telegram_a01432df36d1939f6c8dc09501f4ffcd3}{build\+Inline\+Keyboard\+Button} (\$text, \$url=\char`\"{}\char`\"{}, \$callback\+\_\+data=\char`\"{}\char`\"{}, \$switch\+\_\+inline\+\_\+query=\char`\"{}\char`\"{}, \$switch\+\_\+inline\+\_\+query\+\_\+current\+\_\+chat=\char`\"{}\char`\"{}, \$callback\+\_\+game=\char`\"{}\char`\"{})
 \begin{DoxyCompactList}\small\item\em Create an Inline\+Keyboard\+Button. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a611a52a2e9be838207b3943007a76b6c}{build\+Keyboard\+Button} (\$text, \$request\+\_\+contact=false, \$request\+\_\+location=false)
 \begin{DoxyCompactList}\small\item\em Create a Keyboard\+Button. \end{DoxyCompactList}\item 
@@ -239,16 +239,18 @@ This object represents an inline keyboard that appears right next to the message
 \begin{DoxyReturn}{Returns}
 the requested keyboard as Json 
 \end{DoxyReturn}
-\hypertarget{class_telegram_acb9d27401f6095212d6baf7d40ee1981}{}\index{Telegram@{Telegram}!build\+Inline\+Keyboard\+Button@{build\+Inline\+Keyboard\+Button}}
+\hypertarget{class_telegram_a01432df36d1939f6c8dc09501f4ffcd3}{}\index{Telegram@{Telegram}!build\+Inline\+Keyboard\+Button@{build\+Inline\+Keyboard\+Button}}
 \index{build\+Inline\+Keyboard\+Button@{build\+Inline\+Keyboard\+Button}!Telegram@{Telegram}}
-\subsubsection[{build\+Inline\+Keyboard\+Button(\$text, \$url="""", \$callback\+\_\+data="""", \$switch\+\_\+inline\+\_\+query="""")}]{\setlength{\rightskip}{0pt plus 5cm}build\+Inline\+Keyboard\+Button (
+\subsubsection[{build\+Inline\+Keyboard\+Button(\$text, \$url="""", \$callback\+\_\+data="""", \$switch\+\_\+inline\+\_\+query="""", \$switch\+\_\+inline\+\_\+query\+\_\+current\+\_\+chat="""", \$callback\+\_\+game="""")}]{\setlength{\rightskip}{0pt plus 5cm}build\+Inline\+Keyboard\+Button (
 \begin{DoxyParamCaption}
 \item[{}]{\$text, }
 \item[{}]{\$url = {\ttfamily \char`\"{}\char`\"{}}, }
 \item[{}]{\$callback\+\_\+data = {\ttfamily \char`\"{}\char`\"{}}, }
-\item[{}]{\$switch\+\_\+inline\+\_\+query = {\ttfamily \char`\"{}\char`\"{}}}
+\item[{}]{\$switch\+\_\+inline\+\_\+query = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{}]{\$switch\+\_\+inline\+\_\+query\+\_\+current\+\_\+chat = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{}]{\$callback\+\_\+game = {\ttfamily \char`\"{}\char`\"{}}}
 \end{DoxyParamCaption}
-)}\label{class_telegram_acb9d27401f6095212d6baf7d40ee1981}
+)}\label{class_telegram_a01432df36d1939f6c8dc09501f4ffcd3}
 
 
 Create an Inline\+Keyboard\+Button. 
@@ -262,6 +264,10 @@ This object represents one button of an inline keyboard. You must use exactly on
 {\em \$callback\+\_\+data} & String Optional. Data to be sent in a callback query to the bot when button is pressed \\
 \hline
 {\em \$switch\+\_\+inline\+\_\+query} & String Optional. If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted. \\
+\hline
+{\em \$switch\+\_\+inline\+\_\+query\+\_\+current\+\_\+chat} & String Optional. Optional. If set, pressing the button will insert the bot‘s username and the specified inline query in the current chat\textquotesingle{}s input field. Can be empty, in which case only the bot’s username will be inserted. \\
+\hline
+{\em \$callback\+\_\+game} & String Optional. Description of the game that will be launched when the user presses the button. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

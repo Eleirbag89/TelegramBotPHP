@@ -1396,15 +1396,17 @@ class Telegram {
         return $encodedMarkup;
     }
 
-    /// Create an InlineKeyboardButton
+     /// Create an InlineKeyboardButton
     /** This object represents one button of an inline keyboard. You must use exactly one of the optional fields.
      * \param $text String; Array of button rows, each represented by an Array of Strings
      * \param $url String Optional. HTTP url to be opened when button is pressed
      * \param $callback_data String Optional. Data to be sent in a callback query to the bot when button is pressed
      * \param $switch_inline_query String Optional. If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted.
+     * \param $switch_inline_query_current_chat String Optional. Optional. If set, pressing the button will insert the bot‘s username and the specified inline query in the current chat's input field. Can be empty, in which case only the bot’s username will be inserted.
+     * \param $callback_game  String Optional. Description of the game that will be launched when the user presses the button.
      * \return the requested button as Array
      */
-    public function buildInlineKeyboardButton($text, $url = "", $callback_data = "", $switch_inline_query = "") {
+    public function buildInlineKeyboardButton($text, $url = "", $callback_data = "", $switch_inline_query = "", $switch_inline_query_current_chat = "", $callback_game = "") {
         $replyMarkup = array(
             'text' => $text
         );
@@ -1414,6 +1416,10 @@ class Telegram {
             $replyMarkup['callback_data'] = $callback_data;
         } else if ($switch_inline_query != "") {
             $replyMarkup['switch_inline_query'] = $switch_inline_query;
+        } else if ($switch_inline_query_current_chat != "") {
+            $replyMarkup['switch_inline_query_current_chat'] = $switch_inline_query_current_chat;
+        } else if ($callback_game != "") {
+            $replyMarkup['callback_game'] = $callback_game;
         }
         return $replyMarkup;
     }
