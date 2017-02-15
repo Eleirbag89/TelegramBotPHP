@@ -47,6 +47,15 @@ class Telegram {
     public function getMe() {
         return $this->endpoint("getMe", array(), false);
     }
+    
+    /// A method for responding http to Telegram.
+    /**
+     * \return the HTTP 200 to Telegram
+     */
+    public function respondSuccess() {
+        http_response_code(200);
+        return json_encode(array("status" => "success"));
+    }
 
     /// Send a message
     /**
@@ -1245,6 +1254,29 @@ class Telegram {
      */
     public function ChatID() {
         return $this->data["message"]["chat"]["id"];
+    }
+    /// Get the message_id of the current message
+    /**
+     * \return the String message_id
+     */
+    public function MessageID() {
+        return $this->data["message"]["message_id"];
+    }
+
+    /// Get the reply_to_message message_id of the current message
+    /**
+     * \return the String reply_to_message message_id
+     */
+    public function ReplyToMessageID() {
+        return $this->data["message"]["reply_to_message"]["message_id"];
+    }
+
+    /// Get the reply_to_message forward_from user_id of the current message
+    /**
+     * \return the String reply_to_message forward_from user_id
+     */
+    public function ReplyToMessageFromUserID() {
+        return $this->data["message"]["reply_to_message"]["forward_from"]["id"];
     }
 	
 		/// Get the message_id of the current message
