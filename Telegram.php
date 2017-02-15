@@ -1278,14 +1278,6 @@ class Telegram {
     public function ReplyToMessageFromUserID() {
         return $this->data["message"]["reply_to_message"]["forward_from"]["id"];
     }
-	
-		/// Get the message_id of the current message
-	/**
-	 * \return the String message_id
-	 */
-	public function MessageID() {
-		return $this->data["message"]["message_id"];
-	}
 
      /// Get the inline_query of the current update
     /**
