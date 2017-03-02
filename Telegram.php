@@ -1364,6 +1364,11 @@ class Telegram {
         return count($this->updates["result"]);
     }
 
+	public function UserID()
+    {
+       return $this->data["message"]["from"]["id"]; 
+    }
+	
     /// Tell if a message is from a group or user chat
     /**
      *  
