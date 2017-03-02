@@ -1369,6 +1369,12 @@ class Telegram {
        return $this->data["message"]["from"]["id"]; 
     }
 	
+	public function FromID()
+    {
+      return $this->data["message"] ["forward_from"]["id"];
+
+    }
+
     /// Tell if a message is from a group or user chat
     /**
      *  
