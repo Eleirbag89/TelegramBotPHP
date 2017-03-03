@@ -9,6 +9,8 @@
 \begin{DoxyCompactList}\small\item\em Do requests to \hyperlink{class_telegram}{Telegram} Bot A\+P\+I. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a6bc057a9b0c03f8147a4294936b2494b}{get\+Me} ()
 \begin{DoxyCompactList}\small\item\em A method for testing your bot. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_aff3588359c3fa16dfa8e3f074086e7da}{respond\+Success} ()
+\begin{DoxyCompactList}\small\item\em A method for responding http to \hyperlink{class_telegram}{Telegram}. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_af1369d6caab77f71a051ab73fa642a3f}{send\+Message} (array \$content)
 \begin{DoxyCompactList}\small\item\em Send a message. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_aebf3d567e947a457971c1501be7fc1fe}{forward\+Message} (array \$content)
@@ -78,6 +80,10 @@
 \begin{DoxyCompactList}\small\item\em Get the chat\+\_\+id of the current message. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a957f0d35d7a8cabb6116cc7bf51ceac2}{Message\+I\+D} ()
 \begin{DoxyCompactList}\small\item\em Get the message\+\_\+id of the current message. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_ad4dbc2a3a269f1e596a3d6b40c948ebf}{Reply\+To\+Message\+I\+D} ()
+\begin{DoxyCompactList}\small\item\em Get the reply\+\_\+to\+\_\+message message\+\_\+id of the current message. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_afd21e142f6ae005b8f72b39624da3505}{Reply\+To\+Message\+From\+User\+I\+D} ()
+\begin{DoxyCompactList}\small\item\em Get the reply\+\_\+to\+\_\+message forward\+\_\+from user\+\_\+id of the current message. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a27937704e98b35ccaf2066aa74b1fbe1}{Inline\+\_\+\+Query} ()
 \begin{DoxyCompactList}\small\item\em Get the inline\+\_\+query of the current update. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a891f961aa0d3272c01ac9fe64f10a714}{Callback\+\_\+\+Query} ()
@@ -110,6 +116,15 @@
 \hypertarget{class_telegram_a330b2888bb21d6c182534021a797103b}{}\hyperlink{class_telegram_a330b2888bb21d6c182534021a797103b}{Update\+Count} ()\label{class_telegram_a330b2888bb21d6c182534021a797103b}
 
 \begin{DoxyCompactList}\small\item\em Get the number of updates. \end{DoxyCompactList}\item 
+\hypertarget{class_telegram_afb1da9eb82ceca0b78cbba8e35e3fec8}{}\hyperlink{class_telegram_afb1da9eb82ceca0b78cbba8e35e3fec8}{User\+I\+D} ()\label{class_telegram_afb1da9eb82ceca0b78cbba8e35e3fec8}
+
+\begin{DoxyCompactList}\small\item\em Get user\textquotesingle{}s id of current message. \end{DoxyCompactList}\item 
+\hypertarget{class_telegram_af9d816f01fd16f3ace634023f8320aad}{}\hyperlink{class_telegram_af9d816f01fd16f3ace634023f8320aad}{From\+I\+D} ()\label{class_telegram_af9d816f01fd16f3ace634023f8320aad}
+
+\begin{DoxyCompactList}\small\item\em Get user\textquotesingle{}s id of current forwarded message. \end{DoxyCompactList}\item 
+\hypertarget{class_telegram_a4974bfd879b102b7bff6b69e14673b56}{}\hyperlink{class_telegram_a4974bfd879b102b7bff6b69e14673b56}{From\+Chat\+I\+D} ()\label{class_telegram_a4974bfd879b102b7bff6b69e14673b56}
+
+\begin{DoxyCompactList}\small\item\em Get chat\textquotesingle{}s id where current message forwarded from. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a59b7bf91ea3b26d732f7536c2d65da19}{message\+From\+Group} ()
 \begin{DoxyCompactList}\small\item\em Tell if a message is from a group or user chat. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_acd2c4c8c6f15dbb1f25af2f539c2ec16}{message\+From\+Group\+Title} ()
@@ -912,6 +927,48 @@ Get the message\+\_\+id of the current message.
 
 \begin{DoxyReturn}{Returns}
 the String message\+\_\+id 
+\end{DoxyReturn}
+\hypertarget{class_telegram_afd21e142f6ae005b8f72b39624da3505}{}\index{Telegram@{Telegram}!Reply\+To\+Message\+From\+User\+I\+D@{Reply\+To\+Message\+From\+User\+I\+D}}
+\index{Reply\+To\+Message\+From\+User\+I\+D@{Reply\+To\+Message\+From\+User\+I\+D}!Telegram@{Telegram}}
+\subsubsection[{Reply\+To\+Message\+From\+User\+I\+D()}]{\setlength{\rightskip}{0pt plus 5cm}Reply\+To\+Message\+From\+User\+I\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_telegram_afd21e142f6ae005b8f72b39624da3505}
+
+
+Get the reply\+\_\+to\+\_\+message forward\+\_\+from user\+\_\+id of the current message. 
+
+\begin{DoxyReturn}{Returns}
+the String reply\+\_\+to\+\_\+message forward\+\_\+from user\+\_\+id 
+\end{DoxyReturn}
+\hypertarget{class_telegram_ad4dbc2a3a269f1e596a3d6b40c948ebf}{}\index{Telegram@{Telegram}!Reply\+To\+Message\+I\+D@{Reply\+To\+Message\+I\+D}}
+\index{Reply\+To\+Message\+I\+D@{Reply\+To\+Message\+I\+D}!Telegram@{Telegram}}
+\subsubsection[{Reply\+To\+Message\+I\+D()}]{\setlength{\rightskip}{0pt plus 5cm}Reply\+To\+Message\+I\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_telegram_ad4dbc2a3a269f1e596a3d6b40c948ebf}
+
+
+Get the reply\+\_\+to\+\_\+message message\+\_\+id of the current message. 
+
+\begin{DoxyReturn}{Returns}
+the String reply\+\_\+to\+\_\+message message\+\_\+id 
+\end{DoxyReturn}
+\hypertarget{class_telegram_aff3588359c3fa16dfa8e3f074086e7da}{}\index{Telegram@{Telegram}!respond\+Success@{respond\+Success}}
+\index{respond\+Success@{respond\+Success}!Telegram@{Telegram}}
+\subsubsection[{respond\+Success()}]{\setlength{\rightskip}{0pt plus 5cm}respond\+Success (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_telegram_aff3588359c3fa16dfa8e3f074086e7da}
+
+
+A method for responding http to \hyperlink{class_telegram}{Telegram}. 
+
+\begin{DoxyReturn}{Returns}
+the H\+T\+T\+P 200 to \hyperlink{class_telegram}{Telegram} 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a178b081bbab51f83caa31e554b3e2ffe}{}\index{Telegram@{Telegram}!send\+Audio@{send\+Audio}}
 \index{send\+Audio@{send\+Audio}!Telegram@{Telegram}}
