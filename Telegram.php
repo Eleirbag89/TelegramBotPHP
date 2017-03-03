@@ -1364,17 +1364,20 @@ class Telegram {
         return count($this->updates["result"]);
     }
 
+	/// Get user's id of current message
 	public function UserID()
     {
        return $this->data["message"]["from"]["id"]; 
     }
-	
+
+	/// Get user's id of current forwarded message
 	public function FromID()
     {
       return $this->data["message"] ["forward_from"]["id"];
 
     }
-
+	
+	/// Get chat's id where current message forwarded from
 	public function FromChatID()
     {
       return $this->data["message"] ["forward_from_chat"]["id"];
