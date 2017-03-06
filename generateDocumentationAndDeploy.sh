@@ -81,7 +81,7 @@ doxygen $DOXYFILE 2>&1 | tee doxygen.log
 if [ -d "html" ] && [ -f "html/index.html" ]; then
     echo 'moving files'
     mv  html/* .
-    rm html
+    rm -rf html
     echo 'Uploading documentation to the gh-pages branch...'
     # Add everything in this directory (the Doxygen code documentation) to the
     # gh-pages branch.
