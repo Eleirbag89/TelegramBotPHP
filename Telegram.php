@@ -1215,11 +1215,12 @@ class Telegram {
      */
     public function setWebhook($url, $certificate = "") {
         if ($certificate == "") {
-            $content = array('url' => $url);
+            $requestBody = array('url' => $url);
         } else {
-            $content = array('url' => $url, 'certificate' => $certificate);
+            $requestBody = array('url' => $url, 'certificate' => "@$certificate");
         }
-        return $this->endpoint("setWebhook", $content);
+
+        return $this->endpoint("setWebhook", $requestBody, !empty($certificate));
     }
 
     /// Get the data of the current message
@@ -1567,15 +1568,3 @@ class Telegram {
     }
 
 }
-
-// Helper for Uploading file using CURL
-if (!function_exists('curl_file_create')) {
-
-    function curl_file_create($filename, $mimetype = '', $postname = '') {
-        return "@$filename;filename="
-                . ($postname ? : basename($filename))
-                . ($mimetype ? ";type=$mimetype" : '');
-    }
-
-}
-?>
