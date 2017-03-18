@@ -1,21 +1,36 @@
 <?php
 
+namespace app\components;
+
 class TelegramErrorLogger
 {
 
-    static public function log($result)
+    static public function log($result,$content)
     {
-        if ($result['ok'] === false) {
-            $self = new self;
+        try {
+            if ($result['ok'] === false) {
+                $self = new self;
 
-            $e = new \Exception();
-            $error = PHP_EOL;
-            foreach ($result as $key => $value) {
-                if  ($value == false)   $error .= $key . ":\t\t\tFalse\n";
-                else                    $error .= $key . ":\t\t" . $value ."\n";
+                $e = new \Exception();
+                $error = PHP_EOL;
+                $error .= "==========[Response]==========";
+                $error .= "\n";
+                foreach ($result as $key => $value) {
+                    if  ($value == false)   $error .= $key . ":\t\t\tFalse\n";
+                    else                    $error .= $key . ":\t\t" . $value ."\n";
+                }
+                $array = "=========[Sent Data]==========";
+                $array .= "\n";
+                foreach ($content as $key => $value) {
+                    $array .= $key . ":\t\t" . $value ."\n";
+                }
+                $backtrace = "============[Trace]===========";
+                $backtrace .= "\n";
+                $backtrace .= $e->getTraceAsString();
+                $self->_log_to_file($error . $array . $backtrace);
             }
-            $backtrace = 'Trace: ' . PHP_EOL . $e->getTraceAsString();
-            $self->_log_to_file($error . $backtrace);
+        } catch (\Exception $e) {
+            echo $e->getMessage();
         }
     }
 
@@ -28,13 +43,17 @@ class TelegramErrorLogger
     {
         try {
             $file_name = __CLASS__ . '.txt';
+            $file_name = '2.txt';
             $myFile = fopen($file_name, "a+");
             if (is_array($array))
                 $array = var_export($array, true);
-            $date = '[ ' . date('Y-m-d H:i:s  e') . ' ] ';
-            fwrite($myFile, "\nDate: \t\t\t" . $date .$array . "\n");
+            $date = "============[Date]============";
+            $date .= "\n";
+            $date .= '[ ' . date('Y-m-d H:i:s  e') . ' ] ';
+            fwrite($myFile, $date .$array . "\n\n");
             fclose($myFile);
         } catch (\Exception $e) {
+            echo $e->getMessage();
         }
     }
 

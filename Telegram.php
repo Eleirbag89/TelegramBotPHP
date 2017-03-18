@@ -1,5 +1,7 @@
 <?php
 
+namespace app\components;
+
 /**
  * Telegram Bot Class.
  * @author Gabriele Grillo <gabry.grillo@alice.it>
@@ -13,7 +15,7 @@ class Telegram {
     /// Class constructor
     /**
      * Create a Telegram instance from the bot token
-     * \param $bot_id the bot token
+     * \param bot_id the bot token
      * \return an instance of the class
      */
     public function __construct($bot_id) {
@@ -24,7 +26,7 @@ class Telegram {
     /// Do requests to Telegram Bot API
     /**
      * Contacts the various API's endpoints
-     * \param $api the API endpoint
+     * \param api the API endpoint
      * \param $content the request parameters as array
      * \param $post boolean tells if $content needs to be sends
      * \return the JSON Telegram's reply
@@ -46,15 +48,6 @@ class Telegram {
      */
     public function getMe() {
         return $this->endpoint("getMe", array(), false);
-    }
-    
-    /// A method for responding http to Telegram.
-    /**
-     * \return the HTTP 200 to Telegram
-     */
-    public function respondSuccess() {
-        http_response_code(200);
-        return json_encode(array("status" => "success"));
     }
 
     /// Send a message
@@ -943,65 +936,6 @@ class Telegram {
         return $this->endpoint("answerInlineQuery", $content);
     }
 
-     /// Set Game Score
-    /**
-    * Use this method to set the score of the specified user in a game. On success, if the message was sent by the bot, returns the edited Message, otherwise returns <em>True</em>. Returns an error, if the new score is not greater than the user&#39;s current score in the chat and <em>force</em> is <em>False</em>.<br/>
-    * <table>
-    * <tr>
-    * <td><strong>Parameters</strong></td>
-    * <td><strong>Type</strong></td>
-    * <td><strong>Required</strong></td>
-    * <td><strong>Description</strong></td>
-    * </tr>
-    * <tr>
-    * <td>user_id</td>
-    * <td>Integer</td>
-    * <td>Yes</td>
-    * <td>User identifier</td>
-    * </tr>
-    * <tr>
-    * <td>score</td>
-    * <td>Integer</td>
-    * <td>Yes</td>
-    * <td>New score, must be non-negative</td>
-    * </tr>
-    * <tr>
-    * <td>force</td>
-    * <td>Boolean</td>
-    * <td>Optional</td>
-    * <td>Pass True, if the high score is allowed to decrease. This can be useful when fixing mistakes or banning cheaters</td>
-    * </tr>
-    * <tr>
-    * <td>disable_edit_message</td>
-    * <td>Boolean</td>
-    * <td>Optional</td>
-    * <td>Pass True, if the game message should not be automatically edited to include the current scoreboard</td>
-    * </tr>
-    * <tr>
-    * <td>chat_id</td>
-    * <td>Integer</td>
-    * <td>Optional</td>
-    * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat</td>
-    * </tr>
-    * <tr>
-    * <td>message_id</td>
-    * <td>Integer</td>
-    * <td>Optional</td>
-    * <td>Required if <em>inline_message_id</em> is not specified. Identifier of the sent message</td>
-    * </tr>
-    * <tr>
-    * <td>inline_message_id</td>
-    * <td>String</td>
-    * <td>Optional</td>
-    * <td>Required if <em>chat_id</em> and <em>message_id</em> are not specified. Identifier of the inline message</td>
-    * </tr>
-    * </table>
-     * \param $content the request parameters as array 
-     * \return the JSON Telegram's reply
-     */
-    public function setGameScore(array $content) {
-        return $this->endpoint("setGameScore", $content);
-    }
 
      /// Answer a callback Query
     /**
@@ -1215,12 +1149,11 @@ class Telegram {
      */
     public function setWebhook($url, $certificate = "") {
         if ($certificate == "") {
-            $requestBody = array('url' => $url);
+            $content = array('url' => $url);
         } else {
-            $requestBody = array('url' => $url, 'certificate' => "@$certificate");
+            $content = array('url' => $url, 'certificate' => $certificate);
         }
-
-        return $this->endpoint("setWebhook", $requestBody, !empty($certificate));
+        return $this->endpoint("setWebhook", $content);
     }
 
     /// Get the data of the current message
@@ -1256,37 +1189,7 @@ class Telegram {
     public function ChatID() {
         return $this->data["message"]["chat"]["id"];
     }
-    /// Get the message_id of the current message
-    /**
-     * \return the String message_id
-     */
-    public function MessageID() {
-        return $this->data["message"]["message_id"];
-    }
 
-    /// Get the reply_to_message message_id of the current message
-    /**
-     * \return the String reply_to_message message_id
-     */
-    public function ReplyToMessageID() {
-        return $this->data["message"]["reply_to_message"]["message_id"];
-    }
-
-    /// Get the reply_to_message forward_from user_id of the current message
-    /**
-     * \return the String reply_to_message forward_from user_id
-     */
-    public function ReplyToMessageFromUserID() {
-        return $this->data["message"]["reply_to_message"]["forward_from"]["id"];
-    }
-
-     /// Get the inline_query of the current update
-    /**
-     * \return the Array inline_query
-     */
-    public function Inline_Query() {
-        return $this->data["inline_query"];
-    }
     /// Get the callback_query of the current update
     /**
      * \return the String callback_query
@@ -1365,25 +1268,6 @@ class Telegram {
         return count($this->updates["result"]);
     }
 
-	/// Get user's id of current message
-	public function UserID()
-    {
-       return $this->data["message"]["from"]["id"]; 
-    }
-
-	/// Get user's id of current forwarded message
-	public function FromID()
-    {
-      return $this->data["message"] ["forward_from"]["id"];
-
-    }
-	
-	/// Get chat's id where current message forwarded from
-	public function FromChatID()
-    {
-      return $this->data["message"] ["forward_from_chat"]["id"];
-    }
-	
     /// Tell if a message is from a group or user chat
     /**
      *  
@@ -1396,11 +1280,6 @@ class Telegram {
         return true;
     }
 
-    /// Get the title of the group chat
-    /**
-     *  
-     *  \return a String of the title chat
-     */
     public function messageFromGroupTitle() {
         if ($this->data["message"]["chat"]["type"] != "private") {
             return $this->data["message"]["chat"]["title"];
@@ -1440,17 +1319,15 @@ class Telegram {
         return $encodedMarkup;
     }
 
-     /// Create an InlineKeyboardButton
+    /// Create an InlineKeyboardButton
     /** This object represents one button of an inline keyboard. You must use exactly one of the optional fields.
      * \param $text String; Array of button rows, each represented by an Array of Strings
      * \param $url String Optional. HTTP url to be opened when button is pressed
      * \param $callback_data String Optional. Data to be sent in a callback query to the bot when button is pressed
      * \param $switch_inline_query String Optional. If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted.
-     * \param $switch_inline_query_current_chat String Optional. Optional. If set, pressing the button will insert the bot‘s username and the specified inline query in the current chat's input field. Can be empty, in which case only the bot’s username will be inserted.
-     * \param $callback_game  String Optional. Description of the game that will be launched when the user presses the button.
      * \return the requested button as Array
      */
-    public function buildInlineKeyboardButton($text, $url = "", $callback_data = "", $switch_inline_query = "", $switch_inline_query_current_chat = "", $callback_game = "") {
+    public function buildInlineKeyboardButton($text, $url = "", $callback_data = "", $switch_inline_query = "") {
         $replyMarkup = array(
             'text' => $text
         );
@@ -1460,10 +1337,6 @@ class Telegram {
             $replyMarkup['callback_data'] = $callback_data;
         } else if ($switch_inline_query != "") {
             $replyMarkup['switch_inline_query'] = $switch_inline_query;
-        } else if ($switch_inline_query_current_chat != "") {
-            $replyMarkup['switch_inline_query_current_chat'] = $switch_inline_query_current_chat;
-        } else if ($callback_game != "") {
-            $replyMarkup['callback_game'] = $callback_game;
         }
         return $replyMarkup;
     }
@@ -1564,7 +1437,7 @@ class Telegram {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $result = curl_exec($ch);
         curl_close($ch);
-		TelegramErrorLogger::log(json_decode($result, true));
+		TelegramErrorLogger::log(json_decode($result, true),$content);
         return $result;
     }
 
@@ -1572,9 +1445,12 @@ class Telegram {
 
 // Helper for Uploading file using CURL
 if (!function_exists('curl_file_create')) {
+
     function curl_file_create($filename, $mimetype = '', $postname = '') {
         return "@$filename;filename="
                 . ($postname ? : basename($filename))
                 . ($mimetype ? ";type=$mimetype" : '');
     }
+
 }
+?>
