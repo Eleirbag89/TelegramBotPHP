@@ -50,7 +50,7 @@ if(!is_null($text) && !is_null($chat_id)){
 	    //Download the file just sended
 	    $file_id = $message["photo"][0]["file_id"];
 	    $file = $telegram->getFile($file_id);
-	    $telegram->downloadFile($file["file_path"], "./test_download.png");
+	    $telegram->downloadFile($file["result"]["file_path"], "./test_download.png");
 	}
 	
 	if ($text == "/where") {
