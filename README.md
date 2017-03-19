@@ -25,6 +25,8 @@ include("Telegram.php");
 $telegram = new Telegram($bot_id);
 ```
 
+* To enable error log file, also copy TelegramErrorLogger.php in the same directory of Telegram.php file
+
 Configuration (WebHook)
 ---------
 
