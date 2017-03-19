@@ -43,7 +43,7 @@ If you want to get some specific parameter from the \hyperlink{class_telegram}{T
 
 To upload a Photo or some other files, you need to load it with Curl\-File\-: ```php // Load a local file to upload. If is already on \hyperlink{class_telegram}{Telegram}'s Servers just pass the resource id \$img = curl\-\_\-file\-\_\-create('test.\-png','image/png'); \$content = array('chat\-\_\-id' =$>$ \$chat\-\_\-id, 'photo' =$>$ \$img ); \$telegram-\/$>$send\-Photo(\$content); ```
 
-To download a file on the \hyperlink{class_telegram}{Telegram}'s servers ```php \$file = \$telegram-\/$>$get\-File(\$file\-\_\-id); \$telegram-\/$>$download\-File(\$file\mbox{[}\char`\"{}file\-\_\-path\char`\"{}\mbox{]}, \char`\"{}./my\-\_\-downloaded\-\_\-file\-\_\-on\-\_\-local\-\_\-server.\-png\char`\"{}); ```
+To download a file on the \hyperlink{class_telegram}{Telegram}'s servers ```php \$file = \$telegram-\/$>$get\-File(\$file\-\_\-id); \$telegram-\/$>$download\-File(\$file\mbox{[}\char`\"{}result\char`\"{}\mbox{]}\mbox{[}\char`\"{}file\-\_\-path\char`\"{}\mbox{]}, \char`\"{}./my\-\_\-downloaded\-\_\-file\-\_\-on\-\_\-local\-\_\-server.\-png\char`\"{}); ```
 
 See update.\-php or update cowsay.\-php for the complete example. If you wanna see the Cow\-Say Bot in action \href{https://telegram.me/cowmooobot}{\tt add it}.
 
@@ -79,6 +79,6 @@ You can contact me \href{https://telegram.me/ggrillo}{\tt via Telegram} but if y
 
 \subsection*{Support me }
 
-You can support me using Flattr.
+You can buy me a beer or two using \href{https://paypal.me/eleirbag89}{\tt Paypal} or support me using Flattr.
 
 \href{https://flattr.com/submit/auto?user_id=eleirbag89&url=https://github.com/Eleirbag89/TelegramBotPHP&title=TelegramBotPHP&language=&tags=github&category=software}{\tt !\mbox{[}Flattr this git repo\mbox{]}(http\-://api.\-flattr.\-com/button/flattr-\/badge-\/large.\-png)} 

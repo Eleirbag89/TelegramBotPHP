@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>```php $telegram = new <a class="el" href="class_telegram.html">Telegram</a>($bot_id); $chat_id = $telegram-&gt;ChatID(); $content = array('chat_id' =&gt; $chat_id, 'text' =&gt; "Test"); $telegram-&gt;sendMessage($content); ```</p>
 <p>If you want to get some specific parameter from the <a class="el" href="class_telegram.html">Telegram</a> response: ```php $telegram = new <a class="el" href="class_telegram.html">Telegram</a>($bot_id); $result = $telegram-&gt;getData(); $text = $result["message"] ["text"]; $chat_id = $result["message"] ["chat"]["id"]; $content = array('chat_id' =&gt; $chat_id, 'text' =&gt; "Test"); $telegram-&gt;sendMessage($content); ```</p>
 <p>To upload a Photo or some other files, you need to load it with CurlFile: ```php // Load a local file to upload. If is already on <a class="el" href="class_telegram.html">Telegram</a>'s Servers just pass the resource id $img = curl_file_create('test.png','image/png'); $content = array('chat_id' =&gt; $chat_id, 'photo' =&gt; $img ); $telegram-&gt;sendPhoto($content); ```</p>
-<p>To download a file on the <a class="el" href="class_telegram.html">Telegram</a>'s servers ```php $file = $telegram-&gt;getFile($file_id); $telegram-&gt;downloadFile($file["file_path"], "./my_downloaded_file_on_local_server.png"); ```</p>
+<p>To download a file on the <a class="el" href="class_telegram.html">Telegram</a>'s servers ```php $file = $telegram-&gt;getFile($file_id); $telegram-&gt;downloadFile($file["result"]["file_path"], "./my_downloaded_file_on_local_server.png"); ```</p>
 <p>See update.php or update cowsay.php for the complete example. If you wanna see the CowSay Bot in action <a href="https://telegram.me/cowmooobot">add it</a>.</p>
 <p>If you want to use GetUpdates instead of the WebHook you need to call the the serveUpdate function inside a for cycle. ```php $req = $telegram-&gt;getUpdates(); for ($i = 0; $i &lt; $telegram-&gt; UpdateCount(); $i++) { // You NEED to call serveUpdate before accessing the values of message in <a class="el" href="class_telegram.html">Telegram</a> Class $telegram-&gt;serveUpdate($i); $text = $telegram-&gt;Text(); $chat_id = $telegram-&gt;ChatID();</p>
 <p>if ($text == "/start") { $reply = "Working"; $content = array('chat_id' =&gt; $chat_id, 'text' =&gt; $reply); $telegram-&gt;sendMessage($content); } // DO OTHER STUFF } ``` See getUpdates.php for the complete example.</p>
@@ -125,7 +125,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h2>Contact me </h2>
 <p>You can contact me <a href="https://telegram.me/ggrillo">via Telegram</a> but if you have an issue please <a href="https://github.com/Eleirbag89/TelegramBotPHP/issues">open</a> one.</p>
 <h2>Support me </h2>
-<p>You can support me using Flattr.</p>
+<p>You can buy me a beer or two using <a href="https://paypal.me/eleirbag89">Paypal</a> or support me using Flattr.</p>
 <p><a href="https://flattr.com/submit/auto?user_id=eleirbag89&amp;url=https://github.com/Eleirbag89/TelegramBotPHP&amp;title=TelegramBotPHP&amp;language=&amp;tags=github&amp;category=software">![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)</a> </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
