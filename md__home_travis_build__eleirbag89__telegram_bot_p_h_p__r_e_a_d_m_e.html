@@ -99,6 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h2>Installation </h2>
 <ul>
 <li>Copy Telegram.php into your server and include it in your new bot script ```php include("Telegram.php"); $telegram = new <a class="el" href="class_telegram.html">Telegram</a>($bot_id); ```</li>
+<li>To enable error log file, also copy TelegramErrorLogger.php in the same directory of Telegram.php file</li>
 </ul>
 <h2>Configuration (WebHook) </h2>
 <p>Navigate to <a href="https://api.telegram.org/bot(BOT_ID)/setWebhook?url=https://yoursite.com/your_update.php">https://api.telegram.org/bot(BOT_ID)/setWebhook?url=https://yoursite.com/your_update.php</a> Or use the <a class="el" href="class_telegram.html">Telegram</a> class setWebhook method.</p>
