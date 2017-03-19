@@ -52,41 +52,7 @@ if (\$text == \char`\"{}/start\char`\"{}) \{ \$reply = \char`\"{}\-Working\char`
 
 \subsection*{Functions }
 
-For a complete documentation check \href{http://eleirbag89.github.io/TelegramBotPHP/}{\tt http\-://eleirbag89.\-github.\-io/\-Telegram\-Bot\-P\-H\-P/}
-\begin{DoxyItemize}
-\item get\-Me() \href{https://core.telegram.org/bots/api#getme}{\tt A method for testing your bot}.
-\item send\-Message(array \$content) \href{https://core.telegram.org/bots/api#sendmessage}{\tt Send a message}. \$content is an array with at least chat\-\_\-id and text.
-\item forward\-Message(array \$content) \href{https://core.telegram.org/bots/api#forwardmessage}{\tt Forward a message}. \$content is an array with chat\-\_\-id, from\-\_\-chat\-\_\-id and message\-\_\-id.
-\item send\-Photo(array \$content) \href{https://core.telegram.org/bots/api#sendphoto}{\tt Send a photo}. \$content is an array with at least chat\-\_\-id and photo.
-\item send\-Audio(array \$content) \href{https://core.telegram.org/bots/api#sendaudio}{\tt Send an audio}. \$content is an array with at least chat\-\_\-id and audio.
-\item send\-Document(array \$content) \href{https://core.telegram.org/bots/api#senddocument}{\tt Send a document}. \$content is an array with at least chat\-\_\-id and document.
-\item send\-Sticker(array \$content) \href{https://core.telegram.org/bots/api#sendsticker}{\tt Send a sticker}. \$content is an array with at least chat\-\_\-id and sticker.
-\item send\-Video(array \$content) \href{https://core.telegram.org/bots/api#sendvideo}{\tt Send a video}. \$content is an array with at least chat\-\_\-id and video.
-\item send\-Voice(array \$content) \href{https://core.telegram.org/bots/api#sendvoice}{\tt Send a voice message}. \$content is an array with at least chat\-\_\-id and audio.
-\item send\-Location(array \$content) \href{https://core.telegram.org/bots/api#sendlocation}{\tt Send a location}. \$content is an array with at least chat\-\_\-id, latitude and longitude.
-\item send\-Chat\-Action(array \$content) \href{https://core.telegram.org/bots/api#sendchataction}{\tt Send a chat action}. \$content is an array with at least chat\-\_\-id and action.
-\item get\-User\-Profile\-Photos(array \$content) \href{https://core.telegram.org/bots/api#getuserprofilephotos}{\tt Get a list of profile pictures for a user}. \$content is an array with at least user\-\_\-id.
-\item get\-File(\$file\-\_\-id) \href{https://core.telegram.org/bots/api#getfile}{\tt Use this method to get basic info about a file and prepare it for downloading}.
-\item download\-File(\$telegram\-\_\-file\-\_\-path, \$local\-\_\-file\-\_\-path) Download a File using the Thelegram's file\-\_\-path returned from get\-File() and save it in \$local\-\_\-file\-\_\-path.
-\item set\-Web\-Hook(\$url, \$certificate) \href{https://core.telegram.org/bots/api#setwebhook}{\tt Set a Web\-Hook for the bot}.
-\item get\-Data() Return the user request as array
-\item Text() Return the Text of the user message
-\item Chat\-I\-D() Return the id of the chat
-\item Date() Return the date of the mesage (Timestamp)
-\item First\-Name() Return the user's first name
-\item Last\-Name() Return the user's last name
-\item Username() Return the user's username
-\item Callback\-\_\-\-Query() Return the Callback\-\_\-\-Query
-\item Callback\-\_\-\-I\-D() Return the Callback\-\_\-\-Query I\-D
-\item Callback\-\_\-\-Data() Return the Callback\-\_\-\-Query data
-\item Callback\-\_\-\-Message() Return the Callback\-\_\-\-Query message
-\item Callback\-\_\-\-Chat\-I\-D() Return the Callback\-\_\-\-Query message chat id
-\item message\-From\-Group() Check if the message is sent from a group chat (boolean)
-\item get\-Updates(\$offset = 0, \$limit = 100, \$timeout = 0, \$update = true) Get the updates. If \$update = true confirm the update to \hyperlink{class_telegram}{Telegram} in order to avoid duplicate replies. See \href{https://core.telegram.org/bots/api#getting-updates}{\tt Telegram doc} for the other parameters.
-\item serve\-Update(\$update) Set the current message to the one with index \$update.
-\item Update\-I\-D() Get the message's Update I\-D.
-\item Update\-Count() Return the Get\-Updates messages count.
-\end{DoxyItemize}
+For a complete and up-\/to-\/date functions documentation check \href{http://eleirbag89.github.io/TelegramBotPHP/}{\tt http\-://eleirbag89.\-github.\-io/\-Telegram\-Bot\-P\-H\-P/}
 
 \subsection*{Build keyboard parameters }
 

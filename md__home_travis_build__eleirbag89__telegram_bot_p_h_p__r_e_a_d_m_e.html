@@ -111,41 +111,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>If you want to use GetUpdates instead of the WebHook you need to call the the serveUpdate function inside a for cycle. ```php $req = $telegram-&gt;getUpdates(); for ($i = 0; $i &lt; $telegram-&gt; UpdateCount(); $i++) { // You NEED to call serveUpdate before accessing the values of message in <a class="el" href="class_telegram.html">Telegram</a> Class $telegram-&gt;serveUpdate($i); $text = $telegram-&gt;Text(); $chat_id = $telegram-&gt;ChatID();</p>
 <p>if ($text == "/start") { $reply = "Working"; $content = array('chat_id' =&gt; $chat_id, 'text' =&gt; $reply); $telegram-&gt;sendMessage($content); } // DO OTHER STUFF } ``` See getUpdates.php for the complete example.</p>
 <h2>Functions </h2>
-<p>For a complete documentation check <a href="http://eleirbag89.github.io/TelegramBotPHP/">http://eleirbag89.github.io/TelegramBotPHP/</a></p>
-<ul>
-<li>getMe() <a href="https://core.telegram.org/bots/api#getme">A method for testing your bot</a>.</li>
-<li>sendMessage(array $content) <a href="https://core.telegram.org/bots/api#sendmessage">Send a message</a>. $content is an array with at least chat_id and text.</li>
-<li>forwardMessage(array $content) <a href="https://core.telegram.org/bots/api#forwardmessage">Forward a message</a>. $content is an array with chat_id, from_chat_id and message_id.</li>
-<li>sendPhoto(array $content) <a href="https://core.telegram.org/bots/api#sendphoto">Send a photo</a>. $content is an array with at least chat_id and photo.</li>
-<li>sendAudio(array $content) <a href="https://core.telegram.org/bots/api#sendaudio">Send an audio</a>. $content is an array with at least chat_id and audio.</li>
-<li>sendDocument(array $content) <a href="https://core.telegram.org/bots/api#senddocument">Send a document</a>. $content is an array with at least chat_id and document.</li>
-<li>sendSticker(array $content) <a href="https://core.telegram.org/bots/api#sendsticker">Send a sticker</a>. $content is an array with at least chat_id and sticker.</li>
-<li>sendVideo(array $content) <a href="https://core.telegram.org/bots/api#sendvideo">Send a video</a>. $content is an array with at least chat_id and video.</li>
-<li>sendVoice(array $content) <a href="https://core.telegram.org/bots/api#sendvoice">Send a voice message</a>. $content is an array with at least chat_id and audio.</li>
-<li>sendLocation(array $content) <a href="https://core.telegram.org/bots/api#sendlocation">Send a location</a>. $content is an array with at least chat_id, latitude and longitude.</li>
-<li>sendChatAction(array $content) <a href="https://core.telegram.org/bots/api#sendchataction">Send a chat action</a>. $content is an array with at least chat_id and action.</li>
-<li>getUserProfilePhotos(array $content) <a href="https://core.telegram.org/bots/api#getuserprofilephotos">Get a list of profile pictures for a user</a>. $content is an array with at least user_id.</li>
-<li>getFile($file_id) <a href="https://core.telegram.org/bots/api#getfile">Use this method to get basic info about a file and prepare it for downloading</a>.</li>
-<li>downloadFile($telegram_file_path, $local_file_path) Download a File using the Thelegram's file_path returned from getFile() and save it in $local_file_path.</li>
-<li>setWebHook($url, $certificate) <a href="https://core.telegram.org/bots/api#setwebhook">Set a WebHook for the bot</a>.</li>
-<li>getData() Return the user request as array</li>
-<li>Text() Return the Text of the user message</li>
-<li>ChatID() Return the id of the chat</li>
-<li>Date() Return the date of the mesage (Timestamp)</li>
-<li>FirstName() Return the user's first name</li>
-<li>LastName() Return the user's last name</li>
-<li>Username() Return the user's username</li>
-<li>Callback_Query() Return the Callback_Query</li>
-<li>Callback_ID() Return the Callback_Query ID</li>
-<li>Callback_Data() Return the Callback_Query data</li>
-<li>Callback_Message() Return the Callback_Query message</li>
-<li>Callback_ChatID() Return the Callback_Query message chat id</li>
-<li>messageFromGroup() Check if the message is sent from a group chat (boolean)</li>
-<li>getUpdates($offset = 0, $limit = 100, $timeout = 0, $update = true) Get the updates. If $update = true confirm the update to <a class="el" href="class_telegram.html">Telegram</a> in order to avoid duplicate replies. See <a href="https://core.telegram.org/bots/api#getting-updates">Telegram doc</a> for the other parameters.</li>
-<li>serveUpdate($update) Set the current message to the one with index $update.</li>
-<li>UpdateID() Get the message's Update ID.</li>
-<li>UpdateCount() Return the GetUpdates messages count.</li>
-</ul>
+<p>For a complete and up-to-date functions documentation check <a href="http://eleirbag89.github.io/TelegramBotPHP/">http://eleirbag89.github.io/TelegramBotPHP/</a></p>
 <h2>Build keyboard parameters </h2>
 <p>```php buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true) ``` Send a custom keyboard. $option is an array of array KeyboardButton. Check <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyBoardMarkUp</a> for more info.</p>
 <p>```php buildInlineKeyBoard(array $inline_keyboard) ``` Send a custom keyboard. $inline_keyboard is an array of array InlineKeyboardButton. Check <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> for more info.</p>
