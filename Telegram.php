@@ -1,6 +1,7 @@
 <?php
-
-require_once 'TelegramErrorLogger.php';
+if(file_exists('TelegramErrorLogger.php')){
+  require_once 'TelegramErrorLogger.php';
+}
 
 /**
  * Telegram Bot Class.
@@ -1566,7 +1567,9 @@ class Telegram {
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 		$result = curl_exec($ch);
 		curl_close($ch);
-		TelegramErrorLogger::log(json_decode($result, true),$content);
+                if (class_exists('TelegramErrorLogger')) {
+                    TelegramErrorLogger::log(json_decode($result, true),$content);
+                }
 		return $result;
 	}
 
