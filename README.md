@@ -65,7 +65,7 @@ $telegram->sendPhoto($content);
 To download a file on the Telegram's servers
 ```php
 $file = $telegram->getFile($file_id);
-$telegram->downloadFile($file["file_path"], "./my_downloaded_file_on_local_server.png");
+$telegram->downloadFile($file["result"]["file_path"], "./my_downloaded_file_on_local_server.png");
 ```
 
 See update.php or update cowsay.php for the complete example.
@@ -145,6 +145,7 @@ You can contact me [via Telegram](https://telegram.me/ggrillo) but if you have a
 
 Support me
 ------------
-You can support me using Flattr.    
+You can buy me a beer or two using [Paypal](https://paypal.me/eleirbag89)    
+or support me using Flattr.    
 
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=eleirbag89&url=https://github.com/Eleirbag89/TelegramBotPHP&title=TelegramBotPHP&language=&tags=github&category=software) 
