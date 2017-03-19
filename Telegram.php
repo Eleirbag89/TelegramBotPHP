@@ -1566,6 +1566,9 @@ class Telegram {
 		}
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 		$result = curl_exec($ch);
+                if($result === false) {
+                    $result = json_encode(array('ok'=>false, 'curl_error_code' => curl_errno($ch), 'curl_error' => curl_error($ch)));
+                }
 		curl_close($ch);
                 if (class_exists('TelegramErrorLogger')) {
                     TelegramErrorLogger::log(json_decode($result, true),$content);
