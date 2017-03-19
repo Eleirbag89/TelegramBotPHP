@@ -1,7 +1,5 @@
 <?php
 
-namespace app\components;
-
 class TelegramErrorLogger
 {
 
@@ -10,7 +8,6 @@ class TelegramErrorLogger
         try {
             if ($result['ok'] === false) {
                 $self = new self;
-
                 $e = new \Exception();
                 $error = PHP_EOL;
                 $error .= "==========[Response]==========";
@@ -42,11 +39,8 @@ class TelegramErrorLogger
     private function _log_to_file($array)
     {
         try {
-            $file_name = __CLASS__ . '.txt';
-            $file_name = '2.txt';
-            $myFile = fopen($file_name, "a+");
-            if (is_array($array))
-                $array = var_export($array, true);
+            $fileName = __CLASS__ . '.txt';
+            $myFile = fopen($fileName, "a+");
             $date = "============[Date]============";
             $date .= "\n";
             $date .= '[ ' . date('Y-m-d H:i:s  e') . ' ] ';
