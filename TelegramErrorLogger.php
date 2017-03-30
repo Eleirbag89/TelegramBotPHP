@@ -1,7 +1,11 @@
 <?php
+if(file_exists('varDumpAsText.php')){
+    require_once 'varDumpAsText.php';
+}
+
 /**
  * Telegram Error Logger Class.
- * @author shakibonline
+ * @author shakibonline <shakiba_9@yahoo.com>
  */
 class TelegramErrorLogger
 {
@@ -26,8 +30,12 @@ class TelegramErrorLogger
                 }
                 $array = "=========[Sent Data]==========";
                 $array .= "\n";
-                foreach ($content as $key => $value) {
-                    $array .= $key . ":\t\t" . $value ."\n";
+                if (function_exists('rt')) {
+                    $array .= rt($content);
+                } else {
+                    foreach ($content as $key => $value) {
+                        $array .= $key . ":\t\t" . $value ."\n";
+                    }
                 }
                 $backtrace = "============[Trace]===========";
                 $backtrace .= "\n";
