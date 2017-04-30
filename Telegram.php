@@ -1501,7 +1501,7 @@ class Telegram {
 	 */
 	public function buildKeyBoardHide($selective = true) {
 		$replyMarkup = array(
-			'hide_keyboard' => true,
+			'remove_keyboard' => true,
 			'selective' => $selective
 		);
 		$encodedMarkup = json_encode($replyMarkup, true);
