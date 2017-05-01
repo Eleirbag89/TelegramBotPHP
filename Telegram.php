@@ -1249,7 +1249,9 @@ class Telegram {
 	 * \return the String users's text
 	 */
 	public function Text() {
-		return $this->data["message"] ["text"];
+		if ($this->getUpdateType() == 'callback_query')
+			return @$this->data["callback_query"]["data"];
+		return @$this->data["message"]["text"];
 	}
 
 	/// Get the chat_id of the current message
@@ -1340,17 +1342,17 @@ class Telegram {
 
 	/// Get the first name of the user
 	public function FirstName() {
-		return $this->data["message"]["from"]["first_name"];
+		return @$this->data["message"]["from"]["first_name"];
 	}
 
 /// Get the last name of the user
 	public function LastName() {
-		return $this->data["message"]["from"]["last_name"];
+		return @$this->data["message"]["from"]["last_name"];
 	}
 
 /// Get the username of the user
 	public function Username() {
-		return $this->data["message"]["from"]["username"];
+		return @$this->data["message"]["from"]["username"];
 	}
 
 /// Get the location in the message
@@ -1371,6 +1373,8 @@ class Telegram {
 	/// Get user's id of current message
 	public function UserID()
 	{
+		if ($this->getUpdateType() == 'callback_query')
+			return $this->data["callback_query"]["from"]["id"];
 		return $this->data["message"]["from"]["id"];
 	}
 
@@ -1484,13 +1488,6 @@ class Telegram {
 			'request_contact' => $request_contact,
 			'request_location' => $request_location
 		);
-		if ($url != "") {
-			$replyMarkup['url'] = $url;
-		} else if ($callback_data != "") {
-			$replyMarkup['callback_data'] = $callback_data;
-		} else if ($switch_inline_query != "") {
-			$replyMarkup['switch_inline_query'] = $switch_inline_query;
-		}
 		return $replyMarkup;
 	}
 
@@ -1551,6 +1548,26 @@ class Telegram {
 		$this->data = $this->updates["result"][$update];
 	}
 
+	/// Return current update type
+	/**
+	 * Return current update type `False` on failure
+	 *
+	 * @return bool|string
+	 */
+	public function getUpdateType()
+	{
+		$update = $this->data;
+		if (isset($update['callback_query']))      		return 'callback_query';
+		if (isset($update['message']['text']))          return 'message';
+		if (isset($update['message']['photo']))         return 'photo';
+		if (isset($update['message']['video']))         return 'video';
+		if (isset($update['message']['audio']))         return 'audio';
+		if (isset($update['message']['voice']))         return 'voice';
+		if (isset($update['message']['document']))      return 'document';
+		if (isset($update['message']['location']))      return 'location';
+		return FALSE;
+	}
+
 	private function sendAPIRequest($url, array $content, $post = true) {
 		if (isset($content['chat_id'])) {
 			$url = $url . "?chat_id=" . $content['chat_id'];
@@ -1566,13 +1583,13 @@ class Telegram {
 		}
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 		$result = curl_exec($ch);
-                if($result === false) {
-                    $result = json_encode(array('ok'=>false, 'curl_error_code' => curl_errno($ch), 'curl_error' => curl_error($ch)));
-                }
+		if($result === false) {
+			$result = json_encode(array('ok'=>false, 'curl_error_code' => curl_errno($ch), 'curl_error' => curl_error($ch)));
+		}
 		curl_close($ch);
-                if (class_exists('TelegramErrorLogger')) {
-                    TelegramErrorLogger::log(json_decode($result, true),$content);
-                }
+		if (class_exists('TelegramErrorLogger')) {
+			TelegramErrorLogger::log(json_decode($result, true),$content);
+		}
 		return $result;
 	}
 
