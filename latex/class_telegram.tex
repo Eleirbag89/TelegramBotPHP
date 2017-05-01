@@ -146,7 +146,9 @@
 \hyperlink{class_telegram_adb467486d3d5e83ce21a03e00f17b16c}{get\-Updates} (\$offset=0, \$limit=100, \$timeout=0, \$update=true)
 \begin{DoxyCompactList}\small\item\em Receive incoming messages using polling. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a57e6066940e4cca7310cfd5c45fd8510}{serve\-Update} (\$update)
-\begin{DoxyCompactList}\small\item\em Serve an update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Serve an update. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a291f955d4bae8e89b42e0a762b9bcc33}{get\-Update\-Type} ()
+\begin{DoxyCompactList}\small\item\em Return current update type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -773,6 +775,22 @@ Use this method to receive incoming updates using long polling.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 the updates as Array 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a291f955d4bae8e89b42e0a762b9bcc33}{\index{Telegram@{Telegram}!get\-Update\-Type@{get\-Update\-Type}}
+\index{get\-Update\-Type@{get\-Update\-Type}!Telegram@{Telegram}}
+\subsubsection[{get\-Update\-Type}]{\setlength{\rightskip}{0pt plus 5cm}get\-Update\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_a291f955d4bae8e89b42e0a762b9bcc33}
+
+
+Return current update type. 
+
+Return current update type {\ttfamily False} on failure
+
+\begin{DoxyReturn}{Returns}
+bool$\vert$string 
 \end{DoxyReturn}
 \hypertarget{class_telegram_af2245dc488830eb7add02c35e8dcf492}{\index{Telegram@{Telegram}!get\-User\-Profile\-Photos@{get\-User\-Profile\-Photos}}
 \index{get\-User\-Profile\-Photos@{get\-User\-Profile\-Photos}!Telegram@{Telegram}}

@@ -12,8 +12,8 @@ Warning: ignoring unsupported tag `DOCBOOK_PROGRAMLISTING =' at line 1960, file 
 Warning: ignoring unsupported tag `PLANTUML_JAR_PATH      =' at line 2389, file /home/travis/build/Eleirbag89/TelegramBotPHP/Doxyfile
 Warning: ignoring unsupported tag `PLANTUML_INCLUDE_PATH  =' at line 2394, file /home/travis/build/Eleirbag89/TelegramBotPHP/Doxyfile
 /home/travis/build/Eleirbag89/TelegramBotPHP/README.md:15: warning: Illegal command BotFather as part of a <a>..</a> block
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1419: warning: Found unknown command `\mentioned'
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1499: warning: Found unknown command `\mentioned'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1423: warning: Found unknown command `\mentioned'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1496: warning: Found unknown command `\mentioned'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1117: warning: Found unknown command `\channelusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1164: warning: Found unknown command `\channelusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1058: warning: Found unknown command `\channelusername'
@@ -139,5 +139,5 @@ Generating file index...
 Generating file member index...
 Generating example index...
 finalizing index lists...
-lookup cache used 58/65536 hits=115 misses=58
+lookup cache used 59/65536 hits=117 misses=59
 finished...
