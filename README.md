@@ -71,7 +71,7 @@ $telegram->downloadFile($file["result"]["file_path"], "./my_downloaded_file_on_l
 See update.php or update cowsay.php for the complete example.
 If you wanna see the CowSay Bot in action [add it] (https://telegram.me/cowmooobot).
 
-If you want to use GetUpdates instead of the WebHook you need to call the the serveUpdate function inside a for cycle.
+If you want to use GetUpdates instead of the WebHook you need to call the the `serveUpdate` function inside a for cycle.
 ```php
 $req = $telegram->getUpdates();
 for ($i = 0; $i < $telegram-> UpdateCount(); $i++) {
