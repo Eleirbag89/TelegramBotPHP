@@ -1518,6 +1518,220 @@ class Telegram {
 		$encodedMarkup = json_encode($replyMarkup, true);
 		return $encodedMarkup;
 	}
+        
+        // Payments
+  	/**
+	 * Use this method to send invoices. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned.
+	 * <table>
+         * <tr>
+	 * <td><strong>Parameters</strong></td>
+	 * <td><strong>Type</strong></td>
+	 * <td><strong>Required</strong></td>
+	 * <td><strong>Description</strong></td>
+	 * </tr>
+	 * <tr>
+	 * <td>chat_id</td>
+	 * <td>Integer</td>
+	 * <td>Yes</td>
+	 * <td>Unique identifier for the target private chat</td>
+	 * </tr>
+	 * <tr>
+	 * <td>title</td>
+	 * <td>String</td>
+	 * <td>Yes</td>
+	 * <td>Product name</td>
+	 * </tr>
+	 * <tr>
+	 * <td>description</td>
+	 * <td>String</td>
+	 * <td>Yes</td>
+	 * <td>Product description</td>
+	 * </tr>
+	 * <tr>
+	 * <td>payload</td>
+	 * <td>String</td>
+	 * <td>Yes</td>
+	 * <td>Bot-defined invoice payload, 1-128 bytes. This will not be displayed to the user, use for your internal processes.</td>
+	 * </tr>
+	 * <tr>
+	 * <td>provider_token</td>
+	 * <td>String</td>
+	 * <td>Yes</td>
+	 * <td>Payments provider token, obtained via <a href="/">Botfather</a></td>
+	 * </tr>
+	 * <tr>
+	 * <td>start_parameter</td>
+	 * <td>String</td>
+	 * <td>Yes</td>
+	 * <td>Unique deep-linking parameter that can be used to generate this invoice when used as a start parameter</td>
+	 * </tr>
+	 * <tr>
+	 * <td>currency</td>
+	 * <td>String</td>
+	 * <td>Yes</td>
+	 * <td>Three-letter ISO 4217 currency code, see <a href="https://core.telegram.org/bots/payments#supported-currencies">more on currencies</a></td>
+	 * </tr>
+	 * <tr>
+	 * <td>prices</td>
+	 * <td>Array of <a href="https://core.telegram.org/bots/api#labeledprice">LabeledPrice</a></td>
+	 * <td>Yes</td>
+	 * <td>Price breakdown, a list of components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.)</td>
+	 * </tr>
+	 * <tr>
+	 * <td>photo_url</td>
+	 * <td>String</td>
+	 * <td>Optional</td>
+	 * <td>URL of the product photo for the invoice. Can be a photo of the goods or a marketing image for a service. People like it better when they see what they are paying for.</td>
+	 * </tr>
+	 * <tr>
+	 * <td>photo_size</td>
+	 * <td>Integer</td>
+	 * <td>Optional</td>
+	 * <td>Photo size</td>
+	 * </tr>
+	 * <tr>
+	 * <td>photo_width</td>
+	 * <td>Integer</td>
+	 * <td>Optional</td>
+	 * <td>Photo width</td>
+	 * </tr>
+	 * <tr>
+	 * <td>photo_height</td>
+	 * <td>Integer</td>
+	 * <td>Optional</td>
+	 * <td>Photo height</td>
+	 * </tr>
+	 * <tr>
+	 * <td>need_name</td>
+	 * <td>Bool</td>
+	 * <td>Optional</td>
+	 * <td>Pass <em>True</em>, if you require the user's full name to complete the order</td>
+	 * </tr>
+	 * <tr>
+	 * <td>need_phone_number</td>
+	 * <td>Boolean</td>
+	 * <td>Optional</td>
+	 * <td>Pass <em>True</em>, if you require the user's phone number to complete the order</td>
+	 * </tr>
+	 * <tr>
+	 * <td>need_email</td>
+	 * <td>Bool</td>
+	 * <td>Optional</td>
+	 * <td>Pass <em>True</em>, if you require the user's email to complete the order</td>
+	 * </tr>
+	 * <tr>
+	 * <td>need_shipping_address</td>
+	 * <td>Boolean</td>
+	 * <td>Optional</td>
+	 * <td>Pass <em>True</em>, if you require the user's shipping address to complete the order</td>
+	 * </tr>
+	 * <tr>
+	 * <td>is_flexible</td>
+	 * <td>Boolean</td>
+	 * <td>Optional</td>
+	 * <td>Pass <em>True</em>, if the final price depends on the shipping method</td>
+	 * </tr>
+	 * <tr>
+	 * <td>disable_notification</td>
+	 * <td>Boolean</td>
+	 * <td>Optional</td>
+	 * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+	 * </tr>
+	 * <tr>
+	 * <td>reply_to_message_id</td>
+	 * <td>Integer</td>
+	 * <td>Optional</td>
+	 * <td>If the message is a reply, ID of the original message</td>
+	 * </tr>
+	 * <tr>
+	 * <td>reply_markup</td>
+	 * <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
+	 * <td>Optional</td>
+	 * <td>A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>. If empty, one 'Pay <code>total price</code>' button will be shown. If not empty, the first button must be a Pay button.</td>
+	 * </tr>
+	 * </table>
+	 * \param $content the request parameters as array
+	 * \return the JSON Telegram's reply
+	 */
+	public function sendInvoice(array $content) {
+		return $this->endpoint("sendInvoice", $content);
+        }
+        
+         /**
+	 * Once the user has confirmed their payment and shipping details, the Bot API sends the final confirmation in the form of an <a href="https://core.telegram.org/bots/api#updates">Update</a> with the field <em>pre_checkout_query</em>. Use this method to respond to such pre-checkout queries. On success, True is returned. <strong>Note:</strong> The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent.    
+	 * <table>
+	 * <tr>
+	 * <td><strong>Parameters</strong></td>
+	 * <td><strong>Type</strong></td>
+	 * <td><strong>Required</strong></td>
+	 * <td><strong>Description</strong></td>
+	 * </tr>
+	 * <tr>
+	 * <td>shipping_query_id</td>
+	 * <td>String</td>
+	 * <td>Yes</td>
+	 * <td>Unique identifier for the query to be answered</td>
+	 * </tr>
+	 * <tr>
+	 * <td>ok</td>
+	 * <td>Boolean</td>
+	 * <td>Yes</td>
+	 * <td>Specify True if delivery to the specified address is possible and False if there are any problems (for example, if delivery to the specified address is not possible)</td>
+	 * </tr>
+	 * <tr>
+	 * <td>shipping_options</td>
+	 * <td>Array of <a href="https://core.telegram.org/bots/api#shippingoption">ShippingOption</a></td>
+	 * <td>Optional</td>
+	 * <td>Required if <em>ok</em> is True. A JSON-serialized array of available shipping options.</td>
+	 * </tr>
+	 * <tr>
+	 * <td>error_message</td>
+	 * <td>String</td>
+	 * <td>Optional</td>
+	 * <td>Required if <em>ok</em> is False. Error message in human readable form that explains why it is impossible to complete the order (e.g. "Sorry, delivery to your desired address is unavailable'). Telegram will display this message to the user.</td>
+	 * </tr>
+	 * </table>
+	 * \param $content the request parameters as array
+	 * \return the JSON Telegram's reply
+	 */
+	public function answerShippingQuery(array $content) {
+		return $this->endpoint("answerShippingQuery", $content);
+        }
+        
+         /**
+         * Once the user has confirmed their payment and shipping details, the Bot API sends the final confirmation in the form of an <a href="https://core.telegram.org/bots/api#">Update</a> with the field <em>pre_checkout_query</em>. Use this method to respond to such pre-checkout queries. On success, True is returned. <strong>Note:</strong> The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent.
+	 * <table>
+         * <tr>
+	 * <td><strong>Parameters</strong></td>
+	 * <td><strong>Type</strong></td>
+	 * <td><strong>Required</strong></td>
+	 * <td><strong>Description</strong></td>
+	 * </tr>
+	 * <tr>
+	 * <td>pre_checkout_query_id</td>
+	 * <td>String</td>
+	 * <td>Yes</td>
+	 * <td>Unique identifier for the query to be answered</td>
+	 * </tr>
+	 * <tr>
+	 * <td>ok</td>
+	 * <td>Boolean</td>
+	 * <td>Yes</td>
+	 * <td>Specify <em>True</em> if everything is alright (goods are available, etc.) and the bot is ready to proceed with the order. Use <em>False</em> if there are any problems.</td>
+	 * </tr>
+	 * <tr>
+	 * <td>error_message</td>
+	 * <td>String</td>
+	 * <td>Optional</td>
+	 * <td>Required if <em>ok</em> is <em>False</em>. Error message in human readable form that explains the reason for failure to proceed with the checkout (e.g. "Sorry, somebody just bought the last of our amazing black T-shirts while you were busy filling out your payment details. Please choose a different color or garment!"). Telegram will display this message to the user.</td>
+	 * </tr>
+	 * </table>
+	 * \param $content the request parameters as array
+	 * \return the JSON Telegram's reply
+	 */
+	public function answerPreCheckoutQuery(array $content) {
+		return $this->endpoint("answerPreCheckoutQuery", $content);
+        }
 
 	/// Receive incoming messages using polling
 	/** Use this method to receive incoming updates using long polling.
