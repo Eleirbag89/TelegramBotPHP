@@ -149,6 +149,10 @@
 \item 
 \hyperlink{class_telegram_a9eb2fa2623f2cd4f360f5b13fc4bfc73}{answer\-Pre\-Checkout\-Query} (array \$content)
 \item 
+\hyperlink{class_telegram_ab40154a0f3a51a0e308ca40cdc0bbdd0}{send\-Video\-Note} (array \$content)
+\item 
+\hyperlink{class_telegram_af46503521fd05da7d9e42313c5f29dd6}{delete\-Message} (array \$content)
+\item 
 \hyperlink{class_telegram_adb467486d3d5e83ce21a03e00f17b16c}{get\-Updates} (\$offset=0, \$limit=100, \$timeout=0, \$update=true)
 \begin{DoxyCompactList}\small\item\em Receive incoming messages using polling. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a57e6066940e4cca7310cfd5c45fd8510}{serve\-Update} (\$update)
@@ -514,6 +518,27 @@ Get the date of the current message.
 
 \begin{DoxyReturn}{Returns}
 the String message's date 
+\end{DoxyReturn}
+\hypertarget{class_telegram_af46503521fd05da7d9e42313c5f29dd6}{\index{Telegram@{Telegram}!delete\-Message@{delete\-Message}}
+\index{delete\-Message@{delete\-Message}!Telegram@{Telegram}}
+\subsubsection[{delete\-Message}]{\setlength{\rightskip}{0pt plus 5cm}delete\-Message (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_af46503521fd05da7d9e42313c5f29dd6}
+Use this method to delete a message. A message can only be deleted if it was sent less than 48 hours ago. Any such recently sent outgoing message may be deleted. Additionally, if the bot is an administrator in a group chat, it can delete any message. If the bot is an administrator in a supergroup, it can delete messages from any other user and service messages about people joining or leaving the group (other types of service messages may only be removed by the group creator). In channels, bots can only remove their own messages. Returns True on success. \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+message\-\_\-id &Integer &Yes &Identifier of the message to delete  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
 \end{DoxyReturn}
 \hypertarget{class_telegram_af08c6bc7982d71857f05c0756221a703}{\index{Telegram@{Telegram}!download\-File@{download\-File}}
 \index{download\-File@{download\-File}!Telegram@{Telegram}}
@@ -1385,6 +1410,32 @@ duration &Integer &Optional &Duration of sent video in seconds  \\\cline{1-4}
 caption &String &Optional &Video caption (may also be used when resending videos by {\itshape file\-\_\-id}).  \\\cline{1-4}
 reply\-\_\-to\-\_\-message\-\_\-id &Integer &Optional &If the message is a reply, I\-D of the original message  \\\cline{1-4}
 reply\-\_\-markup &Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_ab40154a0f3a51a0e308ca40cdc0bbdd0}{\index{Telegram@{Telegram}!send\-Video\-Note@{send\-Video\-Note}}
+\index{send\-Video\-Note@{send\-Video\-Note}!Telegram@{Telegram}}
+\subsubsection[{send\-Video\-Note}]{\setlength{\rightskip}{0pt plus 5cm}send\-Video\-Note (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_ab40154a0f3a51a0e308ca40cdc0bbdd0}
+As of \href{https://telegram.org/blog/video-messages-and-telescope}{\tt v.\-4.\-0}, \hyperlink{class_telegram}{Telegram} clients support rounded square mp4 videos of up to 1 minute long. Use this method to send video messages. On success, the sent \href{https://core.telegram.org/bots/api#message}{\tt Message} is returned. \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+video\-\_\-note &\href{https://core.telegram.org/bots/api#inputfile}{\tt Input\-File} or String &Yes &Video note to send. Pass a file\-\_\-id as String to send a video note that exists on the \hyperlink{class_telegram}{Telegram} servers (recommended) or upload a new video using multipart/form-\/data. \href{https://core.telegram.org/bots/api#sending-files}{\tt More info on Sending Files »}. Sending video notes by a U\-R\-L is currently unsupported  \\\cline{1-4}
+duration &Integer &Optional &Duration of sent video in seconds  \\\cline{1-4}
+length &Integer &Optional &Video width and height  \\\cline{1-4}
+disable\-\_\-notification &Boolean &Optional &Sends the message \href{https://telegram.org/blog/channels-2-0#silent-messages}{\tt silently}. i\-O\-S users will not receive a notification, Android users will receive a notification with no sound.  \\\cline{1-4}
+reply\-\_\-to\-\_\-message\-\_\-id &Integer &Optional &If the message is a reply, I\-D of the original message  \\\cline{1-4}
+reply\-\_\-markup &\href{#inlinekeyboardmarkup}{\tt Inline\-Keyboard\-Markup} or \href{#replykeyboardmarkup}{\tt Reply\-Keyboard\-Markup} or \href{#replykeyboardremove}{\tt Reply\-Keyboard\-Remove} or \href{#forcereply}{\tt Force\-Reply} &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for an \href{https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating}{\tt inline keyboard}, \href{https://core.telegram.org/bots#keyboards}{\tt custom reply keyboard}, instructions to remove reply keyboard or to force a reply from the user.  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}

@@ -11,6 +11,7 @@ var searchData=
   ['sendsticker',['sendSticker',['../class_telegram.html#a0a176d232d8e7941184698447902beb6',1,'Telegram']]],
   ['sendvenue',['sendVenue',['../class_telegram.html#a4ad657480e7bc9575a71912eb85c92d5',1,'Telegram']]],
   ['sendvideo',['sendVideo',['../class_telegram.html#a789f27ed21d8a1232cc60832efdab17f',1,'Telegram']]],
+  ['sendvideonote',['sendVideoNote',['../class_telegram.html#ab40154a0f3a51a0e308ca40cdc0bbdd0',1,'Telegram']]],
   ['sendvoice',['sendVoice',['../class_telegram.html#a4faab9f92639453b851912d41ca1a3ca',1,'Telegram']]],
   ['serveupdate',['serveUpdate',['../class_telegram.html#a57e6066940e4cca7310cfd5c45fd8510',1,'Telegram']]],
   ['setdata',['setData',['../class_telegram.html#a87449bdd364c33ff024d32896342bf31',1,'Telegram']]],

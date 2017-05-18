@@ -287,6 +287,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7f8d89bb5061feb40973d2ac31b10a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9eb2fa2623f2cd4f360f5b13fc4bfc73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a9eb2fa2623f2cd4f360f5b13fc4bfc73">answerPreCheckoutQuery</a> (array $content)</td></tr>
 <tr class="separator:a9eb2fa2623f2cd4f360f5b13fc4bfc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab40154a0f3a51a0e308ca40cdc0bbdd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#ab40154a0f3a51a0e308ca40cdc0bbdd0">sendVideoNote</a> (array $content)</td></tr>
+<tr class="separator:ab40154a0f3a51a0e308ca40cdc0bbdd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af46503521fd05da7d9e42313c5f29dd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#af46503521fd05da7d9e42313c5f29dd6">deleteMessage</a> (array $content)</td></tr>
+<tr class="separator:af46503521fd05da7d9e42313c5f29dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb467486d3d5e83ce21a03e00f17b16c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#adb467486d3d5e83ce21a03e00f17b16c">getUpdates</a> ($offset=0, $limit=100, $timeout=0, $update=true)</td></tr>
 <tr class="memdesc:adb467486d3d5e83ce21a03e00f17b16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive incoming messages using polling.  <a href="#adb467486d3d5e83ce21a03e00f17b16c">More...</a><br/></td></tr>
 <tr class="separator:adb467486d3d5e83ce21a03e00f17b16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -824,6 +828,38 @@ Values inside $content:<br/>
 
 <p>Get the date of the current message. </p>
 <dl class="section return"><dt>Returns</dt><dd>the String message's date </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af46503521fd05da7d9e42313c5f29dd6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">deleteMessage </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Use this method to delete a message. A message can only be deleted if it was sent less than 48 hours ago. Any such recently sent outgoing message may be deleted. Additionally, if the bot is an administrator in a group chat, it can delete any message. If the bot is an administrator in a supergroup, it can delete messages from any other user and service messages about people joining or leaving the group (other types of service messages may only be removed by the group creator). In channels, bots can only remove their own messages. Returns True on success. </p>
+<table class="doxtable">
+<tr>
+<td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
+<tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<tr>
+<td>message_id </td><td>Integer </td><td>Yes </td><td>Identifier of the message to delete  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply </dd></dl>
 
 </div>
 </div>
@@ -2061,6 +2097,48 @@ Values inside $content:<br/>
 <td>reply_to_message_id </td><td>Integer </td><td>Optional </td><td>If the message is a reply, ID of the original message  </td></tr>
 <tr>
 <td>reply_markup </td><td>ReplyKeyboardMarkup or ReplyKeyboardHide or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab40154a0f3a51a0e308ca40cdc0bbdd0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sendVideoNote </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>As of <a href="https://telegram.org/blog/video-messages-and-telescope">v.4.0</a>, <a class="el" href="class_telegram.html">Telegram</a> clients support rounded square mp4 videos of up to 1 minute long. Use this method to send video messages. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned. </p>
+<table class="doxtable">
+<tr>
+<td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
+<tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<tr>
+<td>video_note </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String </td><td>Yes </td><td>Video note to send. Pass a file_id as String to send a video note that exists on the <a class="el" href="class_telegram.html">Telegram</a> servers (recommended) or upload a new video using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>. Sending video notes by a URL is currently unsupported  </td></tr>
+<tr>
+<td>duration </td><td>Integer </td><td>Optional </td><td>Duration of sent video in seconds  </td></tr>
+<tr>
+<td>length </td><td>Integer </td><td>Optional </td><td>Video width and height  </td></tr>
+<tr>
+<td>disable_notification </td><td>Boolean </td><td>Optional </td><td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. iOS users will not receive a notification, Android users will receive a notification with no sound.  </td></tr>
+<tr>
+<td>reply_to_message_id </td><td>Integer </td><td>Optional </td><td>If the message is a reply, ID of the original message  </td></tr>
+<tr>
+<td>reply_markup </td><td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a> </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
