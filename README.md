@@ -19,6 +19,8 @@ For the GetUpdates:
 Installation
 ---------
 
+#### Manual
+
 * Copy Telegram.php into your server and include it in your new bot script
 ```php
 include("Telegram.php");
@@ -26,6 +28,13 @@ $telegram = new Telegram($bot_id);
 ```
 
 * To enable error log file, also copy TelegramErrorLogger.php in the same directory of Telegram.php file
+
+#### Using Composer
+
+From your project directory, run
+```
+composer require eleirbag89/telegrambotphp
+```
 
 Configuration (WebHook)
 ---------
