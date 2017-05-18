@@ -19,6 +19,14 @@ For the GetUpdates:
 Installation
 ---------
 
+#### composer
+```
+composer require shakibonline/telegrambotphp
+```
+
+#### manually
+
+
 * Copy Telegram.php into your server and include it in your new bot script
 ```php
 include("Telegram.php");
