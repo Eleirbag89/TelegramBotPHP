@@ -1225,6 +1225,15 @@ class Telegram {
 
 		return $this->endpoint("setWebhook", $requestBody, !empty($certificate));
 	}
+        
+        /// Delete the WebHook for the bot
+	/**
+	 *  Use this method to remove webhook integration if you decide to switch back to <a href="https://core.telegram.org/bots/api#getupdates">getUpdates</a>. Returns True on success. Requires no parameters.
+	 * \return the JSON Telegram's reply
+	 */
+	public function deleteWebhook() {
+            return $this->endpoint("deleteWebhook", array(), false);
+	}
 
 	/// Get the data of the current message
 	/** Get the POST request of a user in a Webhook or the message actually processed in a getUpdates() enviroment.
