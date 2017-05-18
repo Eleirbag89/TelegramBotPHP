@@ -7,6 +7,9 @@
  */
 class TelegramErrorLogger
 {
+
+    private static $self;
+
     /// Log request and response parameters from/to Telegrsm API
     /**
      * Prints the list of parameters from/to Telegram's API endpoint
@@ -17,7 +20,7 @@ class TelegramErrorLogger
     {
         try {
             if ($result['ok'] === false) {
-                $self = new self;
+                self::$self = new self;
                 $e = new \Exception();
                 $error = PHP_EOL;
                 $error .= "==========[Response]==========";
@@ -29,7 +32,9 @@ class TelegramErrorLogger
                 $array = "=========[Sent Data]==========";
                 $array .= "\n";
                 if ($use_rt == true) {
-                    $array .= $self->rt($content);
+                    foreach ($content as $item) {
+                        $array .= self::$self->rt($item) . PHP_EOL. PHP_EOL;
+                    }
                 } else {
                     foreach ($content as $key => $value) {
                         $array .= $key . ":\t\t" . $value ."\n";
@@ -38,7 +43,7 @@ class TelegramErrorLogger
                 $backtrace = "============[Trace]===========";
                 $backtrace .= "\n";
                 $backtrace .= $e->getTraceAsString();
-                $self->_log_to_file($error . $array . $backtrace);
+                self::$self->_log_to_file($error . $array . $backtrace);
             }
         } catch (\Exception $e) {
             echo $e->getMessage();
@@ -79,7 +84,7 @@ class TelegramErrorLogger
                 if ($title != null) {
                     $key = $title.'.'.$key;
                 }
-                $text .= rt($value , $key, false);
+                $text .= self::rt($value , $key, false);
             } else {
                 if (is_bool($value)) {
                     $value = ($value) ? 'true' : 'false';

@@ -1648,7 +1648,7 @@ class Telegram
             $result = json_encode(array('ok' => false, 'curl_error_code' => curl_errno($ch), 'curl_error' => curl_error($ch)));
         }
         curl_close($ch);
-        TelegramErrorLogger::log(json_decode($result, true), $content);
+        TelegramErrorLogger::log(json_decode($result, true), [$this->getData(), $content]);
         return $result;
     }
 
