@@ -1,0 +1,16 @@
+{
+    "name": "shakibonline/telegrambotphp",
+    "description": "A very simple PHP Telegram Bot API",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Abbas Shakiba",
+            "email": "shakiba_9@yahoo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": ["Telegram.php", "TelegramErrorLogger.php"]
+    }
+}
