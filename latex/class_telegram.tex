@@ -70,6 +70,8 @@
 \begin{DoxyCompactList}\small\item\em Use this method to download a file. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_ae94b55864cae3e7751e7293585eec9f5}{set\-Webhook} (\$url, \$certificate=\char`\"{}\char`\"{})
 \begin{DoxyCompactList}\small\item\em Set a Web\-Hook for the bot. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_ad90cef56fdc7dfcc40318a78bf5aed71}{delete\-Webhook} ()
+\begin{DoxyCompactList}\small\item\em Delete the Web\-Hook for the bot. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a81a67162a6288d78fc4c55283325f0b4}{get\-Data} ()
 \begin{DoxyCompactList}\small\item\em Get the data of the current message. \end{DoxyCompactList}\item 
 \hypertarget{class_telegram_a87449bdd364c33ff024d32896342bf31}{\hyperlink{class_telegram_a87449bdd364c33ff024d32896342bf31}{set\-Data} (array \$data)}\label{class_telegram_a87449bdd364c33ff024d32896342bf31}
@@ -538,6 +540,20 @@ message\-\_\-id &Integer &Yes &Identifier of the message to delete  \\\cline{1-4
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+\end{DoxyReturn}
+\hypertarget{class_telegram_ad90cef56fdc7dfcc40318a78bf5aed71}{\index{Telegram@{Telegram}!delete\-Webhook@{delete\-Webhook}}
+\index{delete\-Webhook@{delete\-Webhook}!Telegram@{Telegram}}
+\subsubsection[{delete\-Webhook}]{\setlength{\rightskip}{0pt plus 5cm}delete\-Webhook (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_ad90cef56fdc7dfcc40318a78bf5aed71}
+
+
+Delete the Web\-Hook for the bot. 
+
+Use this method to remove webhook integration if you decide to switch back to \href{https://core.telegram.org/bots/api#getupdates}{\tt get\-Updates}. Returns True on success. Requires no parameters. \begin{DoxyReturn}{Returns}
 the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
 \end{DoxyReturn}
 \hypertarget{class_telegram_af08c6bc7982d71857f05c0756221a703}{\index{Telegram@{Telegram}!download\-File@{download\-File}}
