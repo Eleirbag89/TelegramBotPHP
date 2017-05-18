@@ -21,7 +21,7 @@ Installation
 
 #### composer
 ```
-composer require shakibonline/telegrambotphp
+composer require shakibonline/telegrambotphp v0.0.1
 ```
 
 #### manually
