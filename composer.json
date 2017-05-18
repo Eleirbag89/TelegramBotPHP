@@ -8,7 +8,7 @@
             "email": "shakiba_9@yahoo.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "alpha",
     "require": {},
     "autoload": {
         "files": ["Telegram.php", "TelegramErrorLogger.php"]
