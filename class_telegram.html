@@ -268,9 +268,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a81212e5e1fe0b3f72dd503a71577bbc4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a81212e5e1fe0b3f72dd503a71577bbc4">buildInlineKeyBoard</a> (array $options)</td></tr>
 <tr class="memdesc:a81212e5e1fe0b3f72dd503a71577bbc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an InlineKeyBoard.  <a href="#a81212e5e1fe0b3f72dd503a71577bbc4">More...</a><br/></td></tr>
 <tr class="separator:a81212e5e1fe0b3f72dd503a71577bbc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01432df36d1939f6c8dc09501f4ffcd3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a01432df36d1939f6c8dc09501f4ffcd3">buildInlineKeyboardButton</a> ($text, $url=&quot;&quot;, $callback_data=&quot;&quot;, $switch_inline_query=&quot;&quot;, $switch_inline_query_current_chat=&quot;&quot;, $callback_game=&quot;&quot;)</td></tr>
-<tr class="memdesc:a01432df36d1939f6c8dc09501f4ffcd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an InlineKeyboardButton.  <a href="#a01432df36d1939f6c8dc09501f4ffcd3">More...</a><br/></td></tr>
-<tr class="separator:a01432df36d1939f6c8dc09501f4ffcd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62a5f2033af5baeee4d69dcee98740a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a62a5f2033af5baeee4d69dcee98740a2">buildInlineKeyboardButton</a> ($text, $url=&quot;&quot;, $callback_data=&quot;&quot;, $switch_inline_query=&quot;&quot;, $switch_inline_query_current_chat=&quot;&quot;, $callback_game=&quot;&quot;, $pay=&quot;&quot;)</td></tr>
+<tr class="memdesc:a62a5f2033af5baeee4d69dcee98740a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an InlineKeyboardButton.  <a href="#a62a5f2033af5baeee4d69dcee98740a2">More...</a><br/></td></tr>
+<tr class="separator:a62a5f2033af5baeee4d69dcee98740a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a611a52a2e9be838207b3943007a76b6c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a611a52a2e9be838207b3943007a76b6c">buildKeyboardButton</a> ($text, $request_contact=false, $request_location=false)</td></tr>
 <tr class="memdesc:a611a52a2e9be838207b3943007a76b6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a KeyboardButton.  <a href="#a611a52a2e9be838207b3943007a76b6c">More...</a><br/></td></tr>
 <tr class="separator:a611a52a2e9be838207b3943007a76b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -508,7 +508,7 @@ Values inside $content:<br/>
 
 </div>
 </div>
-<a class="anchor" id="a01432df36d1939f6c8dc09501f4ffcd3"></a>
+<a class="anchor" id="a62a5f2033af5baeee4d69dcee98740a2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -546,7 +546,13 @@ Values inside $content:<br/>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$callback_game</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>$callback_game</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$pay</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -566,6 +572,7 @@ Values inside $content:<br/>
     <tr><td class="paramname">$switch_inline_query</td><td>String Optional. If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted. </td></tr>
     <tr><td class="paramname">$switch_inline_query_current_chat</td><td>String Optional. Optional. If set, pressing the button will insert the bot‘s username and the specified inline query in the current chat's input field. Can be empty, in which case only the bot’s username will be inserted. </td></tr>
     <tr><td class="paramname">$callback_game</td><td>String Optional. Description of the game that will be launched when the user presses the button. </td></tr>
+    <tr><td class="paramname">$pay</td><td>Boolean Optional. Specify True, to send a <a href="https://core.telegram.org/bots/api#payments">Pay button</a>. </td></tr>
   </table>
   </dd>
 </dl>

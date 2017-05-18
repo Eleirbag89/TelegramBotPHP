@@ -100,7 +100,7 @@ Generating page documentation...
 Generating docs for page md__home_travis_build_Eleirbag89_TelegramBotPHP_LICENSE...
 Generating docs for page md__home_travis_build_Eleirbag89_TelegramBotPHP_README./home/travis/build/Eleirbag89/TelegramBotPHP/README.md:22: warning: Illegal command BotFather as part of a <a>..</a> block
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1423: warning: Found unknown command `\mentioned'
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1496: warning: Found unknown command `\mentioned'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1499: warning: Found unknown command `\mentioned'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1117: warning: Found unknown command `\channelusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1164: warning: Found unknown command `\channelusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1058: warning: Found unknown command `\channelusername'
