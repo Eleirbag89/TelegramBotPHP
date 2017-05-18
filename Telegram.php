@@ -1455,9 +1455,10 @@ class Telegram {
 	 * \param $switch_inline_query String Optional. If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted.
 	 * \param $switch_inline_query_current_chat String Optional. Optional. If set, pressing the button will insert the bot‘s username and the specified inline query in the current chat's input field. Can be empty, in which case only the bot’s username will be inserted.
 	 * \param $callback_game  String Optional. Description of the game that will be launched when the user presses the button.
+         * \param $pay  Boolean Optional. Specify True, to send a <a href="https://core.telegram.org/bots/api#payments">Pay button</a>.
 	 * \return the requested button as Array
 	 */
-	public function buildInlineKeyboardButton($text, $url = "", $callback_data = "", $switch_inline_query = "", $switch_inline_query_current_chat = "", $callback_game = "") {
+	public function buildInlineKeyboardButton($text, $url = "", $callback_data = "", $switch_inline_query = "", $switch_inline_query_current_chat = "", $callback_game = "", $pay = "") {
 		$replyMarkup = array(
 			'text' => $text
 		);
@@ -1471,7 +1472,9 @@ class Telegram {
 			$replyMarkup['switch_inline_query_current_chat'] = $switch_inline_query_current_chat;
 		} else if ($callback_game != "") {
 			$replyMarkup['callback_game'] = $callback_game;
-		}
+		} else if ($pay != "") {
+                    $replyMarkup['pay'] = $pay;
+                }
 		return $replyMarkup;
 	}
 
