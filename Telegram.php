@@ -1735,6 +1735,94 @@ class Telegram {
 	public function answerPreCheckoutQuery(array $content) {
 		return $this->endpoint("answerPreCheckoutQuery", $content);
         }
+        
+         /**
+         * As of <a href="https://telegram.org/blog/video-messages-and-telescope">v.4.0</a>, Telegram clients support rounded square mp4 videos of up to 1 minute long. Use this method to send video messages. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned. 
+         * <table>
+	 * <tr>
+	 * <td><strong>Parameters</strong></td>
+	 * <td><strong>Type</strong></td>
+	 * <td><strong>Required</strong></td>
+	 * <td><strong>Description</strong></td>
+	 * </tr>
+	 * <tr>
+	 * <td>chat_id</td>
+	 * <td>Integer or String</td>
+	 * <td>Yes</td>
+	 * <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
+	 * </tr>
+	 * <tr>
+	 * <td>video_note</td>
+	 * <td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String</td>
+	 * <td>Yes</td>
+	 * <td>Video note to send. Pass a file_id as String to send a video note that exists on the Telegram servers (recommended) or upload a new video using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>. Sending video notes by a URL is currently unsupported</td>
+	 * </tr>
+	 * <tr>
+	 * <td>duration</td>
+	 * <td>Integer</td>
+	 * <td>Optional</td>
+	 * <td>Duration of sent video in seconds</td>
+	 * </tr>
+	 * <tr>
+	 * <td>length</td>
+	 * <td>Integer</td>
+	 * <td>Optional</td>
+	 * <td>Video width and height</td>
+	 * </tr>
+	 * <tr>
+	 * <td>disable_notification</td>
+	 * <td>Boolean</td>
+	 * <td>Optional</td>
+	 * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. iOS users will not receive a notification, Android users will receive a notification with no sound.</td>
+	 * </tr>
+	 * <tr>
+	 * <td>reply_to_message_id</td>
+	 * <td>Integer</td>
+	 * <td>Optional</td>
+	 * <td>If the message is a reply, ID of the original message</td>
+	 * </tr>
+	 * <tr>
+	 * <td>reply_markup</td>
+	 * <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
+	 * <td>Optional</td>
+	 * <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
+	 * </tr>
+	 * </table>
+	 * \param $content the request parameters as array
+	 * \return the JSON Telegram's reply
+	 */
+	public function sendVideoNote(array $content) {
+		return $this->endpoint("sendVideoNote", $content);
+        }
+        
+         /**
+         * Use this method to delete a message. A message can only be deleted if it was sent less than 48 hours ago. Any such recently sent outgoing message may be deleted. Additionally, if the bot is an administrator in a group chat, it can delete any message. If the bot is an administrator in a supergroup, it can delete messages from any other user and service messages about people joining or leaving the group (other types of service messages may only be removed by the group creator). In channels, bots can only remove their own messages. Returns True on success.
+         * <table>
+	 * <tr>
+	 * <td><strong>Parameters</strong></td>
+	 * <td><strong>Type</strong></td>
+	 * <td><strong>Required</strong></td>
+	 * <td><strong>Description</strong></td>
+	 * </tr>
+	 * <tr>
+	 * <td>chat_id</td>
+	 * <td>Integer or String</td>
+	 * <td>Yes</td>
+	 * <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
+	 * </tr>
+	 * <tr>
+	 * <td>message_id</td>
+	 * <td>Integer</td>
+	 * <td>Yes</td>
+	 * <td>Identifier of the message to delete</td>
+	 * </tr>
+	 * </table>
+	 * \param $content the request parameters as array
+	 * \return the JSON Telegram's reply
+	 */
+	public function deleteMessage(array $content) {
+		return $this->endpoint("deleteMessage", $content);
+        }
 
 	/// Receive incoming messages using polling
 	/** Use this method to receive incoming updates using long polling.
