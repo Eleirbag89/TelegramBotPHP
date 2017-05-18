@@ -11,7 +11,9 @@
     ],
     "license": "MIT",
     "minimum-stability": "alpha",
-    "require": {},
+    "require": {
+        "php": ">=5.0"
+    },
     "autoload": {
         "files": ["Telegram.php", "TelegramErrorLogger.php"]
     }
