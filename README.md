@@ -150,7 +150,7 @@ buildForceReply($selective=true)
 Show a Reply interface to the user.  
 Check [ForceReply](https://core.telegram.org/bots/api#forcereply) for more info.
 
-List of Bot using the library
+List of Bots using the library
 ------------
 Let me know (see the Contact me section) if you have made a bot using this API, I will add it to this section.
 
