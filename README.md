@@ -85,7 +85,7 @@ $telegram->downloadFile($file["result"]["file_path"], "./my_downloaded_file_on_l
 ```
 
 See update.php or update cowsay.php for the complete example.
-If you wanna see the CowSay Bot in action [add it] (https://telegram.me/cowmooobot).
+If you wanna see the CowSay Bot in action [add it](https://telegram.me/cowmooobot).
 
 If you want to use GetUpdates instead of the WebHook you need to call the the serveUpdate function inside a for cycle.
 ```php
@@ -117,38 +117,42 @@ Build keyboard parameters
 buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true)
 ```
 Send a custom keyboard. $option is an array of array KeyboardButton.  
-Check [ReplyKeyBoardMarkUp] (https://core.telegram.org/bots/api#replykeyboardmarkup) for more info.    
+Check [ReplyKeyBoardMarkUp](https://core.telegram.org/bots/api#replykeyboardmarkup) for more info.    
 
 ```php
 buildInlineKeyBoard(array $inline_keyboard)
 ```
 Send a custom keyboard. $inline_keyboard is an array of array InlineKeyboardButton.  
-Check [InlineKeyboardMarkup] (https://core.telegram.org/bots/api#inlinekeyboardmarkup) for more info.    
+Check [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) for more info.    
 
 ```php
 buildInlineKeyBoardButton($text, $url, $callback_data, $switch_inline_query)
 ```
 Create an InlineKeyboardButton.    
-Check [InlineKeyBoardButton] (https://core.telegram.org/bots/api#inlinekeyboardbutton) for more info.    
+Check [InlineKeyBoardButton](https://core.telegram.org/bots/api#inlinekeyboardbutton) for more info.    
 
 ```php
 buildKeyBoardButton($text, $url, $request_contact, $request_location)
 ```
 Create a KeyboardButton.    
-Check [KeyBoardButton] (https://core.telegram.org/bots/api#keyboardbutton) for more info.    
+Check [KeyBoardButton](https://core.telegram.org/bots/api#keyboardbutton) for more info.    
 
 
 ```php
 buildKeyBoardHide($selective=true)
 ```
 Hide a custom keyboard.  
-Check [ReplyKeyBoarHide] (https://core.telegram.org/bots/api#replykeyboardhide) for more info.    
+Check [ReplyKeyBoarHide](https://core.telegram.org/bots/api#replykeyboardhide) for more info.    
 
 ```php
 buildForceReply($selective=true)
 ```
 Show a Reply interface to the user.  
-Check [ForceReply] (https://core.telegram.org/bots/api#forcereply) for more info.
+Check [ForceReply](https://core.telegram.org/bots/api#forcereply) for more info.
+
+List of Bot using the library
+------------
+Let me know (see the Contact me section) if you have made a bot using this API, I will add it to this section.
 
 Emoticons
 ------------
