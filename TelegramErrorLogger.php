@@ -33,7 +33,7 @@ class TelegramErrorLogger
                 $array .= "\n";
                 if ($use_rt == true) {
                     foreach ($content as $item) {
-                        $array .= self::$self->rt($item) . PHP_EOL. PHP_EOL;
+                        $array .= self::$self->rt($item) . PHP_EOL . PHP_EOL;
                     }
                 } else {
                     foreach ($content as $key => $value) {
