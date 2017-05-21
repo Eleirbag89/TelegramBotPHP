@@ -39,7 +39,7 @@ $telegram = new Telegram($bot_id);
 
 From your project directory, run
 ```
-composer require eleirbag89/telegrambotphp
+composer require shakibonline/telegrambotphp
 ```
 
 Configuration (WebHook)
