@@ -285,14 +285,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a34cfc8575c348ca3dd168b9611af4f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a reply interface to the user. <br/></td></tr>
 <tr class="separator:a34cfc8575c348ca3dd168b9611af4f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2c4d7308afec34759ccafe4a4f83053"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#ae2c4d7308afec34759ccafe4a4f83053">sendInvoice</a> (array $content)</td></tr>
+<tr class="memdesc:ae2c4d7308afec34759ccafe4a4f83053"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an invoice.  <a href="#ae2c4d7308afec34759ccafe4a4f83053">More...</a><br/></td></tr>
 <tr class="separator:ae2c4d7308afec34759ccafe4a4f83053"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f8d89bb5061feb40973d2ac31b10a5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a7f8d89bb5061feb40973d2ac31b10a5a">answerShippingQuery</a> (array $content)</td></tr>
+<tr class="memdesc:a7f8d89bb5061feb40973d2ac31b10a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Answer a shipping query.  <a href="#a7f8d89bb5061feb40973d2ac31b10a5a">More...</a><br/></td></tr>
 <tr class="separator:a7f8d89bb5061feb40973d2ac31b10a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9eb2fa2623f2cd4f360f5b13fc4bfc73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a9eb2fa2623f2cd4f360f5b13fc4bfc73">answerPreCheckoutQuery</a> (array $content)</td></tr>
+<tr class="memdesc:a9eb2fa2623f2cd4f360f5b13fc4bfc73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Answer a PreCheckout query.  <a href="#a9eb2fa2623f2cd4f360f5b13fc4bfc73">More...</a><br/></td></tr>
 <tr class="separator:a9eb2fa2623f2cd4f360f5b13fc4bfc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab40154a0f3a51a0e308ca40cdc0bbdd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#ab40154a0f3a51a0e308ca40cdc0bbdd0">sendVideoNote</a> (array $content)</td></tr>
+<tr class="memdesc:ab40154a0f3a51a0e308ca40cdc0bbdd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a video note.  <a href="#ab40154a0f3a51a0e308ca40cdc0bbdd0">More...</a><br/></td></tr>
 <tr class="separator:ab40154a0f3a51a0e308ca40cdc0bbdd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af46503521fd05da7d9e42313c5f29dd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#af46503521fd05da7d9e42313c5f29dd6">deleteMessage</a> (array $content)</td></tr>
+<tr class="memdesc:af46503521fd05da7d9e42313c5f29dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a message.  <a href="#af46503521fd05da7d9e42313c5f29dd6">More...</a><br/></td></tr>
 <tr class="separator:af46503521fd05da7d9e42313c5f29dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb467486d3d5e83ce21a03e00f17b16c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#adb467486d3d5e83ce21a03e00f17b16c">getUpdates</a> ($offset=0, $limit=100, $timeout=0, $update=true)</td></tr>
 <tr class="memdesc:adb467486d3d5e83ce21a03e00f17b16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive incoming messages using polling.  <a href="#adb467486d3d5e83ce21a03e00f17b16c">More...</a><br/></td></tr>
@@ -432,6 +437,8 @@ Values inside $content:<br/>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Answer a PreCheckout query. </p>
 <p>Once the user has confirmed their payment and shipping details, the Bot API sends the final confirmation in the form of an <a href="https://core.telegram.org/bots/api#">Update</a> with the field <em>pre_checkout_query</em>. Use this method to respond to such pre-checkout queries. On success, True is returned. <b>Note:</b> The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent. </p>
 <table class="doxtable">
 <tr>
@@ -466,6 +473,8 @@ Values inside $content:<br/>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Answer a shipping query. </p>
 <p>Once the user has confirmed their payment and shipping details, the Bot API sends the final confirmation in the form of an <a href="https://core.telegram.org/bots/api#updates">Update</a> with the field <em>pre_checkout_query</em>. Use this method to respond to such pre-checkout queries. On success, True is returned. <b>Note:</b> The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent. </p>
 <table class="doxtable">
 <tr>
@@ -847,6 +856,8 @@ Values inside $content:<br/>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Delete a message. </p>
 <p>Use this method to delete a message. A message can only be deleted if it was sent less than 48 hours ago. Any such recently sent outgoing message may be deleted. Additionally, if the bot is an administrator in a group chat, it can delete any message. If the bot is an administrator in a supergroup, it can delete messages from any other user and service messages about people joining or leaving the group (other types of service messages may only be removed by the group creator). In channels, bots can only remove their own messages. Returns True on success. </p>
 <table class="doxtable">
 <tr>
@@ -1810,6 +1821,8 @@ Values inside $content:<br/>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Send an invoice. </p>
 <p>Use this method to send invoices. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned. </p>
 <table class="doxtable">
 <tr>
@@ -2143,6 +2156,8 @@ Values inside $content:<br/>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Send a video note. </p>
 <p>As of <a href="https://telegram.org/blog/video-messages-and-telescope">v.4.0</a>, <a class="el" href="class_telegram.html">Telegram</a> clients support rounded square mp4 videos of up to 1 minute long. Use this method to send video messages. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned. </p>
 <table class="doxtable">
 <tr>

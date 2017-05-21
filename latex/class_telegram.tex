@@ -146,15 +146,15 @@
 
 \begin{DoxyCompactList}\small\item\em Display a reply interface to the user. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_ae2c4d7308afec34759ccafe4a4f83053}{send\-Invoice} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Send an invoice. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a7f8d89bb5061feb40973d2ac31b10a5a}{answer\-Shipping\-Query} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Answer a shipping query. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a9eb2fa2623f2cd4f360f5b13fc4bfc73}{answer\-Pre\-Checkout\-Query} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Answer a Pre\-Checkout query. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_ab40154a0f3a51a0e308ca40cdc0bbdd0}{send\-Video\-Note} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Send a video note. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_af46503521fd05da7d9e42313c5f29dd6}{delete\-Message} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Delete a message. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_adb467486d3d5e83ce21a03e00f17b16c}{get\-Updates} (\$offset=0, \$limit=100, \$timeout=0, \$update=true)
 \begin{DoxyCompactList}\small\item\em Receive incoming messages using polling. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a57e6066940e4cca7310cfd5c45fd8510}{serve\-Update} (\$update)
@@ -257,6 +257,10 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_a9eb2fa2623f2cd4f360f5b13fc4bfc73}
+
+
+Answer a Pre\-Checkout query. 
+
 Once the user has confirmed their payment and shipping details, the Bot A\-P\-I sends the final confirmation in the form of an \href{https://core.telegram.org/bots/api#}{\tt Update} with the field {\itshape pre\-\_\-checkout\-\_\-query}. Use this method to respond to such pre-\/checkout queries. On success, True is returned. {\bfseries Note\-:} The Bot A\-P\-I must receive an answer within 10 seconds after the pre-\/checkout query was sent. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
@@ -279,6 +283,10 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_a7f8d89bb5061feb40973d2ac31b10a5a}
+
+
+Answer a shipping query. 
+
 Once the user has confirmed their payment and shipping details, the Bot A\-P\-I sends the final confirmation in the form of an \href{https://core.telegram.org/bots/api#updates}{\tt Update} with the field {\itshape pre\-\_\-checkout\-\_\-query}. Use this method to respond to such pre-\/checkout queries. On success, True is returned. {\bfseries Note\-:} The Bot A\-P\-I must receive an answer within 10 seconds after the pre-\/checkout query was sent. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
@@ -528,6 +536,10 @@ the String message's date
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_af46503521fd05da7d9e42313c5f29dd6}
+
+
+Delete a message. 
+
 Use this method to delete a message. A message can only be deleted if it was sent less than 48 hours ago. Any such recently sent outgoing message may be deleted. Additionally, if the bot is an administrator in a group chat, it can delete any message. If the bot is an administrator in a supergroup, it can delete messages from any other user and service messages about people joining or leaving the group (other types of service messages may only be removed by the group creator). In channels, bots can only remove their own messages. Returns True on success. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
@@ -1215,6 +1227,10 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_ae2c4d7308afec34759ccafe4a4f83053}
+
+
+Send an invoice. 
+
 Use this method to send invoices. On success, the sent \href{https://core.telegram.org/bots/api#message}{\tt Message} is returned. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
@@ -1442,6 +1458,10 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_ab40154a0f3a51a0e308ca40cdc0bbdd0}
+
+
+Send a video note. 
+
 As of \href{https://telegram.org/blog/video-messages-and-telescope}{\tt v.\-4.\-0}, \hyperlink{class_telegram}{Telegram} clients support rounded square mp4 videos of up to 1 minute long. Use this method to send video messages. On success, the sent \href{https://core.telegram.org/bots/api#message}{\tt Message} is returned. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
