@@ -3,7 +3,7 @@
 ![PHP](https://img.shields.io/badge/php-%3E%3D5.3-8892bf.svg)
 ![CURL](https://img.shields.io/badge/cURL-required-green.svg)
 
-[![Total Downloads](https://poser.pugx.org/shakibonline/telegrambotphp/downloads)](https://packagist.org/packages/shakibonline/telegrambotphp)
+[![Total Downloads](https://poser.pugx.org/eleirbag89/telegrambotphp/downloads)](https://packagist.org/packages/eleirbag89/telegrambotphp)
 [![License](https://poser.pugx.org/eleirbag89/telegrambotphp/license)](https://packagist.org/packages/eleirbag89/telegrambotphp)
 
 > A very simple PHP [Telegram Bot API](https://core.telegram.org/bots) for sending messages.    
@@ -39,7 +39,7 @@ $telegram = new Telegram($bot_id);
 
 From your project directory, run
 ```
-composer require shakibonline/telegrambotphp
+composer require eleirbag89/telegrambotphp
 ```
 
 Configuration (WebHook)
