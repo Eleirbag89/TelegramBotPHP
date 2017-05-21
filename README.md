@@ -1,6 +1,13 @@
 # TelegramBotPHP
+[![API](https://img.shields.io/badge/Telegram%20Bot%20API-May%2018%2C%202017-36ade1.svg)](https://core.telegram.org/bots/api)
+![PHP](https://img.shields.io/badge/php-%3E%3D5.3-8892bf.svg)
+![CURL](https://img.shields.io/badge/cURL-required-green.svg)
+
+[![Total Downloads](https://poser.pugx.org/eleirbag89/telegrambotphp/downloads)](https://packagist.org/packages/eleirbag89/telegrambotphp)
+[![License](https://poser.pugx.org/eleirbag89/telegrambotphp/license)](https://packagist.org/packages/eleirbag89/telegrambotphp)
+
 > A very simple PHP [Telegram Bot API](https://core.telegram.org/bots) for sending messages.    
-> (Almost) Compliant with the November 21, 2016 Telegram Bot API update.
+> (Almost) Compliant with the May 18, 2017 Telegram Bot API update.
 
 Requirements
 ---------
@@ -19,13 +26,6 @@ For the GetUpdates:
 Installation
 ---------
 
-#### composer
-```
-composer require shakibonline/telegrambotphp v0.0.2
-```
-
-#### manually
-
 
 * Copy Telegram.php into your server and include it in your new bot script
 ```php
@@ -34,6 +34,13 @@ $telegram = new Telegram($bot_id);
 ```
 
 * To enable error log file, also copy TelegramErrorLogger.php in the same directory of Telegram.php file
+
+#### Using Composer
+
+From your project directory, run
+```
+composer require eleirbag89/telegrambotphp
+```
 
 Configuration (WebHook)
 ---------
@@ -77,7 +84,7 @@ $telegram->downloadFile($file["result"]["file_path"], "./my_downloaded_file_on_l
 ```
 
 See update.php or update cowsay.php for the complete example.
-If you wanna see the CowSay Bot in action [add it] (https://telegram.me/cowmooobot).
+If you wanna see the CowSay Bot in action [add it](https://telegram.me/cowmooobot).
 
 If you want to use GetUpdates instead of the WebHook you need to call the the `serveUpdate` function inside a for cycle.
 ```php
@@ -109,38 +116,42 @@ Build keyboard parameters
 buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true)
 ```
 Send a custom keyboard. $option is an array of array KeyboardButton.  
-Check [ReplyKeyBoardMarkUp] (https://core.telegram.org/bots/api#replykeyboardmarkup) for more info.    
+Check [ReplyKeyBoardMarkUp](https://core.telegram.org/bots/api#replykeyboardmarkup) for more info.    
 
 ```php
 buildInlineKeyBoard(array $inline_keyboard)
 ```
 Send a custom keyboard. $inline_keyboard is an array of array InlineKeyboardButton.  
-Check [InlineKeyboardMarkup] (https://core.telegram.org/bots/api#inlinekeyboardmarkup) for more info.    
+Check [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) for more info.    
 
 ```php
 buildInlineKeyBoardButton($text, $url, $callback_data, $switch_inline_query)
 ```
 Create an InlineKeyboardButton.    
-Check [InlineKeyBoardButton] (https://core.telegram.org/bots/api#inlinekeyboardbutton) for more info.    
+Check [InlineKeyBoardButton](https://core.telegram.org/bots/api#inlinekeyboardbutton) for more info.    
 
 ```php
 buildKeyBoardButton($text, $url, $request_contact, $request_location)
 ```
 Create a KeyboardButton.    
-Check [KeyBoardButton] (https://core.telegram.org/bots/api#keyboardbutton) for more info.    
+Check [KeyBoardButton](https://core.telegram.org/bots/api#keyboardbutton) for more info.    
 
 
 ```php
 buildKeyBoardHide($selective=true)
 ```
 Hide a custom keyboard.  
-Check [ReplyKeyBoarHide] (https://core.telegram.org/bots/api#replykeyboardhide) for more info.    
+Check [ReplyKeyBoarHide](https://core.telegram.org/bots/api#replykeyboardhide) for more info.    
 
 ```php
 buildForceReply($selective=true)
 ```
 Show a Reply interface to the user.  
-Check [ForceReply] (https://core.telegram.org/bots/api#forcereply) for more info.
+Check [ForceReply](https://core.telegram.org/bots/api#forcereply) for more info.
+
+List of Bots using the library
+------------
+Let me know (see the Contact me section) if you have made a bot using this API, I will add it to this section.
 
 Emoticons
 ------------

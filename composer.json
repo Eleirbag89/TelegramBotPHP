@@ -1,11 +1,11 @@
 {
-    "name": "shakibonline/telegrambotphp",
+    "name": "eleirbag89/telegrambotphp",
     "description": "A very simple PHP Telegram Bot API",
     "type": "library",
     "authors": [
         {
-            "name": "Abbas Shakiba",
-            "email": "shakiba_9@yahoo.com"
+            "name": "Gabriele Grillo",
+            "email": "gabry.grillo@alice.it"
         }
     ],
     "license": "MIT",
