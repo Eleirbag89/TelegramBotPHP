@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -82,7 +82,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
 <div class="title">Telegram Class Reference</div>  </div>
 </div><!--header-->
@@ -308,6 +309,29 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a291f955d4bae8e89b42e0a762b9bcc33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a291f955d4bae8e89b42e0a762b9bcc33">getUpdateType</a> ()</td></tr>
 <tr class="memdesc:a291f955d4bae8e89b42e0a762b9bcc33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current update type.  <a href="#a291f955d4bae8e89b42e0a762b9bcc33">More...</a><br/></td></tr>
 <tr class="separator:a291f955d4bae8e89b42e0a762b9bcc33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a464a4a095bb928388381b33e0babf9fe"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a464a4a095bb928388381b33e0babf9fe">CALLBACK_QUERY</a> = 'callback_query'</td></tr>
+<tr class="separator:a464a4a095bb928388381b33e0babf9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa469cc007db1409d59a5e5bfac0633ec"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#aa469cc007db1409d59a5e5bfac0633ec">EDITED_MESSAGE</a> = 'edited_message'</td></tr>
+<tr class="separator:aa469cc007db1409d59a5e5bfac0633ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb63774895b195d4c22afe2b089a3ddd"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#acb63774895b195d4c22afe2b089a3ddd">REPLY</a> = 'reply'</td></tr>
+<tr class="separator:acb63774895b195d4c22afe2b089a3ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9b451d04eb24044a2d4112be10de570"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#af9b451d04eb24044a2d4112be10de570">MESSAGE</a> = 'message'</td></tr>
+<tr class="separator:af9b451d04eb24044a2d4112be10de570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aeb08e94e66f9d958f565530b6b6a80"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a0aeb08e94e66f9d958f565530b6b6a80">PHOTO</a> = 'photo'</td></tr>
+<tr class="separator:a0aeb08e94e66f9d958f565530b6b6a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a333a9b0a1034beea1b4b505f30885cea"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a333a9b0a1034beea1b4b505f30885cea">VIDEO</a> = 'video'</td></tr>
+<tr class="separator:a333a9b0a1034beea1b4b505f30885cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f6cfe013372d7de1568a95c871214d1"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a9f6cfe013372d7de1568a95c871214d1">AUDIO</a> = 'audio'</td></tr>
+<tr class="separator:a9f6cfe013372d7de1568a95c871214d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12e48e3d10ee66d0a6ca34c207d8e282"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a12e48e3d10ee66d0a6ca34c207d8e282">VOICE</a> = 'voice'</td></tr>
+<tr class="separator:a12e48e3d10ee66d0a6ca34c207d8e282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6494d627239bf203e03297843bf52053"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a6494d627239bf203e03297843bf52053">DOCUMENT</a> = 'document'</td></tr>
+<tr class="separator:a6494d627239bf203e03297843bf52053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca699735a6cec340e45cde5c623bdb32"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#aca699735a6cec340e45cde5c623bdb32">LOCATION</a> = 'location'</td></tr>
+<tr class="separator:aca699735a6cec340e45cde5c623bdb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_telegram.html">Telegram</a> Bot Class. </p>
@@ -2386,6 +2410,137 @@ Values inside $content:<br/>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Field Documentation</h2>
+<a class="anchor" id="a9f6cfe013372d7de1568a95c871214d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const AUDIO = 'audio'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constant for type Audio </p>
+
+</div>
+</div>
+<a class="anchor" id="a464a4a095bb928388381b33e0babf9fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const CALLBACK_QUERY = 'callback_query'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constant for type Callback Query </p>
+
+</div>
+</div>
+<a class="anchor" id="a6494d627239bf203e03297843bf52053"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DOCUMENT = 'document'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constant for type Document </p>
+
+</div>
+</div>
+<a class="anchor" id="aa469cc007db1409d59a5e5bfac0633ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EDITED_MESSAGE = 'edited_message'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constant for type Edited Message </p>
+
+</div>
+</div>
+<a class="anchor" id="aca699735a6cec340e45cde5c623bdb32"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const LOCATION = 'location'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constant for type Location </p>
+
+</div>
+</div>
+<a class="anchor" id="af9b451d04eb24044a2d4112be10de570"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const MESSAGE = 'message'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constant for type Message </p>
+
+</div>
+</div>
+<a class="anchor" id="a0aeb08e94e66f9d958f565530b6b6a80"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PHOTO = 'photo'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constant for type Photo </p>
+
+</div>
+</div>
+<a class="anchor" id="acb63774895b195d4c22afe2b089a3ddd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const REPLY = 'reply'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constant for type Reply </p>
+
+</div>
+</div>
+<a class="anchor" id="a333a9b0a1034beea1b4b505f30885cea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const VIDEO = 'video'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constant for type Video </p>
+
+</div>
+</div>
+<a class="anchor" id="a12e48e3d10ee66d0a6ca34c207d8e282"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const VOICE = 'voice'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constant for type Voice </p>
 
 </div>
 </div>
