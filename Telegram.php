@@ -10,6 +10,47 @@ if (file_exists('TelegramErrorLogger.php')) {
 class Telegram 
 {
 
+    /**
+    * Constant for type Callback Query
+    */ 
+    const CALLBACK_QUERY = 'callback_query';
+     /**
+    * Constant for type Edited Message
+    */ 
+    const EDITED_MESSAGE = 'edited_message';
+      /**
+    * Constant for type Reply
+    */ 
+    const REPLY = 'reply';   
+     /**
+    * Constant for type Message
+    */ 
+    const MESSAGE = 'message';    
+     /**
+    * Constant for type Photo
+    */ 
+    const PHOTO = 'photo';
+     /**
+    * Constant for type Video
+    */ 
+    const VIDEO = 'video';
+     /**
+    * Constant for type Audio
+    */ 
+    const AUDIO = 'audio';
+     /**
+    * Constant for type Voice
+    */ 
+    const VOICE = 'voice';
+     /**
+    * Constant for type Document
+    */ 
+    const DOCUMENT = 'document';
+     /**
+    * Constant for type Location
+    */ 
+    const LOCATION = 'location';
+   
     private $bot_id = "";
     private $data = array();
     private $updates = array();
@@ -1296,7 +1337,7 @@ class Telegram
      */
     public function Text() 
     {
-        if ($this->getUpdateType() == 'callback_query') {
+        if ($this->getUpdateType() == CALLBACK_QUERY) {
             return @$this->data["callback_query"]["data"];
         }
         return @$this->data["message"]["text"];
@@ -1316,6 +1357,9 @@ class Telegram
      */
     public function MessageID() 
     {
+        if ($this->getUpdateType() == CALLBACK_QUERY) {
+            return @$this->data["callback_query"]["message"]["message_id"];
+        }
         return $this->data["message"]["message_id"];
     }
 
@@ -1402,7 +1446,7 @@ class Telegram
     /// Get the first name of the user
     public function FirstName() 
     {
-        if ($this->getUpdateType() == 'callback_query') {
+        if ($this->getUpdateType() == CALLBACK_QUERY) {
             return @$this->data["callback_query"]["from"]["first_name"];
         }
         return @$this->data["message"]["from"]["first_name"];
@@ -1411,7 +1455,7 @@ class Telegram
     /// Get the last name of the user
     public function LastName() 
     {
-        if ($this->getUpdateType() == 'callback_query') {
+        if ($this->getUpdateType() == CALLBACK_QUERY) {
             return @$this->data["callback_query"]["from"]["last_name"];
         }
         return @$this->data["message"]["from"]["last_name"];
@@ -1420,7 +1464,7 @@ class Telegram
 /// Get the username of the user
     public function Username() 
     {
-        if ($this->getUpdateType() == 'callback_query') {
+        if ($this->getUpdateType() == CALLBACK_QUERY) {
             return @$this->data["callback_query"]["from"]["username"];
         }
         return @$this->data["message"]["from"]["username"];
@@ -1447,7 +1491,7 @@ class Telegram
     /// Get user's id of current message
     public function UserID()
     {
-        if ($this->getUpdateType() == 'callback_query')
+        if ($this->getUpdateType() == CALLBACK_QUERY)
             return $this->data["callback_query"]["from"]["id"];
         return $this->data["message"]["from"]["id"];
     }
@@ -1956,16 +2000,36 @@ class Telegram
     public function getUpdateType()
     {
         $update = $this->data;
-        if (isset($update['callback_query']))               return 'callback_query';
-        if (isset($update['edited_message']))               return 'edited_message';
-        if (isset($update['message']['reply_to_message']))  return 'reply';
-        if (isset($update['message']['text']))              return 'message';
-        if (isset($update['message']['photo']))             return 'photo';
-        if (isset($update['message']['video']))             return 'video';
-        if (isset($update['message']['audio']))             return 'audio';
-        if (isset($update['message']['voice']))             return 'voice';
-        if (isset($update['message']['document']))          return 'document';
-        if (isset($update['message']['location']))          return 'location';
+        if (isset($update['callback_query'])) {
+            return CALLBACK_QUERY;
+        }
+        if (isset($update['edited_message'])) {
+            return EDITED_MESSAGE;
+        }
+        if (isset($update['message']['reply_to_message'])) {
+            return REPLY;
+        }
+        if (isset($update['message']['text'])) {
+            return MESSAGE;
+        }
+        if (isset($update['message']['photo'])) {
+            return PHOTO;
+        }
+        if (isset($update['message']['video'])) {
+            return VIDEO;
+        }
+        if (isset($update['message']['audio'])) {
+            return AUDIO;
+        }
+        if (isset($update['message']['voice'])) {
+            return VOICE;
+        }
+        if (isset($update['message']['document'])) {
+            return DOCUMENT;
+        }
+        if (isset($update['message']['location'])) {
+            return LOCATION;
+        }
         return FALSE;
     }
 
