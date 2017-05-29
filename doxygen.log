@@ -92,9 +92,9 @@ Computing dependencies between directories...
 Generating citations page...
 Counting data structures...
 Resolving user defined r/home/travis/build/Eleirbag89/TelegramBotPHP/README.md:22: warning: Illegal command BotFather as part of a <a>..</a> block
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1543: warning: Found unknown command `\mentioned'
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1623: warning: Found unknown command `\mentioned'
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1946: warning: Found unknown command `\channelusername'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1546: warning: Found unknown command `\mentioned'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1626: warning: Found unknown command `\mentioned'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1949: warning: Found unknown command `\channelusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1188: warning: Found unknown command `\channelusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1236: warning: Found unknown command `\channelusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1128: warning: Found unknown command `\channelusername'
@@ -110,7 +110,7 @@ Resolving user defined r/home/travis/build/Eleirbag89/TelegramBotPHP/README.md:2
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:814: warning: Found unknown command `\channelusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:638: warning: Found unknown command `\channelusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:566: warning: Found unknown command `\channelusername'
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1885: warning: Found unknown command `\channelusername'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1888: warning: Found unknown command `\channelusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1288: warning: Unsupported xml/html tag <token> found
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:838: warning: Found unknown command `\supergroupusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/TelegramErrorLogger.php:15: warning: The following parameters of TelegramErrorLogger\log($result,$content,$use_rt=true) are not documented:
