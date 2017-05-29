@@ -1337,7 +1337,7 @@ class Telegram
      */
     public function Text() 
     {
-        if ($this->getUpdateType() == CALLBACK_QUERY) {
+        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
             return @$this->data["callback_query"]["data"];
         }
         return @$this->data["message"]["text"];
@@ -1357,7 +1357,7 @@ class Telegram
      */
     public function MessageID() 
     {
-        if ($this->getUpdateType() == CALLBACK_QUERY) {
+        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
             return @$this->data["callback_query"]["message"]["message_id"];
         }
         return $this->data["message"]["message_id"];
@@ -1446,7 +1446,7 @@ class Telegram
     /// Get the first name of the user
     public function FirstName() 
     {
-        if ($this->getUpdateType() == CALLBACK_QUERY) {
+        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
             return @$this->data["callback_query"]["from"]["first_name"];
         }
         return @$this->data["message"]["from"]["first_name"];
@@ -1455,7 +1455,7 @@ class Telegram
     /// Get the last name of the user
     public function LastName() 
     {
-        if ($this->getUpdateType() == CALLBACK_QUERY) {
+        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
             return @$this->data["callback_query"]["from"]["last_name"];
         }
         return @$this->data["message"]["from"]["last_name"];
@@ -1464,7 +1464,7 @@ class Telegram
 /// Get the username of the user
     public function Username() 
     {
-        if ($this->getUpdateType() == CALLBACK_QUERY) {
+        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
             return @$this->data["callback_query"]["from"]["username"];
         }
         return @$this->data["message"]["from"]["username"];
@@ -1491,7 +1491,7 @@ class Telegram
     /// Get user's id of current message
     public function UserID()
     {
-        if ($this->getUpdateType() == CALLBACK_QUERY)
+        if ($this->getUpdateType() == self::CALLBACK_QUERY)
             return $this->data["callback_query"]["from"]["id"];
         return $this->data["message"]["from"]["id"];
     }
@@ -2001,34 +2001,34 @@ class Telegram
     {
         $update = $this->data;
         if (isset($update['callback_query'])) {
-            return CALLBACK_QUERY;
+            return self::CALLBACK_QUERY;
         }
         if (isset($update['edited_message'])) {
-            return EDITED_MESSAGE;
+            return self::EDITED_MESSAGE;
         }
         if (isset($update['message']['reply_to_message'])) {
-            return REPLY;
+            return self::REPLY;
         }
         if (isset($update['message']['text'])) {
-            return MESSAGE;
+            return self::MESSAGE;
         }
         if (isset($update['message']['photo'])) {
-            return PHOTO;
+            return self::PHOTO;
         }
         if (isset($update['message']['video'])) {
-            return VIDEO;
+            return self::VIDEO;
         }
         if (isset($update['message']['audio'])) {
-            return AUDIO;
+            return self::AUDIO;
         }
         if (isset($update['message']['voice'])) {
-            return VOICE;
+            return self::VOICE;
         }
         if (isset($update['message']['document'])) {
-            return DOCUMENT;
+            return self::DOCUMENT;
         }
         if (isset($update['message']['location'])) {
-            return LOCATION;
+            return self::LOCATION;
         }
         return FALSE;
     }
