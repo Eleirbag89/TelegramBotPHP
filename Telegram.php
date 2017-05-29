@@ -1349,6 +1349,9 @@ class Telegram
      */
     public function ChatID() 
     {
+        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
+            return @$this->data["callback_query"]["message"]["chat"]["id"];
+        }
         return $this->data["message"]["chat"]["id"];
     }
     /// Get the message_id of the current message
