@@ -1,56 +1,12 @@
 <?php
-if (file_exists('TelegramErrorLogger.php')) {
-    require_once 'TelegramErrorLogger.php';
-}
 
 /**
  * Telegram Bot Class.
  * @author Gabriele Grillo <gabry.grillo@alice.it>
  */
-class Telegram 
+class Telegram
 {
 
-    /**
-    * Constant for type Callback Query
-    */ 
-    const CALLBACK_QUERY = 'callback_query';
-     /**
-    * Constant for type Edited Message
-    */ 
-    const EDITED_MESSAGE = 'edited_message';
-      /**
-    * Constant for type Reply
-    */ 
-    const REPLY = 'reply';   
-     /**
-    * Constant for type Message
-    */ 
-    const MESSAGE = 'message';    
-     /**
-    * Constant for type Photo
-    */ 
-    const PHOTO = 'photo';
-     /**
-    * Constant for type Video
-    */ 
-    const VIDEO = 'video';
-     /**
-    * Constant for type Audio
-    */ 
-    const AUDIO = 'audio';
-     /**
-    * Constant for type Voice
-    */ 
-    const VOICE = 'voice';
-     /**
-    * Constant for type Document
-    */ 
-    const DOCUMENT = 'document';
-     /**
-    * Constant for type Location
-    */ 
-    const LOCATION = 'location';
-   
     private $bot_id = "";
     private $data = array();
     private $updates = array();
@@ -61,7 +17,7 @@ class Telegram
      * \param $bot_id the bot token
      * \return an instance of the class
      */
-    public function __construct($bot_id) 
+    public function __construct($bot_id)
     {
         $this->bot_id = $bot_id;
         $this->data = $this->getData();
@@ -75,7 +31,7 @@ class Telegram
      * \param $post boolean tells if $content needs to be sends
      * \return the JSON Telegram's reply
      */
-    public function endpoint($api, array $content, $post = true) 
+    public function endpoint($api, array $content, $post = true)
     {
         $url = 'https://api.telegram.org/bot' . $this->bot_id . '/' . $api;
         if ($post)
@@ -91,7 +47,7 @@ class Telegram
      * Returns basic information about the bot in form of a User object.
      * \return the JSON Telegram's reply
      */
-    public function getMe() 
+    public function getMe()
     {
         return $this->endpoint("getMe", array(), false);
     }
@@ -100,7 +56,7 @@ class Telegram
     /**
      * \return the HTTP 200 to Telegram
      */
-    public function respondSuccess() 
+    public function respondSuccess()
     {
         http_response_code(200);
         return json_encode(array("status" => "success"));
@@ -156,9 +112,14 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function sendMessage(array $content) 
+    public function sendMessage(array $content)
     {
         return $this->endpoint("sendMessage", $content);
+    }
+
+    public function deleteMessage(array $content)
+    {
+        return $this->endpoint("deleteMessage", $content);
     }
 
     /// Forward a message
@@ -193,7 +154,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function forwardMessage(array $content) 
+    public function forwardMessage(array $content)
     {
         return $this->endpoint("forwardMessage", $content);
     }
@@ -242,7 +203,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function sendPhoto(array $content) 
+    public function sendPhoto(array $content)
     {
         return $this->endpoint("sendPhoto", $content);
     }
@@ -250,7 +211,6 @@ class Telegram
     /// Send an audio
     /**
      * Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.
-
      * For backward compatibility, when the fields title and performer are both empty and the mime-type of the file to be sent is not audio/mpeg, the file will be sent as a playable voice message. For this to work, the audio must be in an .ogg file encoded with OPUS. This behavior will be phased out in the future. For sending voice messages, use the sendVoice method instead.<br/>Values inside $content:<br/>
      * <table>
      * <tr>
@@ -305,7 +265,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function sendAudio(array $content) 
+    public function sendAudio(array $content)
     {
         return $this->endpoint("sendAudio", $content);
     }
@@ -348,7 +308,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function sendDocument(array $content) 
+    public function sendDocument(array $content)
     {
         return $this->endpoint("sendDocument", $content);
     }
@@ -391,7 +351,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function sendSticker(array $content) 
+    public function sendSticker(array $content)
     {
         return $this->endpoint("sendSticker", $content);
     }
@@ -446,7 +406,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function sendVideo(array $content) 
+    public function sendVideo(array $content)
     {
         return $this->endpoint("sendVideo", $content);
     }
@@ -495,7 +455,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function sendVoice(array $content) 
+    public function sendVoice(array $content)
     {
         return $this->endpoint("sendVoice", $content);
     }
@@ -544,7 +504,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function sendLocation(array $content) 
+    public function sendLocation(array $content)
     {
         return $this->endpoint("sendLocation", $content);
     }
@@ -617,7 +577,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function sendVenue(array $content) 
+    public function sendVenue(array $content)
     {
         return $this->endpoint("sendVenue", $content);
     }
@@ -677,7 +637,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function sendContact(array $content) 
+    public function sendContact(array $content)
     {
         return $this->endpoint("sendContact", $content);
     }
@@ -685,9 +645,7 @@ class Telegram
     /// Send a chat action
     /**
      *  Use this method when you need to tell the user that something is happening on the bot's side. The status is set for 5 seconds or less (when a message arrives from your bot, Telegram clients clear its typing status).
-
      * Example: The ImageBot needs some time to process a request and upload the image. Instead of sending a text message along the lines of “Retrieving image, please wait…”, the bot may use sendChatAction with action = upload_photo. The user will see a “sending photo” status for the bot.
-
      * We only recommend using this method when a response from the bot will take a noticeable amount of time to arrive.<br/>Values inside $content:<br/>
      * <table>
      * <tr>
@@ -712,7 +670,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function sendChatAction(array $content) 
+    public function sendChatAction(array $content)
     {
         return $this->endpoint("sendChatAction", $content);
     }
@@ -749,7 +707,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function getUserProfilePhotos(array $content) 
+    public function getUserProfilePhotos(array $content)
     {
         return $this->endpoint("getUserProfilePhotos", $content);
     }
@@ -760,7 +718,7 @@ class Telegram
      * \param $file_id String File identifier to get info about
      * \return the JSON Telegram's reply
      */
-    public function getFile($file_id) 
+    public function getFile($file_id)
     {
         $content = array('file_id' => $file_id);
         return $this->endpoint("getFile", $content);
@@ -793,7 +751,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function kickChatMember(array $content) 
+    public function kickChatMember(array $content)
     {
         return $this->endpoint("kickChatMember", $content);
     }
@@ -817,7 +775,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function leaveChat(array $content) 
+    public function leaveChat(array $content)
     {
         return $this->endpoint("leaveChat", $content);
     }
@@ -847,7 +805,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function unbanChatMember(array $content) 
+    public function unbanChatMember(array $content)
     {
         return $this->endpoint("unbanChatMember", $content);
     }
@@ -871,7 +829,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function getChat(array $content) 
+    public function getChat(array $content)
     {
         return $this->endpoint("getChat", $content);
     }
@@ -895,7 +853,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function getChatAdministrators(array $content) 
+    public function getChatAdministrators(array $content)
     {
         return $this->endpoint("getChatAdministrators", $content);
     }
@@ -919,7 +877,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function getChatMembersCount(array $content) 
+    public function getChatMembersCount(array $content)
     {
         return $this->endpoint("getChatMembersCount", $content);
     }
@@ -949,7 +907,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function getChatMember(array $content) 
+    public function getChatMember(array $content)
     {
         return $this->endpoint("getChatMember", $content);
     }
@@ -1009,7 +967,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function answerInlineQuery(array $content) 
+    public function answerInlineQuery(array $content)
     {
         return $this->endpoint("answerInlineQuery", $content);
     }
@@ -1070,7 +1028,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function setGameScore(array $content) 
+    public function setGameScore(array $content)
     {
         return $this->endpoint("setGameScore", $content);
     }
@@ -1107,7 +1065,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function answerCallbackQuery(array $content) 
+    public function answerCallbackQuery(array $content)
     {
         return $this->endpoint("answerCallbackQuery", $content);
     }
@@ -1167,7 +1125,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function editMessageText(array $content) 
+    public function editMessageText(array $content)
     {
         return $this->endpoint("editMessageText", $content);
     }
@@ -1215,7 +1173,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function editMessageCaption(array $content) 
+    public function editMessageCaption(array $content)
     {
         return $this->endpoint("editMessageCaption", $content);
     }
@@ -1257,7 +1215,7 @@ class Telegram
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
-    public function editMessageReplyMarkup(array $content) 
+    public function editMessageReplyMarkup(array $content)
     {
         return $this->endpoint("editMessageReplyMarkup", $content);
     }
@@ -1268,7 +1226,7 @@ class Telegram
      * \param $telegram_file_path String File path on Telegram servers
      * \param $local_file_path String File path where save the file
      */
-    public function downloadFile($telegram_file_path, $local_file_path) 
+    public function downloadFile($telegram_file_path, $local_file_path)
     {
         $file_url = "https://api.telegram.org/file/bot" . $this->bot_id . "/" . $telegram_file_path;
         $in = fopen($file_url, "rb");
@@ -1284,13 +1242,12 @@ class Telegram
     /// Set a WebHook for the bot
     /**
      *  Use this method to specify a url and receive incoming updates via an outgoing webhook. Whenever there is an update for the bot, we will send an HTTPS POST request to the specified url, containing a JSON-serialized Update. In case of an unsuccessful request, we will give up after a reasonable amount of attempts.
-
      * If you'd like to make sure that the Webhook request comes from Telegram, we recommend using a secret path in the URL, e.g. https://www.example.com/<token>. Since nobody else knows your botâ€˜s token, you can be pretty sure itâ€™s us.
      * \param $url String HTTPS url to send updates to. Use an empty string to remove webhook integration
      * \param $certificate InputFile Upload your public key certificate so that the root certificate in use can be checked
      * \return the JSON Telegram's reply
      */
-    public function setWebhook($url, $certificate = "") 
+    public function setWebhook($url, $certificate = "")
     {
         if ($certificate == "") {
             $requestBody = array('url' => $url);
@@ -1301,21 +1258,11 @@ class Telegram
         return $this->endpoint("setWebhook", $requestBody, !empty($certificate));
     }
 
-    /// Delete the WebHook for the bot
-    /**
-     *  Use this method to remove webhook integration if you decide to switch back to <a href="https://core.telegram.org/bots/api#getupdates">getUpdates</a>. Returns True on success. Requires no parameters.
-     * \return the JSON Telegram's reply
-     */
-    public function deleteWebhook() 
-    {
-        return $this->endpoint("deleteWebhook", array(), false);
-    }
-
     /// Get the data of the current message
     /** Get the POST request of a user in a Webhook or the message actually processed in a getUpdates() enviroment.
      * \return the JSON users's message
      */
-    public function getData() 
+    public function getData()
     {
         if (empty($this->data)) {
             $rawData = file_get_contents("php://input");
@@ -1326,7 +1273,7 @@ class Telegram
     }
 
     /// Set the data currently used
-    public function setData(array $data) 
+    public function setData(array $data)
     {
         $this->data = $data;
     }
@@ -1335,34 +1282,34 @@ class Telegram
     /**
      * \return the String users's text
      */
-    public function Text() 
+    public function Text()
     {
-        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
+        if ($this->getUpdateType() == 'callback_query')
             return @$this->data["callback_query"]["data"];
-        }
         return @$this->data["message"]["text"];
     }
+
+    public function Caption()
+    {
+        return @$this->data["message"]["caption"];
+    }
+
 
     /// Get the chat_id of the current message
     /**
      * \return the String users's chat_id
      */
-    public function ChatID() 
-    {
-        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
+    public function ChatID() {
+        if ($this->getUpdateType() == 'callback_query')
             return @$this->data["callback_query"]["message"]["chat"]["id"];
-        }
         return $this->data["message"]["chat"]["id"];
     }
     /// Get the message_id of the current message
     /**
      * \return the String message_id
      */
-    public function MessageID() 
+    public function MessageID()
     {
-        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
-            return @$this->data["callback_query"]["message"]["message_id"];
-        }
         return $this->data["message"]["message_id"];
     }
 
@@ -1370,7 +1317,7 @@ class Telegram
     /**
      * \return the String reply_to_message message_id
      */
-    public function ReplyToMessageID() 
+    public function ReplyToMessageID()
     {
         return $this->data["message"]["reply_to_message"]["message_id"];
     }
@@ -1379,7 +1326,7 @@ class Telegram
     /**
      * \return the String reply_to_message forward_from user_id
      */
-    public function ReplyToMessageFromUserID() 
+    public function ReplyToMessageFromUserID()
     {
         return $this->data["message"]["reply_to_message"]["forward_from"]["id"];
     }
@@ -1388,7 +1335,7 @@ class Telegram
     /**
      * \return the Array inline_query
      */
-    public function Inline_Query() 
+    public function Inline_Query()
     {
         return $this->data["inline_query"];
     }
@@ -1396,7 +1343,7 @@ class Telegram
     /**
      * \return the String callback_query
      */
-    public function Callback_Query() 
+    public function Callback_Query()
     {
         return $this->data["callback_query"];
     }
@@ -1405,7 +1352,7 @@ class Telegram
     /**
      * \return the String callback_query id
      */
-    public function Callback_ID() 
+    public function Callback_ID()
     {
         return $this->data["callback_query"]["id"];
     }
@@ -1414,7 +1361,7 @@ class Telegram
     /**
      * \return the String callback_data
      */
-    public function Callback_Data() 
+    public function Callback_Data()
     {
         return $this->data["callback_query"]["data"];
     }
@@ -1423,7 +1370,7 @@ class Telegram
     /**
      * \return the Message
      */
-    public function Callback_Message() 
+    public function Callback_Message()
     {
         return $this->data["callback_query"]["message"];
     }
@@ -1432,7 +1379,7 @@ class Telegram
     /**
      * \return the String callback_query
      */
-    public function Callback_ChatID() 
+    public function Callback_ChatID()
     {
         return $this->data["callback_query"]["message"]["chat"]["id"];
     }
@@ -1441,52 +1388,43 @@ class Telegram
     /**
      * \return the String message's date
      */
-    public function Date() 
+    public function Date()
     {
         return $this->data["message"]["date"];
     }
 
     /// Get the first name of the user
-    public function FirstName() 
+    public function FirstName()
     {
-        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
-            return @$this->data["callback_query"]["from"]["first_name"];
-        }
         return @$this->data["message"]["from"]["first_name"];
     }
 
-    /// Get the last name of the user
-    public function LastName() 
+/// Get the last name of the user
+    public function LastName()
     {
-        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
-            return @$this->data["callback_query"]["from"]["last_name"];
-        }
         return @$this->data["message"]["from"]["last_name"];
     }
 
 /// Get the username of the user
-    public function Username() 
+    public function Username()
     {
-        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
-            return @$this->data["callback_query"]["from"]["username"];
-        }
         return @$this->data["message"]["from"]["username"];
     }
 
 /// Get the location in the message
-    public function Location() 
+    public function Location()
     {
         return $this->data["message"]["location"];
     }
 
 /// Get the update_id of the message
-    public function UpdateID() 
+    public function UpdateID()
     {
         return $this->data["update_id"];
     }
 
 /// Get the number of updates
-    public function UpdateCount() 
+    public function UpdateCount()
     {
         return count($this->updates["result"]);
     }
@@ -1494,7 +1432,7 @@ class Telegram
     /// Get user's id of current message
     public function UserID()
     {
-        if ($this->getUpdateType() == self::CALLBACK_QUERY)
+        if ($this->getUpdateType() == 'callback_query')
             return $this->data["callback_query"]["from"]["id"];
         return $this->data["message"]["from"]["id"];
     }
@@ -1517,7 +1455,7 @@ class Telegram
      *
      *  \return BOOLEAN true if the message is from a Group chat, false otherwise
      */
-    public function messageFromGroup() 
+    public function messageFromGroup()
     {
         if ($this->data["message"]["chat"]["type"] == "private") {
             return false;
@@ -1530,7 +1468,7 @@ class Telegram
      *
      *  \return a String of the title chat
      */
-    public function messageFromGroupTitle() 
+    public function messageFromGroupTitle()
     {
         if ($this->data["message"]["chat"]["type"] != "private") {
             return $this->data["message"]["chat"]["title"];
@@ -1546,7 +1484,7 @@ class Telegram
      * \param $selective Boolean Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's message is a reply (has reply_to_message_id), sender of the original message.
      * \return the requested keyboard as Json
      */
-    public function buildKeyBoard(array $options, $onetime = false, $resize = false, $selective = true) 
+    public function buildKeyBoard(array $options, $onetime = false, $resize = false, $selective = true)
     {
         $replyMarkup = array(
             'keyboard' => $options,
@@ -1563,7 +1501,7 @@ class Telegram
      * \param $options Array of Array of InlineKeyboardButton; Array of button rows, each represented by an Array of InlineKeyboardButton
      * \return the requested keyboard as Json
      */
-    public function buildInlineKeyBoard(array $options) 
+    public function buildInlineKeyBoard(array $options)
     {
         $replyMarkup = array(
             'inline_keyboard' => $options,
@@ -1580,10 +1518,9 @@ class Telegram
      * \param $switch_inline_query String Optional. If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted.
      * \param $switch_inline_query_current_chat String Optional. Optional. If set, pressing the button will insert the bot‘s username and the specified inline query in the current chat's input field. Can be empty, in which case only the bot’s username will be inserted.
      * \param $callback_game  String Optional. Description of the game that will be launched when the user presses the button.
-     * \param $pay  Boolean Optional. Specify True, to send a <a href="https://core.telegram.org/bots/api#payments">Pay button</a>.
      * \return the requested button as Array
      */
-    public function buildInlineKeyboardButton($text, $url = "", $callback_data = "", $switch_inline_query = "", $switch_inline_query_current_chat = "", $callback_game = "", $pay = "") 
+    public function buildInlineKeyboardButton($text, $url = "", $callback_data = "", $switch_inline_query = "", $switch_inline_query_current_chat = "", $callback_game = "")
     {
         $replyMarkup = array(
             'text' => $text
@@ -1598,8 +1535,6 @@ class Telegram
             $replyMarkup['switch_inline_query_current_chat'] = $switch_inline_query_current_chat;
         } else if ($callback_game != "") {
             $replyMarkup['callback_game'] = $callback_game;
-        } else if ($pay != "") {
-            $replyMarkup['pay'] = $pay;
         }
         return $replyMarkup;
     }
@@ -1611,7 +1546,7 @@ class Telegram
      * \param $request_location Boolean Optional. If True, the user's current location will be sent when the button is pressed. Available in private chats only
      * \return the requested button as Array
      */
-    public function buildKeyboardButton($text, $request_contact = false, $request_location = false) 
+    public function buildKeyboardButton($text, $request_contact = false, $request_location = false)
     {
         $replyMarkup = array(
             'text' => $text,
@@ -1626,7 +1561,7 @@ class Telegram
      * \param $selective Boolean Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's message is a reply (has reply_to_message_id), sender of the original message.
      * \return the requested keyboard hide as Array
      */
-    public function buildKeyBoardHide($selective = true) 
+    public function buildKeyBoardHide($selective = true)
     {
         $replyMarkup = array(
             'remove_keyboard' => true,
@@ -1641,7 +1576,7 @@ class Telegram
      * \param $selective Boolean Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's message is a reply (has reply_to_message_id), sender of the original message.
      * \return the requested force reply as Array
      */
-    public function buildForceReply($selective = true) 
+    public function buildForceReply($selective = true)
     {
         $replyMarkup = array(
             'force_reply' => true,
@@ -1649,318 +1584,6 @@ class Telegram
         );
         $encodedMarkup = json_encode($replyMarkup, true);
         return $encodedMarkup;
-    }
-
-    // Payments
-    /// Send an invoice
-    /**
-     * Use this method to send invoices. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target private chat</td>
-     * </tr>
-     * <tr>
-     * <td>title</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Product name</td>
-     * </tr>
-     * <tr>
-     * <td>description</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Product description</td>
-     * </tr>
-     * <tr>
-     * <td>payload</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Bot-defined invoice payload, 1-128 bytes. This will not be displayed to the user, use for your internal processes.</td>
-     * </tr>
-     * <tr>
-     * <td>provider_token</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Payments provider token, obtained via <a href="/">Botfather</a></td>
-     * </tr>
-     * <tr>
-     * <td>start_parameter</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Unique deep-linking parameter that can be used to generate this invoice when used as a start parameter</td>
-     * </tr>
-     * <tr>
-     * <td>currency</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Three-letter ISO 4217 currency code, see <a href="https://core.telegram.org/bots/payments#supported-currencies">more on currencies</a></td>
-     * </tr>
-     * <tr>
-     * <td>prices</td>
-     * <td>Array of <a href="https://core.telegram.org/bots/api#labeledprice">LabeledPrice</a></td>
-     * <td>Yes</td>
-     * <td>Price breakdown, a list of components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.)</td>
-     * </tr>
-     * <tr>
-     * <td>photo_url</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>URL of the product photo for the invoice. Can be a photo of the goods or a marketing image for a service. People like it better when they see what they are paying for.</td>
-     * </tr>
-     * <tr>
-     * <td>photo_size</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Photo size</td>
-     * </tr>
-     * <tr>
-     * <td>photo_width</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Photo width</td>
-     * </tr>
-     * <tr>
-     * <td>photo_height</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Photo height</td>
-     * </tr>
-     * <tr>
-     * <td>need_name</td>
-     * <td>Bool</td>
-     * <td>Optional</td>
-     * <td>Pass <em>True</em>, if you require the user's full name to complete the order</td>
-     * </tr>
-     * <tr>
-     * <td>need_phone_number</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Pass <em>True</em>, if you require the user's phone number to complete the order</td>
-     * </tr>
-     * <tr>
-     * <td>need_email</td>
-     * <td>Bool</td>
-     * <td>Optional</td>
-     * <td>Pass <em>True</em>, if you require the user's email to complete the order</td>
-     * </tr>
-     * <tr>
-     * <td>need_shipping_address</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Pass <em>True</em>, if you require the user's shipping address to complete the order</td>
-     * </tr>
-     * <tr>
-     * <td>is_flexible</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Pass <em>True</em>, if the final price depends on the shipping method</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-     * <td>Optional</td>
-     * <td>A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>. If empty, one 'Pay <code>total price</code>' button will be shown. If not empty, the first button must be a Pay button.</td>
-     * </tr>
-     * </table>
-     * \param $content the request parameters as array
-     * \return the JSON Telegram's reply
-     */
-    public function sendInvoice(array $content) 
-    {
-        return $this->endpoint("sendInvoice", $content);
-    }
-
-    /// Answer a shipping query
-    /**
-     * Once the user has confirmed their payment and shipping details, the Bot API sends the final confirmation in the form of an <a href="https://core.telegram.org/bots/api#updates">Update</a> with the field <em>pre_checkout_query</em>. Use this method to respond to such pre-checkout queries. On success, True is returned. <strong>Note:</strong> The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>shipping_query_id</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the query to be answered</td>
-     * </tr>
-     * <tr>
-     * <td>ok</td>
-     * <td>Boolean</td>
-     * <td>Yes</td>
-     * <td>Specify True if delivery to the specified address is possible and False if there are any problems (for example, if delivery to the specified address is not possible)</td>
-     * </tr>
-     * <tr>
-     * <td>shipping_options</td>
-     * <td>Array of <a href="https://core.telegram.org/bots/api#shippingoption">ShippingOption</a></td>
-     * <td>Optional</td>
-     * <td>Required if <em>ok</em> is True. A JSON-serialized array of available shipping options.</td>
-     * </tr>
-     * <tr>
-     * <td>error_message</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Required if <em>ok</em> is False. Error message in human readable form that explains why it is impossible to complete the order (e.g. "Sorry, delivery to your desired address is unavailable'). Telegram will display this message to the user.</td>
-     * </tr>
-     * </table>
-     * \param $content the request parameters as array
-     * \return the JSON Telegram's reply
-     */
-    public function answerShippingQuery(array $content) 
-    {
-        return $this->endpoint("answerShippingQuery", $content);
-    }
-
-    /// Answer a PreCheckout query
-    /**
-     * Once the user has confirmed their payment and shipping details, the Bot API sends the final confirmation in the form of an <a href="https://core.telegram.org/bots/api#">Update</a> with the field <em>pre_checkout_query</em>. Use this method to respond to such pre-checkout queries. On success, True is returned. <strong>Note:</strong> The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>pre_checkout_query_id</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the query to be answered</td>
-     * </tr>
-     * <tr>
-     * <td>ok</td>
-     * <td>Boolean</td>
-     * <td>Yes</td>
-     * <td>Specify <em>True</em> if everything is alright (goods are available, etc.) and the bot is ready to proceed with the order. Use <em>False</em> if there are any problems.</td>
-     * </tr>
-     * <tr>
-     * <td>error_message</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Required if <em>ok</em> is <em>False</em>. Error message in human readable form that explains the reason for failure to proceed with the checkout (e.g. "Sorry, somebody just bought the last of our amazing black T-shirts while you were busy filling out your payment details. Please choose a different color or garment!"). Telegram will display this message to the user.</td>
-     * </tr>
-     * </table>
-     * \param $content the request parameters as array
-     * \return the JSON Telegram's reply
-     */
-    public function answerPreCheckoutQuery(array $content) 
-    {
-        return $this->endpoint("answerPreCheckoutQuery", $content);
-    }
-
-    /// Send a video note
-    /**
-     * As of <a href="https://telegram.org/blog/video-messages-and-telescope">v.4.0</a>, Telegram clients support rounded square mp4 videos of up to 1 minute long. Use this method to send video messages. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
-     * </tr>
-     * <tr>
-     * <td>video_note</td>
-     * <td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String</td>
-     * <td>Yes</td>
-     * <td>Video note to send. Pass a file_id as String to send a video note that exists on the Telegram servers (recommended) or upload a new video using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>. Sending video notes by a URL is currently unsupported</td>
-     * </tr>
-     * <tr>
-     * <td>duration</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Duration of sent video in seconds</td>
-     * </tr>
-     * <tr>
-     * <td>length</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Video width and height</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. iOS users will not receive a notification, Android users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
-     * <td>Optional</td>
-     * <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
-     * </tr>
-     * </table>
-     * \param $content the request parameters as array
-     * \return the JSON Telegram's reply
-     */
-    public function sendVideoNote(array $content) 
-    {
-        return $this->endpoint("sendVideoNote", $content);
-    }
-
-    /// Delete a message
-    /**
-     * Use this method to delete a message. A message can only be deleted if it was sent less than 48 hours ago. Any such recently sent outgoing message may be deleted. Additionally, if the bot is an administrator in a group chat, it can delete any message. If the bot is an administrator in a supergroup, it can delete messages from any other user and service messages about people joining or leaving the group (other types of service messages may only be removed by the group creator). In channels, bots can only remove their own messages. Returns True on success.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
-     * </tr>
-     * <tr>
-     * <td>message_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Identifier of the message to delete</td>
-     * </tr>
-     * </table>
-     * \param $content the request parameters as array
-     * \return the JSON Telegram's reply
-     */
-    public function deleteMessage(array $content) 
-    {
-        return $this->endpoint("deleteMessage", $content);
     }
 
     /// Receive incoming messages using polling
@@ -1971,7 +1594,7 @@ class Telegram
      * \param $update Boolean If true updates the pending message list to the last update received. Default to true.
      * \return the updates as Array
      */
-    public function getUpdates($offset = 0, $limit = 100, $timeout = 0, $update = true) 
+    public function getUpdates($offset = 0, $limit = 100, $timeout = 0, $update = true)
     {
         $content = array('offset' => $offset, 'limit' => $limit, 'timeout' => $timeout);
         $this->updates = $this->endpoint("getUpdates", $content);
@@ -1989,7 +1612,7 @@ class Telegram
     /** Use this method to use the bultin function like Text() or Username() on a specific update.
      * \param $update Integer The index of the update in the updates array.
      */
-    public function serveUpdate($update) 
+    public function serveUpdate($update)
     {
         $this->data = $this->updates["result"][$update];
     }
@@ -2003,40 +1626,20 @@ class Telegram
     public function getUpdateType()
     {
         $update = $this->data;
-        if (isset($update['callback_query'])) {
-            return self::CALLBACK_QUERY;
-        }
-        if (isset($update['edited_message'])) {
-            return self::EDITED_MESSAGE;
-        }
-        if (isset($update['message']['reply_to_message'])) {
-            return self::REPLY;
-        }
-        if (isset($update['message']['text'])) {
-            return self::MESSAGE;
-        }
-        if (isset($update['message']['photo'])) {
-            return self::PHOTO;
-        }
-        if (isset($update['message']['video'])) {
-            return self::VIDEO;
-        }
-        if (isset($update['message']['audio'])) {
-            return self::AUDIO;
-        }
-        if (isset($update['message']['voice'])) {
-            return self::VOICE;
-        }
-        if (isset($update['message']['document'])) {
-            return self::DOCUMENT;
-        }
-        if (isset($update['message']['location'])) {
-            return self::LOCATION;
-        }
+        if (isset($update['callback_query']))               return 'callback_query';
+        if (isset($update['edited_message']))               return 'edited_message';
+        if (isset($update['message']['reply_to_message']))  return 'reply';
+        if (isset($update['message']['text']))              return 'message';
+        if (isset($update['message']['photo']))             return 'photo';
+        if (isset($update['message']['video']))             return 'video';
+        if (isset($update['message']['audio']))             return 'audio';
+        if (isset($update['message']['voice']))             return 'voice';
+        if (isset($update['message']['document']))          return 'document';
+        if (isset($update['message']['location']))          return 'location';
         return FALSE;
     }
 
-    private function sendAPIRequest($url, array $content, $post = true) 
+    private function sendAPIRequest($url, array $content, $post = true)
     {
         if (isset($content['chat_id'])) {
             $url = $url . "?chat_id=" . $content['chat_id'];
@@ -2053,12 +1656,10 @@ class Telegram
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $result = curl_exec($ch);
         if ($result === false) {
-            $result = json_encode(array('ok'=>false, 'curl_error_code' => curl_errno($ch), 'curl_error' => curl_error($ch)));
+            $result = json_encode(array('ok' => false, 'curl_error_code' => curl_errno($ch), 'curl_error' => curl_error($ch)));
         }
         curl_close($ch);
-        if (class_exists('TelegramErrorLogger')) {
-            TelegramErrorLogger::log(json_decode($result, true), [$this->getData(), $content]);
-        }
+        TelegramErrorLogger::log(json_decode($result, true), [$this->getData(), $content]);
         return $result;
     }
 
@@ -2066,9 +1667,10 @@ class Telegram
 
 // Helper for Uploading file using CURL
 if (!function_exists('curl_file_create')) {
-    function curl_file_create($filename, $mimetype = '', $postname = '') {
+    function curl_file_create($filename, $mimetype = '', $postname = '')
+    {
         return "@$filename;filename="
-        . ($postname ? : basename($filename))
+        . ($postname ?: basename($filename))
         . ($mimetype ? ";type=$mimetype" : '');
     }
 }
