@@ -1345,6 +1345,11 @@ class Telegram
         return @$this->data["message"]["text"];
     }
 
+    public function Caption()
+    {
+        return @$this->data["message"]["caption"];
+    }
+
     /// Get the chat_id of the current message
     /**
      * \return the String users's chat_id
