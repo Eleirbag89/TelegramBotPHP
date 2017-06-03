@@ -114,7 +114,7 @@ Build keyboards
 ------------
 Telegram's bots can have two different kind of keyboards: Inline and Reply.    
 The InlineKeyboard is linked to a particular message, while the ReplyKeyboard is linked to the whole chat.    
-Both are an array of array of buttons, which rapresent the row and columns.    
+They are both an array of array of buttons, which rapresent the rows and columns.    
 For instance you can arrange a ReplyKeyboard like this:
 ![ReplyKeabordExample](https://picload.org/image/rilclcwr/replykeyboard.png)
 using this code:
