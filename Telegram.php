@@ -50,7 +50,9 @@ class Telegram
     * Constant for type Location
     */ 
     const LOCATION = 'location';
-
+     /**
+    * Constant for type Contact
+    */
     const CONTACT = 'contact';
 
     private $bot_id = "";
