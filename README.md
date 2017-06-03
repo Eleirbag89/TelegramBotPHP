@@ -110,8 +110,43 @@ Functions
 
 For a complete and up-to-date functions documentation check http://eleirbag89.github.io/TelegramBotPHP/
 
-Build keyboard parameters
+Build keyboards
 ------------
+Telegram's bots can have two different kind of keyboards: Inline and Reply.    
+The InlineKeyboard is linked to a particular message, while the ReplyKeyboard is linked to the whole chat.    
+They are both an array of array of buttons, which rapresent the rows and columns.    
+For instance you can arrange a ReplyKeyboard like this:
+![ReplyKeabordExample](https://picload.org/image/rilclcwr/replykeyboard.png)
+using this code:
+```php
+$option = array( 
+    //First row
+    array($telegram->buildKeyboardButton("Button 1"), $telegram->buildKeyboardButton("Button 2")), 
+    //Second row 
+    array($telegram->buildKeyboardButton("Button 3"), $telegram->buildKeyboardButton("Button 4"), $telegram->buildKeyboardButton("Button 5")), 
+    //Third row
+    array($telegram->buildKeyboardButton("Button 6")) );
+$keyb = $telegram->buildKeyBoard($option, $onetime=false);
+$content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "This is a Keyboard Test");
+$telegram->sendMessage($content);
+```
+When a user click on the button, the button text is send back to the bot.    
+For an InlineKeyboard it's pretty much the same (but you need to provide a valid URL or a Callback data)
+![InlineKeabordExample](https://picload.org/image/rilclcwa/replykeyboardinline.png)
+```php
+$option = array( 
+    //First row
+    array($telegram->buildInlineKeyBoardButton("Button 1", $url="http://link1.com"), $telegram->buildInlineKeyBoardButton("Button 2", $url="http://link2.com")), 
+    //Second row 
+    array($telegram->buildInlineKeyBoardButton("Button 3", $url="http://link3.com"), $telegram->buildInlineKeyBoardButton("Button 4", $url="http://link4.com"), $telegram->buildInlineKeyBoardButton("Button 5", $url="http://link5.com")), 
+    //Third row
+    array($telegram->buildInlineKeyBoardButton("Button 6", $url="http://link6.com")) );
+$keyb = $telegram->buildInlineKeyBoard($option);
+$content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "This is a Keyboard Test");
+$telegram->sendMessage($content);
+```
+This is the list of all the helper functions to make keyboards easily:     
+
 ```php
 buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true)
 ```
@@ -151,7 +186,9 @@ Check [ForceReply](https://core.telegram.org/bots/api#forcereply) for more info.
 
 List of Bots using the library
 ------------
-Let me know (see the Contact me section) if you have made a bot using this API, I will add it to this section.
+Let me know using this [Issue](https://github.com/Eleirbag89/TelegramBotPHP/issues/80) if you have made a bot using this API, I will add it to this section.    
+* [Notifyadbot](https://telegram.me/notifyadbot) - Lang : Persian/Farsi
+* [Partners_shakibonline_bot](https://telegram.me/Partners_shakibonline_bot) - Lang : Persian/Farsi
 
 Emoticons
 ------------
