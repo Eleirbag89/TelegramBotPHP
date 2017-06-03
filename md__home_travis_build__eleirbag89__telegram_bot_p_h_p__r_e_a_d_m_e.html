@@ -123,7 +123,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>if ($text == "/start") { $reply = "Working"; $content = array('chat_id' =&gt; $chat_id, 'text' =&gt; $reply); $telegram-&gt;sendMessage($content); } // DO OTHER STUFF } ``` See getUpdates.php for the complete example.</p>
 <h2>Functions </h2>
 <p>For a complete and up-to-date functions documentation check <a href="http://eleirbag89.github.io/TelegramBotPHP/">http://eleirbag89.github.io/TelegramBotPHP/</a></p>
-<h2>Build keyboard parameters </h2>
+<h2>Build keyboards </h2>
+<p><a class="el" href="class_telegram.html">Telegram</a>'s bots can have two different kind of keyboards: Inline and Reply. The InlineKeyboard is linked to a particular message, while the ReplyKeyboard is linked to the whole chat. Both are an array of array of buttons, which rapresent the row and columns. For instance you can arrange a ReplyKeyboard like this: </p>
+<div class="image">
+<img src="https://picload.org/image/rilclcwr/replykeyboard.png"  alt="ReplyKeabordExample"/>
+</div>
+<p> using this code: ```php $option = array( array($telegram-&gt;buildKeyboardButton("Button 1"), $telegram-&gt;buildKeyboardButton("Button 2")), array($telegram-&gt;buildKeyboardButton("Button 3"), $telegram-&gt;buildKeyboardButton("Button 4"), $telegram-&gt;buildKeyboardButton("Button 5")), array($telegram-&gt;buildKeyboardButton("Button 6")) ); $keyb = $telegram-&gt;buildKeyBoard($option, $onetime=false); $content = array('chat_id' =&gt; $chat_id, 'reply_markup' =&gt; $keyb, 'text' =&gt; "This is a Keyboard Test"); $telegram-&gt;sendMessage($content); ``` When a user click on the button, the button text is send back to the bot. For an InlineKeyboard it's pretty much the same (but you need to provide a valid URL or a Callback data) </p>
+<div class="image">
+<img src="https://picload.org/image/rilclcwa/replykeyboardinline.png"  alt="InlineKeabordExample"/>
+</div>
+<p> ```php $option = array( array($telegram-&gt;buildInlineKeyBoardButton("Button 1", $url="http://link1.com"), $telegram-&gt;buildInlineKeyBoardButton("Button 2", $url="http://link2.com")), array($telegram-&gt;buildInlineKeyBoardButton("Button 3", $url="http://link3.com"), $telegram-&gt;buildInlineKeyBoardButton("Button 4", $url="http://link4.com"), $telegram-&gt;buildInlineKeyBoardButton("Button 5", $url="http://link5.com")), array($telegram-&gt;buildInlineKeyBoardButton("Button 6", $url="http://link6.com")) ); $keyb = $telegram-&gt;buildInlineKeyBoard($option); $content = array('chat_id' =&gt; $chat_id, 'reply_markup' =&gt; $keyb, 'text' =&gt; "This is a Keyboard Test"); $telegram-&gt;sendMessage($content); ``` This is the list of all the helper functions to make keyboards easily:</p>
 <p>```php buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true) ``` Send a custom keyboard. $option is an array of array KeyboardButton. Check <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyBoardMarkUp</a> for more info.</p>
 <p>```php buildInlineKeyBoard(array $inline_keyboard) ``` Send a custom keyboard. $inline_keyboard is an array of array InlineKeyboardButton. Check <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> for more info.</p>
 <p>```php buildInlineKeyBoardButton($text, $url, $callback_data, $switch_inline_query) ``` Create an InlineKeyboardButton. Check <a href="https://core.telegram.org/bots/api#inlinekeyboardbutton">InlineKeyBoardButton</a> for more info.</p>
