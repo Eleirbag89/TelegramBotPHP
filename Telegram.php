@@ -50,7 +50,11 @@ class Telegram
     * Constant for type Location
     */ 
     const LOCATION = 'location';
-   
+     /**
+    * Constant for type Contact
+    */
+    const CONTACT = 'contact';
+
     private $bot_id = "";
     private $data = array();
     private $updates = array();
@@ -1343,6 +1347,11 @@ class Telegram
         return @$this->data["message"]["text"];
     }
 
+    public function Caption()
+    {
+        return @$this->data["message"]["caption"];
+    }
+
     /// Get the chat_id of the current message
     /**
      * \return the String users's chat_id
@@ -2026,6 +2035,9 @@ class Telegram
         }
         if (isset($update['message']['voice'])) {
             return self::VOICE;
+        }
+        if (isset($update['message']['contact'])) {
+            return self::CONTACT;
         }
         if (isset($update['message']['document'])) {
             return self::DOCUMENT;
