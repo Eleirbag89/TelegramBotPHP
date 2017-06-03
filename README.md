@@ -151,7 +151,9 @@ Check [ForceReply](https://core.telegram.org/bots/api#forcereply) for more info.
 
 List of Bots using the library
 ------------
-Let me know (see the Contact me section) if you have made a bot using this API, I will add it to this section.
+Let me know (see the Contact me section) if you have made a bot using this API, I will add it to this section.    
+* [Notifyadbot](https://telegram.me/notifyadbot) - Lang : Persian/Farsi
+* [Partners_shakibonline_bot](https://telegram.me/Partners_shakibonline_bot) - Lang : Persian/Farsi
 
 Emoticons
 ------------
