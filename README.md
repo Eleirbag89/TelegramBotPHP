@@ -110,8 +110,31 @@ Functions
 
 For a complete and up-to-date functions documentation check http://eleirbag89.github.io/TelegramBotPHP/
 
-Build keyboard parameters
+Build keyboards
 ------------
+Telegram's bots can have two different kind of keyboards: Inline and Reply.    
+The InlineKeyboard is linked to a particular message, while the ReplyKeyboard is linked to the whole chat.    
+Both are an array of array of buttons, which rapresent the row and columns.    
+For instance you can arrange a ReplyKeyboard like this:
+![ReplyKeabordExample](https://picload.org/image/rilclcwr/replykeyboard.png)
+using this code:
+```php
+$option = array( array($telegram->buildKeyboardButton("Button 1"), $telegram->buildKeyboardButton("Button 2")), array($telegram->buildKeyboardButton("Button 3"), $telegram->buildKeyboardButton("Button 4"), $telegram->buildKeyboardButton("Button 5")), array($telegram->buildKeyboardButton("Button 6")) );
+$keyb = $telegram->buildKeyBoard($option, $onetime=false);
+$content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "This is a Keyboard Test");
+$telegram->sendMessage($content);
+```
+When a user click on the button, the button text is send back to the bot.    
+For an InlineKeyboard it's pretty much the same (but you need to provide a valid URL or a Callback data)
+![InlineKeabordExample](https://picload.org/image/rilclcwa/replykeyboardinline.png)
+```php
+$option = array( array($telegram->buildInlineKeyBoardButton("Button 1", $url="http://link1.com"), $telegram->buildInlineKeyBoardButton("Button 2", $url="http://link2.com")), array($telegram->buildInlineKeyBoardButton("Button 3", $url="http://link3.com"), $telegram->buildInlineKeyBoardButton("Button 4", $url="http://link4.com"), $telegram->buildInlineKeyBoardButton("Button 5", $url="http://link5.com")), array($telegram->buildInlineKeyBoardButton("Button 6", $url="http://link6.com")) );
+$keyb = $telegram->buildInlineKeyBoard($option);
+$content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "This is a Keyboard Test");
+$telegram->sendMessage($content);
+```
+This is the list of all the helper functions to make keyboards easily:     
+
 ```php
 buildKeyBoard(array $options, $onetime=true, $resize=true, $selective=true)
 ```
