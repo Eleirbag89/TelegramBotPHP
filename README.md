@@ -193,7 +193,13 @@ Let me know using this [Issue](https://github.com/Eleirbag89/TelegramBotPHP/issu
 Emoticons
 ------------
 For a list of emoticons to use in your bot messages, please refer to the column Bytes of this table:
-http://apps.timwhitlock.info/emoji/tables/unicode
+http://apps.timwhitlock.info/emoji/tables/unicode    
+Or you can include this [library](https://github.com/shanraisshan/EmojiCodeSheet/tree/master/php/procedural%20php/string) and use the defined constans:
+```php
+
+include 'emojis/people.php';
+$content = array('chat_id' => $chat_id, 'text' => "Emoji" . PEOPLE_GRINNING_FACE);
+```
 
 Contact me
 ------------
