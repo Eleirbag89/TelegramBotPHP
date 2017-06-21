@@ -1302,7 +1302,7 @@ class Telegram
             $requestBody = array('url' => $url, 'certificate' => "@$certificate");
         }
 
-        return $this->endpoint("setWebhook", $requestBody, !empty($certificate));
+        return $this->endpoint("setWebhook", $requestBody, true);
     }
 
     /// Delete the WebHook for the bot
