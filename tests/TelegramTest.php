@@ -12,7 +12,7 @@ class TelegramTest extends TestCase
         $reply = "It works!";
         $content = array('chat_id' => $chat_id, 'text' => $reply);
         $reply = $telegram->sendMessage($content);
-        $this->assertEquals($reply, true);
+        $this->assertTrue($reply['ok']);
     }
 }
 ?>
