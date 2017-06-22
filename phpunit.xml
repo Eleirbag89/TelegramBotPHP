@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+     backupStaticAttributes="false"
+
+     cacheTokens="false"
+     colors="false"
+     convertErrorsToExceptions="true"
+     convertNoticesToExceptions="true"
+     convertWarningsToExceptions="true"
+     forceCoversAnnotation="false"
+     bootstrap="src/Telegram.php"
+
+     processIsolation="false"
+     stopOnError="false"
+     stopOnFailure="false"
+     stopOnIncomplete="false"
+     stopOnSkipped="false"
+    >
+
+    <testsuites>
+        <testsuite name="AllTests">
+        <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
