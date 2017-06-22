@@ -5,8 +5,14 @@ class TelegramTest extends TestCase
 {
     public function testSample()
     {
-        $test = getenv('GH_REPO_NAME');
-        $this->assertEquals('TelegramBotPHP', $test);
+        $bot_id = getenv('BOT_TOKEN');
+        $chat_id = getenv('CHAT_ID');
+        
+        $telegram = new Telegram($bot_id);
+        $reply = "It works!";
+        $content = array('chat_id' => $chat_id, 'text' => $reply);
+        $reply = $telegram->sendMessage($content);
+        $this->assertEquals($reply, true);
     }
 }
 ?>
