@@ -30,6 +30,7 @@ addons:
 # Build your code e.g. by calling make
 script:
   - composer require --dev phpunit/phpunit ^5.1
+  - phpunit
   - echo "Setup done"
 
 # Generate and deploy documentation
