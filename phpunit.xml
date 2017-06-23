@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
      backupStaticAttributes="false"
-
      cacheTokens="false"
      colors="false"
      convertErrorsToExceptions="true"
      convertNoticesToExceptions="true"
      convertWarningsToExceptions="true"
      forceCoversAnnotation="false"
-     bootstrap="Telegram.php"
-
+     bootstrap="tests/bootstrap.php"
      processIsolation="false"
      stopOnError="false"
      stopOnFailure="false"
@@ -20,6 +18,7 @@
     <testsuites>
         <testsuite name="AllTests">
         <directory>tests</directory>
+        <exclude>tests/bootstrap.php</exclude>
         </testsuite>
     </testsuites>
 </phpunit>
