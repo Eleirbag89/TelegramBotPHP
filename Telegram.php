@@ -1592,7 +1592,7 @@ class Telegram
      * \param $pay  Boolean Optional. Specify True, to send a <a href="https://core.telegram.org/bots/api#payments">Pay button</a>.
      * \return the requested button as Array
      */
-    public function buildInlineKeyboardButton($text, $url = "", $callback_data = "", $switch_inline_query = "", $switch_inline_query_current_chat = "", $callback_game = "", $pay = "") 
+    public function buildInlineKeyboardButton($text, $url = "", $callback_data = "", $switch_inline_query = null, $switch_inline_query_current_chat = null, $callback_game = "", $pay = "") 
     {
         $replyMarkup = array(
             'text' => $text
@@ -1601,9 +1601,9 @@ class Telegram
             $replyMarkup['url'] = $url;
         } else if ($callback_data != "") {
             $replyMarkup['callback_data'] = $callback_data;
-        } else if ($switch_inline_query != "") {
+        } else if (!is_null($switch_inline_query)) {
             $replyMarkup['switch_inline_query'] = $switch_inline_query;
-        } else if ($switch_inline_query_current_chat != "") {
+        } else if (!is_null($switch_inline_query_current_chat)) {
             $replyMarkup['switch_inline_query_current_chat'] = $switch_inline_query_current_chat;
         } else if ($callback_game != "") {
             $replyMarkup['callback_game'] = $callback_game;
