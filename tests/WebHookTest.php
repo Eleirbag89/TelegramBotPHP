@@ -34,10 +34,15 @@ class WebHookTest extends TestCase
             ["", true, "Webhook was deleted"]
         ];
     }
+    public function tearDown()
+    {
+        sleep(2);
+    }
     
     public static function tearDownAfterClass() {
         parent::tearDownAfterClass();
         global $WEBHOOK_URL;
+         global $BOT_TOKEN;
         $telegram = new Telegram($BOT_TOKEN);
         $reply = $telegram->setWebhook($WEBHOOK_URL);
     }
