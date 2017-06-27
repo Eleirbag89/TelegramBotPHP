@@ -36,7 +36,7 @@ class WebHookTest extends TestCase
     }
     public function tearDown()
     {
-        sleep(2);
+        sleep(1);
     }
     
     public static function tearDownAfterClass() {

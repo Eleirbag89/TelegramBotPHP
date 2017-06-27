@@ -2,7 +2,7 @@
 <phpunit
      backupStaticAttributes="false"
      cacheTokens="false"
-     colors="false"
+     colors="auto"
      convertErrorsToExceptions="true"
      convertNoticesToExceptions="true"
      convertWarningsToExceptions="true"
@@ -13,6 +13,8 @@
      stopOnFailure="false"
      stopOnIncomplete="false"
      stopOnSkipped="false"
+     verbose="true"
+     testdox="true">
     >
 
     <testsuites>
