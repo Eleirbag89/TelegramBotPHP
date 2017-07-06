@@ -87,6 +87,20 @@ if(!is_null($text) && !is_null($chat_id)){
 	    $content = array('chat_id' => $chat_id, 'latitude' => "37.5", 'longitude' => "15.1" );
 	    $telegram->sendLocation($content);
 	}
+		
+        elseif ($text == "/inlinekeyboard") {
+            // Shows the Inline Keyboard and Trigger a callback on a button press  
+            $option = array( 
+                array(
+                $telegram->buildInlineKeyBoardButton("Callback 1", $url="", $callback_data="1"),
+                $telegram->buildInlineKeyBoardButton("Callback 2", $url="", $callback_data="2")
+                ) 
+            );
+        
+            $keyb = $telegram->buildInlineKeyBoard($option);
+            $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "This is an InlineKeyboard Test with Callbacks");
+            $telegram->sendMessage($content);
+        }
 }
 
 ?>
