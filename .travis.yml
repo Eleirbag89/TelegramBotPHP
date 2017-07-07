@@ -4,6 +4,7 @@ sudo: false
 
 branches:
   only:
+    - master
     - testing-travis
 
 language: php
@@ -21,11 +22,11 @@ env:
 addons:
   apt:
     packages:
-      - doxygen
-      - doxygen-doc
-      - doxygen-latex
-      - doxygen-gui
-      - graphviz
+      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master']; then doxygen fi
+      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master'];doxygen-doc fi
+      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master'];doxygen-latex fi
+      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master'];doxygen-gui fi
+      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master'];graphviz fi
 
 # Build your code e.g. by calling make
 script:
@@ -37,4 +38,4 @@ script:
 after_success:
   - cd $TRAVIS_BUILD_DIR
   - chmod +x generateDocumentationAndDeploy.sh
-  #- ./generateDocumentationAndDeploy.sh
+  - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master']; ./generateDocumentationAndDeploy.sh fi
