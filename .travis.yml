@@ -19,14 +19,8 @@ env:
     - GH_REPO_REF: github.com/Eleirbag89/TelegramBotPHP.git
 
 # Install dependencies
-addons:
-  apt:
-    packages:
-      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master']; then doxygen fi
-      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master']; then doxygen-doc fi
-      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master']; then doxygen-latex fi
-      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master']; then doxygen-gui fi
-      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master']; then graphviz fi
+before_script:
+    - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master']; then sudo apt-get install doxygen doxygen-doc doxygen-latex  doxygen-gui graphviz -y fi
 
 # Build your code e.g. by calling make
 script:
