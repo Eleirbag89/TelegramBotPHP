@@ -20,7 +20,7 @@ env:
 
 # Install dependencies
 before_script:
-    - if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = 'testing-travis' ]; then bash sudo apt-get install doxygen doxygen-doc doxygen-latex  doxygen-gui graphviz -y; fi
+    - if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = 'testing-travis' ]; then sudo apt-get install doxygen doxygen-doc doxygen-latex  doxygen-gui graphviz -y; fi
 
 # Build your code e.g. by calling make
 script:
@@ -32,4 +32,4 @@ script:
 after_success:
   - cd $TRAVIS_BUILD_DIR
   - chmod +x generateDocumentationAndDeploy.sh
-  - if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = 'master' ]; then bash ./generateDocumentationAndDeploy.sh; fi
+  - if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = 'master' ]; then ./generateDocumentationAndDeploy.sh; fi
