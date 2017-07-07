@@ -23,10 +23,10 @@ addons:
   apt:
     packages:
       - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master']; then doxygen fi
-      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master'];doxygen-doc fi
-      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master'];doxygen-latex fi
-      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master'];doxygen-gui fi
-      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master'];graphviz fi
+      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master']; then doxygen-doc fi
+      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master']; then doxygen-latex fi
+      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master']; then doxygen-gui fi
+      - if [ "${TRAVIS_PULL_REQUEST}" = "false" -a $TRAVIS_BRANCH = 'master']; then graphviz fi
 
 # Build your code e.g. by calling make
 script:
