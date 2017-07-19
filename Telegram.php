@@ -1528,10 +1528,10 @@ class Telegram
      */
     public function messageFromGroup() 
     {
-        if ($this->data["message"]["chat"]["type"] == "private") {
-            return false;
-        }
-        return true;
+        if ($this->getUpdateType() == self::CALLBACK_QUERY)
+            return (!$this->data["callback_query"]["message"]["chat"]["type"] == "private");
+        
+        return (!$this->data["message"]["chat"]["type"] == "private");
     }
 
     /// Get the title of the group chat
