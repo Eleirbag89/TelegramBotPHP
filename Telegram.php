@@ -2224,7 +2224,135 @@ class Telegram
     {
         return $this->endpoint('deleteChatPhoto', $content);
     }
+    
+    // Set Chat Title
 
+    /**
+     * Use this method to change the title of a chat. Titles can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note: In regular groups (non-supergroups), this method will only work if the ‘All Members Are Admins’ setting is off in the target group.
+     * <table>
+     * <tr>
+     * <td><strong>Parameters</strong></td>
+     * <td><strong>Type</strong></td>
+     * <td><strong>Required</strong></td>
+     * <td><strong>Description</strong></td>
+     * </tr>
+     * <tr>
+     * <td>chat_id</td>
+     * <td>Integer or String</td>
+     * <td>Yes</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
+     * </tr>
+     * <tr>
+     * <td>title</td>
+     * <td>String</td>
+     * <td>Yes</td>
+     * <td>New chat title, 1-255 characters</td>
+     * </tr>
+     * </table>
+     * \param $content the request parameters as array
+     * \return the JSON Telegram's reply.
+     */
+    public function setChatTitle(array $content)
+    {
+        return $this->endpoint('setChatTitle', $content);
+    }
+
+    // Set Chat Description
+
+    /**
+     * Use this method to change the description of a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. 
+     * <table>
+     * <tr>
+     * <td><strong>Parameters</strong></td>
+     * <td><strong>Type</strong></td>
+     * <td><strong>Required</strong></td>
+     * <td><strong>Description</strong></td>
+     * </tr>
+     * <tr>
+     * <td>chat_id</td>
+     * <td>Integer or String</td>
+     * <td>Yes</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
+     * </tr>
+     * <tr>
+     * <td>description</td>
+     * <td>String</td>
+     * <td>No</td>
+     * <td>New chat description, 0-255 characters</td>
+     * </tr>
+     * </table>
+     * \param $content the request parameters as array
+     * \return the JSON Telegram's reply.
+     */
+    public function setChatDescription(array $content)
+    {
+        return $this->endpoint('setChatDescription', $content);
+    }
+
+    // Pin Chat Message
+
+    /**
+     * Use this method to pin a message in a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. 
+     * <table>
+     * <tr>
+     * <td><strong>Parameters</strong></td>
+     * <td><strong>Type</strong></td>
+     * <td><strong>Required</strong></td>
+     * <td><strong>Description</strong></td>
+     * </tr>
+     * <tr>
+     * <td>chat_id</td>
+     * <td>Integer or String</td>
+     * <td>Yes</td>
+     * <td>Unique identifier for the target chat or username of the target supergroup (in the format <code>@supergroupusername</code>)</td>
+     * </tr>
+     * <tr>
+     * <td>message_id</td>
+     * <td>Integer</td>
+     * <td>Yes</td>
+     * <td>Identifier of a message to pin</td>
+     * </tr>
+     * <tr>
+     * <td>disable_notification</td>
+     * <td>Boolean</td>
+     * <td>No</td>
+     * <td>Pass <em>True</em>, if it is not necessary to send a notification to all group members about the new pinned message</td>
+     * </tr>
+     * </table>
+     * \param $content the request parameters as array
+     * \return the JSON Telegram's reply.
+     */
+    public function pinChatMessage(array $content)
+    {
+        return $this->endpoint('pinChatMessage', $content);
+    }
+    
+    // Unpin Chat Message
+
+    /**
+     * Use this method to unpin a message in a supergroup chat. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. 
+     * <table>
+     * <tr>
+     * <td><strong>Parameters</strong></td>
+     * <td><strong>Type</strong></td>
+     * <td><strong>Required</strong></td>
+     * <td><strong>Description</strong></td>
+     * </tr>
+     * <tr>
+     * <td>chat_id</td>
+     * <td>Integer or String</td>
+     * <td>Yes</td>
+     * <td>Unique identifier for the target chat or username of the target supergroup (in the format <code>@supergroupusername</code>)</td>
+     * </tr>
+     * </table>
+     * \param $content the request parameters as array
+     * \return the JSON Telegram's reply.
+     */
+    public function unpinChatMessage(array $content)
+    {
+        return $this->endpoint('unpinChatMessage', $content);
+    }
+    
     /// Delete a message
 
     /**
