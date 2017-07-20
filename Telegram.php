@@ -1940,6 +1940,141 @@ class Telegram
     {
         return $this->endpoint("sendVideoNote", $content);
     }
+    
+    /// Restrict Chat Member
+
+    /**
+     * Use this method to restrict a user in a supergroup. The bot must be an administrator in the supergroup for this to work and must have the appropriate admin rights. Pass True for all boolean parameters to lift restrictions from a user. Returns True on success.
+     * <table>
+     * <tr>
+     * <td><strong>Parameters</strong></td>
+     * <td><strong>Type</strong></td>
+     * <td><strong>Required</strong></td>
+     * <td><strong>Description</strong></td>
+     * </tr>
+     * <tr>
+     * <td>chat_id</td>
+     * <td>Yes</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
+     * </tr>
+     * <tr>
+     * <td>photo</td>
+     * <td><a href="#inputfile">InputFile</a> or String</td>
+     * <td>Yes</td>
+     * <td>Photo to send. Pass a file_id as String to send a photo that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a photo from the Internet, or upload a new photo using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a></td>
+     * </tr>
+     * <tr>
+     * <td>caption</td>
+     * <td>String</td>
+     * <td>Optional</td>
+     * <td>Photo caption (may also be used when resending photos by <em>file_id</em>), 0-200 characters</td>
+     * </tr>
+     * <tr>
+     * <td>disable_notification</td>
+     * <td>Boolean</td>
+     * <td>Optional</td>
+     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+     * </tr>
+     * <tr>
+     * <td>reply_to_message_id</td>
+     * <td>Integer</td>
+     * <td>Optional</td>
+     * <td>If the message is a reply, ID of the original message</td>
+     * </tr>
+     * <tr>
+     * <td>reply_markup</td>
+     * <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
+     * <td>Optional</td>
+     * <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
+     * </tr>
+     * </table>
+     * \param $content the request parameters as array
+     * \return the JSON Telegram's reply.
+     */
+    public function restrictChatMember(array $content)
+    {
+        return $this->endpoint('restrictChatMember', $content);
+    }
+
+    /// Promote Chat Member
+
+    /**
+     * Use this method to promote or demote a user in a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Pass False for all boolean parameters to demote a user. Returns True on success
+     * <table>
+     * <tr>
+     * <td><strong>Parameters</strong></td>
+     * <td><strong>Type</strong></td>
+     * <td><strong>Required</strong></td>
+     * <td><strong>Description</strong></td>
+     * </tr>
+     * <tr>
+     * <td>chat_id</td>
+     * <td>Integer or String</td>
+     * <td>Yes</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
+     * </tr>
+     * <tr>
+     * <td>user_id</td>
+     * <td>Integer</td>
+     * <td>Yes</td>
+     * <td>Unique identifier of the target user</td>
+     * </tr>
+     * <tr>
+     * <td>can_change_info</td>
+     * <td>Boolean</td>
+     * <td>No</td>
+     * <td>Pass True, if the administrator can change chat title, photo and other settings</td>
+     * </tr>
+     * <tr>
+     * <td>can_post_messages</td>
+     * <td>Boolean</td>
+     * <td>No</td>
+     * <td>Pass True, if the administrator can create channel posts, channels only</td>
+     * </tr>
+     * <tr>
+     * <td>can_edit_messages</td>
+     * <td>Boolean</td>
+     * <td>No</td>
+     * <td>Pass True, if the administrator can edit messages of other users, channels only</td>
+     * </tr>
+     * <tr>
+     * <td>can_delete_messages</td>
+     * <td>Boolean</td>
+     * <td>No</td>
+     * <td>Pass True, if the administrator can delete messages of other users</td>
+     * </tr>
+     * <tr>
+     * <td>can_invite_users</td>
+     * <td>Boolean</td>
+     * <td>No</td>
+     * <td>Pass True, if the administrator can invite new users to the chat</td>
+     * </tr>
+     * <tr>
+     * <td>can_restrict_members</td>
+     * <td>Boolean</td>
+     * <td>No</td>
+     * <td>Pass True, if the administrator can restrict, ban or unban chat members</td>
+     * </tr>
+     * <tr>
+     * <td>can_pin_messages</td>
+     * <td>Boolean</td>
+     * <td>No</td>
+     * <td>Pass True, if the administrator can pin messages, supergroups only</td>
+     * </tr>
+     * <tr>
+     * <td>can_promote_members</td>
+     * <td>Boolean</td>
+     * <td>No</td>
+     * <td>Pass True, if the administrator can add new administrators with a subset of his own privileges or demote administrators that he has promoted, directly or indirectly (promoted by administrators that were appointed by him)</td>
+     * </tr>
+     * </table>
+     * \param $content the request parameters as array
+     * \return the JSON Telegram's reply.
+     */
+    public function promoteChatMember(array $content)
+    {
+        return $this->endpoint('promoteChatMember', $content);
+    }
 
     /// Delete a message
     /**
