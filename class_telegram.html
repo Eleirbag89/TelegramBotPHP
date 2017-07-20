@@ -306,6 +306,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2021787930735bb9c4ee22b07943447b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a2021787930735bb9c4ee22b07943447b">promoteChatMember</a> (array $content)</td></tr>
 <tr class="memdesc:a2021787930735bb9c4ee22b07943447b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Promote Chat Member.  <a href="#a2021787930735bb9c4ee22b07943447b">More...</a><br/></td></tr>
 <tr class="separator:a2021787930735bb9c4ee22b07943447b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0bd8531ee91c28e85fce5f3af515ae3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#ab0bd8531ee91c28e85fce5f3af515ae3">exportChatInviteLink</a> (array $content)</td></tr>
+<tr class="memdesc:ab0bd8531ee91c28e85fce5f3af515ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export Chat Invite Link.  <a href="#ab0bd8531ee91c28e85fce5f3af515ae3">More...</a><br/></td></tr>
+<tr class="separator:ab0bd8531ee91c28e85fce5f3af515ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c19ab9430d547b68e78cbe8f9870c04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a2c19ab9430d547b68e78cbe8f9870c04">setChatPhoto</a> (array $content)</td></tr>
+<tr class="separator:a2c19ab9430d547b68e78cbe8f9870c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae56adc8aed44147e945b6c4c9a16f975"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#ae56adc8aed44147e945b6c4c9a16f975">deleteChatPhoto</a> (array $content)</td></tr>
+<tr class="separator:ae56adc8aed44147e945b6c4c9a16f975"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af46503521fd05da7d9e42313c5f29dd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#af46503521fd05da7d9e42313c5f29dd6">deleteMessage</a> (array $content)</td></tr>
 <tr class="memdesc:af46503521fd05da7d9e42313c5f29dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a message.  <a href="#af46503521fd05da7d9e42313c5f29dd6">More...</a><br/></td></tr>
 <tr class="separator:af46503521fd05da7d9e42313c5f29dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -878,6 +885,36 @@ Values inside $content:<br/>
 
 </div>
 </div>
+<a class="anchor" id="ae56adc8aed44147e945b6c4c9a16f975"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">deleteChatPhoto </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Use this method to delete a chat photo. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note: In regular groups (non-supergroups), this method will only work if the ‘All Members Are Admins’ setting is off in the target group. </p>
+<table class="doxtable">
+<tr>
+<td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
+<tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="af46503521fd05da7d9e42313c5f29dd6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1126,6 +1163,38 @@ Values inside $content:<br/>
     <tr><td class="paramname">$api</td><td>the API endpoint </td></tr>
     <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
     <tr><td class="paramname">$post</td><td>boolean tells if $content needs to be sends </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab0bd8531ee91c28e85fce5f3af515ae3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">exportChatInviteLink </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Export Chat Invite Link. </p>
+<p>Use this method to export an invite link to a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns exported invite link as String on success. </p>
+<table class="doxtable">
+<tr>
+<td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
+<tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
   </table>
   </dd>
 </dl>
@@ -1745,7 +1814,7 @@ Values inside $content:<br/>
 <tr>
 <td>chat_id </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
 <tr>
-<td>photo </td><td><a href="#inputfile">InputFile</a> or String </td><td>Yes </td><td>Photo to send. Pass a file_id as String to send a photo that exists on the <a class="el" href="class_telegram.html">Telegram</a> servers (recommended), pass an HTTP URL as a String for <a class="el" href="class_telegram.html">Telegram</a> to get a photo from the Internet, or upload a new photo using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a>  </td></tr>
+<td>photo </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String </td><td>Yes </td><td>Photo to send. Pass a file_id as String to send a photo that exists on the <a class="el" href="class_telegram.html">Telegram</a> servers (recommended), pass an HTTP URL as a String for <a class="el" href="class_telegram.html">Telegram</a> to get a photo from the Internet, or upload a new photo using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>  </td></tr>
 <tr>
 <td>caption </td><td>String </td><td>Optional </td><td>Photo caption (may also be used when resending photos by <em>file_id</em>), 0-200 characters  </td></tr>
 <tr>
@@ -1753,7 +1822,7 @@ Values inside $content:<br/>
 <tr>
 <td>reply_to_message_id </td><td>Integer </td><td>Optional </td><td>If the message is a reply, ID of the original message  </td></tr>
 <tr>
-<td>reply_markup </td><td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a> </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.  </td></tr>
+<td>reply_markup </td><td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="https://core.telegram.org/bots/api#forcereply">ForceReply</a> </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1993,7 +2062,7 @@ Values inside $content:<br/>
 <tr>
 <td>reply_to_message_id </td><td>Integer </td><td>Optional </td><td>If the message is a reply, ID of the original message  </td></tr>
 <tr>
-<td>reply_markup </td><td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> </td><td>Optional </td><td>A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>. If empty, one 'Pay <code>total price</code>' button will be shown. If not empty, the first button must be a Pay button.  </td></tr>
+<td>reply_markup </td><td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> </td><td>Optional </td><td>A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>. If empty, one 'Pay <code>total price</code>' button will be shown. If not empty, the first button must be a Pay button.  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2302,7 +2371,7 @@ Values inside $content:<br/>
 <tr>
 <td>reply_to_message_id </td><td>Integer </td><td>Optional </td><td>If the message is a reply, ID of the original message  </td></tr>
 <tr>
-<td>reply_markup </td><td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a> </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.  </td></tr>
+<td>reply_markup </td><td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="https://core.telegram.org/bots/api#forcereply">ForceReply</a> </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2378,6 +2447,38 @@ Values inside $content:<br/>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a2c19ab9430d547b68e78cbe8f9870c04"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">setChatPhoto </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Use this method to set a new profile photo for the chat. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note: In regular groups (non-supergroups), this method will only work if the ‘All Members Are Admins’ setting is off in the target group. </p>
+<table class="doxtable">
+<tr>
+<td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
+<tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<tr>
+<td>photo </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> </td><td>Yes </td><td>New chat photo, uploaded using multipart/form-data  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply. </dd></dl>
 
 </div>
 </div>
