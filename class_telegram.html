@@ -313,6 +313,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2c19ab9430d547b68e78cbe8f9870c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae56adc8aed44147e945b6c4c9a16f975"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#ae56adc8aed44147e945b6c4c9a16f975">deleteChatPhoto</a> (array $content)</td></tr>
 <tr class="separator:ae56adc8aed44147e945b6c4c9a16f975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f5f32ecaf8d6837c1804de6d0ab4b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#ac2f5f32ecaf8d6837c1804de6d0ab4b1">setChatTitle</a> (array $content)</td></tr>
+<tr class="separator:ac2f5f32ecaf8d6837c1804de6d0ab4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef9a5b1ff9d835244626a4d37064513"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#adef9a5b1ff9d835244626a4d37064513">setChatDescription</a> (array $content)</td></tr>
+<tr class="separator:adef9a5b1ff9d835244626a4d37064513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11c2b4c3a2967132d1f39dc06f8d50c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a11c2b4c3a2967132d1f39dc06f8d50c1">pinChatMessage</a> (array $content)</td></tr>
+<tr class="separator:a11c2b4c3a2967132d1f39dc06f8d50c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5457e52eb64d18064484e408bff8ea8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a5457e52eb64d18064484e408bff8ea8f">unpinChatMessage</a> (array $content)</td></tr>
+<tr class="separator:a5457e52eb64d18064484e408bff8ea8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af46503521fd05da7d9e42313c5f29dd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#af46503521fd05da7d9e42313c5f29dd6">deleteMessage</a> (array $content)</td></tr>
 <tr class="memdesc:af46503521fd05da7d9e42313c5f29dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a message.  <a href="#af46503521fd05da7d9e42313c5f29dd6">More...</a><br/></td></tr>
 <tr class="separator:af46503521fd05da7d9e42313c5f29dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1688,6 +1696,40 @@ Values inside $content:<br/>
 
 </div>
 </div>
+<a class="anchor" id="a11c2b4c3a2967132d1f39dc06f8d50c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pinChatMessage </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Use this method to pin a message in a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. </p>
+<table class="doxtable">
+<tr>
+<td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
+<tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup (in the format <code></code>)  </td></tr>
+<tr>
+<td>message_id </td><td>Integer </td><td>Yes </td><td>Identifier of a message to pin  </td></tr>
+<tr>
+<td>disable_notification </td><td>Boolean </td><td>No </td><td>Pass <em>True</em>, if it is not necessary to send a notification to all group members about the new pinned message  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a2021787930735bb9c4ee22b07943447b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2450,6 +2492,38 @@ Values inside $content:<br/>
 
 </div>
 </div>
+<a class="anchor" id="adef9a5b1ff9d835244626a4d37064513"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">setChatDescription </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Use this method to change the description of a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. </p>
+<table class="doxtable">
+<tr>
+<td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
+<tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<tr>
+<td>description </td><td>String </td><td>No </td><td>New chat description, 0-255 characters  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a2c19ab9430d547b68e78cbe8f9870c04"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2471,6 +2545,38 @@ Values inside $content:<br/>
 <td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
 <tr>
 <td>photo </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> </td><td>Yes </td><td>New chat photo, uploaded using multipart/form-data  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac2f5f32ecaf8d6837c1804de6d0ab4b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">setChatTitle </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Use this method to change the title of a chat. Titles can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note: In regular groups (non-supergroups), this method will only work if the ‘All Members Are Admins’ setting is off in the target group. </p>
+<table class="doxtable">
+<tr>
+<td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
+<tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<tr>
+<td>title </td><td>String </td><td>Yes </td><td>New chat title, 1-255 characters  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2606,6 +2712,36 @@ Values inside $content:<br/>
 <td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target group or username of the target supergroup (in the format <code></code>)  </td></tr>
 <tr>
 <td>user_id </td><td>Integer </td><td>Yes </td><td>Unique identifier of the target user  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5457e52eb64d18064484e408bff8ea8f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unpinChatMessage </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Use this method to unpin a message in a supergroup chat. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. </p>
+<table class="doxtable">
+<tr>
+<td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
+<tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup (in the format <code></code>)  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

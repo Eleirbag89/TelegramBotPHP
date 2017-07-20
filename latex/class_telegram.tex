@@ -166,6 +166,14 @@
 \item 
 \hyperlink{class_telegram_ae56adc8aed44147e945b6c4c9a16f975}{delete\-Chat\-Photo} (array \$content)
 \item 
+\hyperlink{class_telegram_ac2f5f32ecaf8d6837c1804de6d0ab4b1}{set\-Chat\-Title} (array \$content)
+\item 
+\hyperlink{class_telegram_adef9a5b1ff9d835244626a4d37064513}{set\-Chat\-Description} (array \$content)
+\item 
+\hyperlink{class_telegram_a11c2b4c3a2967132d1f39dc06f8d50c1}{pin\-Chat\-Message} (array \$content)
+\item 
+\hyperlink{class_telegram_a5457e52eb64d18064484e408bff8ea8f}{unpin\-Chat\-Message} (array \$content)
+\item 
 \hyperlink{class_telegram_af46503521fd05da7d9e42313c5f29dd6}{delete\-Message} (array \$content)
 \begin{DoxyCompactList}\small\item\em Delete a message. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_adb467486d3d5e83ce21a03e00f17b16c}{get\-Updates} (\$offset=0, \$limit=100, \$timeout=0, \$update=true)
@@ -1138,6 +1146,28 @@ Get the message\-\_\-id of the current message.
 \begin{DoxyReturn}{Returns}
 the String message\-\_\-id. 
 \end{DoxyReturn}
+\hypertarget{class_telegram_a11c2b4c3a2967132d1f39dc06f8d50c1}{\index{Telegram@{Telegram}!pin\-Chat\-Message@{pin\-Chat\-Message}}
+\index{pin\-Chat\-Message@{pin\-Chat\-Message}!Telegram@{Telegram}}
+\subsubsection[{pin\-Chat\-Message}]{\setlength{\rightskip}{0pt plus 5cm}pin\-Chat\-Message (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_a11c2b4c3a2967132d1f39dc06f8d50c1}
+Use this method to pin a message in a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target supergroup (in the format {\ttfamily })  \\\cline{1-4}
+message\-\_\-id &Integer &Yes &Identifier of a message to pin  \\\cline{1-4}
+disable\-\_\-notification &Boolean &No &Pass {\itshape True}, if it is not necessary to send a notification to all group members about the new pinned message  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
+\end{DoxyReturn}
 \hypertarget{class_telegram_a2021787930735bb9c4ee22b07943447b}{\index{Telegram@{Telegram}!promote\-Chat\-Member@{promote\-Chat\-Member}}
 \index{promote\-Chat\-Member@{promote\-Chat\-Member}!Telegram@{Telegram}}
 \subsubsection[{promote\-Chat\-Member}]{\setlength{\rightskip}{0pt plus 5cm}promote\-Chat\-Member (
@@ -1673,6 +1703,27 @@ Use this method to use the bultin function like \hyperlink{class_telegram_a950a9
 {\em \$update} & Integer The index of the update in the updates array. \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_telegram_adef9a5b1ff9d835244626a4d37064513}{\index{Telegram@{Telegram}!set\-Chat\-Description@{set\-Chat\-Description}}
+\index{set\-Chat\-Description@{set\-Chat\-Description}!Telegram@{Telegram}}
+\subsubsection[{set\-Chat\-Description}]{\setlength{\rightskip}{0pt plus 5cm}set\-Chat\-Description (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_adef9a5b1ff9d835244626a4d37064513}
+Use this method to change the description of a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+description &String &No &New chat description, 0-\/255 characters  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
+\end{DoxyReturn}
 \hypertarget{class_telegram_a2c19ab9430d547b68e78cbe8f9870c04}{\index{Telegram@{Telegram}!set\-Chat\-Photo@{set\-Chat\-Photo}}
 \index{set\-Chat\-Photo@{set\-Chat\-Photo}!Telegram@{Telegram}}
 \subsubsection[{set\-Chat\-Photo}]{\setlength{\rightskip}{0pt plus 5cm}set\-Chat\-Photo (
@@ -1685,6 +1736,27 @@ Use this method to set a new profile photo for the chat. Photos can't be changed
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
 chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
 photo &\href{https://core.telegram.org/bots/api#inputfile}{\tt Input\-File} &Yes &New chat photo, uploaded using multipart/form-\/data  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
+\end{DoxyReturn}
+\hypertarget{class_telegram_ac2f5f32ecaf8d6837c1804de6d0ab4b1}{\index{Telegram@{Telegram}!set\-Chat\-Title@{set\-Chat\-Title}}
+\index{set\-Chat\-Title@{set\-Chat\-Title}!Telegram@{Telegram}}
+\subsubsection[{set\-Chat\-Title}]{\setlength{\rightskip}{0pt plus 5cm}set\-Chat\-Title (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_ac2f5f32ecaf8d6837c1804de6d0ab4b1}
+Use this method to change the title of a chat. Titles can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note\-: In regular groups (non-\/supergroups), this method will only work if the ‘\-All Members Are Admins’ setting is off in the target group. \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+title &String &Yes &New chat title, 1-\/255 characters  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -1777,6 +1849,26 @@ Values inside \$content\-:\par
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
 chat\-\_\-id &Integer or String &Yes &Unique identifier for the target group or username of the target supergroup (in the format {\ttfamily })  \\\cline{1-4}
 user\-\_\-id &Integer &Yes &Unique identifier of the target user  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a5457e52eb64d18064484e408bff8ea8f}{\index{Telegram@{Telegram}!unpin\-Chat\-Message@{unpin\-Chat\-Message}}
+\index{unpin\-Chat\-Message@{unpin\-Chat\-Message}!Telegram@{Telegram}}
+\subsubsection[{unpin\-Chat\-Message}]{\setlength{\rightskip}{0pt plus 5cm}unpin\-Chat\-Message (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_a5457e52eb64d18064484e408bff8ea8f}
+Use this method to unpin a message in a supergroup chat. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target supergroup (in the format {\ttfamily })  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
