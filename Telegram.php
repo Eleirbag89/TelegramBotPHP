@@ -2224,7 +2224,7 @@ class Telegram
     {
         return $this->endpoint('deleteChatPhoto', $content);
     }
-    
+
     // Set Chat Title
 
     /**
@@ -2260,7 +2260,7 @@ class Telegram
     // Set Chat Description
 
     /**
-     * Use this method to change the description of a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. 
+     * Use this method to change the description of a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success.
      * <table>
      * <tr>
      * <td><strong>Parameters</strong></td>
@@ -2292,7 +2292,7 @@ class Telegram
     // Pin Chat Message
 
     /**
-     * Use this method to pin a message in a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. 
+     * Use this method to pin a message in a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success.
      * <table>
      * <tr>
      * <td><strong>Parameters</strong></td>
@@ -2326,11 +2326,11 @@ class Telegram
     {
         return $this->endpoint('pinChatMessage', $content);
     }
-    
+
     // Unpin Chat Message
 
     /**
-     * Use this method to unpin a message in a supergroup chat. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. 
+     * Use this method to unpin a message in a supergroup chat. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success.
      * <table>
      * <tr>
      * <td><strong>Parameters</strong></td>
@@ -2352,7 +2352,7 @@ class Telegram
     {
         return $this->endpoint('unpinChatMessage', $content);
     }
-    
+
     /// Delete a message
 
     /**
