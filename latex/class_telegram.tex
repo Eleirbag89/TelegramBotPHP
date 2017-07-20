@@ -68,7 +68,7 @@
 \item 
 \hyperlink{class_telegram_af08c6bc7982d71857f05c0756221a703}{download\-File} (\$telegram\-\_\-file\-\_\-path, \$local\-\_\-file\-\_\-path)
 \begin{DoxyCompactList}\small\item\em Use this method to download a file. \end{DoxyCompactList}\item 
-\hyperlink{class_telegram_ae94b55864cae3e7751e7293585eec9f5}{set\-Webhook} (\$url, \$certificate=\char`\"{}\char`\"{})
+\hyperlink{class_telegram_a460bc346782ab380344e7fba7de6968c}{set\-Webhook} (\$url, \$certificate= '')
 \begin{DoxyCompactList}\small\item\em Set a Web\-Hook for the bot. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_ad90cef56fdc7dfcc40318a78bf5aed71}{delete\-Webhook} ()
 \begin{DoxyCompactList}\small\item\em Delete the Web\-Hook for the bot. \end{DoxyCompactList}\item 
@@ -139,7 +139,7 @@
 \begin{DoxyCompactList}\small\item\em Set a custom keyboard. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a81212e5e1fe0b3f72dd503a71577bbc4}{build\-Inline\-Key\-Board} (array \$options)
 \begin{DoxyCompactList}\small\item\em Set an Inline\-Key\-Board. \end{DoxyCompactList}\item 
-\hyperlink{class_telegram_a10013fd4d6183e854ca978b8366c0da7}{build\-Inline\-Keyboard\-Button} (\$text, \$url=\char`\"{}\char`\"{}, \$callback\-\_\-data=\char`\"{}\char`\"{}, \$switch\-\_\-inline\-\_\-query=null, \$switch\-\_\-inline\-\_\-query\-\_\-current\-\_\-chat=null, \$callback\-\_\-game=\char`\"{}\char`\"{}, \$pay=\char`\"{}\char`\"{})
+\hyperlink{class_telegram_a7f9a043a4713bce87d59b37fd1390251}{build\-Inline\-Keyboard\-Button} (\$text, \$url= '', \$callback\-\_\-data= '', \$switch\-\_\-inline\-\_\-query=null, \$switch\-\_\-inline\-\_\-query\-\_\-current\-\_\-chat=null, \$callback\-\_\-game= '', \$pay= '')
 \begin{DoxyCompactList}\small\item\em Create an Inline\-Keyboard\-Button. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a611a52a2e9be838207b3943007a76b6c}{build\-Keyboard\-Button} (\$text, \$request\-\_\-contact=false, \$request\-\_\-location=false)
 \begin{DoxyCompactList}\small\item\em Create a Keyboard\-Button. \end{DoxyCompactList}\item 
@@ -196,7 +196,9 @@ const \hyperlink{class_telegram_aac7f4f1b55319f64ad56ae8a8222d9b5}{C\-O\-N\-T\-A
 
 
 \subsection{Detailed Description}
-\hyperlink{class_telegram}{Telegram} Bot Class. \begin{DoxyAuthor}{Author}
+\hyperlink{class_telegram}{Telegram} Bot Class.
+
+\begin{DoxyAuthor}{Author}
 Gabriele Grillo \href{mailto:gabry.grillo@alice.it}{\tt gabry.\-grillo@alice.\-it} 
 \end{DoxyAuthor}
 
@@ -219,7 +221,7 @@ Create a \hyperlink{class_telegram}{Telegram} instance from the bot token
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-an instance of the class 
+an instance of the class. 
 \end{DoxyReturn}
 
 
@@ -250,7 +252,7 @@ show\-\_\-alert &Boolean &Optional &If {\itshape true}, an alert will be shown b
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_aae2439e89943ccea30fd724ad5ae9a89}{\index{Telegram@{Telegram}!answer\-Inline\-Query@{answer\-Inline\-Query}}
 \index{answer\-Inline\-Query@{answer\-Inline\-Query}!Telegram@{Telegram}}
@@ -280,7 +282,7 @@ switch\-\_\-pm\-\_\-parameter &String &Optional &Parameter for the start message
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a9eb2fa2623f2cd4f360f5b13fc4bfc73}{\index{Telegram@{Telegram}!answer\-Pre\-Checkout\-Query@{answer\-Pre\-Checkout\-Query}}
 \index{answer\-Pre\-Checkout\-Query@{answer\-Pre\-Checkout\-Query}!Telegram@{Telegram}}
@@ -306,7 +308,7 @@ error\-\_\-message &String &Optional &Required if {\itshape ok} is {\itshape Fal
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a7f8d89bb5061feb40973d2ac31b10a5a}{\index{Telegram@{Telegram}!answer\-Shipping\-Query@{answer\-Shipping\-Query}}
 \index{answer\-Shipping\-Query@{answer\-Shipping\-Query}!Telegram@{Telegram}}
@@ -333,7 +335,7 @@ error\-\_\-message &String &Optional &Required if {\itshape ok} is False. Error 
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a81212e5e1fe0b3f72dd503a71577bbc4}{\index{Telegram@{Telegram}!build\-Inline\-Key\-Board@{build\-Inline\-Key\-Board}}
 \index{build\-Inline\-Key\-Board@{build\-Inline\-Key\-Board}!Telegram@{Telegram}}
@@ -352,21 +354,21 @@ This object represents an inline keyboard that appears right next to the message
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the requested keyboard as Json 
+the requested keyboard as Json. 
 \end{DoxyReturn}
-\hypertarget{class_telegram_a10013fd4d6183e854ca978b8366c0da7}{\index{Telegram@{Telegram}!build\-Inline\-Keyboard\-Button@{build\-Inline\-Keyboard\-Button}}
+\hypertarget{class_telegram_a7f9a043a4713bce87d59b37fd1390251}{\index{Telegram@{Telegram}!build\-Inline\-Keyboard\-Button@{build\-Inline\-Keyboard\-Button}}
 \index{build\-Inline\-Keyboard\-Button@{build\-Inline\-Keyboard\-Button}!Telegram@{Telegram}}
 \subsubsection[{build\-Inline\-Keyboard\-Button}]{\setlength{\rightskip}{0pt plus 5cm}build\-Inline\-Keyboard\-Button (
 \begin{DoxyParamCaption}
 \item[{}]{\$text, }
-\item[{}]{\$url = {\ttfamily \char`\"{}\char`\"{}}, }
-\item[{}]{\$callback\-\_\-data = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{}]{\$url = {\ttfamily ''}, }
+\item[{}]{\$callback\-\_\-data = {\ttfamily ''}, }
 \item[{}]{\$switch\-\_\-inline\-\_\-query = {\ttfamily null}, }
 \item[{}]{\$switch\-\_\-inline\-\_\-query\-\_\-current\-\_\-chat = {\ttfamily null}, }
-\item[{}]{\$callback\-\_\-game = {\ttfamily \char`\"{}\char`\"{}}, }
-\item[{}]{\$pay = {\ttfamily \char`\"{}\char`\"{}}}
+\item[{}]{\$callback\-\_\-game = {\ttfamily ''}, }
+\item[{}]{\$pay = {\ttfamily ''}}
 \end{DoxyParamCaption}
-)}}\label{class_telegram_a10013fd4d6183e854ca978b8366c0da7}
+)}}\label{class_telegram_a7f9a043a4713bce87d59b37fd1390251}
 
 
 Create an Inline\-Keyboard\-Button. 
@@ -389,7 +391,7 @@ This object represents one button of an inline keyboard. You must use exactly on
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the requested button as Array 
+the requested button as Array. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a5c9619923ae1810aa340fa0e9acc1744}{\index{Telegram@{Telegram}!build\-Key\-Board@{build\-Key\-Board}}
 \index{build\-Key\-Board@{build\-Key\-Board}!Telegram@{Telegram}}
@@ -417,7 +419,7 @@ This object represents a custom keyboard with reply options
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the requested keyboard as Json 
+the requested keyboard as Json. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a611a52a2e9be838207b3943007a76b6c}{\index{Telegram@{Telegram}!build\-Keyboard\-Button@{build\-Keyboard\-Button}}
 \index{build\-Keyboard\-Button@{build\-Keyboard\-Button}!Telegram@{Telegram}}
@@ -442,7 +444,7 @@ This object represents one button of an inline keyboard. You must use exactly on
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the requested button as Array 
+the requested button as Array. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a3a02a8bbaf6021f98871752bfd32de97}{\index{Telegram@{Telegram}!build\-Key\-Board\-Hide@{build\-Key\-Board\-Hide}}
 \index{build\-Key\-Board\-Hide@{build\-Key\-Board\-Hide}!Telegram@{Telegram}}
@@ -461,7 +463,7 @@ Upon receiving a message with this object, \hyperlink{class_telegram}{Telegram} 
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the requested keyboard hide as Array 
+the requested keyboard hide as Array. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a848317ddda1c61f7173e55e0253b12e0}{\index{Telegram@{Telegram}!Callback\-\_\-\-Chat\-I\-D@{Callback\-\_\-\-Chat\-I\-D}}
 \index{Callback\-\_\-\-Chat\-I\-D@{Callback\-\_\-\-Chat\-I\-D}!Telegram@{Telegram}}
@@ -475,7 +477,7 @@ the requested keyboard hide as Array
 Get the Get the chati\-\_\-id of the current callback. 
 
 \begin{DoxyReturn}{Returns}
-the String callback\-\_\-query 
+the String callback\-\_\-query. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a0df77a257a02ef572ca7d745f659e98d}{\index{Telegram@{Telegram}!Callback\-\_\-\-Data@{Callback\-\_\-\-Data}}
 \index{Callback\-\_\-\-Data@{Callback\-\_\-\-Data}!Telegram@{Telegram}}
@@ -489,7 +491,7 @@ the String callback\-\_\-query
 Get the Get the data of the current callback. 
 
 \begin{DoxyReturn}{Returns}
-the String callback\-\_\-data 
+the String callback\-\_\-data. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a61006cd19798be37ae51af5bc405ec71}{\index{Telegram@{Telegram}!Callback\-\_\-\-I\-D@{Callback\-\_\-\-I\-D}}
 \index{Callback\-\_\-\-I\-D@{Callback\-\_\-\-I\-D}!Telegram@{Telegram}}
@@ -503,7 +505,7 @@ the String callback\-\_\-data
 Get the callback\-\_\-query id of the current update. 
 
 \begin{DoxyReturn}{Returns}
-the String callback\-\_\-query id 
+the String callback\-\_\-query id. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_ad72a9632c75419625e9f194f400a31c9}{\index{Telegram@{Telegram}!Callback\-\_\-\-Message@{Callback\-\_\-\-Message}}
 \index{Callback\-\_\-\-Message@{Callback\-\_\-\-Message}!Telegram@{Telegram}}
@@ -517,7 +519,7 @@ the String callback\-\_\-query id
 Get the Get the message of the current callback. 
 
 \begin{DoxyReturn}{Returns}
-the Message 
+the Message. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a891f961aa0d3272c01ac9fe64f10a714}{\index{Telegram@{Telegram}!Callback\-\_\-\-Query@{Callback\-\_\-\-Query}}
 \index{Callback\-\_\-\-Query@{Callback\-\_\-\-Query}!Telegram@{Telegram}}
@@ -531,7 +533,7 @@ the Message
 Get the callback\-\_\-query of the current update. 
 
 \begin{DoxyReturn}{Returns}
-the String callback\-\_\-query 
+the String callback\-\_\-query. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a4b624bab3560ed1e761aba1e7431cb6e}{\index{Telegram@{Telegram}!Chat\-I\-D@{Chat\-I\-D}}
 \index{Chat\-I\-D@{Chat\-I\-D}!Telegram@{Telegram}}
@@ -545,7 +547,7 @@ the String callback\-\_\-query
 Get the chat\-\_\-id of the current message. 
 
 \begin{DoxyReturn}{Returns}
-the String users's chat\-\_\-id 
+the String users's chat\-\_\-id. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_aff49fc2cda4491ff4457ca481bb8edf9}{\index{Telegram@{Telegram}!Date@{Date}}
 \index{Date@{Date}!Telegram@{Telegram}}
@@ -559,7 +561,7 @@ the String users's chat\-\_\-id
 Get the date of the current message. 
 
 \begin{DoxyReturn}{Returns}
-the String message's date 
+the String message's date. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_af46503521fd05da7d9e42313c5f29dd6}{\index{Telegram@{Telegram}!delete\-Message@{delete\-Message}}
 \index{delete\-Message@{delete\-Message}!Telegram@{Telegram}}
@@ -584,7 +586,7 @@ message\-\_\-id &Integer &Yes &Identifier of the message to delete  \\\cline{1-4
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_ad90cef56fdc7dfcc40318a78bf5aed71}{\index{Telegram@{Telegram}!delete\-Webhook@{delete\-Webhook}}
 \index{delete\-Webhook@{delete\-Webhook}!Telegram@{Telegram}}
@@ -598,7 +600,7 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply
 Delete the Web\-Hook for the bot. 
 
 Use this method to remove webhook integration if you decide to switch back to \href{https://core.telegram.org/bots/api#getupdates}{\tt get\-Updates}. Returns True on success. Requires no parameters. \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_af08c6bc7982d71857f05c0756221a703}{\index{Telegram@{Telegram}!download\-File@{download\-File}}
 \index{download\-File@{download\-File}!Telegram@{Telegram}}
@@ -616,7 +618,7 @@ Use this method to to download a file from the \hyperlink{class_telegram}{Telegr
 \begin{DoxyParams}{Parameters}
 {\em \$telegram\-\_\-file\-\_\-path} & String File path on \hyperlink{class_telegram}{Telegram} servers \\
 \hline
-{\em \$local\-\_\-file\-\_\-path} & String File path where save the file \\
+{\em \$local\-\_\-file\-\_\-path} & String File path where save the file. \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_telegram_a3531b07c9dc7afb693c6e956e5debdad}{\index{Telegram@{Telegram}!edit\-Message\-Caption@{edit\-Message\-Caption}}
@@ -643,7 +645,7 @@ reply\-\_\-markup &\href{https://core.telegram.org/bots/api#inlinekeyboardmarkup
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_acd615562e6a6eeeb3d8a825eb03e3e5f}{\index{Telegram@{Telegram}!edit\-Message\-Reply\-Markup@{edit\-Message\-Reply\-Markup}}
 \index{edit\-Message\-Reply\-Markup@{edit\-Message\-Reply\-Markup}!Telegram@{Telegram}}
@@ -668,7 +670,7 @@ reply\-\_\-markup &\href{https://core.telegram.org/bots/api#inlinekeyboardmarkup
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_afbc4f6fd5f28a20e1bea0b083863b688}{\index{Telegram@{Telegram}!edit\-Message\-Text@{edit\-Message\-Text}}
 \index{edit\-Message\-Text@{edit\-Message\-Text}!Telegram@{Telegram}}
@@ -696,7 +698,7 @@ reply\-\_\-markup &\href{https://core.telegram.org/bots/api#inlinekeyboardmarkup
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a9241a37baf9b641df49a377c34bbdd59}{\index{Telegram@{Telegram}!endpoint@{endpoint}}
 \index{endpoint@{endpoint}!Telegram@{Telegram}}
@@ -721,7 +723,7 @@ Contacts the various A\-P\-I's endpoints
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_aebf3d567e947a457971c1501be7fc1fe}{\index{Telegram@{Telegram}!forward\-Message@{forward\-Message}}
 \index{forward\-Message@{forward\-Message}!Telegram@{Telegram}}
@@ -749,7 +751,7 @@ message\-\_\-id &Integer &Yes &Unique message identifier  \\\cline{1-4}
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a84b0d627829ac32122cf771094f3cffb}{\index{Telegram@{Telegram}!get\-Chat@{get\-Chat}}
 \index{get\-Chat@{get\-Chat}!Telegram@{Telegram}}
@@ -771,7 +773,7 @@ chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or u
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a9ef409fa4668818b134c349553ccebd9}{\index{Telegram@{Telegram}!get\-Chat\-Administrators@{get\-Chat\-Administrators}}
 \index{get\-Chat\-Administrators@{get\-Chat\-Administrators}!Telegram@{Telegram}}
@@ -793,7 +795,7 @@ chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or u
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a744f71c0b62f310e2b2c665071509fec}{\index{Telegram@{Telegram}!get\-Chat\-Member@{get\-Chat\-Member}}
 \index{get\-Chat\-Member@{get\-Chat\-Member}!Telegram@{Telegram}}
@@ -816,7 +818,7 @@ user\-\_\-id &Integer &Yes &Unique identifier of the target user  \\\cline{1-4}
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_aaeb16972df57138d5efa3579085ebb5f}{\index{Telegram@{Telegram}!get\-Chat\-Members\-Count@{get\-Chat\-Members\-Count}}
 \index{get\-Chat\-Members\-Count@{get\-Chat\-Members\-Count}!Telegram@{Telegram}}
@@ -838,7 +840,7 @@ chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or u
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a81a67162a6288d78fc4c55283325f0b4}{\index{Telegram@{Telegram}!get\-Data@{get\-Data}}
 \index{get\-Data@{get\-Data}!Telegram@{Telegram}}
@@ -852,7 +854,7 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply
 Get the data of the current message. 
 
 Get the P\-O\-S\-T request of a user in a Webhook or the message actually processed in a \hyperlink{class_telegram_adb467486d3d5e83ce21a03e00f17b16c}{get\-Updates()} enviroment. \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N users's message 
+the J\-S\-O\-N users's message. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_acb201ffc034063cfd347962c49ad5ad9}{\index{Telegram@{Telegram}!get\-File@{get\-File}}
 \index{get\-File@{get\-File}!Telegram@{Telegram}}
@@ -871,7 +873,7 @@ Use this method to get basic info about a file and prepare it for downloading. F
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a6bc057a9b0c03f8147a4294936b2494b}{\index{Telegram@{Telegram}!get\-Me@{get\-Me}}
 \index{get\-Me@{get\-Me}!Telegram@{Telegram}}
@@ -885,7 +887,7 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply
 A method for testing your bot. 
 
 A simple method for testing your bot's auth token. Requires no parameters. Returns basic information about the bot in form of a User object. \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_adb467486d3d5e83ce21a03e00f17b16c}{\index{Telegram@{Telegram}!get\-Updates@{get\-Updates}}
 \index{get\-Updates@{get\-Updates}!Telegram@{Telegram}}
@@ -913,7 +915,7 @@ Use this method to receive incoming updates using long polling.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the updates as Array 
+the updates as Array. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a291f955d4bae8e89b42e0a762b9bcc33}{\index{Telegram@{Telegram}!get\-Update\-Type@{get\-Update\-Type}}
 \index{get\-Update\-Type@{get\-Update\-Type}!Telegram@{Telegram}}
@@ -926,7 +928,7 @@ the updates as Array
 
 Return current update type. 
 
-Return current update type {\ttfamily False} on failure
+Return current update type {\ttfamily False} on failure.
 
 \begin{DoxyReturn}{Returns}
 bool$\vert$string 
@@ -957,7 +959,7 @@ limit &Integer &Optional &Limits the number of photos to be retrieved. Values be
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a27937704e98b35ccaf2066aa74b1fbe1}{\index{Telegram@{Telegram}!Inline\-\_\-\-Query@{Inline\-\_\-\-Query}}
 \index{Inline\-\_\-\-Query@{Inline\-\_\-\-Query}!Telegram@{Telegram}}
@@ -971,7 +973,7 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply
 Get the inline\-\_\-query of the current update. 
 
 \begin{DoxyReturn}{Returns}
-the Array inline\-\_\-query 
+the Array inline\-\_\-query. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a165397f59469136d25b445a83b6fd13b}{\index{Telegram@{Telegram}!kick\-Chat\-Member@{kick\-Chat\-Member}}
 \index{kick\-Chat\-Member@{kick\-Chat\-Member}!Telegram@{Telegram}}
@@ -1018,7 +1020,7 @@ Unique identifier of the target user
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_ab5d2552e116deb2f9c3940f3e09b4e7a}{\index{Telegram@{Telegram}!leave\-Chat@{leave\-Chat}}
 \index{leave\-Chat@{leave\-Chat}!Telegram@{Telegram}}
@@ -1042,7 +1044,7 @@ chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or u
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a59b7bf91ea3b26d732f7536c2d65da19}{\index{Telegram@{Telegram}!message\-From\-Group@{message\-From\-Group}}
 \index{message\-From\-Group@{message\-From\-Group}!Telegram@{Telegram}}
@@ -1056,7 +1058,7 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply
 Tell if a message is from a group or user chat. 
 
 \begin{DoxyReturn}{Returns}
-B\-O\-O\-L\-E\-A\-N true if the message is from a Group chat, false otherwise 
+B\-O\-O\-L\-E\-A\-N true if the message is from a Group chat, false otherwise. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_acd2c4c8c6f15dbb1f25af2f539c2ec16}{\index{Telegram@{Telegram}!message\-From\-Group\-Title@{message\-From\-Group\-Title}}
 \index{message\-From\-Group\-Title@{message\-From\-Group\-Title}!Telegram@{Telegram}}
@@ -1070,7 +1072,7 @@ B\-O\-O\-L\-E\-A\-N true if the message is from a Group chat, false otherwise
 Get the title of the group chat. 
 
 \begin{DoxyReturn}{Returns}
-a String of the title chat 
+a String of the title chat. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a957f0d35d7a8cabb6116cc7bf51ceac2}{\index{Telegram@{Telegram}!Message\-I\-D@{Message\-I\-D}}
 \index{Message\-I\-D@{Message\-I\-D}!Telegram@{Telegram}}
@@ -1084,7 +1086,7 @@ a String of the title chat
 Get the message\-\_\-id of the current message. 
 
 \begin{DoxyReturn}{Returns}
-the String message\-\_\-id 
+the String message\-\_\-id. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a2021787930735bb9c4ee22b07943447b}{\index{Telegram@{Telegram}!promote\-Chat\-Member@{promote\-Chat\-Member}}
 \index{promote\-Chat\-Member@{promote\-Chat\-Member}!Telegram@{Telegram}}
@@ -1131,7 +1133,7 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply.
 Get the reply\-\_\-to\-\_\-message forward\-\_\-from user\-\_\-id of the current message. 
 
 \begin{DoxyReturn}{Returns}
-the String reply\-\_\-to\-\_\-message forward\-\_\-from user\-\_\-id 
+the String reply\-\_\-to\-\_\-message forward\-\_\-from user\-\_\-id. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_ad4dbc2a3a269f1e596a3d6b40c948ebf}{\index{Telegram@{Telegram}!Reply\-To\-Message\-I\-D@{Reply\-To\-Message\-I\-D}}
 \index{Reply\-To\-Message\-I\-D@{Reply\-To\-Message\-I\-D}!Telegram@{Telegram}}
@@ -1145,7 +1147,7 @@ the String reply\-\_\-to\-\_\-message forward\-\_\-from user\-\_\-id
 Get the reply\-\_\-to\-\_\-message message\-\_\-id of the current message. 
 
 \begin{DoxyReturn}{Returns}
-the String reply\-\_\-to\-\_\-message message\-\_\-id 
+the String reply\-\_\-to\-\_\-message message\-\_\-id. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_aff3588359c3fa16dfa8e3f074086e7da}{\index{Telegram@{Telegram}!respond\-Success@{respond\-Success}}
 \index{respond\-Success@{respond\-Success}!Telegram@{Telegram}}
@@ -1159,7 +1161,7 @@ the String reply\-\_\-to\-\_\-message message\-\_\-id
 A method for responding http to \hyperlink{class_telegram}{Telegram}. 
 
 \begin{DoxyReturn}{Returns}
-the H\-T\-T\-P 200 to \hyperlink{class_telegram}{Telegram} 
+the H\-T\-T\-P 200 to \hyperlink{class_telegram}{Telegram}. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_aa0c71f6fb724e8515f0b36eb5cca0bac}{\index{Telegram@{Telegram}!restrict\-Chat\-Member@{restrict\-Chat\-Member}}
 \index{restrict\-Chat\-Member@{restrict\-Chat\-Member}!Telegram@{Telegram}}
@@ -1222,7 +1224,7 @@ reply\-\_\-markup &Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Re
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_aa8c4c54f8f2fcbb53de050458fb176b7}{\index{Telegram@{Telegram}!send\-Chat\-Action@{send\-Chat\-Action}}
 \index{send\-Chat\-Action@{send\-Chat\-Action}!Telegram@{Telegram}}
@@ -1253,7 +1255,7 @@ action &String &Yes &Type of action to broadcast. Choose one, depending on what 
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a5ba4fd675a877d995bb0d7305aa56324}{\index{Telegram@{Telegram}!send\-Contact@{send\-Contact}}
 \index{send\-Contact@{send\-Contact}!Telegram@{Telegram}}
@@ -1312,7 +1314,7 @@ reply\-\_\-markup &Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Re
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_ae2c4d7308afec34759ccafe4a4f83053}{\index{Telegram@{Telegram}!send\-Invoice@{send\-Invoice}}
 \index{send\-Invoice@{send\-Invoice}!Telegram@{Telegram}}
@@ -1355,7 +1357,7 @@ reply\-\_\-markup &\href{#inlinekeyboardmarkup}{\tt Inline\-Keyboard\-Markup} &O
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_ac395e843f13d36d70f57c2d26868a33f}{\index{Telegram@{Telegram}!send\-Location@{send\-Location}}
 \index{send\-Location@{send\-Location}!Telegram@{Telegram}}
@@ -1385,7 +1387,7 @@ reply\-\_\-markup &Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Re
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_af1369d6caab77f71a051ab73fa642a3f}{\index{Telegram@{Telegram}!send\-Message@{send\-Message}}
 \index{send\-Message@{send\-Message}!Telegram@{Telegram}}
@@ -1419,7 +1421,7 @@ reply\-\_\-markup &Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Re
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_ac7adcbd9f46b77664f8b738b84f290e7}{\index{Telegram@{Telegram}!send\-Photo@{send\-Photo}}
 \index{send\-Photo@{send\-Photo}!Telegram@{Telegram}}
@@ -1449,7 +1451,7 @@ reply\-\_\-markup &Reply\-Keyboard\-Markup or $>$Reply\-Keyboard\-Hide or Force\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a0a176d232d8e7941184698447902beb6}{\index{Telegram@{Telegram}!send\-Sticker@{send\-Sticker}}
 \index{send\-Sticker@{send\-Sticker}!Telegram@{Telegram}}
@@ -1478,7 +1480,7 @@ reply\-\_\-markup &Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Re
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a4ad657480e7bc9575a71912eb85c92d5}{\index{Telegram@{Telegram}!send\-Venue@{send\-Venue}}
 \index{send\-Venue@{send\-Venue}!Telegram@{Telegram}}
@@ -1512,7 +1514,7 @@ reply\-\_\-markup &\href{https://core.telegram.org/bots/api#inlinekeyboardmarkup
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a789f27ed21d8a1232cc60832efdab17f}{\index{Telegram@{Telegram}!send\-Video@{send\-Video}}
 \index{send\-Video@{send\-Video}!Telegram@{Telegram}}
@@ -1543,7 +1545,7 @@ reply\-\_\-markup &Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Re
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_ab40154a0f3a51a0e308ca40cdc0bbdd0}{\index{Telegram@{Telegram}!send\-Video\-Note@{send\-Video\-Note}}
 \index{send\-Video\-Note@{send\-Video\-Note}!Telegram@{Telegram}}
@@ -1573,7 +1575,7 @@ reply\-\_\-markup &\href{#inlinekeyboardmarkup}{\tt Inline\-Keyboard\-Markup} or
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a4faab9f92639453b851912d41ca1a3ca}{\index{Telegram@{Telegram}!send\-Voice@{send\-Voice}}
 \index{send\-Voice@{send\-Voice}!Telegram@{Telegram}}
@@ -1603,7 +1605,7 @@ reply\-\_\-markup &Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Re
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a57e6066940e4cca7310cfd5c45fd8510}{\index{Telegram@{Telegram}!serve\-Update@{serve\-Update}}
 \index{serve\-Update@{serve\-Update}!Telegram@{Telegram}}
@@ -1650,16 +1652,16 @@ inline\-\_\-message\-\_\-id &String &Optional &Required if {\itshape chat\-\_\-i
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
-\hypertarget{class_telegram_ae94b55864cae3e7751e7293585eec9f5}{\index{Telegram@{Telegram}!set\-Webhook@{set\-Webhook}}
+\hypertarget{class_telegram_a460bc346782ab380344e7fba7de6968c}{\index{Telegram@{Telegram}!set\-Webhook@{set\-Webhook}}
 \index{set\-Webhook@{set\-Webhook}!Telegram@{Telegram}}
 \subsubsection[{set\-Webhook}]{\setlength{\rightskip}{0pt plus 5cm}set\-Webhook (
 \begin{DoxyParamCaption}
 \item[{}]{\$url, }
-\item[{}]{\$certificate = {\ttfamily \char`\"{}\char`\"{}}}
+\item[{}]{\$certificate = {\ttfamily ''}}
 \end{DoxyParamCaption}
-)}}\label{class_telegram_ae94b55864cae3e7751e7293585eec9f5}
+)}}\label{class_telegram_a460bc346782ab380344e7fba7de6968c}
 
 
 Set a Web\-Hook for the bot. 
@@ -1674,7 +1676,7 @@ If you'd like to make sure that the Webhook request comes from \hyperlink{class_
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_a950a98ae75562dc9c6a458acbd330143}{\index{Telegram@{Telegram}!Text@{Text}}
 \index{Text@{Text}!Telegram@{Telegram}}
@@ -1688,7 +1690,7 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply
 Get the text of the current message. 
 
 \begin{DoxyReturn}{Returns}
-the String users's text 
+the String users's text. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_abb59232bb0fd79760521c8e81ea0f9b8}{\index{Telegram@{Telegram}!unban\-Chat\-Member@{unban\-Chat\-Member}}
 \index{unban\-Chat\-Member@{unban\-Chat\-Member}!Telegram@{Telegram}}
@@ -1711,7 +1713,7 @@ user\-\_\-id &Integer &Yes &Unique identifier of the target user  \\\cline{1-4}
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply 
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 
 
@@ -1719,37 +1721,37 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply
 \hypertarget{class_telegram_a9f6cfe013372d7de1568a95c871214d1}{\index{Telegram@{Telegram}!A\-U\-D\-I\-O@{A\-U\-D\-I\-O}}
 \index{A\-U\-D\-I\-O@{A\-U\-D\-I\-O}!Telegram@{Telegram}}
 \subsubsection[{A\-U\-D\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}const A\-U\-D\-I\-O = 'audio'}}\label{class_telegram_a9f6cfe013372d7de1568a95c871214d1}
-Constant for type Audio \hypertarget{class_telegram_a464a4a095bb928388381b33e0babf9fe}{\index{Telegram@{Telegram}!C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-Q\-U\-E\-R\-Y@{C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-Q\-U\-E\-R\-Y}}
+Constant for type Audio. \hypertarget{class_telegram_a464a4a095bb928388381b33e0babf9fe}{\index{Telegram@{Telegram}!C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-Q\-U\-E\-R\-Y@{C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-Q\-U\-E\-R\-Y}}
 \index{C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-Q\-U\-E\-R\-Y@{C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-Q\-U\-E\-R\-Y}!Telegram@{Telegram}}
 \subsubsection[{C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-Q\-U\-E\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}const C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-Q\-U\-E\-R\-Y = 'callback\-\_\-query'}}\label{class_telegram_a464a4a095bb928388381b33e0babf9fe}
-Constant for type Callback Query \hypertarget{class_telegram_aac7f4f1b55319f64ad56ae8a8222d9b5}{\index{Telegram@{Telegram}!C\-O\-N\-T\-A\-C\-T@{C\-O\-N\-T\-A\-C\-T}}
+Constant for type Callback Query. \hypertarget{class_telegram_aac7f4f1b55319f64ad56ae8a8222d9b5}{\index{Telegram@{Telegram}!C\-O\-N\-T\-A\-C\-T@{C\-O\-N\-T\-A\-C\-T}}
 \index{C\-O\-N\-T\-A\-C\-T@{C\-O\-N\-T\-A\-C\-T}!Telegram@{Telegram}}
 \subsubsection[{C\-O\-N\-T\-A\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}const C\-O\-N\-T\-A\-C\-T = 'contact'}}\label{class_telegram_aac7f4f1b55319f64ad56ae8a8222d9b5}
-Constant for type Contact \hypertarget{class_telegram_a6494d627239bf203e03297843bf52053}{\index{Telegram@{Telegram}!D\-O\-C\-U\-M\-E\-N\-T@{D\-O\-C\-U\-M\-E\-N\-T}}
+Constant for type Contact. \hypertarget{class_telegram_a6494d627239bf203e03297843bf52053}{\index{Telegram@{Telegram}!D\-O\-C\-U\-M\-E\-N\-T@{D\-O\-C\-U\-M\-E\-N\-T}}
 \index{D\-O\-C\-U\-M\-E\-N\-T@{D\-O\-C\-U\-M\-E\-N\-T}!Telegram@{Telegram}}
 \subsubsection[{D\-O\-C\-U\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}const D\-O\-C\-U\-M\-E\-N\-T = 'document'}}\label{class_telegram_a6494d627239bf203e03297843bf52053}
-Constant for type Document \hypertarget{class_telegram_aa469cc007db1409d59a5e5bfac0633ec}{\index{Telegram@{Telegram}!E\-D\-I\-T\-E\-D\-\_\-\-M\-E\-S\-S\-A\-G\-E@{E\-D\-I\-T\-E\-D\-\_\-\-M\-E\-S\-S\-A\-G\-E}}
+Constant for type Document. \hypertarget{class_telegram_aa469cc007db1409d59a5e5bfac0633ec}{\index{Telegram@{Telegram}!E\-D\-I\-T\-E\-D\-\_\-\-M\-E\-S\-S\-A\-G\-E@{E\-D\-I\-T\-E\-D\-\_\-\-M\-E\-S\-S\-A\-G\-E}}
 \index{E\-D\-I\-T\-E\-D\-\_\-\-M\-E\-S\-S\-A\-G\-E@{E\-D\-I\-T\-E\-D\-\_\-\-M\-E\-S\-S\-A\-G\-E}!Telegram@{Telegram}}
 \subsubsection[{E\-D\-I\-T\-E\-D\-\_\-\-M\-E\-S\-S\-A\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}const E\-D\-I\-T\-E\-D\-\_\-\-M\-E\-S\-S\-A\-G\-E = 'edited\-\_\-message'}}\label{class_telegram_aa469cc007db1409d59a5e5bfac0633ec}
-Constant for type Edited Message \hypertarget{class_telegram_aca699735a6cec340e45cde5c623bdb32}{\index{Telegram@{Telegram}!L\-O\-C\-A\-T\-I\-O\-N@{L\-O\-C\-A\-T\-I\-O\-N}}
+Constant for type Edited Message. \hypertarget{class_telegram_aca699735a6cec340e45cde5c623bdb32}{\index{Telegram@{Telegram}!L\-O\-C\-A\-T\-I\-O\-N@{L\-O\-C\-A\-T\-I\-O\-N}}
 \index{L\-O\-C\-A\-T\-I\-O\-N@{L\-O\-C\-A\-T\-I\-O\-N}!Telegram@{Telegram}}
 \subsubsection[{L\-O\-C\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}const L\-O\-C\-A\-T\-I\-O\-N = 'location'}}\label{class_telegram_aca699735a6cec340e45cde5c623bdb32}
-Constant for type Location \hypertarget{class_telegram_af9b451d04eb24044a2d4112be10de570}{\index{Telegram@{Telegram}!M\-E\-S\-S\-A\-G\-E@{M\-E\-S\-S\-A\-G\-E}}
+Constant for type Location. \hypertarget{class_telegram_af9b451d04eb24044a2d4112be10de570}{\index{Telegram@{Telegram}!M\-E\-S\-S\-A\-G\-E@{M\-E\-S\-S\-A\-G\-E}}
 \index{M\-E\-S\-S\-A\-G\-E@{M\-E\-S\-S\-A\-G\-E}!Telegram@{Telegram}}
 \subsubsection[{M\-E\-S\-S\-A\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}const M\-E\-S\-S\-A\-G\-E = 'message'}}\label{class_telegram_af9b451d04eb24044a2d4112be10de570}
-Constant for type Message \hypertarget{class_telegram_a0aeb08e94e66f9d958f565530b6b6a80}{\index{Telegram@{Telegram}!P\-H\-O\-T\-O@{P\-H\-O\-T\-O}}
+Constant for type Message. \hypertarget{class_telegram_a0aeb08e94e66f9d958f565530b6b6a80}{\index{Telegram@{Telegram}!P\-H\-O\-T\-O@{P\-H\-O\-T\-O}}
 \index{P\-H\-O\-T\-O@{P\-H\-O\-T\-O}!Telegram@{Telegram}}
 \subsubsection[{P\-H\-O\-T\-O}]{\setlength{\rightskip}{0pt plus 5cm}const P\-H\-O\-T\-O = 'photo'}}\label{class_telegram_a0aeb08e94e66f9d958f565530b6b6a80}
-Constant for type Photo \hypertarget{class_telegram_acb63774895b195d4c22afe2b089a3ddd}{\index{Telegram@{Telegram}!R\-E\-P\-L\-Y@{R\-E\-P\-L\-Y}}
+Constant for type Photo. \hypertarget{class_telegram_acb63774895b195d4c22afe2b089a3ddd}{\index{Telegram@{Telegram}!R\-E\-P\-L\-Y@{R\-E\-P\-L\-Y}}
 \index{R\-E\-P\-L\-Y@{R\-E\-P\-L\-Y}!Telegram@{Telegram}}
 \subsubsection[{R\-E\-P\-L\-Y}]{\setlength{\rightskip}{0pt plus 5cm}const R\-E\-P\-L\-Y = 'reply'}}\label{class_telegram_acb63774895b195d4c22afe2b089a3ddd}
-Constant for type Reply \hypertarget{class_telegram_a333a9b0a1034beea1b4b505f30885cea}{\index{Telegram@{Telegram}!V\-I\-D\-E\-O@{V\-I\-D\-E\-O}}
+Constant for type Reply. \hypertarget{class_telegram_a333a9b0a1034beea1b4b505f30885cea}{\index{Telegram@{Telegram}!V\-I\-D\-E\-O@{V\-I\-D\-E\-O}}
 \index{V\-I\-D\-E\-O@{V\-I\-D\-E\-O}!Telegram@{Telegram}}
 \subsubsection[{V\-I\-D\-E\-O}]{\setlength{\rightskip}{0pt plus 5cm}const V\-I\-D\-E\-O = 'video'}}\label{class_telegram_a333a9b0a1034beea1b4b505f30885cea}
-Constant for type Video \hypertarget{class_telegram_a12e48e3d10ee66d0a6ca34c207d8e282}{\index{Telegram@{Telegram}!V\-O\-I\-C\-E@{V\-O\-I\-C\-E}}
+Constant for type Video. \hypertarget{class_telegram_a12e48e3d10ee66d0a6ca34c207d8e282}{\index{Telegram@{Telegram}!V\-O\-I\-C\-E@{V\-O\-I\-C\-E}}
 \index{V\-O\-I\-C\-E@{V\-O\-I\-C\-E}!Telegram@{Telegram}}
 \subsubsection[{V\-O\-I\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}const V\-O\-I\-C\-E = 'voice'}}\label{class_telegram_a12e48e3d10ee66d0a6ca34c207d8e282}
-Constant for type Voice 
+Constant for type Voice. 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
