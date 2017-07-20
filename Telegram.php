@@ -2140,7 +2140,7 @@ class Telegram
     {
         return $this->endpoint('promoteChatMember', $content);
     }
-    
+
     /// Export Chat Invite Link
 
     /**
@@ -2166,7 +2166,7 @@ class Telegram
     {
         return $this->endpoint('exportChatInviteLink', $content);
     }
-    
+
     // Set Chat Photo
 
     /**
