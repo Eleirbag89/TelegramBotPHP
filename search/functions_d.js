@@ -16,5 +16,5 @@ var searchData=
   ['serveupdate',['serveUpdate',['../class_telegram.html#a57e6066940e4cca7310cfd5c45fd8510',1,'Telegram']]],
   ['setdata',['setData',['../class_telegram.html#a87449bdd364c33ff024d32896342bf31',1,'Telegram']]],
   ['setgamescore',['setGameScore',['../class_telegram.html#adc67d74632a07c0f50875d8e35304463',1,'Telegram']]],
-  ['setwebhook',['setWebhook',['../class_telegram.html#ae94b55864cae3e7751e7293585eec9f5',1,'Telegram']]]
+  ['setwebhook',['setWebhook',['../class_telegram.html#a460bc346782ab380344e7fba7de6968c',1,'Telegram']]]
 ];
