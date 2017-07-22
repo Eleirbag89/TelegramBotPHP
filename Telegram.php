@@ -791,6 +791,8 @@ class Telegram
 
         return $this->endpoint('getFile', $content);
     }
+    
+    /// Kick Chat Member
 
     /**
      * Use this method to kick a user from a group or a supergroup. In the case of supergroups, the user will not be able to return to the group on their own using invite links, etc., unless <a href="https://core.telegram.org/bots/api#unbanchatmember">unbanned</a> first. The bot must be an administrator in the group for this to work. Returns <em>True</em> on success.<br>
@@ -823,6 +825,8 @@ class Telegram
     {
         return $this->endpoint('kickChatMember', $content);
     }
+    
+    /// Leave Chat
 
     /**
      * Use this method for your bot to leave a group, supergroup or channel. Returns <em>True</em> on success.</p> <br/>Values inside $content:<br/>
@@ -847,6 +851,8 @@ class Telegram
     {
         return $this->endpoint('leaveChat', $content);
     }
+    
+    /// Unban Chat Member
 
     /**
      * Use this method to unban a previously kicked user in a supergroup. The user will <strong>not</strong> return to the group automatically, but will be able to join via link, etc. The bot must be an administrator in the group for this to work. Returns <em>True</em> on success.<br/>Values inside $content:<br/>
@@ -877,6 +883,8 @@ class Telegram
     {
         return $this->endpoint('unbanChatMember', $content);
     }
+    
+    /// Get Chat Information
 
     /**
      * Use this method to get up to date information about the chat (current name of the user for one-on-one conversations, current username of a user, group or channel, etc.). Returns a <a href="https://core.telegram.org/bots/api#chat">Chat</a> object on success.<br/>Values inside $content:<br/>
