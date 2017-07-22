@@ -145,12 +145,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acb201ffc034063cfd347962c49ad5ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this method to get basic info about a file and prepare it for downloading.  <a href="#acb201ffc034063cfd347962c49ad5ad9">More...</a><br/></td></tr>
 <tr class="separator:acb201ffc034063cfd347962c49ad5ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a165397f59469136d25b445a83b6fd13b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a165397f59469136d25b445a83b6fd13b">kickChatMember</a> (array $content)</td></tr>
+<tr class="memdesc:a165397f59469136d25b445a83b6fd13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kick Chat Member.  <a href="#a165397f59469136d25b445a83b6fd13b">More...</a><br/></td></tr>
 <tr class="separator:a165397f59469136d25b445a83b6fd13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5d2552e116deb2f9c3940f3e09b4e7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#ab5d2552e116deb2f9c3940f3e09b4e7a">leaveChat</a> (array $content)</td></tr>
+<tr class="memdesc:ab5d2552e116deb2f9c3940f3e09b4e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Leave Chat.  <a href="#ab5d2552e116deb2f9c3940f3e09b4e7a">More...</a><br/></td></tr>
 <tr class="separator:ab5d2552e116deb2f9c3940f3e09b4e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb59232bb0fd79760521c8e81ea0f9b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#abb59232bb0fd79760521c8e81ea0f9b8">unbanChatMember</a> (array $content)</td></tr>
+<tr class="memdesc:abb59232bb0fd79760521c8e81ea0f9b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unban Chat Member.  <a href="#abb59232bb0fd79760521c8e81ea0f9b8">More...</a><br/></td></tr>
 <tr class="separator:abb59232bb0fd79760521c8e81ea0f9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84b0d627829ac32122cf771094f3cffb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a84b0d627829ac32122cf771094f3cffb">getChat</a> (array $content)</td></tr>
+<tr class="memdesc:a84b0d627829ac32122cf771094f3cffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Chat Information.  <a href="#a84b0d627829ac32122cf771094f3cffb">More...</a><br/></td></tr>
 <tr class="separator:a84b0d627829ac32122cf771094f3cffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ef409fa4668818b134c349553ccebd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a9ef409fa4668818b134c349553ccebd9">getChatAdministrators</a> (array $content)</td></tr>
 <tr class="separator:a9ef409fa4668818b134c349553ccebd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1400,6 +1404,8 @@ Values inside $content:<br/>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get Chat Information. </p>
 <p>Use this method to get up to date information about the chat (current name of the user for one-on-one conversations, current username of a user, group or channel, etc.). Returns a <a href="https://core.telegram.org/bots/api#chat">Chat</a> object on success.<br/>
 Values inside $content:<br/>
  </p>
@@ -1752,6 +1758,8 @@ Values inside $content:<br/>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Kick Chat Member. </p>
 <p>Use this method to kick a user from a group or a supergroup. In the case of supergroups, the user will not be able to return to the group on their own using invite links, etc., unless <a href="https://core.telegram.org/bots/api#unbanchatmember">unbanned</a> first. The bot must be an administrator in the group for this to work. Returns <em>True</em> on success.<br/>
  Note: This will method only work if the â€˜All Members Are Adminsâ€™ setting is off in the target group. Otherwise members may only be removed by the group&amp;#39;s creator or by the member that added them.<br/>
 Values inside $content:<br/>
@@ -1793,6 +1801,8 @@ Values inside $content:<br/>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Leave Chat. </p>
 <p>Use this method for your bot to leave a group, supergroup or channel. Returns <em>True</em> on success.</p>
 <p><br/>
 Values inside $content:<br/>
@@ -2915,6 +2925,8 @@ Values inside $content:<br/>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Unban Chat Member. </p>
 <p>Use this method to unban a previously kicked user in a supergroup. The user will <b>not</b> return to the group automatically, but will be able to join via link, etc. The bot must be an administrator in the group for this to work. Returns <em>True</em> on success.<br/>
 Values inside $content:<br/>
  </p>

@@ -41,13 +41,13 @@
 \hyperlink{class_telegram_acb201ffc034063cfd347962c49ad5ad9}{get\-File} (\$file\-\_\-id)
 \begin{DoxyCompactList}\small\item\em Use this method to get basic info about a file and prepare it for downloading. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a165397f59469136d25b445a83b6fd13b}{kick\-Chat\-Member} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Kick Chat Member. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_ab5d2552e116deb2f9c3940f3e09b4e7a}{leave\-Chat} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Leave Chat. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_abb59232bb0fd79760521c8e81ea0f9b8}{unban\-Chat\-Member} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Unban Chat Member. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a84b0d627829ac32122cf771094f3cffb}{get\-Chat} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Get Chat Information. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a9ef409fa4668818b134c349553ccebd9}{get\-Chat\-Administrators} (array \$content)
 \item 
 \hyperlink{class_telegram_aaeb16972df57138d5efa3579085ebb5f}{get\-Chat\-Members\-Count} (array \$content)
@@ -912,6 +912,10 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply.
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_a84b0d627829ac32122cf771094f3cffb}
+
+
+Get Chat Information. 
+
 Use this method to get up to date information about the chat (current name of the user for one-\/on-\/one conversations, current username of a user, group or channel, etc.). Returns a \href{https://core.telegram.org/bots/api#chat}{\tt Chat} object on success.\par
 Values inside \$content\-:\par
  \begin{TabularC}{4}
@@ -1158,6 +1162,10 @@ the Array inline\-\_\-query.
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_a165397f59469136d25b445a83b6fd13b}
+
+
+Kick Chat Member. 
+
 Use this method to kick a user from a group or a supergroup. In the case of supergroups, the user will not be able to return to the group on their own using invite links, etc., unless \href{https://core.telegram.org/bots/api#unbanchatmember}{\tt unbanned} first. The bot must be an administrator in the group for this to work. Returns {\itshape True} on success.\par
  Note\-: This will method only work if the â€˜\-All Members Are Adminsâ€™ setting is off in the target group. Otherwise members may only be removed by the group\&\#39;s creator or by the member that added them.\par
 Values inside \$content\-:\par
@@ -1205,6 +1213,10 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply.
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_ab5d2552e116deb2f9c3940f3e09b4e7a}
+
+
+Leave Chat. 
+
 Use this method for your bot to leave a group, supergroup or channel. Returns {\itshape True} on success.
 
 \par
@@ -2001,6 +2013,10 @@ the String users's text.
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_abb59232bb0fd79760521c8e81ea0f9b8}
+
+
+Unban Chat Member. 
+
 Use this method to unban a previously kicked user in a supergroup. The user will {\bfseries not} return to the group automatically, but will be able to join via link, etc. The bot must be an administrator in the group for this to work. Returns {\itshape True} on success.\par
 Values inside \$content\-:\par
  \begin{TabularC}{4}
