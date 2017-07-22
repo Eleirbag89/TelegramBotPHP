@@ -791,7 +791,7 @@ class Telegram
 
         return $this->endpoint('getFile', $content);
     }
-    
+
     /// Kick Chat Member
 
     /**
@@ -825,7 +825,7 @@ class Telegram
     {
         return $this->endpoint('kickChatMember', $content);
     }
-    
+
     /// Leave Chat
 
     /**
@@ -851,7 +851,7 @@ class Telegram
     {
         return $this->endpoint('leaveChat', $content);
     }
-    
+
     /// Unban Chat Member
 
     /**
@@ -883,7 +883,7 @@ class Telegram
     {
         return $this->endpoint('unbanChatMember', $content);
     }
-    
+
     /// Get Chat Information
 
     /**
@@ -2360,7 +2360,7 @@ class Telegram
     {
         return $this->endpoint('unpinChatMessage', $content);
     }
-    
+
     /// Get Sticker Set
 
     /**
@@ -2386,7 +2386,7 @@ class Telegram
     {
         return $this->endpoint('getStickerSet', $content);
     }
-    
+
     /// Upload Sticker File
 
     /**
@@ -2418,7 +2418,7 @@ class Telegram
     {
         return $this->endpoint('uploadStickerFile', $content);
     }
-    
+
     /// Create New Sticker Set
 
     /**
@@ -2480,7 +2480,7 @@ class Telegram
     {
         return $this->endpoint('createNewStickerSet', $content);
     }
-    
+
     /// Add Sticker To Set
 
     /**
@@ -2530,7 +2530,7 @@ class Telegram
     {
         return $this->endpoint('addStickerToSet', $content);
     }
-    
+
     /// Set Sticker Position In Set
 
     /**
@@ -2562,7 +2562,7 @@ class Telegram
     {
         return $this->endpoint('setStickerPositionInSet', $content);
     }
-    
+
     /// Delete Sticker From Set
 
     /**
