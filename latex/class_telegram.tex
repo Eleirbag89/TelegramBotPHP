@@ -161,19 +161,31 @@
 \hyperlink{class_telegram_a2021787930735bb9c4ee22b07943447b}{promote\-Chat\-Member} (array \$content)
 \begin{DoxyCompactList}\small\item\em Promote Chat Member. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_ab0bd8531ee91c28e85fce5f3af515ae3}{export\-Chat\-Invite\-Link} (array \$content)
-\begin{DoxyCompactList}\small\item\em Export Chat Invite Link. \end{DoxyCompactList}\item 
+\item 
 \hyperlink{class_telegram_a2c19ab9430d547b68e78cbe8f9870c04}{set\-Chat\-Photo} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Set Chat Photo. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_ae56adc8aed44147e945b6c4c9a16f975}{delete\-Chat\-Photo} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Delete Chat Photo. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_ac2f5f32ecaf8d6837c1804de6d0ab4b1}{set\-Chat\-Title} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Set Chat Title. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_adef9a5b1ff9d835244626a4d37064513}{set\-Chat\-Description} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Set Chat Description. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a11c2b4c3a2967132d1f39dc06f8d50c1}{pin\-Chat\-Message} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Pin Chat Message. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a5457e52eb64d18064484e408bff8ea8f}{unpin\-Chat\-Message} (array \$content)
-\item 
+\begin{DoxyCompactList}\small\item\em Unpin Chat Message. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a5000eba932fd5faad00805e7014cf986}{get\-Sticker\-Set} (array \$content)
+\begin{DoxyCompactList}\small\item\em Get Sticker Set. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a86adb79b2c6b1bc9b1a786003cf0aaf5}{upload\-Sticker\-File} (array \$content)
+\begin{DoxyCompactList}\small\item\em Upload Sticker File. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_aa9ae79c6d122a0e0a88fb3b81e48aff1}{create\-New\-Sticker\-Set} (array \$content)
+\begin{DoxyCompactList}\small\item\em Create New Sticker Set. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a1dd9ac39878694581875b53f100189da}{add\-Sticker\-To\-Set} (array \$content)
+\begin{DoxyCompactList}\small\item\em Add Sticker To Set. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_afe5e2d14ddabfb88fea538c2c778b3d8}{set\-Sticker\-Position\-In\-Set} (array \$content)
+\begin{DoxyCompactList}\small\item\em Set Sticker Position In Set. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a98b2c8abebbc2e53bb02dbb2757238ae}{delete\-Sticker\-From\-Set} (array \$content)
+\begin{DoxyCompactList}\small\item\em Delete Sticker From Set. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_af46503521fd05da7d9e42313c5f29dd6}{delete\-Message} (array \$content)
 \begin{DoxyCompactList}\small\item\em Delete a message. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_adb467486d3d5e83ce21a03e00f17b16c}{get\-Updates} (\$offset=0, \$limit=100, \$timeout=0, \$update=true)
@@ -240,6 +252,34 @@ an instance of the class.
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_telegram_a1dd9ac39878694581875b53f100189da}{\index{Telegram@{Telegram}!add\-Sticker\-To\-Set@{add\-Sticker\-To\-Set}}
+\index{add\-Sticker\-To\-Set@{add\-Sticker\-To\-Set}!Telegram@{Telegram}}
+\subsubsection[{add\-Sticker\-To\-Set}]{\setlength{\rightskip}{0pt plus 5cm}add\-Sticker\-To\-Set (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_a1dd9ac39878694581875b53f100189da}
+
+
+Add Sticker To Set. 
+
+Use this method to add a new sticker to a set created by the bot. Returns True on success. \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+user\-\_\-id &Integer &Yes &User identifier of sticker set owner  \\\cline{1-4}
+name &String &Yes &Sticker set name  \\\cline{1-4}
+png\-\_\-sticker &\href{#inputfile}{\tt Input\-File} or String &Yes &{\bfseries Png} image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. Pass a {\itshape file\-\_\-id} as a String to send a file that already exists on the \hyperlink{class_telegram}{Telegram} servers, pass an H\-T\-T\-P U\-R\-L as a String for \hyperlink{class_telegram}{Telegram} to get a file from the Internet, or upload a new one using multipart/form-\/data. \href{#sending-files}{\tt More info on Sending Files »}  \\\cline{1-4}
+emojis &String &Yes &One or more emoji corresponding to the sticker  \\\cline{1-4}
+mask\-\_\-position &\href{#maskposition}{\tt Mask\-Position} &Optional &Position where the mask should be placed on faces  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
+\end{DoxyReturn}
 \hypertarget{class_telegram_a55fa1d6bbcca385e333b402894e8ca37}{\index{Telegram@{Telegram}!answer\-Callback\-Query@{answer\-Callback\-Query}}
 \index{answer\-Callback\-Query@{answer\-Callback\-Query}!Telegram@{Telegram}}
 \subsubsection[{answer\-Callback\-Query}]{\setlength{\rightskip}{0pt plus 5cm}answer\-Callback\-Query (
@@ -563,6 +603,36 @@ Get the chat\-\_\-id of the current message.
 \begin{DoxyReturn}{Returns}
 the String users's chat\-\_\-id. 
 \end{DoxyReturn}
+\hypertarget{class_telegram_aa9ae79c6d122a0e0a88fb3b81e48aff1}{\index{Telegram@{Telegram}!create\-New\-Sticker\-Set@{create\-New\-Sticker\-Set}}
+\index{create\-New\-Sticker\-Set@{create\-New\-Sticker\-Set}!Telegram@{Telegram}}
+\subsubsection[{create\-New\-Sticker\-Set}]{\setlength{\rightskip}{0pt plus 5cm}create\-New\-Sticker\-Set (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_aa9ae79c6d122a0e0a88fb3b81e48aff1}
+
+
+Create New Sticker Set. 
+
+Use this method to create new sticker set owned by a user. The bot will be able to edit the created sticker set. Returns True on success. \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+user\-\_\-id &Integer &Yes &User identifier of created sticker set owner  \\\cline{1-4}
+name &String &Yes &Short name of sticker set, to be used in {\ttfamily t.\-me/addstickers/} U\-R\-Ls (e.\-g., {\itshape animals}). Can contain only english letters, digits and underscores. Must begin with a letter, can't contain consecutive underscores and must end in {\itshape “\-\_\-by\-\_\-$<$bot username$>$”}. {\itshape $<$bot\-\_\-username$>$} is case insensitive. 1-\/64 characters.  \\\cline{1-4}
+title &String &Yes &Sticker set title, 1-\/64 characters  \\\cline{1-4}
+png\-\_\-sticker &\href{#inputfile}{\tt Input\-File} or String &Yes &{\bfseries Png} image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. Pass a {\itshape file\-\_\-id} as a String to send a file that already exists on the \hyperlink{class_telegram}{Telegram} servers, pass an H\-T\-T\-P U\-R\-L as a String for \hyperlink{class_telegram}{Telegram} to get a file from the Internet, or upload a new one using multipart/form-\/data. \href{#sending-files}{\tt More info on Sending Files »}  \\\cline{1-4}
+emojis &String &Yes &One or more emoji corresponding to the sticker  \\\cline{1-4}
+is\-\_\-masks &Boolean &Optional &Pass {\itshape True}, if a set of mask stickers should be created  \\\cline{1-4}
+mask\-\_\-position &\href{#maskposition}{\tt Mask\-Position} &Optional &Position where the mask should be placed on faces  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
+\end{DoxyReturn}
 \hypertarget{class_telegram_aff49fc2cda4491ff4457ca481bb8edf9}{\index{Telegram@{Telegram}!Date@{Date}}
 \index{Date@{Date}!Telegram@{Telegram}}
 \subsubsection[{Date}]{\setlength{\rightskip}{0pt plus 5cm}Date (
@@ -584,6 +654,10 @@ the String message's date.
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_ae56adc8aed44147e945b6c4c9a16f975}
+
+
+Delete Chat Photo. 
+
 Use this method to delete a chat photo. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note\-: In regular groups (non-\/supergroups), this method will only work if the ‘\-All Members Are Admins’ setting is off in the target group. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
@@ -613,6 +687,30 @@ Use this method to delete a message. A message can only be deleted if it was sen
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
 chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
 message\-\_\-id &Integer &Yes &Identifier of the message to delete  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a98b2c8abebbc2e53bb02dbb2757238ae}{\index{Telegram@{Telegram}!delete\-Sticker\-From\-Set@{delete\-Sticker\-From\-Set}}
+\index{delete\-Sticker\-From\-Set@{delete\-Sticker\-From\-Set}!Telegram@{Telegram}}
+\subsubsection[{delete\-Sticker\-From\-Set}]{\setlength{\rightskip}{0pt plus 5cm}delete\-Sticker\-From\-Set (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_a98b2c8abebbc2e53bb02dbb2757238ae}
+
+
+Delete Sticker From Set. 
+
+Use this method to delete a sticker from a set created by the bot. Returns True on success. \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+sticker &String &Yes &File identifier of the sticker  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -766,10 +864,6 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply.
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_ab0bd8531ee91c28e85fce5f3af515ae3}
-
-
-Export Chat Invite Link. 
-
 Use this method to export an invite link to a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns exported invite link as String on success. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
@@ -945,6 +1039,30 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply.
 A method for testing your bot. 
 
 A simple method for testing your bot's auth token. Requires no parameters. Returns basic information about the bot in form of a User object. \begin{DoxyReturn}{Returns}
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a5000eba932fd5faad00805e7014cf986}{\index{Telegram@{Telegram}!get\-Sticker\-Set@{get\-Sticker\-Set}}
+\index{get\-Sticker\-Set@{get\-Sticker\-Set}!Telegram@{Telegram}}
+\subsubsection[{get\-Sticker\-Set}]{\setlength{\rightskip}{0pt plus 5cm}get\-Sticker\-Set (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_a5000eba932fd5faad00805e7014cf986}
+
+
+Get Sticker Set. 
+
+Use this method to get a sticker set. On success, a Sticker\-Set object is returned. \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+name &String &Yes &Short name of the sticker set that is used in {\ttfamily t.\-me/addstickers/} U\-R\-Ls (e.\-g., {\itshape animals})  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
 \end{DoxyReturn}
 \hypertarget{class_telegram_adb467486d3d5e83ce21a03e00f17b16c}{\index{Telegram@{Telegram}!get\-Updates@{get\-Updates}}
@@ -1153,6 +1271,10 @@ the String message\-\_\-id.
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_a11c2b4c3a2967132d1f39dc06f8d50c1}
+
+
+Pin Chat Message. 
+
 Use this method to pin a message in a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
@@ -1710,6 +1832,10 @@ Use this method to use the bultin function like \hyperlink{class_telegram_a950a9
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_adef9a5b1ff9d835244626a4d37064513}
+
+
+Set Chat Description. 
+
 Use this method to change the description of a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
@@ -1731,6 +1857,10 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply.
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_a2c19ab9430d547b68e78cbe8f9870c04}
+
+
+Set Chat Photo. 
+
 Use this method to set a new profile photo for the chat. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note\-: In regular groups (non-\/supergroups), this method will only work if the ‘\-All Members Are Admins’ setting is off in the target group. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
@@ -1752,6 +1882,10 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply.
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_ac2f5f32ecaf8d6837c1804de6d0ab4b1}
+
+
+Set Chat Title. 
+
 Use this method to change the title of a chat. Titles can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note\-: In regular groups (non-\/supergroups), this method will only work if the ‘\-All Members Are Admins’ setting is off in the target group. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
@@ -1788,6 +1922,31 @@ disable\-\_\-edit\-\_\-message &Boolean &Optional &Pass True, if the game messag
 chat\-\_\-id &Integer &Optional &Required if {\itshape inline\-\_\-message\-\_\-id} is not specified. Unique identifier for the target chat  \\\cline{1-4}
 message\-\_\-id &Integer &Optional &Required if {\itshape inline\-\_\-message\-\_\-id} is not specified. Identifier of the sent message  \\\cline{1-4}
 inline\-\_\-message\-\_\-id &String &Optional &Required if {\itshape chat\-\_\-id} and {\itshape message\-\_\-id} are not specified. Identifier of the inline message  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
+\end{DoxyReturn}
+\hypertarget{class_telegram_afe5e2d14ddabfb88fea538c2c778b3d8}{\index{Telegram@{Telegram}!set\-Sticker\-Position\-In\-Set@{set\-Sticker\-Position\-In\-Set}}
+\index{set\-Sticker\-Position\-In\-Set@{set\-Sticker\-Position\-In\-Set}!Telegram@{Telegram}}
+\subsubsection[{set\-Sticker\-Position\-In\-Set}]{\setlength{\rightskip}{0pt plus 5cm}set\-Sticker\-Position\-In\-Set (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_afe5e2d14ddabfb88fea538c2c778b3d8}
+
+
+Set Sticker Position In Set. 
+
+Use this method to move a sticker in a set created by the bot to a specific position . Returns True on success. \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+sticker &String &Yes &File identifier of the sticker  \\\cline{1-4}
+position &Integer &Yes &New sticker position in the set, zero-\/based  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -1865,10 +2024,39 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply.
 \item[{array}]{\$content}
 \end{DoxyParamCaption}
 )}}\label{class_telegram_a5457e52eb64d18064484e408bff8ea8f}
+
+
+Unpin Chat Message. 
+
 Use this method to unpin a message in a supergroup chat. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
 chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target supergroup (in the format {\ttfamily })  \\\cline{1-4}
+\end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a86adb79b2c6b1bc9b1a786003cf0aaf5}{\index{Telegram@{Telegram}!upload\-Sticker\-File@{upload\-Sticker\-File}}
+\index{upload\-Sticker\-File@{upload\-Sticker\-File}!Telegram@{Telegram}}
+\subsubsection[{upload\-Sticker\-File}]{\setlength{\rightskip}{0pt plus 5cm}upload\-Sticker\-File (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_a86adb79b2c6b1bc9b1a786003cf0aaf5}
+
+
+Upload Sticker File. 
+
+Use this method to upload a .png file with a sticker for later use in create\-New\-Sticker\-Set and add\-Sticker\-To\-Set methods (can be used multiple times). Returns the uploaded File on success. \begin{TabularC}{4}
+\hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+user\-\_\-id &Integer &Yes &User identifier of sticker file owner  \\\cline{1-4}
+png\-\_\-sticker &\href{#inputfile}{\tt Input\-File} &Yes &{\bfseries Png} image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. \href{#sending-files}{\tt More info on Sending Files »}  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}

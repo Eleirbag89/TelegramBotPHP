@@ -19,5 +19,6 @@ var searchData=
   ['setchattitle',['setChatTitle',['../class_telegram.html#ac2f5f32ecaf8d6837c1804de6d0ab4b1',1,'Telegram']]],
   ['setdata',['setData',['../class_telegram.html#a87449bdd364c33ff024d32896342bf31',1,'Telegram']]],
   ['setgamescore',['setGameScore',['../class_telegram.html#adc67d74632a07c0f50875d8e35304463',1,'Telegram']]],
+  ['setstickerpositioninset',['setStickerPositionInSet',['../class_telegram.html#afe5e2d14ddabfb88fea538c2c778b3d8',1,'Telegram']]],
   ['setwebhook',['setWebhook',['../class_telegram.html#a460bc346782ab380344e7fba7de6968c',1,'Telegram']]]
 ];
