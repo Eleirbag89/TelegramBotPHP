@@ -2141,7 +2141,7 @@ class Telegram
         return $this->endpoint('promoteChatMember', $content);
     }
 
-    /// Export Chat Invite Link
+    //// Export Chat Invite Link
 
     /**
      * Use this method to export an invite link to a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns exported invite link as String on success.
@@ -2167,7 +2167,7 @@ class Telegram
         return $this->endpoint('exportChatInviteLink', $content);
     }
 
-    // Set Chat Photo
+    /// Set Chat Photo
 
     /**
      * Use this method to set a new profile photo for the chat. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note: In regular groups (non-supergroups), this method will only work if the ‘All Members Are Admins’ setting is off in the target group.
@@ -2199,7 +2199,7 @@ class Telegram
         return $this->endpoint('setChatPhoto', $content);
     }
 
-    // Delete Chat Photo
+    /// Delete Chat Photo
 
     /**
      * Use this method to delete a chat photo. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note: In regular groups (non-supergroups), this method will only work if the ‘All Members Are Admins’ setting is off in the target group.
@@ -2225,7 +2225,7 @@ class Telegram
         return $this->endpoint('deleteChatPhoto', $content);
     }
 
-    // Set Chat Title
+    /// Set Chat Title
 
     /**
      * Use this method to change the title of a chat. Titles can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note: In regular groups (non-supergroups), this method will only work if the ‘All Members Are Admins’ setting is off in the target group.
@@ -2257,7 +2257,7 @@ class Telegram
         return $this->endpoint('setChatTitle', $content);
     }
 
-    // Set Chat Description
+    /// Set Chat Description
 
     /**
      * Use this method to change the description of a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success.
@@ -2289,7 +2289,7 @@ class Telegram
         return $this->endpoint('setChatDescription', $content);
     }
 
-    // Pin Chat Message
+    /// Pin Chat Message
 
     /**
      * Use this method to pin a message in a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success.
@@ -2327,7 +2327,7 @@ class Telegram
         return $this->endpoint('pinChatMessage', $content);
     }
 
-    // Unpin Chat Message
+    /// Unpin Chat Message
 
     /**
      * Use this method to unpin a message in a supergroup chat. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success.
@@ -2351,6 +2351,234 @@ class Telegram
     public function unpinChatMessage(array $content)
     {
         return $this->endpoint('unpinChatMessage', $content);
+    }
+    
+    /// Get Sticker Set
+
+    /**
+     * Use this method to get a sticker set. On success, a StickerSet object is returned.
+     * <table>
+     * <tr>
+     * <td><strong>Parameters</strong></td>
+     * <td><strong>Type</strong></td>
+     * <td><strong>Required</strong></td>
+     * <td><strong>Description</strong></td>
+     * </tr>
+     * <tr>
+     * <td>name</td>
+     * <td>String</td>
+     * <td>Yes</td>
+     * <td>Short name of the sticker set that is used in <code>t.me/addstickers/</code> URLs (e.g., <em>animals</em>)</td>
+     * </tr>
+     * </table>
+     * \param $content the request parameters as array
+     * \return the JSON Telegram's reply.
+     */
+    public function getStickerSet(array $content)
+    {
+        return $this->endpoint('getStickerSet', $content);
+    }
+    
+    /// Upload Sticker File
+
+    /**
+     * Use this method to upload a .png file with a sticker for later use in createNewStickerSet and addStickerToSet methods (can be used multiple times). Returns the uploaded File on success.
+     * <table>
+     * <tr>
+     * <td><strong>Parameters</strong></td>
+     * <td><strong>Type</strong></td>
+     * <td><strong>Required</strong></td>
+     * <td><strong>Description</strong></td>
+     * </tr>
+     * <tr>
+     * <td>user_id</td>
+     * <td>Integer</td>
+     * <td>Yes</td>
+     * <td>User identifier of sticker file owner</td>
+     * </tr>
+     * <tr>
+     * <td>png_sticker</td>
+     * <td><a href="#inputfile">InputFile</a></td>
+     * <td>Yes</td>
+     * <td><strong>Png</strong> image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. <a href="#sending-files">More info on Sending Files »</a></td>
+     * </tr>
+     * </table>
+     * \param $content the request parameters as array
+     * \return the JSON Telegram's reply.
+     */
+    public function uploadStickerFile(array $content)
+    {
+        return $this->endpoint('uploadStickerFile', $content);
+    }
+    
+    /// Create New Sticker Set
+
+    /**
+     * Use this method to create new sticker set owned by a user. The bot will be able to edit the created sticker set. Returns True on success.
+     * <table>
+     * <tr>
+     * <td><strong>Parameters</strong></td>
+     * <td><strong>Type</strong></td>
+     * <td><strong>Required</strong></td>
+     * <td><strong>Description</strong></td>
+     * </tr>
+     * <tr>
+     * <td>user_id</td>
+     * <td>Integer</td>
+     * <td>Yes</td>
+     * <td>User identifier of created sticker set owner</td>
+     * </tr>
+     * <tr>
+     * <td>name</td>
+     * <td>String</td>
+     * <td>Yes</td>
+     * <td>Short name of sticker set, to be used in <code>t.me/addstickers/</code> URLs (e.g., <em>animals</em>). Can contain only english letters, digits and underscores. Must begin with a letter, can't contain consecutive underscores and must end in <em>“_by_&lt;bot username&gt;”</em>. <em>&lt;bot_username&gt;</em> is case insensitive. 1-64 characters.</td>
+     * </tr>
+     * <tr>
+     * <td>title</td>
+     * <td>String</td>
+     * <td>Yes</td>
+     * <td>Sticker set title, 1-64 characters</td>
+     * </tr>
+     * <tr>
+     * <td>png_sticker</td>
+     * <td><a href="#inputfile">InputFile</a> or String</td>
+     * <td>Yes</td>
+     * <td><strong>Png</strong> image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. Pass a <em>file_id</em> as a String to send a file that already exists on the Telegram servers, pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a></td>
+     * </tr>
+     * <tr>
+     * <td>emojis</td>
+     * <td>String</td>
+     * <td>Yes</td>
+     * <td>One or more emoji corresponding to the sticker</td>
+     * </tr>
+     * <tr>
+     * <td>is_masks</td>
+     * <td>Boolean</td>
+     * <td>Optional</td>
+     * <td>Pass <em>True</em>, if a set of mask stickers should be created</td>
+     * </tr>
+     * <tr>
+     * <td>mask_position</td>
+     * <td><a href="#maskposition">MaskPosition</a></td>
+     * <td>Optional</td>
+     * <td>Position where the mask should be placed on faces</td>
+     * </tr>
+     * </table>
+     * \param $content the request parameters as array
+     * \return the JSON Telegram's reply.
+     */
+    public function createNewStickerSet(array $content)
+    {
+        return $this->endpoint('createNewStickerSet', $content);
+    }
+    
+    /// Add Sticker To Set
+
+    /**
+     * Use this method to add a new sticker to a set created by the bot. Returns True on success.
+     * <table>
+     * <tr>
+     * <td><strong>Parameters</strong></td>
+     * <td><strong>Type</strong></td>
+     * <td><strong>Required</strong></td>
+     * <td><strong>Description</strong></td>
+     * </tr>
+     * <tr>
+     * <td>user_id</td>
+     * <td>Integer</td>
+     * <td>Yes</td>
+     * <td>User identifier of sticker set owner</td>
+     * </tr>
+     * <tr>
+     * <td>name</td>
+     * <td>String</td>
+     * <td>Yes</td>
+     * <td>Sticker set name</td>
+     * </tr>
+     * <tr>
+     * <td>png_sticker</td>
+     * <td><a href="#inputfile">InputFile</a> or String</td>
+     * <td>Yes</td>
+     * <td><strong>Png</strong> image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. Pass a <em>file_id</em> as a String to send a file that already exists on the Telegram servers, pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a></td>
+     * </tr>
+     * <tr>
+     * <td>emojis</td>
+     * <td>String</td>
+     * <td>Yes</td>
+     * <td>One or more emoji corresponding to the sticker</td>
+     * </tr>
+     * <tr>
+     * <td>mask_position</td>
+     * <td><a href="#maskposition">MaskPosition</a></td>
+     * <td>Optional</td>
+     * <td>Position where the mask should be placed on faces</td>
+     * </tr>
+     * </table>
+     * \param $content the request parameters as array
+     * \return the JSON Telegram's reply.
+     */
+    public function addStickerToSet(array $content)
+    {
+        return $this->endpoint('addStickerToSet', $content);
+    }
+    
+    /// Set Sticker Position In Set
+
+    /**
+     * Use this method to move a sticker in a set created by the bot to a specific position . Returns True on success.
+     * <table>
+     * <tr>
+     * <td><strong>Parameters</strong></td>
+     * <td><strong>Type</strong></td>
+     * <td><strong>Required</strong></td>
+     * <td><strong>Description</strong></td>
+     * </tr>
+     * <tr>
+     * <td>sticker</td>
+     * <td>String</td>
+     * <td>Yes</td>
+     * <td>File identifier of the sticker</td>
+     * </tr>
+     * <tr>
+     * <td>position</td>
+     * <td>Integer</td>
+     * <td>Yes</td>
+     * <td>New sticker position in the set, zero-based</td>
+     * </tr>
+     * </table>
+     * \param $content the request parameters as array
+     * \return the JSON Telegram's reply.
+     */
+    public function setStickerPositionInSet(array $content)
+    {
+        return $this->endpoint('setStickerPositionInSet', $content);
+    }
+    
+    /// Delete Sticker From Set
+
+    /**
+     * Use this method to delete a sticker from a set created by the bot. Returns True on success.
+     * <table>
+     * <tr>
+     * <td><strong>Parameters</strong></td>
+     * <td><strong>Type</strong></td>
+     * <td><strong>Required</strong></td>
+     * <td><strong>Description</strong></td>
+     * </tr>
+     * <tr>
+     * <td>sticker</td>
+     * <td>String</td>
+     * <td>Yes</td>
+     * <td>File identifier of the sticker</td>
+     * </tr>
+     * </table>
+     * \param $content the request parameters as array
+     * \return the JSON Telegram's reply.
+     */
+    public function deleteStickerFromSet(array $content)
+    {
+        return $this->endpoint('deleteStickerFromSet', $content);
     }
 
     /// Delete a message
