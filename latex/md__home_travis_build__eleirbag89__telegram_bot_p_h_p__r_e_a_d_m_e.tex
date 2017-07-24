@@ -31,7 +31,7 @@ For the Get\-Updates\-:
 
 
 \begin{DoxyItemize}
-\item Copy Telegram.\-php into your server and include it in your new bot script ```php include(\char`\"{}\-Telegram.\-php\char`\"{}); \$telegram = new \hyperlink{class_telegram}{Telegram}(\$bot\-\_\-id); ```
+\item Copy Telegram.\-php into your server and include it in your new bot script ```php include(\char`\"{}\-Telegram.\-php\char`\"{}); \$telegram = new \hyperlink{class_telegram}{Telegram}(\$bot\-\_\-token); ```
 \item To enable error log file, also copy Telegram\-Error\-Logger.\-php in the same directory of Telegram.\-php file
 \end{DoxyItemize}
 
@@ -41,13 +41,13 @@ From your project directory, run ``` composer require eleirbag89/telegrambotphp 
 
 \subsection*{Configuration (Web\-Hook) }
 
-Navigate to \href{https://api.telegram.org/bot(BOT_ID)/setWebhook?url=https://yoursite.com/your_update.php}{\tt https\-://api.\-telegram.\-org/bot(\-B\-O\-T\-\_\-\-I\-D)/set\-Webhook?url=https\-://yoursite.\-com/your\-\_\-update.\-php} Or use the \hyperlink{class_telegram}{Telegram} class set\-Webhook method.
+Navigate to \href{https://api.telegram.org/bot(BOT_TOKEN)/setWebhook?url=https://yoursite.com/your_update.php}{\tt https\-://api.\-telegram.\-org/bot(\-B\-O\-T\-\_\-\-T\-O\-K\-E\-N)/set\-Webhook?url=https\-://yoursite.\-com/your\-\_\-update.\-php} Or use the \hyperlink{class_telegram}{Telegram} class set\-Webhook method.
 
 \subsection*{Examples }
 
-```php \$telegram = new \hyperlink{class_telegram}{Telegram}(\$bot\-\_\-id); \$chat\-\_\-id = \$telegram-\/$>$Chat\-I\-D(); \$content = array('chat\-\_\-id' =$>$ \$chat\-\_\-id, 'text' =$>$ \char`\"{}\-Test\char`\"{}); \$telegram-\/$>$send\-Message(\$content); ```
+```php \$telegram = new \hyperlink{class_telegram}{Telegram}(\$bot\-\_\-token); \$chat\-\_\-id = \$telegram-\/$>$Chat\-I\-D(); \$content = array('chat\-\_\-id' =$>$ \$chat\-\_\-id, 'text' =$>$ \char`\"{}\-Test\char`\"{}); \$telegram-\/$>$send\-Message(\$content); ```
 
-If you want to get some specific parameter from the \hyperlink{class_telegram}{Telegram} response\-: ```php \$telegram = new \hyperlink{class_telegram}{Telegram}(\$bot\-\_\-id); \$result = \$telegram-\/$>$get\-Data(); \$text = \$result\mbox{[}\char`\"{}message\char`\"{}\mbox{]} \mbox{[}\char`\"{}text\char`\"{}\mbox{]}; \$chat\-\_\-id = \$result\mbox{[}\char`\"{}message\char`\"{}\mbox{]} \mbox{[}\char`\"{}chat\char`\"{}\mbox{]}\mbox{[}\char`\"{}id\char`\"{}\mbox{]}; \$content = array('chat\-\_\-id' =$>$ \$chat\-\_\-id, 'text' =$>$ \char`\"{}\-Test\char`\"{}); \$telegram-\/$>$send\-Message(\$content); ```
+If you want to get some specific parameter from the \hyperlink{class_telegram}{Telegram} response\-: ```php \$telegram = new \hyperlink{class_telegram}{Telegram}(\$bot\-\_\-token); \$result = \$telegram-\/$>$get\-Data(); \$text = \$result\mbox{[}\char`\"{}message\char`\"{}\mbox{]} \mbox{[}\char`\"{}text\char`\"{}\mbox{]}; \$chat\-\_\-id = \$result\mbox{[}\char`\"{}message\char`\"{}\mbox{]} \mbox{[}\char`\"{}chat\char`\"{}\mbox{]}\mbox{[}\char`\"{}id\char`\"{}\mbox{]}; \$content = array('chat\-\_\-id' =$>$ \$chat\-\_\-id, 'text' =$>$ \char`\"{}\-Test\char`\"{}); \$telegram-\/$>$send\-Message(\$content); ```
 
 To upload a Photo or some other files, you need to load it with Curl\-File\-: ```php // Load a local file to upload. If is already on \hyperlink{class_telegram}{Telegram}'s Servers just pass the resource id \$img = curl\-\_\-file\-\_\-create('test.\-png','image/png'); \$content = array('chat\-\_\-id' =$>$ \$chat\-\_\-id, 'photo' =$>$ \$img ); \$telegram-\/$>$send\-Photo(\$content); ```
 
