@@ -56,7 +56,7 @@ class Telegram
      */
     const CONTACT = 'contact';
 
-    private $bot_id = '';
+    private $bot_token = '';
     private $data = [];
     private $updates = [];
 
@@ -64,12 +64,12 @@ class Telegram
 
     /**
      * Create a Telegram instance from the bot token
-     * \param $bot_id the bot token
+     * \param $bot_token the bot token
      * \return an instance of the class.
      */
-    public function __construct($bot_id)
+    public function __construct($bot_token)
     {
-        $this->bot_id = $bot_id;
+        $this->bot_token = $bot_token;
         $this->data = $this->getData();
     }
 
@@ -84,7 +84,7 @@ class Telegram
      */
     public function endpoint($api, array $content, $post = true)
     {
-        $url = 'https://api.telegram.org/bot'.$this->bot_id.'/'.$api;
+        $url = 'https://api.telegram.org/bot'.$this->bot_token.'/'.$api;
         if ($post) {
             $reply = $this->sendAPIRequest($url, $content);
         } else {
@@ -1307,7 +1307,7 @@ class Telegram
      */
     public function downloadFile($telegram_file_path, $local_file_path)
     {
-        $file_url = 'https://api.telegram.org/file/bot'.$this->bot_id.'/'.$telegram_file_path;
+        $file_url = 'https://api.telegram.org/file/bot'.$this->bot_token.'/'.$telegram_file_path;
         $in = fopen($file_url, 'rb');
         $out = fopen($local_file_path, 'wb');
 

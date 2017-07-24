@@ -2,8 +2,8 @@
 
 include 'Telegram.php';
 
-$bot_id = 'bot_token';
-$telegram = new Telegram($bot_id);
+$bot_token = 'bot_token';
+$telegram = new Telegram($bot_token);
 $text = $telegram->Text();
 $chat_id = $telegram->ChatID();
 $data = $telegram->getData();

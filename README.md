@@ -31,7 +31,7 @@ Installation
 * Copy Telegram.php into your server and include it in your new bot script
 ```php
 include("Telegram.php");
-$telegram = new Telegram($bot_id);
+$telegram = new Telegram($bot_token);
 ```
 
 * To enable error log file, also copy TelegramErrorLogger.php in the same directory of Telegram.php file
@@ -47,14 +47,14 @@ Configuration (WebHook)
 ---------
 
 Navigate to 
-https://api.telegram.org/bot(BOT_ID)/setWebhook?url=https://yoursite.com/your_update.php
+https://api.telegram.org/bot(BOT_TOKEN)/setWebhook?url=https://yoursite.com/your_update.php
 Or use the Telegram class setWebhook method.
 
 Examples
 ---------
 
 ```php
-$telegram = new Telegram($bot_id);
+$telegram = new Telegram($bot_token);
 $chat_id = $telegram->ChatID();
 $content = array('chat_id' => $chat_id, 'text' => "Test");
 $telegram->sendMessage($content);
@@ -62,7 +62,7 @@ $telegram->sendMessage($content);
 
 If you want to get some specific parameter from the Telegram response:
 ```php
-$telegram = new Telegram($bot_id);
+$telegram = new Telegram($bot_token);
 $result = $telegram->getData();
 $text = $result["message"] ["text"];
 $chat_id = $result["message"] ["chat"]["id"];

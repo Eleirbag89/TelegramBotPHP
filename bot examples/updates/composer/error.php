@@ -2,8 +2,8 @@
 
 require_once '../../../vendor/autoload.php';
 
-$bot_id = 'bot_token';
-$telegram = new Telegram($bot_id);
+$bot_token = 'bot_token';
+$telegram = new Telegram($bot_token);
 
 $telegram->getUpdates();
 $telegram->serveUpdate(0);

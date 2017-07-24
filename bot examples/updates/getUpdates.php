@@ -7,8 +7,8 @@
  */
 include 'Telegram.php';
 
-$bot_id = 'bot_token';
-$telegram = new Telegram($bot_id);
+$bot_token = 'bot_token';
+$telegram = new Telegram($bot_token);
 
 // Get all the new updates and set the new correct update_id
 $req = $telegram->getUpdates();
