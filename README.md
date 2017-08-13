@@ -190,6 +190,7 @@ List of Bots using the library
 Let me know using this [Issue](https://github.com/Eleirbag89/TelegramBotPHP/issues/80) if you have made a bot using this API, I will add it to this section.    
 * [Notifyadbot](https://telegram.me/notifyadbot) - Lang : Persian/Farsi
 * [Partners_shakibonline_bot](https://telegram.me/Partners_shakibonline_bot) - Lang : Persian/Farsi
+* [Pishvazrobot](https://t.me/pishvazrobot) - Lang : Persian/Farsi - the most comprehensive bot for searching and listening to more than 100,000 RBT sound for two most popular and famous mobile operator in iran - MTN Irancell and Hamrahe Aval
 
 Emoticons
 ------------
