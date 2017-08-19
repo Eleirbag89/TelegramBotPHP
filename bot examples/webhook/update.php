@@ -35,6 +35,7 @@ if ($callback_query !== null && $callback_query != '') {
 //Test Inline
 $data = $telegram->getData();
 if ($data['inline_query'] !== null && $data['inline_query'] != '') {
+    $query = $data["inline_query"]["query"];
     // GIF Examples
     if (strpos('testText', $query) !== false) {
         $results = json_encode([['type' => 'gif', 'id'=> '1', 'gif_url' => 'http://i1260.photobucket.com/albums/ii571/LMFAOSPEAKS/LMFAO/113481459.gif', 'thumb_url'=>'http://i1260.photobucket.com/albums/ii571/LMFAOSPEAKS/LMFAO/113481459.gif']]);
