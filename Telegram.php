@@ -266,7 +266,7 @@ class Telegram
 
     /**
      * Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.
-
+     *
      * For backward compatibility, when the fields title and performer are both empty and the mime-type of the file to be sent is not audio/mpeg, the file will be sent as a playable voice message. For this to work, the audio must be in an .ogg file encoded with OPUS. This behavior will be phased out in the future. For sending voice messages, use the sendVoice method instead.<br/>Values inside $content:<br/>
      * <table>
      * <tr>
@@ -708,9 +708,9 @@ class Telegram
 
     /**
      *  Use this method when you need to tell the user that something is happening on the bot's side. The status is set for 5 seconds or less (when a message arrives from your bot, Telegram clients clear its typing status).
-
+     *
      * Example: The ImageBot needs some time to process a request and upload the image. Instead of sending a text message along the lines of “Retrieving image, please wait…”, the bot may use sendChatAction with action = upload_photo. The user will see a “sending photo” status for the bot.
-
+     *
      * We only recommend using this method when a response from the bot will take a noticeable amount of time to arrive.<br/>Values inside $content:<br/>
      * <table>
      * <tr>
@@ -1322,7 +1322,7 @@ class Telegram
 
     /**
      *  Use this method to specify a url and receive incoming updates via an outgoing webhook. Whenever there is an update for the bot, we will send an HTTPS POST request to the specified url, containing a JSON-serialized Update. In case of an unsuccessful request, we will give up after a reasonable amount of attempts.
-
+     *
      * If you'd like to make sure that the Webhook request comes from Telegram, we recommend using a secret path in the URL, e.g. https://www.example.com/<token>. Since nobody else knows your botâ€˜s token, you can be pretty sure itâ€™s us.
      * \param $url String HTTPS url to send updates to. Use an empty string to remove webhook integration
      * \param $certificate InputFile Upload your public key certificate so that the root certificate in use can be checked
@@ -1529,7 +1529,7 @@ class Telegram
         return @$this->data['message']['from']['last_name'];
     }
 
-/// Get the username of the user
+    /// Get the username of the user
     public function Username()
     {
         if ($this->getUpdateType() == self::CALLBACK_QUERY) {
@@ -1539,19 +1539,19 @@ class Telegram
         return @$this->data['message']['from']['username'];
     }
 
-/// Get the location in the message
+    /// Get the location in the message
     public function Location()
     {
         return $this->data['message']['location'];
     }
 
-/// Get the update_id of the message
+    /// Get the update_id of the message
     public function UpdateID()
     {
         return $this->data['update_id'];
     }
 
-/// Get the number of updates
+    /// Get the number of updates
     public function UpdateCount()
     {
         return count($this->updates['result']);
