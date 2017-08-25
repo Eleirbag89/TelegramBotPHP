@@ -35,7 +35,7 @@ if ($callback_query !== null && $callback_query != '') {
 //Test Inline
 $data = $telegram->getData();
 if ($data['inline_query'] !== null && $data['inline_query'] != '') {
-    $query = $data["inline_query"]["query"];
+    $query = $data['inline_query']['query'];
     // GIF Examples
     if (strpos('testText', $query) !== false) {
         $results = json_encode([['type' => 'gif', 'id'=> '1', 'gif_url' => 'http://i1260.photobucket.com/albums/ii571/LMFAOSPEAKS/LMFAO/113481459.gif', 'thumb_url'=>'http://i1260.photobucket.com/albums/ii571/LMFAOSPEAKS/LMFAO/113481459.gif']]);
@@ -58,9 +58,9 @@ if (!is_null($text) && !is_null($chat_id)) {
         } else {
             $reply = 'Private Chat';
         }
-            // Create option for the custom keyboard. Array of array string
-            $option = [['A', 'B'], ['C', 'D']];
-            // Get the keyboard
+        // Create option for the custom keyboard. Array of array string
+        $option = [['A', 'B'], ['C', 'D']];
+        // Get the keyboard
         $keyb = $telegram->buildKeyBoard($option);
         $content = ['chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => $reply];
         $telegram->sendMessage($content);
@@ -84,7 +84,7 @@ if (!is_null($text) && !is_null($chat_id)) {
         $telegram->sendLocation($content);
     } elseif ($text == '/inlinekeyboard') {
         // Shows the Inline Keyboard and Trigger a callback on a button press
-            $option = [
+        $option = [
                 [
                 $telegram->buildInlineKeyBoardButton('Callback 1', $url = '', $callback_data = '1'),
                 $telegram->buildInlineKeyBoardButton('Callback 2', $url = '', $callback_data = '2'),
