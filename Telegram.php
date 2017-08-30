@@ -55,7 +55,7 @@ class Telegram
      * Constant for type Contact.
      */
     const CONTACT = 'contact';
-        /**
+    /**
      * Constant for type Channel Post.
      */
     const CHANNEL_POST = 'channel_post';
