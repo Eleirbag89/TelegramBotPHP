@@ -5,6 +5,7 @@ var searchData=
   ['deletemessage',['deleteMessage',['../class_telegram.html#af46503521fd05da7d9e42313c5f29dd6',1,'Telegram']]],
   ['deletestickerfromset',['deleteStickerFromSet',['../class_telegram.html#a98b2c8abebbc2e53bb02dbb2757238ae',1,'Telegram']]],
   ['deletewebhook',['deleteWebhook',['../class_telegram.html#ad90cef56fdc7dfcc40318a78bf5aed71',1,'Telegram']]],
+  ['deprecated_20list',['Deprecated List',['../deprecated.html',1,'']]],
   ['document',['DOCUMENT',['../class_telegram.html#a6494d627239bf203e03297843bf52053',1,'Telegram']]],
   ['downloadfile',['downloadFile',['../class_telegram.html#af08c6bc7982d71857f05c0756221a703',1,'Telegram']]]
 ];
