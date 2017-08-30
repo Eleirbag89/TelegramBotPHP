@@ -55,6 +55,10 @@ class Telegram
      * Constant for type Contact.
      */
     const CONTACT = 'contact';
+        /**
+     * Constant for type Channel Post.
+     */
+    const CHANNEL_POST = 'channel_post';
 
     private $bot_token = '';
     private $data = [];
@@ -1379,8 +1383,12 @@ class Telegram
      */
     public function Text()
     {
-        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
+        $type = $this->getUpdateType();
+        if ($type == self::CALLBACK_QUERY) {
             return @$this->data['callback_query']['data'];
+        }
+        if ($type == self::CHANNEL_POST) {
+            return @$this->data['channel_post']['text'];
         }
 
         return @$this->data['message']['text'];
@@ -1398,8 +1406,12 @@ class Telegram
      */
     public function ChatID()
     {
-        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
+        $type = $this->getUpdateType();
+        if ($type == self::CALLBACK_QUERY) {
             return @$this->data['callback_query']['message']['chat']['id'];
+        }
+        if ($type == self::CHANNEL_POST) {
+            return @$this->data['channel_post']['chat']['id'];
         }
 
         return $this->data['message']['chat']['id'];
@@ -1412,8 +1424,12 @@ class Telegram
      */
     public function MessageID()
     {
-        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
+        $type = $this->getUpdateType();
+        if ($type == self::CALLBACK_QUERY) {
             return @$this->data['callback_query']['message']['message_id'];
+        }
+        if ($type == self::CHANNEL_POST) {
+            return @$this->data['channel_post']['message_id'];
         }
 
         return $this->data['message']['message_id'];
@@ -1472,6 +1488,7 @@ class Telegram
     /// Get the Get the data of the current callback
 
     /**
+     * \deprecated Use Text() instead
      * \return the String callback_data.
      */
     public function Callback_Data()
@@ -1492,6 +1509,7 @@ class Telegram
     /// Get the Get the chati_id of the current callback
 
     /**
+     * \deprecated Use ChatId() instead
      * \return the String callback_query.
      */
     public function Callback_ChatID()
@@ -1512,8 +1530,12 @@ class Telegram
     /// Get the first name of the user
     public function FirstName()
     {
-        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
+        $type = $this->getUpdateType();
+        if ($type == self::CALLBACK_QUERY) {
             return @$this->data['callback_query']['from']['first_name'];
+        }
+        if ($type == self::CHANNEL_POST) {
+            return @$this->data['channel_post']['from']['first_name'];
         }
 
         return @$this->data['message']['from']['first_name'];
@@ -1522,8 +1544,12 @@ class Telegram
     /// Get the last name of the user
     public function LastName()
     {
-        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
+        $type = $this->getUpdateType();
+        if ($type == self::CALLBACK_QUERY) {
             return @$this->data['callback_query']['from']['last_name'];
+        }
+        if ($type == self::CHANNEL_POST) {
+            return @$this->data['channel_post']['from']['last_name'];
         }
 
         return @$this->data['message']['from']['last_name'];
@@ -1532,8 +1558,12 @@ class Telegram
     /// Get the username of the user
     public function Username()
     {
-        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
+        $type = $this->getUpdateType();
+        if ($type == self::CALLBACK_QUERY) {
             return @$this->data['callback_query']['from']['username'];
+        }
+        if ($type == self::CHANNEL_POST) {
+            return @$this->data['channel_post']['from']['username'];
         }
 
         return @$this->data['message']['from']['username'];
@@ -1560,8 +1590,12 @@ class Telegram
     /// Get user's id of current message
     public function UserID()
     {
-        if ($this->getUpdateType() == self::CALLBACK_QUERY) {
+        $type = $this->getUpdateType();
+        if ($type == self::CALLBACK_QUERY) {
             return $this->data['callback_query']['from']['id'];
+        }
+        if ($type == self::CHANNEL_POST) {
+            return $this->data['channel_post']['from']['id'];
         }
 
         return $this->data['message']['from']['id'];
@@ -2697,6 +2731,9 @@ class Telegram
         }
         if (isset($update['message']['location'])) {
             return self::LOCATION;
+        }
+        if (isset($update['channel_post'])) {
+            return self::CHANNEL_POST;
         }
 
         return false;
