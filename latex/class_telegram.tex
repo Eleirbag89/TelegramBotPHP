@@ -667,7 +667,7 @@ Delete Chat Photo.
 Use this method to delete a chat photo. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note\-: In regular groups (non-\/supergroups), this method will only work if the ‘\-All Members Are Admins’ setting is off in the target group. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -691,7 +691,7 @@ Delete a message.
 Use this method to delete a message. A message can only be deleted if it was sent less than 48 hours ago. Any such recently sent outgoing message may be deleted. Additionally, if the bot is an administrator in a group chat, it can delete any message. If the bot is an administrator in a supergroup, it can delete messages from any other user and service messages about people joining or leaving the group (other types of service messages may only be removed by the group creator). In channels, bots can only remove their own messages. Returns True on success. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 message\-\_\-id &Integer &Yes &Identifier of the message to delete  \\\cline{1-4}
 \end{TabularC}
 
@@ -771,7 +771,7 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &No &Required if {\itshape inline\-\_\-message\-\_\-id} is not specified. Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &No &Required if {\itshape inline\-\_\-message\-\_\-id} is not specified. Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 message\-\_\-id &Integer &No &Required if {\itshape inline\-\_\-message\-\_\-id} is not specified. Unique identifier of the sent message  \\\cline{1-4}
 inline\-\_\-message\-\_\-id &String &No &Required if {\itshape chat\-\_\-id} and {\itshape message\-\_\-id} are not specified. Identifier of the inline message  \\\cline{1-4}
 caption &String &Optional &New caption of the message  \\\cline{1-4}
@@ -797,7 +797,7 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &No &Required if {\itshape inline\-\_\-message\-\_\-id} is not specified. Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &No &Required if {\itshape inline\-\_\-message\-\_\-id} is not specified. Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 message\-\_\-id &Integer &No &Required if {\itshape inline\-\_\-message\-\_\-id} is not specified. Unique identifier of the sent message  \\\cline{1-4}
 inline\-\_\-message\-\_\-id &String &No &Required if {\itshape chat\-\_\-id} and {\itshape message\-\_\-id} are not specified. Identifier of the inline message  \\\cline{1-4}
 reply\-\_\-markup &\href{https://core.telegram.org/bots/api#inlinekeyboardmarkup}{\tt Inline\-Keyboard\-Markup} &Optional &A J\-S\-O\-N-\/serialized object for an \href{https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating}{\tt inline keyboard}.  \\\cline{1-4}
@@ -822,7 +822,7 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &No &Required if {\itshape inline\-\_\-message\-\_\-id} is not specified. Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &No &Required if {\itshape inline\-\_\-message\-\_\-id} is not specified. Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 message\-\_\-id &Integer &No &Required if {\itshape inline\-\_\-message\-\_\-id} is not specified. Unique identifier of the sent message  \\\cline{1-4}
 inline\-\_\-message\-\_\-id &String &No &Required if {\itshape chat\-\_\-id} and {\itshape message\-\_\-id} are not specified. Identifier of the inline message  \\\cline{1-4}
 text &String &Yes &New text of the message  \\\cline{1-4}
@@ -873,7 +873,7 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply.
 Use this method to export an invite link to a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns exported invite link as String on success. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -899,8 +899,9 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer &Yes &Unique identifier for the message recipient — User or Group\-Chat id  \\\cline{1-4}
-from\-\_\-chat\-\_\-id &Integer &Yes &Unique identifier for the chat where the original message was sent — User or Group\-Chat id  \\\cline{1-4}
+chat\-\_\-id &Integer &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
+from\-\_\-chat\-\_\-id &Integer &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
+disable\-\_\-notification &Boolean &Optional &Sends the message silently. Users will receive a notification with no sound.  \\\cline{1-4}
 message\-\_\-id &Integer &Yes &Unique message identifier  \\\cline{1-4}
 \end{TabularC}
 
@@ -927,7 +928,7 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target supergroup or channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target supergroup or channel (in the format {\ttfamily } )  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -949,7 +950,7 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target supergroup or channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target supergroup or channel (in the format {\ttfamily } )  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -971,7 +972,7 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target supergroup or channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target supergroup or channel (in the format {\ttfamily } )  \\\cline{1-4}
 user\-\_\-id &Integer &Yes &Unique identifier of the target user  \\\cline{1-4}
 \end{TabularC}
 
@@ -994,7 +995,7 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target supergroup or channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target supergroup or channel (in the format {\ttfamily } )  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -1230,7 +1231,7 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target supergroup or channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target supergroup or channel (in the format {\ttfamily } )  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -1322,7 +1323,7 @@ Promote Chat Member.
 Use this method to promote or demote a user in a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Pass False for all boolean parameters to demote a user. Returns True on success \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 user\-\_\-id &Integer &Yes &Unique identifier of the target user  \\\cline{1-4}
 can\-\_\-change\-\_\-info &Boolean &No &Pass True, if the administrator can change chat title, photo and other settings  \\\cline{1-4}
 can\-\_\-post\-\_\-messages &Boolean &No &Pass True, if the administrator can create channel posts, channels only  \\\cline{1-4}
@@ -1397,7 +1398,7 @@ Restrict Chat Member.
 Use this method to restrict a user in a supergroup. The bot must be an administrator in the supergroup for this to work and must have the appropriate admin rights. Pass True for all boolean parameters to lift restrictions from a user. Returns True on success. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 photo &\href{https://core.telegram.org/bots/api#inputfile}{\tt Input\-File} or String &Yes &Photo to send. Pass a file\-\_\-id as String to send a photo that exists on the \hyperlink{class_telegram}{Telegram} servers (recommended), pass an H\-T\-T\-P U\-R\-L as a String for \hyperlink{class_telegram}{Telegram} to get a photo from the Internet, or upload a new photo using multipart/form-\/data. \href{https://core.telegram.org/bots/api#sending-files}{\tt More info on Sending Files »}  \\\cline{1-4}
 caption &String &Optional &Photo caption (may also be used when resending photos by {\itshape file\-\_\-id}), 0-\/200 characters  \\\cline{1-4}
 disable\-\_\-notification &Boolean &Optional &Sends the message \href{https://telegram.org/blog/channels-2-0#silent-messages}{\tt silently}. Users will receive a notification with no sound.  \\\cline{1-4}
@@ -1423,20 +1424,19 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply.
 
 Send an audio. 
 
-Use this method to send audio files, if you want \hyperlink{class_telegram}{Telegram} clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 M\-B in size, this limit may be changed in the future.
-
-For backward compatibility, when the fields title and performer are both empty and the mime-\/type of the file to be sent is not audio/mpeg, the file will be sent as a playable voice message. For this to work, the audio must be in an .ogg file encoded with O\-P\-U\-S. This behavior will be phased out in the future. For sending voice messages, use the send\-Voice method instead.\par
+Use this method to send audio files, if you want \hyperlink{class_telegram}{Telegram} clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 M\-B in size, this limit may be changed in the future. For sending voice messages, use the send\-Voice method instead.\par
 Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer &Yes &Unique identifier for the message recipient — User or Group\-Chat id  \\\cline{1-4}
-audio &\href{https://core.telegram.org/bots/api#inputfile}{\tt Input\-File} or String &Yes &Audio file to send. You can either pass a {\itshape file\-\_\-id} as String to resend an audio that is already on the \hyperlink{class_telegram}{Telegram} servers, or upload a new audio file using {\bfseries multipart/form-\/data}.  \\\cline{1-4}
+chat\-\_\-id &Integer &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
+audio &\href{https://core.telegram.org/bots/api#inputfile}{\tt Input\-File} or String &Yes &Audio file to send. Pass a file\-\_\-id as String to send an audio file that exists on the \hyperlink{class_telegram}{Telegram} servers (recommended), pass an H\-T\-T\-P U\-R\-L as a String for \hyperlink{class_telegram}{Telegram} to get an audio file from the Internet, or upload a new one using {\bfseries multipart/form-\/data}.  \\\cline{1-4}
 duration &Integer &Optional &Duration of the audio in seconds  \\\cline{1-4}
 performer &String &Optional &Performer  \\\cline{1-4}
 title &String &Optional &Track name  \\\cline{1-4}
+disable\-\_\-notification &Boolean &Optional &Sends the message silently. Users will receive a notification with no sound.  \\\cline{1-4}
 reply\-\_\-to\-\_\-message\-\_\-id &Integer &Optional &If the message is a reply, I\-D of the original message  \\\cline{1-4}
-reply\-\_\-markup &Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+reply\-\_\-markup &Inline\-Keyboard\-Markup or Reply\-Keyboard\-Markup or Reply\-Keyboard\-Remove or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -1491,7 +1491,7 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 phone\-\_\-number &String &Yes &Contact\&\#39;s phone number  \\\cline{1-4}
 first\-\_\-name &String &Yes &Contact\&\#39;s first name  \\\cline{1-4}
 last\-\_\-name &String &Optional &Contact\&\#39;s last name  \\\cline{1-4}
@@ -1523,10 +1523,12 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer &Yes &Unique identifier for the message recipient — User or Group\-Chat id  \\\cline{1-4}
-document &Input\-File or String &Yes &File to send. You can either pass a {\itshape file\-\_\-id} as String to resend a file that is already on the \hyperlink{class_telegram}{Telegram} servers, or upload a new file using {\bfseries multipart/form-\/data}.  \\\cline{1-4}
+chat\-\_\-id &Integer &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
+document &Input\-File or String &Yes &File to send. Pass a file\-\_\-id as String to send a file that exists on the \hyperlink{class_telegram}{Telegram} servers (recommended), pass an H\-T\-T\-P U\-R\-L as a String for \hyperlink{class_telegram}{Telegram} to get a file from the Internet, or upload a new one using {\bfseries multipart/form-\/data}.  \\\cline{1-4}
+caption &String &Optional &Document caption (may also be used when resending documents by file\-\_\-id), 0-\/200 characters.  \\\cline{1-4}
+disable\-\_\-notification &Boolean &Optional &Sends the message silently. Users will receive a notification with no sound.  \\\cline{1-4}
 reply\-\_\-to\-\_\-message\-\_\-id &Integer &Optional &If the message is a reply, I\-D of the original message  \\\cline{1-4}
-reply\-\_\-markup &Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+reply\-\_\-markup &Inline\-Keyboard\-Markup or Reply\-Keyboard\-Markup or Reply\-Keyboard\-Remove or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -1595,11 +1597,12 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer &Yes &Unique identifier for the message recipient — User or Group\-Chat id  \\\cline{1-4}
+chat\-\_\-id &Integer &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 latitude &Float number &Yes &Latitude of location  \\\cline{1-4}
 longitude &Float number &Yes &Longitude of location  \\\cline{1-4}
+disable\-\_\-notification &Boolean &Optional &Sends the message silently. Users will receive a notification with no sound.  \\\cline{1-4}
 reply\-\_\-to\-\_\-message\-\_\-id &Integer &Optional &If the message is a reply, I\-D of the original message  \\\cline{1-4}
-reply\-\_\-markup &Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+reply\-\_\-markup &Inline\-Keyboard\-Markup or Reply\-Keyboard\-Markup or Reply\-Keyboard\-Remove or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -1620,12 +1623,12 @@ the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply.
 
 Send a message. 
 
-Contacts the various A\-P\-I's endpoints\par
+Use this method to send text messages.\par
 Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer &Yes &Unique identifier for the message recipient — User or Group\-Chat id
+chat\-\_\-id &Integer &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )
 \begin{DoxyItemize}
 \item 
 \end{DoxyItemize}\\\cline{1-4}
@@ -1633,7 +1636,7 @@ text &String &Yes &Text of the message to be sent  \\\cline{1-4}
 parse\-\_\-mode &String &Optional &Send {\itshape Markdown}, if you want \hyperlink{class_telegram}{Telegram} apps to show bold, italic and inline U\-R\-Ls in your bot's message. For the moment, only \hyperlink{class_telegram}{Telegram} for Android supports this.  \\\cline{1-4}
 disable\-\_\-web\-\_\-page\-\_\-preview &Boolean &Optional &Disables link previews for links in this message  \\\cline{1-4}
 reply\-\_\-to\-\_\-message\-\_\-id &Integer &Optional &If the message is a reply, I\-D of the original message  \\\cline{1-4}
-reply\-\_\-markup &Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+reply\-\_\-markup &Inline\-Keyboard\-Markup or Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -1659,11 +1662,12 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer &Yes &Unique identifier for the message recipient — User or Group\-Chat id  \\\cline{1-4}
-photo &\href{https://core.telegram.org/bots/api#inputfile}{\tt Input\-File} or String &Yes &Photo to send. You can either pass a {\itshape file\-\_\-id} as String to resend a photo that is already on the \hyperlink{class_telegram}{Telegram} servers, or upload a new photo using multipart/form-\/data.  \\\cline{1-4}
+chat\-\_\-id &Integer &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
+photo &\href{https://core.telegram.org/bots/api#inputfile}{\tt Input\-File} or String &Yes &Photo to send. Pass a file\-\_\-id as String to send a photo that exists on the \hyperlink{class_telegram}{Telegram} servers (recommended), pass an H\-T\-T\-P U\-R\-L as a String for \hyperlink{class_telegram}{Telegram} to get a photo from the Internet, or upload a new photo using multipart/form-\/data.  \\\cline{1-4}
 caption &String &Optional &Photo caption (may also be used when resending photos by {\itshape file\-\_\-id}).  \\\cline{1-4}
 reply\-\_\-to\-\_\-message\-\_\-id &Integer &Optional &If the message is a reply, I\-D of the original message  \\\cline{1-4}
-reply\-\_\-markup &Reply\-Keyboard\-Markup or $>$Reply\-Keyboard\-Hide or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+disable\-\_\-notification &Boolean &Optional &Sends the message silently. Users will receive a notification with no sound.  \\\cline{1-4}
+reply\-\_\-markup &Inline\-Keyboard\-Markup or Reply\-Keyboard\-Markup or Reply\-Keyboard\-Remove or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -1718,7 +1722,7 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 latitude &Float number &Yes &Latitude of the venue  \\\cline{1-4}
 longitude &Float number &Yes &Longitude of the venue  \\\cline{1-4}
 title &String &Yes &Name of the venue  \\\cline{1-4}
@@ -1753,11 +1757,14 @@ Values inside \$content\-:\par
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
 chat\-\_\-id &Integer &Yes &Unique identifier for the message recipient — User or Group\-Chat id  \\\cline{1-4}
-video &\href{https://core.telegram.org/bots/api#inputfile}{\tt Input\-File} or String &Yes &Video to send. You can either pass a {\itshape file\-\_\-id} as String to resend a video that is already on the \hyperlink{class_telegram}{Telegram} servers, or upload a new video file using {\bfseries multipart/form-\/data}.  \\\cline{1-4}
+video &\href{https://core.telegram.org/bots/api#inputfile}{\tt Input\-File} or String &Yes &Video to send. Pass a file\-\_\-id as String to send a video that exists on the \hyperlink{class_telegram}{Telegram} servers (recommended), pass an H\-T\-T\-P U\-R\-L as a String for \hyperlink{class_telegram}{Telegram} to get a video from the Internet, or upload a new video using {\bfseries multipart/form-\/data}.  \\\cline{1-4}
 duration &Integer &Optional &Duration of sent video in seconds  \\\cline{1-4}
+width &Integer &Optional &Video width  \\\cline{1-4}
+height &Integer &Optional &Video height  \\\cline{1-4}
 caption &String &Optional &Video caption (may also be used when resending videos by {\itshape file\-\_\-id}).  \\\cline{1-4}
+disable\-\_\-notification &Boolean &Optional &Sends the message silently. Users will receive a notification with no sound.  \\\cline{1-4}
 reply\-\_\-to\-\_\-message\-\_\-id &Integer &Optional &If the message is a reply, I\-D of the original message  \\\cline{1-4}
-reply\-\_\-markup &Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+reply\-\_\-markup &Inline\-Keyboard\-Markup or Reply\-Keyboard\-Markup or Reply\-Keyboard\-Remove or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -1781,7 +1788,7 @@ Send a video note.
 As of \href{https://telegram.org/blog/video-messages-and-telescope}{\tt v.\-4.\-0}, \hyperlink{class_telegram}{Telegram} clients support rounded square mp4 videos of up to 1 minute long. Use this method to send video messages. On success, the sent \href{https://core.telegram.org/bots/api#message}{\tt Message} is returned. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 video\-\_\-note &\href{https://core.telegram.org/bots/api#inputfile}{\tt Input\-File} or String &Yes &Video note to send. Pass a file\-\_\-id as String to send a video note that exists on the \hyperlink{class_telegram}{Telegram} servers (recommended) or upload a new video using multipart/form-\/data. \href{https://core.telegram.org/bots/api#sending-files}{\tt More info on Sending Files »}. Sending video notes by a U\-R\-L is currently unsupported  \\\cline{1-4}
 duration &Integer &Optional &Duration of sent video in seconds  \\\cline{1-4}
 length &Integer &Optional &Video width and height  \\\cline{1-4}
@@ -1813,11 +1820,13 @@ Values inside \$content\-:\par
  \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer &Yes &Unique identifier for the message recipient — User or Group\-Chat id  \\\cline{1-4}
-voice &\href{https://core.telegram.org/bots/api#inputfile}{\tt Input\-File} or String &Yes &Audio file to send. You can either pass a {\itshape file\-\_\-id} as String to resend an audio that is already on the \hyperlink{class_telegram}{Telegram} servers, or upload a new audio file using {\bfseries multipart/form-\/data}.  \\\cline{1-4}
+chat\-\_\-id &Integer &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
+voice &\href{https://core.telegram.org/bots/api#inputfile}{\tt Input\-File} or String &Yes &Audio file to send. Pass a file\-\_\-id as String to send a file that exists on the \hyperlink{class_telegram}{Telegram} servers (recommended), pass an H\-T\-T\-P U\-R\-L as a String for \hyperlink{class_telegram}{Telegram} to get a file from the Internet, or upload a new one using {\bfseries multipart/form-\/data}.  \\\cline{1-4}
+caption &String &Optional &Voice message caption, 0-\/200 characters  \\\cline{1-4}
 duration &Integer &Optional &Duration of sent audio in seconds  \\\cline{1-4}
+disable\-\_\-notification &Boolean &Optional &Sends the message silently. Users will receive a notification with no sound.  \\\cline{1-4}
 reply\-\_\-to\-\_\-message\-\_\-id &Integer &Optional &If the message is a reply, I\-D of the original message  \\\cline{1-4}
-reply\-\_\-markup &Reply\-Keyboard\-Markup or Reply\-Keyboard\-Hide or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
+reply\-\_\-markup &Inline\-Keyboard\-Markup or Reply\-Keyboard\-Markup or Reply\-Keyboard\-Remove or Force\-Reply &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  \\\cline{1-4}
 \end{TabularC}
 
 \begin{DoxyParams}{Parameters}
@@ -1857,7 +1866,7 @@ Set Chat Description.
 Use this method to change the description of a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 description &String &No &New chat description, 0-\/255 characters  \\\cline{1-4}
 \end{TabularC}
 
@@ -1882,7 +1891,7 @@ Set Chat Photo.
 Use this method to set a new profile photo for the chat. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note\-: In regular groups (non-\/supergroups), this method will only work if the ‘\-All Members Are Admins’ setting is off in the target group. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 photo &\href{https://core.telegram.org/bots/api#inputfile}{\tt Input\-File} &Yes &New chat photo, uploaded using multipart/form-\/data  \\\cline{1-4}
 \end{TabularC}
 
@@ -1907,7 +1916,7 @@ Set Chat Title.
 Use this method to change the title of a chat. Titles can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note\-: In regular groups (non-\/supergroups), this method will only work if the ‘\-All Members Are Admins’ setting is off in the target group. \begin{TabularC}{4}
 \hline
 {\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
-chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target chat or username of the target channel (in the format {\ttfamily } )  \\\cline{1-4}
 title &String &Yes &New chat title, 1-\/255 characters  \\\cline{1-4}
 \end{TabularC}
 

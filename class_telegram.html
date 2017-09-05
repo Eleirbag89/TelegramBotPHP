@@ -1028,7 +1028,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1060,7 +1060,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
 <td>message_id </td><td>Integer </td><td>Yes </td><td>Identifier of the message to delete  </td></tr>
 </table>
@@ -1181,7 +1181,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>No </td><td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>No </td><td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
 <td>message_id </td><td>Integer </td><td>No </td><td>Required if <em>inline_message_id</em> is not specified. Unique identifier of the sent message  </td></tr>
 <tr>
@@ -1221,7 +1221,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>No </td><td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>No </td><td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
 <td>message_id </td><td>Integer </td><td>No </td><td>Required if <em>inline_message_id</em> is not specified. Unique identifier of the sent message  </td></tr>
 <tr>
@@ -1259,7 +1259,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>No </td><td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>No </td><td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
 <td>message_id </td><td>Integer </td><td>No </td><td>Required if <em>inline_message_id</em> is not specified. Unique identifier of the sent message  </td></tr>
 <tr>
@@ -1345,7 +1345,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1379,9 +1379,11 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the message recipient — User or GroupChat id  </td></tr>
+<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
-<td>from_chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the chat where the original message was sent — User or GroupChat id  </td></tr>
+<td>from_chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
+<tr>
+<td>disable_notification </td><td>Boolean </td><td>Optional </td><td>Sends the message silently. Users will receive a notification with no sound.  </td></tr>
 <tr>
 <td>message_id </td><td>Integer </td><td>Yes </td><td>Unique message identifier  </td></tr>
 </table>
@@ -1417,7 +1419,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format <code></code> )  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1449,7 +1451,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format <code></code> )  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1481,7 +1483,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format <code></code> )  </td></tr>
 <tr>
 <td>user_id </td><td>Integer </td><td>Yes </td><td>Unique identifier of the target user  </td></tr>
 </table>
@@ -1515,7 +1517,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format <code></code> )  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1815,7 +1817,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format <code></code> )  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1937,7 +1939,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
 <td>user_id </td><td>Integer </td><td>Yes </td><td>Unique identifier of the target user  </td></tr>
 <tr>
@@ -2041,7 +2043,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
 <td>photo </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String </td><td>Yes </td><td>Photo to send. Pass a file_id as String to send a photo that exists on the <a class="el" href="class_telegram.html">Telegram</a> servers (recommended), pass an HTTP URL as a String for <a class="el" href="class_telegram.html">Telegram</a> to get a photo from the Internet, or upload a new photo using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>  </td></tr>
 <tr>
@@ -2078,17 +2080,16 @@ Values inside $content:<br/>
 </div><div class="memdoc">
 
 <p>Send an audio. </p>
-<p>Use this method to send audio files, if you want <a class="el" href="class_telegram.html">Telegram</a> clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.</p>
-<p>For backward compatibility, when the fields title and performer are both empty and the mime-type of the file to be sent is not audio/mpeg, the file will be sent as a playable voice message. For this to work, the audio must be in an .ogg file encoded with OPUS. This behavior will be phased out in the future. For sending voice messages, use the sendVoice method instead.<br/>
+<p>Use this method to send audio files, if you want <a class="el" href="class_telegram.html">Telegram</a> clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future. For sending voice messages, use the sendVoice method instead.<br/>
 Values inside $content:<br/>
  </p>
 <table class="doxtable">
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the message recipient — User or GroupChat id  </td></tr>
+<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
-<td>audio </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String </td><td>Yes </td><td>Audio file to send. You can either pass a <em>file_id</em> as String to resend an audio that is already on the <a class="el" href="class_telegram.html">Telegram</a> servers, or upload a new audio file using <b>multipart/form-data</b>.  </td></tr>
+<td>audio </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String </td><td>Yes </td><td>Audio file to send. Pass a file_id as String to send an audio file that exists on the <a class="el" href="class_telegram.html">Telegram</a> servers (recommended), pass an HTTP URL as a String for <a class="el" href="class_telegram.html">Telegram</a> to get an audio file from the Internet, or upload a new one using <b>multipart/form-data</b>.  </td></tr>
 <tr>
 <td>duration </td><td>Integer </td><td>Optional </td><td>Duration of the audio in seconds  </td></tr>
 <tr>
@@ -2096,9 +2097,11 @@ Values inside $content:<br/>
 <tr>
 <td>title </td><td>String </td><td>Optional </td><td>Track name  </td></tr>
 <tr>
+<td>disable_notification </td><td>Boolean </td><td>Optional </td><td>Sends the message silently. Users will receive a notification with no sound.  </td></tr>
+<tr>
 <td>reply_to_message_id </td><td>Integer </td><td>Optional </td><td>If the message is a reply, ID of the original message  </td></tr>
 <tr>
-<td>reply_markup </td><td>ReplyKeyboardMarkup or ReplyKeyboardHide or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
+<td>reply_markup </td><td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2169,7 +2172,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
 <td>phone_number </td><td>String </td><td>Yes </td><td>Contact&amp;#39;s phone number  </td></tr>
 <tr>
@@ -2215,13 +2218,17 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the message recipient — User or GroupChat id  </td></tr>
+<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
-<td>document </td><td>InputFile or String </td><td>Yes </td><td>File to send. You can either pass a <em>file_id</em> as String to resend a file that is already on the <a class="el" href="class_telegram.html">Telegram</a> servers, or upload a new file using <b>multipart/form-data</b>.  </td></tr>
+<td>document </td><td>InputFile or String </td><td>Yes </td><td>File to send. Pass a file_id as String to send a file that exists on the <a class="el" href="class_telegram.html">Telegram</a> servers (recommended), pass an HTTP URL as a String for <a class="el" href="class_telegram.html">Telegram</a> to get a file from the Internet, or upload a new one using <b>multipart/form-data</b>.  </td></tr>
+<tr>
+<td>caption </td><td>String </td><td>Optional </td><td>Document caption (may also be used when resending documents by file_id), 0-200 characters.  </td></tr>
+<tr>
+<td>disable_notification </td><td>Boolean </td><td>Optional </td><td>Sends the message silently. Users will receive a notification with no sound.  </td></tr>
 <tr>
 <td>reply_to_message_id </td><td>Integer </td><td>Optional </td><td>If the message is a reply, ID of the original message  </td></tr>
 <tr>
-<td>reply_markup </td><td>ReplyKeyboardMarkup or ReplyKeyboardHide or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
+<td>reply_markup </td><td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2325,15 +2332,17 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the message recipient — User or GroupChat id  </td></tr>
+<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
 <td>latitude </td><td>Float number </td><td>Yes </td><td>Latitude of location  </td></tr>
 <tr>
 <td>longitude </td><td>Float number </td><td>Yes </td><td>Longitude of location  </td></tr>
 <tr>
+<td>disable_notification </td><td>Boolean </td><td>Optional </td><td>Sends the message silently. Users will receive a notification with no sound.  </td></tr>
+<tr>
 <td>reply_to_message_id </td><td>Integer </td><td>Optional </td><td>If the message is a reply, ID of the original message  </td></tr>
 <tr>
-<td>reply_markup </td><td>ReplyKeyboardMarkup or ReplyKeyboardHide or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
+<td>reply_markup </td><td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2360,14 +2369,14 @@ Values inside $content:<br/>
 </div><div class="memdoc">
 
 <p>Send a message. </p>
-<p>Contacts the various API's endpoints<br/>
+<p>Use this method to send text messages.<br/>
 Values inside $content:<br/>
  </p>
 <table class="doxtable">
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the message recipient — User or GroupChat id<ul>
+<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )<ul>
 <li></li>
 </ul>
 </td></tr>
@@ -2380,7 +2389,7 @@ Values inside $content:<br/>
 <tr>
 <td>reply_to_message_id </td><td>Integer </td><td>Optional </td><td>If the message is a reply, ID of the original message  </td></tr>
 <tr>
-<td>reply_markup </td><td>ReplyKeyboardMarkup or ReplyKeyboardHide or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
+<td>reply_markup </td><td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardHide or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2414,15 +2423,17 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the message recipient — User or GroupChat id  </td></tr>
+<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
-<td>photo </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String </td><td>Yes </td><td>Photo to send. You can either pass a <em>file_id</em> as String to resend a photo that is already on the <a class="el" href="class_telegram.html">Telegram</a> servers, or upload a new photo using multipart/form-data.  </td></tr>
+<td>photo </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String </td><td>Yes </td><td>Photo to send. Pass a file_id as String to send a photo that exists on the <a class="el" href="class_telegram.html">Telegram</a> servers (recommended), pass an HTTP URL as a String for <a class="el" href="class_telegram.html">Telegram</a> to get a photo from the Internet, or upload a new photo using multipart/form-data.  </td></tr>
 <tr>
 <td>caption </td><td>String </td><td>Optional </td><td>Photo caption (may also be used when resending photos by <em>file_id</em>).  </td></tr>
 <tr>
 <td>reply_to_message_id </td><td>Integer </td><td>Optional </td><td>If the message is a reply, ID of the original message  </td></tr>
 <tr>
-<td>reply_markup </td><td>ReplyKeyboardMarkup or &gt;ReplyKeyboardHide or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
+<td>disable_notification </td><td>Boolean </td><td>Optional </td><td>Sends the message silently. Users will receive a notification with no sound.  </td></tr>
+<tr>
+<td>reply_markup </td><td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2496,7 +2507,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
 <td>latitude </td><td>Float number </td><td>Yes </td><td>Latitude of the venue  </td></tr>
 <tr>
@@ -2548,15 +2559,21 @@ Values inside $content:<br/>
 <tr>
 <td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the message recipient — User or GroupChat id  </td></tr>
 <tr>
-<td>video </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String </td><td>Yes </td><td>Video to send. You can either pass a <em>file_id</em> as String to resend a video that is already on the <a class="el" href="class_telegram.html">Telegram</a> servers, or upload a new video file using <b>multipart/form-data</b>.  </td></tr>
+<td>video </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String </td><td>Yes </td><td>Video to send. Pass a file_id as String to send a video that exists on the <a class="el" href="class_telegram.html">Telegram</a> servers (recommended), pass an HTTP URL as a String for <a class="el" href="class_telegram.html">Telegram</a> to get a video from the Internet, or upload a new video using <b>multipart/form-data</b>.  </td></tr>
 <tr>
 <td>duration </td><td>Integer </td><td>Optional </td><td>Duration of sent video in seconds  </td></tr>
 <tr>
+<td>width </td><td>Integer </td><td>Optional </td><td>Video width  </td></tr>
+<tr>
+<td>height </td><td>Integer </td><td>Optional </td><td>Video height  </td></tr>
+<tr>
 <td>caption </td><td>String </td><td>Optional </td><td>Video caption (may also be used when resending videos by <em>file_id</em>).  </td></tr>
+<tr>
+<td>disable_notification </td><td>Boolean </td><td>Optional </td><td>Sends the message silently. Users will receive a notification with no sound.  </td></tr>
 <tr>
 <td>reply_to_message_id </td><td>Integer </td><td>Optional </td><td>If the message is a reply, ID of the original message  </td></tr>
 <tr>
-<td>reply_markup </td><td>ReplyKeyboardMarkup or ReplyKeyboardHide or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
+<td>reply_markup </td><td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2588,7 +2605,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
 <td>video_note </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String </td><td>Yes </td><td>Video note to send. Pass a file_id as String to send a video note that exists on the <a class="el" href="class_telegram.html">Telegram</a> servers (recommended) or upload a new video using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>. Sending video notes by a URL is currently unsupported  </td></tr>
 <tr>
@@ -2634,15 +2651,19 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the message recipient — User or GroupChat id  </td></tr>
+<td>chat_id </td><td>Integer </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
-<td>voice </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String </td><td>Yes </td><td>Audio file to send. You can either pass a <em>file_id</em> as String to resend an audio that is already on the <a class="el" href="class_telegram.html">Telegram</a> servers, or upload a new audio file using <b>multipart/form-data</b>.  </td></tr>
+<td>voice </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String </td><td>Yes </td><td>Audio file to send. Pass a file_id as String to send a file that exists on the <a class="el" href="class_telegram.html">Telegram</a> servers (recommended), pass an HTTP URL as a String for <a class="el" href="class_telegram.html">Telegram</a> to get a file from the Internet, or upload a new one using <b>multipart/form-data</b>.  </td></tr>
+<tr>
+<td>caption </td><td>String </td><td>Optional </td><td>Voice message caption, 0-200 characters  </td></tr>
 <tr>
 <td>duration </td><td>Integer </td><td>Optional </td><td>Duration of sent audio in seconds  </td></tr>
 <tr>
+<td>disable_notification </td><td>Boolean </td><td>Optional </td><td>Sends the message silently. Users will receive a notification with no sound.  </td></tr>
+<tr>
 <td>reply_to_message_id </td><td>Integer </td><td>Optional </td><td>If the message is a reply, ID of the original message  </td></tr>
 <tr>
-<td>reply_markup </td><td>ReplyKeyboardMarkup or ReplyKeyboardHide or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
+<td>reply_markup </td><td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2699,7 +2720,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
 <td>description </td><td>String </td><td>No </td><td>New chat description, 0-255 characters  </td></tr>
 </table>
@@ -2733,7 +2754,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
 <td>photo </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> </td><td>Yes </td><td>New chat photo, uploaded using multipart/form-data  </td></tr>
 </table>
@@ -2767,7 +2788,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code></code> )  </td></tr>
 <tr>
 <td>title </td><td>String </td><td>Yes </td><td>New chat title, 1-255 characters  </td></tr>
 </table>
