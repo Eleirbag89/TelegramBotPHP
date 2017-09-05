@@ -867,7 +867,6 @@ class Telegram
      * Use this method to kick a user from a group or a supergroup. In the case of supergroups, the user will not be able to return to the group on their own using invite links, etc., unless <a href="https://core.telegram.org/bots/api#unbanchatmember">unbanned</a> first. The bot must be an administrator in the group for this to work. Returns <em>True</em> on success.<br>
      * Note: This will method only work if the â€˜All Members Are Adminsâ€™ setting is off in the target group. Otherwise members may only be removed by the group&#39;s creator or by the member that added them.<br/>Values inside $content:<br/>
      * <table>
-     * <tbody>
      * <tr>
      * <td><strong>Parameters</strong></td>
      * <td><strong>Type</strong></td>
@@ -878,7 +877,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target group or username of the target supergroup (in the format <code>@supergroupusername</code>)</td>
+     * <td>Unique identifier for the target group or username of the target supergroup (in the format \c @supergroupusername)</td>
      * </tr>
      * <tr>
      * <td>user_id</td>
