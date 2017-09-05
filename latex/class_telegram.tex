@@ -1176,35 +1176,12 @@ Kick Chat Member.
 Use this method to kick a user from a group or a supergroup. In the case of supergroups, the user will not be able to return to the group on their own using invite links, etc., unless \href{https://core.telegram.org/bots/api#unbanchatmember}{\tt unbanned} first. The bot must be an administrator in the group for this to work. Returns {\itshape True} on success.\par
  Note\-: This will method only work if the â€˜\-All Members Are Adminsâ€™ setting is off in the target group. Otherwise members may only be removed by the group\&\#39;s creator or by the member that added them.\par
 Values inside \$content\-:\par
- \begin{TabularC}{0}
+ \begin{TabularC}{4}
 \hline
+{\bfseries Parameters} &{\bfseries Type} &{\bfseries Required} &{\bfseries Description}  \\\cline{1-4}
+chat\-\_\-id &Integer or String &Yes &Unique identifier for the target group or username of the target supergroup (in the format {\ttfamily } )  \\\cline{1-4}
+user\-\_\-id &Integer &Yes &Unique identifier of the target user  \\\cline{1-4}
 \end{TabularC}
-
-
-{\bfseries Parameters} 
-
-{\bfseries Type} 
-
-{\bfseries Required} 
-
-{\bfseries Description}  
-
-chat\-\_\-id 
-
-Integer or String 
-
-Yes 
-
-Unique identifier for the target group or username of the target supergroup (in the format {\ttfamily })  
-
-user\-\_\-id 
-
-Integer 
-
-Yes 
-
-Unique identifier of the target user  
-
 
 \begin{DoxyParams}{Parameters}
 {\em \$content} & the request parameters as array \\
