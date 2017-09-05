@@ -95,38 +95,10 @@ Resolving user defined r/home/travis/build/Eleirbag89/TelegramBotPHP/README.md:2
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1461: warning: Member Caption() (function) of class Telegram is not documented.
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1712: warning: Found unknown command `\mentioned'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1800: warning: Found unknown command `\mentioned'
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2323: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2705: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1292: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1340: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1232: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2265: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:196: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:202: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:970: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:994: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1042: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1018: warning: Illegal command \channelusername as the argument of a \channelusername command
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:853: warning: Unsupported xml/html tag <token> found
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:853: warning: Unsupported xml/html tag <file_path> found
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:853: warning: Unsupported xml/html tag <file_path> found
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:880: warning: Illegal command \supergroupusername as the argument of a \supergroupusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:912: warning: Illegal command \channelusername as the argument of a \channelusername command
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2413: warning: Found unknown command `\supergroupusername'
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2185: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2129: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:297: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:729: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:365: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:601: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:140: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:240: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:657: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2068: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:539: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2381: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2291: warning: Illegal command \channelusername as the argument of a \channelusername command
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2349: warning: Illegal command \channelusername as the argument of a \channelusername command
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1394: warning: Unsupported xml/html tag <token> found
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:938: warning: Found unknown command `\supergroupusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2451: warning: Found unknown command `\supergroupusername'
