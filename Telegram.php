@@ -137,7 +137,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * * </tr>
      * <tr>
      * <td>text</td>
@@ -193,13 +193,13 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>from_chat_id</td>
      * <td>Integer</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>disable_notification</td>
@@ -237,7 +237,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>photo</td>
@@ -294,7 +294,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>audio</td>
@@ -362,7 +362,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>document</td>
@@ -536,7 +536,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>voice</td>
@@ -598,7 +598,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>latitude</td>
@@ -654,7 +654,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>latitude</td>
@@ -726,7 +726,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>phone_number</td>
@@ -877,7 +877,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target group or username of the target supergroup (in the format \c @supergroupusername)</td>
+     * <td>Unique identifier for the target group or username of the target supergroup (in the format \@supergroupusername)</td>
      * </tr>
      * <tr>
      * <td>user_id</td>
@@ -909,7 +909,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \@channelusername)</td>
      * </tr>
      * </table>
      * \param $content the request parameters as array
@@ -967,7 +967,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \@channelusername)</td>
      * </tr>
      * </table>
      * \param $content the request parameters as array
@@ -991,7 +991,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \@channelusername)</td>
      * </tr>
      * </table>
      * \param $content the request parameters as array
@@ -1015,7 +1015,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \@channelusername)</td>
      * </tr>
      * </table>
      * \param $content the request parameters as array
@@ -1039,7 +1039,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>user_id</td>
@@ -1229,7 +1229,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>No</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>message_id</td>
@@ -1289,7 +1289,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>No</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>message_id</td>
@@ -1337,7 +1337,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>No</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>message_id</td>
@@ -2065,7 +2065,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>video_note</td>
@@ -2126,7 +2126,7 @@ class Telegram
      * <tr>
      * <td>chat_id</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>photo</td>
@@ -2182,7 +2182,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>user_id</td>
@@ -2262,7 +2262,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * </table>
      * \param $content the request parameters as array
@@ -2288,7 +2288,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>photo</td>
@@ -2320,7 +2320,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * </table>
      * \param $content the request parameters as array
@@ -2346,7 +2346,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>title</td>
@@ -2378,7 +2378,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>description</td>
@@ -2702,7 +2702,7 @@ class Telegram
      * <td>chat_id</td>
      * <td>Integer or String</td>
      * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c @channelusername)</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format \@channelusername)</td>
      * </tr>
      * <tr>
      * <td>message_id</td>
