@@ -188,12 +188,13 @@ Check [ForceReply](https://core.telegram.org/bots/api#forcereply) for more info.
 List of Bots using the library
 ------------
 Let me know using this [Issue](https://github.com/Eleirbag89/TelegramBotPHP/issues/80) if you have made a bot using this API, I will add it to this section.    
-* [Notifyadbot](https://telegram.me/notifyadbot) - Lang : Persian/Farsi
-* [Partners_shakibonline_bot](https://telegram.me/Partners_shakibonline_bot) - Lang : Persian/Farsi
+* [Notifyadbot](https://telegram.me/notifyadbot) - Lang : Persian/Farsi (Down as 16/09/17)
+* [Partners_shakibonline_bot](https://telegram.me/Partners_shakibonline_bot) - Lang : Persian/Farsi (Down as 16/09/17)
 * [Pishvazrobot](https://t.me/pishvazrobot) - Lang : Persian/Farsi - the most comprehensive bot for searching and listening to more than 100,000 RBT sound for two most popular and famous mobile operator in iran - MTN Irancell and Hamrahe Aval
 * [iHarfBot](https://t.me/iHarfBot) - Lang: Persian/Farsi
 * [AsansorBot](https://t.me/AsansorBot) - Lang: Persian/Farsi
 * [IDPbot](https://t.me/IDPbot) - Lang: Persian/Farsi
+* [Evil Insult Generator](https://telegram.me/EvilInsultGeneratorBot) - Lang English/German
 
 Emoticons
 ------------
