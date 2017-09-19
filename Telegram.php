@@ -1454,6 +1454,9 @@ class Telegram
         if ($type == self::CHANNEL_POST) {
             return @$this->data['channel_post']['text'];
         }
+		if ($type == self::EDITED_MESSAGE) {
+            return @$this->data['edited_message']['text'];
+        }
 
         return @$this->data['message']['text'];
     }
@@ -1477,7 +1480,9 @@ class Telegram
         if ($type == self::CHANNEL_POST) {
             return @$this->data['channel_post']['chat']['id'];
         }
-
+		if ($type == self::EDITED_MESSAGE) {
+            return @$this->data['edited_message']['chat']['id'];
+        }
         return $this->data['message']['chat']['id'];
     }
 
@@ -1494,6 +1499,9 @@ class Telegram
         }
         if ($type == self::CHANNEL_POST) {
             return @$this->data['channel_post']['message_id'];
+        }
+		if ($type == self::EDITED_MESSAGE) {
+            return @$this->data['edited_message']['message_id'];
         }
 
         return $this->data['message']['message_id'];
@@ -1601,6 +1609,9 @@ class Telegram
         if ($type == self::CHANNEL_POST) {
             return @$this->data['channel_post']['from']['first_name'];
         }
+		if ($type == self::EDITED_MESSAGE) {
+            return @$this->data['edited_message']['from']['first_name'];
+        }
 
         return @$this->data['message']['from']['first_name'];
     }
@@ -1615,6 +1626,9 @@ class Telegram
         if ($type == self::CHANNEL_POST) {
             return @$this->data['channel_post']['from']['last_name'];
         }
+		if ($type == self::EDITED_MESSAGE) {
+            return @$this->data['edited_message']['from']['last_name'];
+        }
 
         return @$this->data['message']['from']['last_name'];
     }
@@ -1628,6 +1642,9 @@ class Telegram
         }
         if ($type == self::CHANNEL_POST) {
             return @$this->data['channel_post']['from']['username'];
+        }
+		if ($type == self::EDITED_MESSAGE) {
+            return @$this->data['edited_message']['from']['username'];
         }
 
         return @$this->data['message']['from']['username'];
@@ -1660,6 +1677,9 @@ class Telegram
         }
         if ($type == self::CHANNEL_POST) {
             return $this->data['channel_post']['from']['id'];
+        }
+		if ($type == self::EDITED_MESSAGE) {
+            return @$this->data['edited_message']['from']['id'];
         }
 
         return $this->data['message']['from']['id'];
