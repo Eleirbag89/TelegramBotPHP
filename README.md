@@ -195,6 +195,9 @@ Let me know using this [Issue](https://github.com/Eleirbag89/TelegramBotPHP/issu
 * [AsansorBot](https://t.me/AsansorBot) - Lang: Persian/Farsi
 * [IDPbot](https://t.me/IDPbot) - Lang: Persian/Farsi
 * [Evil Insult Generator](https://telegram.me/EvilInsultGeneratorBot) - Lang English/German
+* [ibelitbot](https://telegram.me/ibelitbot) -Lang Persian
+* [skydrivebot](https://telegram.me/skydrivebot) - Lang Persian - Instagram Post Downloader - Youtube Link Generator
+* [Advanced Pools Bot](https://telegram.me/apollbot ) - Lang Italian/English([Contribute](https://poeditor.com/join/project/NMAUjrAZ5f))
 
 Emoticons
 ------------
