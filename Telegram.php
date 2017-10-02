@@ -2844,7 +2844,8 @@ class Telegram
         }
         curl_close($ch);
         if (class_exists('TelegramErrorLogger')) {
-            TelegramErrorLogger::log(json_decode($result, true), [$this->getData(), $content]);
+			$loggerArray = ($this->getData() == null) ? [$content] : [$this->getData(), $content];
+            TelegramErrorLogger::log(json_decode($result, true), $loggerArray);
         }
 
         return $result;
