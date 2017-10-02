@@ -256,7 +256,7 @@ class Telegram
      * <td>Integer</td>
      * <td>Optional</td>
      * <td>If the message is a reply, ID of the original message</td>
-     * </tr>     
+     * </tr>
      * <tr>
      * <td>disable_notification</td>
      * <td>Boolean</td>
@@ -1454,7 +1454,7 @@ class Telegram
         if ($type == self::CHANNEL_POST) {
             return @$this->data['channel_post']['text'];
         }
-		if ($type == self::EDITED_MESSAGE) {
+        if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['text'];
         }
 
@@ -1480,9 +1480,10 @@ class Telegram
         if ($type == self::CHANNEL_POST) {
             return @$this->data['channel_post']['chat']['id'];
         }
-		if ($type == self::EDITED_MESSAGE) {
+        if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['chat']['id'];
         }
+
         return $this->data['message']['chat']['id'];
     }
 
@@ -1500,7 +1501,7 @@ class Telegram
         if ($type == self::CHANNEL_POST) {
             return @$this->data['channel_post']['message_id'];
         }
-		if ($type == self::EDITED_MESSAGE) {
+        if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['message_id'];
         }
 
@@ -1609,7 +1610,7 @@ class Telegram
         if ($type == self::CHANNEL_POST) {
             return @$this->data['channel_post']['from']['first_name'];
         }
-		if ($type == self::EDITED_MESSAGE) {
+        if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['from']['first_name'];
         }
 
@@ -1626,7 +1627,7 @@ class Telegram
         if ($type == self::CHANNEL_POST) {
             return @$this->data['channel_post']['from']['last_name'];
         }
-		if ($type == self::EDITED_MESSAGE) {
+        if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['from']['last_name'];
         }
 
@@ -1643,7 +1644,7 @@ class Telegram
         if ($type == self::CHANNEL_POST) {
             return @$this->data['channel_post']['from']['username'];
         }
-		if ($type == self::EDITED_MESSAGE) {
+        if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['from']['username'];
         }
 
@@ -1678,7 +1679,7 @@ class Telegram
         if ($type == self::CHANNEL_POST) {
             return $this->data['channel_post']['from']['id'];
         }
-		if ($type == self::EDITED_MESSAGE) {
+        if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['from']['id'];
         }
 
@@ -2844,7 +2845,7 @@ class Telegram
         }
         curl_close($ch);
         if (class_exists('TelegramErrorLogger')) {
-			$loggerArray = ($this->getData() == null) ? [$content] : [$this->getData(), $content];
+            $loggerArray = ($this->getData() == null) ? [$content] : [$this->getData(), $content];
             TelegramErrorLogger::log(json_decode($result, true), $loggerArray);
         }
 
