@@ -7,41 +7,71 @@
 [![License](https://poser.pugx.org/eleirbag89/telegrambotphp/license)](https://packagist.org/packages/eleirbag89/telegrambotphp)
 [![StyleCI](https://styleci.io/repos/38492095/shield?branch=master)](https://styleci.io/repos/38492095)
 
-> A very simple PHP [Telegram Bot API](https://core.telegram.org/bots).    
-> Compliant with the August 23, 2017 Telegram Bot API update.
+A very simple PHP [Telegram Bot API](https://core.telegram.org/bots).    
+Compliant with the August 23, 2017 Telegram Bot API update.
 
 Requirements
 ---------
 
-* PHP5
-* Curl for PHP5 must be enabled.
+* PHP >= 5.3
+* Curl extension for PHP5 must be enabled.
 * Telegram API key, you can get one simply with [@BotFather](https://core.telegram.org/bots#botfather) with simple commands right after creating your bot.
 
 For the WebHook:
-* An SSL certificate (Telegram API requires this). You can use [Cloudflare's Free Flexible SSL](https://www.cloudflare.com/ssl) which crypts the web traffic from end user to their proxies if you're using CloudFlare DNS.    
+* An VALID SSL certificate (Telegram API requires this). You can use [Cloudflare's Free Flexible SSL](https://www.cloudflare.com/ssl) which crypts the web traffic from end user to their proxies if you're using CloudFlare DNS.    
 Since the August 29 update you can use a self-signed ssl certificate.
 
-For the GetUpdates:
+For the getUpdates(Long Polling):
 * Some way to execute the script in order to serve messages (for example cronjob)
+
+Download
+---------
+
+#### Using Composer
+
+From your project directory, run:
+```
+composer require eleirbag89/telegrambotphp
+```
+or
+```
+php composer.phar require eleirbag89/telegrambotphp
+```
+Note: If you don't have Composer you can download it [HERE](https://getcomposer.org/download/).
+
+#### Using release archives
+
+https://github.com/Eleirbag89/TelegramBotPHP/releases
+
+#### Using Git
+
+From a project directory, run:
+```
+git clone https://github.com/Eleirbag89/TelegramBotPHP.git
+```
 
 Installation
 ---------
 
+#### Via Composer's autoloader
 
-* Copy Telegram.php into your server and include it in your new bot script
+After downloading by using Composer, you can include Composer's autoloader:
 ```php
-include("Telegram.php");
-$telegram = new Telegram($bot_token);
+include (__DIR__ . '/vendor/autoload.php');
+
+$telegram = new Telegram('YOUR TELEGRAM TOKEN HERE');
 ```
 
-* To enable error log file, also copy TelegramErrorLogger.php in the same directory of Telegram.php file
+#### Via TelegramBotPHP class
 
-#### Using Composer
+Copy Telegram.php into your server and include it in your new bot script:
+```php
+include 'Telegram.php';
 
-From your project directory, run
+$telegram = new Telegram('YOUR TELEGRAM TOKEN HERE');
 ```
-composer require eleirbag89/telegrambotphp
-```
+
+Note: To enable error log file, also copy TelegramErrorLogger.php in the same directory of Telegram.php file.
 
 Configuration (WebHook)
 ---------
@@ -54,19 +84,21 @@ Examples
 ---------
 
 ```php
-$telegram = new Telegram($bot_token);
+$telegram = new Telegram('YOUR TELEGRAM TOKEN HERE');
+
 $chat_id = $telegram->ChatID();
-$content = array('chat_id' => $chat_id, 'text' => "Test");
+$content = array('chat_id' => $chat_id, 'text' => 'Test');
 $telegram->sendMessage($content);
 ```
 
 If you want to get some specific parameter from the Telegram response:
 ```php
-$telegram = new Telegram($bot_token);
+$telegram = new Telegram('YOUR TELEGRAM TOKEN HERE');
+
 $result = $telegram->getData();
-$text = $result["message"] ["text"];
-$chat_id = $result["message"] ["chat"]["id"];
-$content = array('chat_id' => $chat_id, 'text' => "Test");
+$text = $result['message'] ['text'];
+$chat_id = $result['message'] ['chat']['id'];
+$content = array('chat_id' => $chat_id, 'text' => 'Test');
 $telegram->sendMessage($content);
 ```
 
@@ -81,23 +113,26 @@ $telegram->sendPhoto($content);
 To download a file on the Telegram's servers
 ```php
 $file = $telegram->getFile($file_id);
-$telegram->downloadFile($file["result"]["file_path"], "./my_downloaded_file_on_local_server.png");
+$telegram->downloadFile($file['result']['file_path'], './my_downloaded_file_on_local_server.png');
 ```
 
 See update.php or update cowsay.php for the complete example.
 If you wanna see the CowSay Bot in action [add it](https://telegram.me/cowmooobot).
 
-If you want to use GetUpdates instead of the WebHook you need to call the the `serveUpdate` function inside a for cycle.
+If you want to use getUpdates instead of the WebHook you need to call the the `serveUpdate` function inside a for cycle.
 ```php
+$telegram = new Telegram('YOUR TELEGRAM TOKEN HERE');
+
 $req = $telegram->getUpdates();
+
 for ($i = 0; $i < $telegram-> UpdateCount(); $i++) {
 	// You NEED to call serveUpdate before accessing the values of message in Telegram Class
 	$telegram->serveUpdate($i);
 	$text = $telegram->Text();
 	$chat_id = $telegram->ChatID();
 
-	if ($text == "/start") {
-		$reply = "Working";
+	if ($text == '/start') {
+		$reply = 'Working';
 		$content = array('chat_id' => $chat_id, 'text' => $reply);
 		$telegram->sendMessage($content);
 	}
@@ -113,6 +148,7 @@ For a complete and up-to-date functions documentation check http://eleirbag89.gi
 
 Build keyboards
 ------------
+
 Telegram's bots can have two different kind of keyboards: Inline and Reply.    
 The InlineKeyboard is linked to a particular message, while the ReplyKeyboard is linked to the whole chat.    
 They are both an array of array of buttons, which rapresent the rows and columns.    
@@ -187,6 +223,7 @@ Check [ForceReply](https://core.telegram.org/bots/api#forcereply) for more info.
 
 List of Bots using the library
 ------------
+
 Let me know using this [Issue](https://github.com/Eleirbag89/TelegramBotPHP/issues/80) if you have made a bot using this API, I will add it to this section.    
 * [Notifyadbot](https://telegram.me/notifyadbot) - Lang : Persian/Farsi (Down as 16/09/17)
 * [Partners_shakibonline_bot](https://telegram.me/Partners_shakibonline_bot) - Lang : Persian/Farsi (Down as 16/09/17)
@@ -204,12 +241,29 @@ Emoticons
 For a list of emoticons to use in your bot messages, please refer to the column Bytes of this table:
 http://apps.timwhitlock.info/emoji/tables/unicode
 
+License
+------------
+
+This open-source software is distributed under the MIT License. See LICENSE.md
+
+Contributing
+------------
+
+All kinds of contributions are welcome - code, tests, documentation, bug reports, new features, etc...
+
+* Send feedbacks.
+* Submit bug reports.
+* Write/Edit the documents.
+* Fix bugs or add new features.
+
 Contact me
 ------------
+
 You can contact me [via Telegram](https://telegram.me/ggrillo) but if you have an issue please [open](https://github.com/Eleirbag89/TelegramBotPHP/issues) one.
 
 Support me
 ------------
+
 You can buy me a beer or two using [Paypal](https://paypal.me/eleirbag89)    
 or support me using Flattr.    
 
