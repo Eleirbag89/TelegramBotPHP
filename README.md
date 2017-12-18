@@ -236,7 +236,10 @@ Let me know using this [Issue](https://github.com/Eleirbag89/TelegramBotPHP/issu
 * [skydrivebot](https://telegram.me/skydrivebot) - Lang Persian - Instagram Post Downloader - Youtube Link Generator
 * [Advanced Pools Bot](https://telegram.me/apollbot) - Lang Italian/English([Contribute](https://poeditor.com/join/project/NMAUjrAZ5f))
 * [Btn_Bot](https://telegram.me/Btn_Bot) - Lang pt-BR - Cria botões transparente para publicações.
-* [snesgamesbot ](https://telegram.me/snesgamesbot) - Lang: pt-BR/Espanhol/Inglês - Download de ROMs para emuladores do SNES
+* [snesgamesbot](https://telegram.me/snesgamesbot) - Lang: pt-BR/Espanhol/Inglês - Download de ROMs para emuladores do SNES
+* [DiffSGLaPuntabot](https://telegram.me/DiffSGLaPuntabot) [DiffGravinaCTbot](https://telegram.me/DiffGravinaCTbot) - Lang: it/Italian - Bots to handle Recycling in San Giovanni La Punta and Gravina (OpenSource Template https://github.com/Gualty/BOTDifferenziata)
+* [GoBot](https://t.me/CoReYe_PGO_bot)
+* [RaidBot](https://t.me/CoReYe_PGO_Raid_bot)
 
 Emoticons
 ------------
