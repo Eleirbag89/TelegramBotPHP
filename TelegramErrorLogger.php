@@ -84,9 +84,9 @@ class TelegramErrorLogger
             $text .= "\n";
         }
         foreach ($array as $key => $value) {
-            if($value instanceof CURLFile){
+            if ($value instanceof CURLFile) {
                 $text .= $ref.'.'.$key.'= File'.PHP_EOL;
-            }else if (is_array($value)) {
+            } elseif (is_array($value)) {
                 if ($title != null) {
                     $key = $title.'.'.$key;
                 }
