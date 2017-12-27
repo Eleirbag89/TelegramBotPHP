@@ -6,6 +6,7 @@ var searchData=
   ['senddocument',['sendDocument',['../class_telegram.html#a25569ca763bd149891d86b89bc66cf54',1,'Telegram']]],
   ['sendinvoice',['sendInvoice',['../class_telegram.html#ae2c4d7308afec34759ccafe4a4f83053',1,'Telegram']]],
   ['sendlocation',['sendLocation',['../class_telegram.html#ac395e843f13d36d70f57c2d26868a33f',1,'Telegram']]],
+  ['sendmediagroup',['sendMediaGroup',['../class_telegram.html#a227968146a427290d58b96925f257078',1,'Telegram']]],
   ['sendmessage',['sendMessage',['../class_telegram.html#af1369d6caab77f71a051ab73fa642a3f',1,'Telegram']]],
   ['sendphoto',['sendPhoto',['../class_telegram.html#ac7adcbd9f46b77664f8b738b84f290e7',1,'Telegram']]],
   ['sendsticker',['sendSticker',['../class_telegram.html#a0a176d232d8e7941184698447902beb6',1,'Telegram']]],
@@ -16,9 +17,11 @@ var searchData=
   ['serveupdate',['serveUpdate',['../class_telegram.html#a57e6066940e4cca7310cfd5c45fd8510',1,'Telegram']]],
   ['setchatdescription',['setChatDescription',['../class_telegram.html#adef9a5b1ff9d835244626a4d37064513',1,'Telegram']]],
   ['setchatphoto',['setChatPhoto',['../class_telegram.html#a2c19ab9430d547b68e78cbe8f9870c04',1,'Telegram']]],
+  ['setchatstickerset',['setChatStickerSet',['../class_telegram.html#a4a9940630e885df9aafdb898859c26cd',1,'Telegram']]],
   ['setchattitle',['setChatTitle',['../class_telegram.html#ac2f5f32ecaf8d6837c1804de6d0ab4b1',1,'Telegram']]],
   ['setdata',['setData',['../class_telegram.html#a87449bdd364c33ff024d32896342bf31',1,'Telegram']]],
   ['setgamescore',['setGameScore',['../class_telegram.html#adc67d74632a07c0f50875d8e35304463',1,'Telegram']]],
   ['setstickerpositioninset',['setStickerPositionInSet',['../class_telegram.html#afe5e2d14ddabfb88fea538c2c778b3d8',1,'Telegram']]],
-  ['setwebhook',['setWebhook',['../class_telegram.html#a460bc346782ab380344e7fba7de6968c',1,'Telegram']]]
+  ['setwebhook',['setWebhook',['../class_telegram.html#a460bc346782ab380344e7fba7de6968c',1,'Telegram']]],
+  ['stopmessagelivelocation',['stopMessageLiveLocation',['../class_telegram.html#adfd20888f1d4e6e4306343a45e4b4687',1,'Telegram']]]
 ];

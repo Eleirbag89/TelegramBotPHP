@@ -130,6 +130,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac395e843f13d36d70f57c2d26868a33f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#ac395e843f13d36d70f57c2d26868a33f">sendLocation</a> (array $content)</td></tr>
 <tr class="memdesc:ac395e843f13d36d70f57c2d26868a33f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a location.  <a href="#ac395e843f13d36d70f57c2d26868a33f">More...</a><br/></td></tr>
 <tr class="separator:ac395e843f13d36d70f57c2d26868a33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38c3b4e1043d9a4e831c30c258f5e7ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a38c3b4e1043d9a4e831c30c258f5e7ee">editMessageLiveLocation</a> (array $content)</td></tr>
+<tr class="memdesc:a38c3b4e1043d9a4e831c30c258f5e7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edit Message Live Location.  <a href="#a38c3b4e1043d9a4e831c30c258f5e7ee">More...</a><br/></td></tr>
+<tr class="separator:a38c3b4e1043d9a4e831c30c258f5e7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfd20888f1d4e6e4306343a45e4b4687"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#adfd20888f1d4e6e4306343a45e4b4687">stopMessageLiveLocation</a> (array $content)</td></tr>
+<tr class="memdesc:adfd20888f1d4e6e4306343a45e4b4687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop Message Live Location.  <a href="#adfd20888f1d4e6e4306343a45e4b4687">More...</a><br/></td></tr>
+<tr class="separator:adfd20888f1d4e6e4306343a45e4b4687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a9940630e885df9aafdb898859c26cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a4a9940630e885df9aafdb898859c26cd">setChatStickerSet</a> (array $content)</td></tr>
+<tr class="memdesc:a4a9940630e885df9aafdb898859c26cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Chat Sticker Set.  <a href="#a4a9940630e885df9aafdb898859c26cd">More...</a><br/></td></tr>
+<tr class="separator:a4a9940630e885df9aafdb898859c26cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefe258391c6678068ec786124d87428b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#aefe258391c6678068ec786124d87428b">deleteChatStickerSet</a> (array $content)</td></tr>
+<tr class="memdesc:aefe258391c6678068ec786124d87428b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete Chat Sticker Set.  <a href="#aefe258391c6678068ec786124d87428b">More...</a><br/></td></tr>
+<tr class="separator:aefe258391c6678068ec786124d87428b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a227968146a427290d58b96925f257078"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a227968146a427290d58b96925f257078">sendMediaGroup</a> (array $content)</td></tr>
+<tr class="memdesc:a227968146a427290d58b96925f257078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send Media Group.  <a href="#a227968146a427290d58b96925f257078">More...</a><br/></td></tr>
+<tr class="separator:a227968146a427290d58b96925f257078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ad657480e7bc9575a71912eb85c92d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a4ad657480e7bc9575a71912eb85c92d5">sendVenue</a> (array $content)</td></tr>
 <tr class="memdesc:a4ad657480e7bc9575a71912eb85c92d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send Venue.  <a href="#a4ad657480e7bc9575a71912eb85c92d5">More...</a><br/></td></tr>
 <tr class="separator:a4ad657480e7bc9575a71912eb85c92d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -443,11 +458,11 @@ Data Fields</h2></td></tr>
 <tr>
 <td>name </td><td>String </td><td>Yes </td><td>Sticker set name  </td></tr>
 <tr>
-<td>png_sticker </td><td><a href="#inputfile">InputFile</a> or String </td><td>Yes </td><td><b>Png</b> image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. Pass a <em>file_id</em> as a String to send a file that already exists on the <a class="el" href="class_telegram.html">Telegram</a> servers, pass an HTTP URL as a String for <a class="el" href="class_telegram.html">Telegram</a> to get a file from the Internet, or upload a new one using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a>  </td></tr>
+<td>png_sticker </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String </td><td>Yes </td><td><b>Png</b> image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. Pass a <em>file_id</em> as a String to send a file that already exists on the <a class="el" href="class_telegram.html">Telegram</a> servers, pass an HTTP URL as a String for <a class="el" href="class_telegram.html">Telegram</a> to get a file from the Internet, or upload a new one using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>  </td></tr>
 <tr>
 <td>emojis </td><td>String </td><td>Yes </td><td>One or more emoji corresponding to the sticker  </td></tr>
 <tr>
-<td>mask_position </td><td><a href="#maskposition">MaskPosition</a> </td><td>Optional </td><td>Position where the mask should be placed on faces  </td></tr>
+<td>mask_position </td><td><a href="https://core.telegram.org/bots/api#maskposition">MaskPosition</a> </td><td>Optional </td><td>Position where the mask should be placed on faces  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -972,13 +987,13 @@ Values inside $content:<br/>
 <tr>
 <td>title </td><td>String </td><td>Yes </td><td>Sticker set title, 1-64 characters  </td></tr>
 <tr>
-<td>png_sticker </td><td><a href="#inputfile">InputFile</a> or String </td><td>Yes </td><td><b>Png</b> image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. Pass a <em>file_id</em> as a String to send a file that already exists on the <a class="el" href="class_telegram.html">Telegram</a> servers, pass an HTTP URL as a String for <a class="el" href="class_telegram.html">Telegram</a> to get a file from the Internet, or upload a new one using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a>  </td></tr>
+<td>png_sticker </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String </td><td>Yes </td><td><b>Png</b> image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. Pass a <em>file_id</em> as a String to send a file that already exists on the <a class="el" href="class_telegram.html">Telegram</a> servers, pass an HTTP URL as a String for <a class="el" href="class_telegram.html">Telegram</a> to get a file from the Internet, or upload a new one using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>  </td></tr>
 <tr>
 <td>emojis </td><td>String </td><td>Yes </td><td>One or more emoji corresponding to the sticker  </td></tr>
 <tr>
 <td>is_masks </td><td>Boolean </td><td>Optional </td><td>Pass <em>True</em>, if a set of mask stickers should be created  </td></tr>
 <tr>
-<td>mask_position </td><td><a href="#maskposition">MaskPosition</a> </td><td>Optional </td><td>Position where the mask should be placed on faces  </td></tr>
+<td>mask_position </td><td><a href="https://core.telegram.org/bots/api#maskposition">MaskPosition</a> </td><td>Optional </td><td>Position where the mask should be placed on faces  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1029,6 +1044,40 @@ Values inside $content:<br/>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
 <td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aefe258391c6678068ec786124d87428b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">deleteChatStickerSet </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete Chat Sticker Set. </p>
+<p>Use this method to delete a group sticker set from a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Use the field <em>can_set_sticker_set</em> optionally returned in <a href="https://core.telegram.org/bots/api#getchat">getChat</a> requests to check if the bot can use this method. Returns <em>True</em> on success.<br/>
+Values inside $content:<br/>
+ </p>
+<table class="doxtable">
+<tr>
+<td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
+<tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup (in the format <code></code>)  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1190,6 +1239,50 @@ Values inside $content:<br/>
 <td>caption </td><td>String </td><td>Optional </td><td>New caption of the message  </td></tr>
 <tr>
 <td>reply_markup </td><td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> </td><td>Optional </td><td>A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>.  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a38c3b4e1043d9a4e831c30c258f5e7ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">editMessageLiveLocation </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Edit Message Live Location. </p>
+<p>Use this method to edit live location messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). A location can be edited until its <em>live_period</em> expires or editing is explicitly disabled by a call to <a href="https://core.telegram.org/bots/api#stopmessagelivelocation">stopMessageLiveLocation</a>. On success, if the edited message was sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise <em>True</em> is returned.<br/>
+Values inside $content:<br/>
+ </p>
+<table class="doxtable">
+<tr>
+<td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
+<tr>
+<td>chat_id </td><td>Integer or String </td><td>Optional </td><td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)  </td></tr>
+<tr>
+<td>message_id </td><td>Integer </td><td>Optional </td><td>Required if <em>inline_message_id</em> is not specified. Identifier of the sent message  </td></tr>
+<tr>
+<td>inline_message_id </td><td>String </td><td>Optional </td><td>Required if <em>chat_id</em> and <em>message_id</em> are not specified. Identifier of the inline message  </td></tr>
+<tr>
+<td>latitude </td><td>Float number </td><td>Yes </td><td>Latitude of new location  </td></tr>
+<tr>
+<td>longitude </td><td>Float number </td><td>Yes </td><td>Longitude of new location  </td></tr>
+<tr>
+<td>reply_markup </td><td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> </td><td>Optional </td><td>A JSON-serialized object for a new <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>.  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1897,7 +1990,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)  </td></tr>
 <tr>
 <td>message_id </td><td>Integer </td><td>Yes </td><td>Identifier of a message to pin  </td></tr>
 <tr>
@@ -2270,6 +2363,8 @@ Values inside $content:<br/>
 <tr>
 <td>prices </td><td>Array of <a href="https://core.telegram.org/bots/api#labeledprice">LabeledPrice</a> </td><td>Yes </td><td>Price breakdown, a list of components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.)  </td></tr>
 <tr>
+<td>provider_data </td><td>String </td><td>Optional </td><td>JSON-encoded data about the invoice, which will be shared with the payment provider. A detailed description of required fields should be provided by the payment provider.  </td></tr>
+<tr>
 <td>photo_url </td><td>String </td><td>Optional </td><td>URL of the product photo for the invoice. Can be a photo of the goods or a marketing image for a service. People like it better when they see what they are paying for.  </td></tr>
 <tr>
 <td>photo_size </td><td>Integer </td><td>Optional </td><td>Photo size  </td></tr>
@@ -2332,11 +2427,53 @@ Values inside $content:<br/>
 <tr>
 <td>longitude </td><td>Float number </td><td>Yes </td><td>Longitude of location  </td></tr>
 <tr>
+<td>live_period </td><td>Integer </td><td>Optional </td><td>Period in seconds for which the location will be updated (see <a href="https://telegram.org/blog/live-locations">Live Locations</a>, should be between 60 and 86400.  </td></tr>
+<tr>
 <td>disable_notification </td><td>Boolean </td><td>Optional </td><td>Sends the message silently. Users will receive a notification with no sound.  </td></tr>
 <tr>
 <td>reply_to_message_id </td><td>Integer </td><td>Optional </td><td>If the message is a reply, ID of the original message  </td></tr>
 <tr>
 <td>reply_markup </td><td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a227968146a427290d58b96925f257078"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sendMediaGroup </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send Media Group. </p>
+<p>Use this method to send a group of photos or videos as an album. On success, an array of the sent <a href="https://core.telegram.org/bots/api#message">Messages</a> is returned.<br/>
+Values inside $content:<br/>
+ </p>
+<table class="doxtable">
+<tr>
+<td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
+<tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)  </td></tr>
+<tr>
+<td>media </td><td>Array of <a href="https://core.telegram.org/bots/api#inputmedia">InputMedia</a> </td><td>Yes </td><td>A JSON-serialized array describing photos and videos to be sent, must include 2–10 items  </td></tr>
+<tr>
+<td>disable_notification </td><td>Boolean </td><td>Optional </td><td>Sends the messages <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.  </td></tr>
+<tr>
+<td>reply_to_message_id </td><td>Integer </td><td>Optional </td><td>If the messages are a reply, ID of the original message  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2762,6 +2899,40 @@ Values inside $content:<br/>
 
 </div>
 </div>
+<a class="anchor" id="a4a9940630e885df9aafdb898859c26cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">setChatStickerSet </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set Chat Sticker Set. </p>
+<p>Use this method to set a new group sticker set for a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Use the field <em>can_set_sticker_set</em> optionally returned in <a href="https://core.telegram.org/bots/api#getchat">getChat</a> requests to check if the bot can use this method. Returns <em>True</em> on success.<br/>
+Values inside $content:<br/>
+ </p>
+<table class="doxtable">
+<tr>
+<td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
+<tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup (in the format <code></code>)  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ac2f5f32ecaf8d6837c1804de6d0ab4b1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2913,6 +3084,46 @@ Values inside $content:<br/>
 
 </div>
 </div>
+<a class="anchor" id="adfd20888f1d4e6e4306343a45e4b4687"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">stopMessageLiveLocation </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop Message Live Location. </p>
+<p>Use this method to stop updating a live location message sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>) before <em>live_period</em> expires. On success, if the message was sent by the bot, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise <em>True</em> is returned.<br/>
+Values inside $content:<br/>
+ </p>
+<table class="doxtable">
+<tr>
+<td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
+<tr>
+<td>chat_id </td><td>Integer or String </td><td>Optional </td><td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)  </td></tr>
+<tr>
+<td>message_id </td><td>Integer </td><td>Optional </td><td>Required if <em>inline_message_id</em> is not specified. Identifier of the sent message  </td></tr>
+<tr>
+<td>inline_message_id </td><td>String </td><td>Optional </td><td>Required if <em>chat_id</em> and <em>message_id</em> are not specified. Identifier of the inline message  </td></tr>
+<tr>
+<td>reply_markup </td><td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> </td><td>Optional </td><td>A JSON-serialized object for a new <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>.  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a950a98ae75562dc9c6a458acbd330143"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2987,7 +3198,7 @@ Values inside $content:<br/>
 <tr>
 <td><b>Parameters</b> </td><td><b>Type</b> </td><td><b>Required</b> </td><td><b>Description</b>  </td></tr>
 <tr>
-<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target supergroup (in the format <code></code>)  </td></tr>
+<td>chat_id </td><td>Integer or String </td><td>Yes </td><td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -3021,7 +3232,7 @@ Values inside $content:<br/>
 <tr>
 <td>user_id </td><td>Integer </td><td>Yes </td><td>User identifier of sticker file owner  </td></tr>
 <tr>
-<td>png_sticker </td><td><a href="#inputfile">InputFile</a> </td><td>Yes </td><td><b>Png</b> image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. <a href="#sending-files">More info on Sending Files »</a>  </td></tr>
+<td>png_sticker </td><td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> </td><td>Yes </td><td><b>Png</b> image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>  </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
