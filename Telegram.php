@@ -644,7 +644,7 @@ class Telegram
     {
         return $this->endpoint('sendLocation', $content);
     }
-        
+
     /// Edit Message Live Location
 
     /**
@@ -700,7 +700,7 @@ class Telegram
     {
         return $this->endpoint('editMessageLiveLocation', $content);
     }
-    
+
     /// Stop Message Live Location
 
     /**
@@ -744,7 +744,7 @@ class Telegram
     {
         return $this->endpoint('stopMessageLiveLocation', $content);
     }
-    
+
     /// Set Chat Sticker Set
 
     /**
@@ -770,8 +770,7 @@ class Telegram
     {
         return $this->endpoint('setChatStickerSet', $content);
     }
-   
-    
+
     /// Delete Chat Sticker Set
 
     /**
@@ -797,7 +796,7 @@ class Telegram
     {
         return $this->endpoint('deleteChatStickerSet', $content);
     }
-    
+
     /// Send Media Group
 
     /**
@@ -841,7 +840,7 @@ class Telegram
     {
         return $this->endpoint('sendMediaGroup', $content);
     }
-    
+
     /// Send Venue
 
     /**
