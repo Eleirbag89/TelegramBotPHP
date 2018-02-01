@@ -11,8 +11,7 @@ if (file_exists('TelegramErrorLogger.php')) {
  */
 class Telegram
 {
-	
-	/**
+    /**
      * Constant for type Inline Query.
      */
     const INLINE_QUERY = 'inline_query';
@@ -2997,7 +2996,7 @@ class Telegram
     public function getUpdateType()
     {
         $update = $this->data;
-		if (isset($update['inline_query'])) {
+        if (isset($update['inline_query'])) {
             return self::INLINE_QUERY;
         }
         if (isset($update['callback_query'])) {
