@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['message',['MESSAGE',['../class_telegram.html#af9b451d04eb24044a2d4112be10de570',1,'Telegram']]]
+  ['location',['LOCATION',['../class_telegram.html#aca699735a6cec340e45cde5c623bdb32',1,'Telegram']]]
 ];
