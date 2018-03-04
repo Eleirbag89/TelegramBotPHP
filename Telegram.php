@@ -1062,6 +1062,8 @@ class Telegram
      */
     public function getFile($file_id)
     {
+
+
         $content = ['file_id' => $file_id];
 
         return $this->endpoint('getFile', $content);
@@ -1894,6 +1896,41 @@ class Telegram
 
         return $this->data['message']['from']['id'];
     }
+	
+	/// Get photo file_id of current message
+	public function photoFileID()
+	{
+		if ($this->getUpdateType() == 'photo')
+			return $this->data["message"]["photo"][0]["file_id"];
+	}
+	
+	/// Get voice file_id of current message
+	public function voiceFileID()
+	{
+		if ($this->getUpdateType() == 'voice')
+			return $this->data["message"]["voice"]["file_id"];
+	}
+	
+	/// Get video file_id of current message
+	public function videoFileID()
+	{
+		if ($this->getUpdateType() == 'video')
+			return $this->data["message"]["video"]["file_id"];
+	}
+	
+	/// Get audio file_id of current message
+	public function audioFileID()
+	{
+		if ($this->getUpdateType() == 'audio')
+			return $this->data["message"]["audio"]["file_id"];
+	}
+	
+	/// Get document file_id of current message
+	public function documentFileID()
+	{
+		if ($this->getUpdateType() == 'document')
+			return $this->data["message"]["document"]["file_id"];
+	}
 
     /// Get user's id of current forwarded message
     public function FromID()
@@ -2995,6 +3032,7 @@ class Telegram
      * Return current update type `False` on failure.
      *
      * @return bool|string
+
      */
     public function getUpdateType()
     {
