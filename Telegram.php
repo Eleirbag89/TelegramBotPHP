@@ -67,6 +67,7 @@ class Telegram
     private $bot_token = '';
     private $data = [];
     private $updates = [];
+    private $log_errors;
 
     /// Class constructor
 
@@ -75,10 +76,11 @@ class Telegram
      * \param $bot_token the bot token
      * \return an instance of the class.
      */
-    public function __construct($bot_token)
+    public function __construct($bot_token, $log_errors = true)
     {
         $this->bot_token = $bot_token;
         $this->data = $this->getData();
+        $this->log_errors = $log_errors;
     }
 
     /// Do requests to Telegram Bot API
@@ -3062,9 +3064,11 @@ class Telegram
             $result = json_encode(['ok'=>false, 'curl_error_code' => curl_errno($ch), 'curl_error' => curl_error($ch)]);
         }
         curl_close($ch);
-        if (class_exists('TelegramErrorLogger')) {
-            $loggerArray = ($this->getData() == null) ? [$content] : [$this->getData(), $content];
-            TelegramErrorLogger::log(json_decode($result, true), $loggerArray);
+        if ($this->log_errors) {
+            if (class_exists('TelegramErrorLogger')) {
+                $loggerArray = ($this->getData() == null) ? [$content] : [$this->getData(), $content];
+                TelegramErrorLogger::log(json_decode($result, true), $loggerArray);
+            }
         }
 
         return $result;
