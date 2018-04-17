@@ -84,6 +84,9 @@ Examples
 ---------
 
 ```php
+define('PROXY', null);
+define('PROXYPWD', null);
+
 $telegram = new Telegram('YOUR TELEGRAM TOKEN HERE');
 
 $chat_id = $telegram->ChatID();

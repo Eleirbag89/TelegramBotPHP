@@ -3058,6 +3058,8 @@ class Telegram
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
         }
+        curl_setopt($ch, CURLOPT_PROXY, PROXY);
+        curl_setopt($ch, CURLOPT_PROXYUSERPWD, PROXYPWD);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $result = curl_exec($ch);
         if ($result === false) {
