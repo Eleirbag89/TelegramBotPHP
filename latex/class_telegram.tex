@@ -4,7 +4,7 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_telegram_a4557e0c8290a6e85aa32c702858d08e3}{\-\_\-\-\_\-construct} (\$bot\-\_\-token, \$log\-\_\-errors=true)
+\hyperlink{class_telegram_aed2bfa82aa91151fcb9f77eebd9df5a3}{\-\_\-\-\_\-construct} (\$bot\-\_\-token, \$log\-\_\-errors=true, array \$proxy=array())
 \begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a9241a37baf9b641df49a377c34bbdd59}{endpoint} (\$api, array \$content, \$post=true)
 \begin{DoxyCompactList}\small\item\em Do requests to \hyperlink{class_telegram}{Telegram} Bot A\-P\-I. \end{DoxyCompactList}\item 
@@ -244,14 +244,15 @@ Gabriele Grillo \href{mailto:gabry.grillo@alice.it}{\tt gabry.\-grillo@alice.\-i
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_telegram_a4557e0c8290a6e85aa32c702858d08e3}{\index{Telegram@{Telegram}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\hypertarget{class_telegram_aed2bfa82aa91151fcb9f77eebd9df5a3}{\index{Telegram@{Telegram}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
 \index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!Telegram@{Telegram}}
 \subsubsection[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-\_\-construct (
 \begin{DoxyParamCaption}
 \item[{}]{\$bot\-\_\-token, }
-\item[{}]{\$log\-\_\-errors = {\ttfamily true}}
+\item[{}]{\$log\-\_\-errors = {\ttfamily true}, }
+\item[{array}]{\$proxy = {\ttfamily array()}}
 \end{DoxyParamCaption}
-)}}\label{class_telegram_a4557e0c8290a6e85aa32c702858d08e3}
+)}}\label{class_telegram_aed2bfa82aa91151fcb9f77eebd9df5a3}
 
 
 Class constructor. 
@@ -259,6 +260,10 @@ Class constructor.
 Create a \hyperlink{class_telegram}{Telegram} instance from the bot token 
 \begin{DoxyParams}{Parameters}
 {\em \$bot\-\_\-token} & the bot token \\
+\hline
+{\em \$log\-\_\-errors} & enable or disable the logging \\
+\hline
+{\em \$proxy} & array with the proxy configuration (url, port, type, auth) \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
