@@ -186,6 +186,7 @@ class Telegram
     public function sendMessage(array $content)
     {
         $content['text'] = ' '.$content['text'];
+
         return $this->endpoint('sendMessage', $content);
     }
 
