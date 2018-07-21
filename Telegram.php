@@ -83,7 +83,7 @@ class Telegram
     /**
      * Create a Telegram instance from the bot token
      * \param $bot_token the bot token
-	 * \param $log_errors enable or disable the logging
+     * \param $log_errors enable or disable the logging
 	 * \param $proxy array with the proxy configuration (url, port, type, auth)
      * \return an instance of the class.
      */
@@ -237,7 +237,7 @@ class Telegram
      */
     public function forwardMessage(array $content)
     {
-        $content['text'] = ' ' . $content['text'];
+        $content['text'] = ' '.$content['text'];
         return $this->endpoint('forwardMessage', $content);
     }
 
@@ -1681,7 +1681,7 @@ class Telegram
         if ($type == self::INLINE_QUERY) {
             return @$this->data['inline_query']['query'];
         } else {
-            if(isset($this->data['message']['text'])) {
+            if (isset($this->data['message']['text'])) {
                 return @$this->data['message']['text'];
             } else {
                 return '';
@@ -1885,7 +1885,7 @@ class Telegram
                 return @$this->data['message']['from']['last_name'];
             } else {
                 return '';
-            } 
+            }
         }
     }
 
@@ -1908,7 +1908,7 @@ class Telegram
             if (isset($this->data['message']['from']['username'])) {
                 return @$this->data['message']['from']['username'];
             } else {
-                return "";
+                return '';
             }
         }
     }
@@ -3121,7 +3121,7 @@ class Telegram
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
         }
-		echo 'inside curl if';
+        echo 'inside curl if';
         if (!empty($this->proxy)) {
             echo 'inside proxy if';
             if (array_key_exists('type', $this->proxy)) {
