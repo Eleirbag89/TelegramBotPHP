@@ -1079,7 +1079,7 @@ class Telegram
     {
         $content = ['file_id' => $file_id];
 
-        return $this->endpoint('getFile', $content);
+        return $this->endpoint('getFile', $content)['result'];
     }
 
     /// Kick Chat Member
