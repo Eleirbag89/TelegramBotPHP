@@ -1060,7 +1060,7 @@ class Telegram
     }
 
     /**
-     * Use this method to get a list of administrators in a chat. On success, returns an Array of <a href="https://core.telegram.org/bots/api#chatmember">ChatMember</a> objects that contains information about all chat administrators except other bots. If the chat is a group or a supergroup and no administrators were appointed, only the creator will be returned. Values inside $content:
+     * Use this method to get a list of administrators in a chat. On success, returns an Array of <a href="https://core.telegram.org/bots/api#chatmember">ChatMember</a> objects that contains information about all chat administrators except other bots. If the chat is a group or a supergroup and no administrators were appointed, only the creator will be returned. Values inside $content:.
      *
      * Parameters
      * Type
@@ -1128,7 +1128,7 @@ class Telegram
     }
 
     /**
-     * Use this method to send answers to an inline query. On success, True is returned.<br>No more than 50 results per query are allowed. Values inside $content:
+     * Use this method to send answers to an inline query. On success, True is returned.<br>No more than 50 results per query are allowed. Values inside $content:.
      *
      * Parameters
      * Type
@@ -1234,7 +1234,7 @@ class Telegram
     /// Answer a callback Query
 
     /**
-     * Use this method to send answers to callback queries sent from inline keyboards. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, True is returned. Values inside $content:
+     * Use this method to send answers to callback queries sent from inline keyboards. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, True is returned. Values inside $content:.
      *
      * Parameters
      * Type
@@ -1265,7 +1265,7 @@ class Telegram
     }
 
     /**
-     * Use this method to edit text messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content:
+     * Use this method to edit text messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content:.
      *
      * Parameters
      * Type
@@ -1316,7 +1316,7 @@ class Telegram
     }
 
     /**
-     * Use this method to edit captions of messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content:
+     * Use this method to edit captions of messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content:.
      *
      * Parameters
      * Type
@@ -1357,7 +1357,7 @@ class Telegram
     }
 
     /**
-     * Use this method to edit only the reply markup of messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>).  On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content:
+     * Use this method to edit only the reply markup of messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>).  On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content:.
      *
      * Parameters
      * Type
