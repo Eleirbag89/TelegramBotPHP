@@ -64,19 +64,19 @@ class Telegram
      */
     const CHANNEL_POST = 'channel_post';
     /**
-    * Constant for type Contact.
-    */
+     * Constant for type Contact.
+     */
     const STICKER = 'sticker';
     /**
-    * Constant for type Video Note.
-    */
+     * Constant for type Video Note.
+     */
     const VIDEONOTE = 'video_note';
 
     private $bot_token = '';
     private $data = [];
     private $updates = [];
     private $log_errors;
-	private $proxy;
+    private $proxy;
 
     /// Class constructor
 
@@ -87,12 +87,12 @@ class Telegram
 	 * \param $proxy array with the proxy configuration (url, port, type, auth)
      * \return an instance of the class.
      */
-    public function __construct($bot_token, $log_errors = true, array $proxy=array())
+    public function __construct($bot_token, $log_errors = true, array $proxy = [])
     {
         $this->bot_token = $bot_token;
         $this->data = $this->getData();
         $this->log_errors = $log_errors;
-		$this->proxy = $proxy;
+	    $this->proxy = $proxy;
     }
 
     /// Do requests to Telegram Bot API
@@ -237,7 +237,7 @@ class Telegram
      */
     public function forwardMessage(array $content)
     {
-        $content['text'] = " " . $content['text'];
+        $content['text'] = ' ' . $content['text'];
         return $this->endpoint('forwardMessage', $content);
     }
 
@@ -1679,12 +1679,12 @@ class Telegram
             return @$this->data['edited_message']['text'];
         }
         if ($type == self::INLINE_QUERY) {
-            return @$this->data["inline_query"]["query"];
+            return @$this->data['inline_query']['query'];
         } else {
-            if(isset($this->data["message"]["text"])) {
-                return @$this->data["message"]["text"];
+            if(isset($this->data['message']['text'])) {
+                return @$this->data['message']['text'];
             } else {
-                return "";
+                return '';
             }
         }
     }
@@ -1738,7 +1738,7 @@ class Telegram
         if ($type == self::INLINE_QUERY) {
             return @$this->data['inline_query']['id'];
         }
-        return @$this->data["message"]["message_id"];
+        return @$this->data['message']['message_id'];
     }
 
     /// Get the reply_to_message message_id of the current message
@@ -1768,7 +1768,7 @@ class Telegram
      */
     public function Inline_Query()
     {
-        if(isset($this->data['inline_query'])) {
+        if (isset($this->data['inline_query'])) {
             return @$this->data['inline_query'];
         } else {
             return false;
@@ -1782,7 +1782,7 @@ class Telegram
      */
     public function Callback_Query()
     {
-        if(isset($this->data['callback_query'])) {
+        if (isset($this->data['callback_query'])) {
             return @$this->data['callback_query'];
         } else {
             return false;
@@ -1860,9 +1860,9 @@ class Telegram
             return @$this->data['edited_message']['from']['first_name'];
         }
         if ($type == self::INLINE_QUERY) {
-            return @$this->data["inline_query"]["from"]["first_name"];
+            return @$this->data['inline_query']['from']['first_name'];
         }
-        return @$this->data["message"]["from"]["first_name"];
+        return @$this->data['message']['from']['first_name'];
     }
 
     /// Get the last name of the user
@@ -1879,12 +1879,12 @@ class Telegram
             return @$this->data['edited_message']['from']['last_name'];
         }
         if ($type == self::INLINE_QUERY) {
-            return @$this->data["inline_query"]["from"]["last_name"];
+            return @$this->data['inline_query']['from']['last_name'];
         } else {
-            if(isset($this->data["message"]["from"]["last_name"])) {
-                return @$this->data["message"]["from"]["last_name"];
+            if (isset($this->data['message']['from']['last_name'])) {
+                return @$this->data['message']['from']['last_name'];
             } else {
-                return "";
+                return '';
             } 
         }
     }
@@ -1903,10 +1903,10 @@ class Telegram
             return @$this->data['edited_message']['from']['username'];
         }
         if ($type == self::INLINE_QUERY) {
-            return @$this->data["inline_query"]["from"]["username"];
+            return @$this->data['inline_query']['from']['username'];
         } else {
-            if(isset($this->data["message"]["from"]["username"])) {
-                return @$this->data["message"]["from"]["username"];
+            if (isset($this->data['message']['from']['username'])) {
+                return @$this->data['message']['from']['username'];
             } else {
                 return "";
             }
@@ -1944,10 +1944,10 @@ class Telegram
         if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['from']['id'];
         }
-        if($type == self::INLINE_QUERY) {
-            return @$this->data["inline_query"]["from"]["id"];
+        if ($type == self::INLINE_QUERY) {
+            return @$this->data['inline_query']['from']['id'];
         }
-        return @$this->data["message"]["from"]["id"];
+        return @$this->data['message']['from']['id'];
     }
 
     /// Get user's id of current forwarded message
@@ -2021,7 +2021,7 @@ class Telegram
         $replyMarkup = [
             'inline_keyboard' => $options,
         ];
-        if($encode) {
+        if ($encode) {
             $encodedMarkup = json_encode($replyMarkup, true);
         } else {
             $encodedMarkup = $replyMarkup;
@@ -3121,28 +3121,27 @@ class Telegram
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
         }
-		echo "inside curl if";
-		if (!empty($this->proxy)) {
-			echo "inside proxy if";
-			if (array_key_exists("type", $this->proxy)) {
-				curl_setopt($ch, CURLOPT_PROXYTYPE, $this->proxy["type"]);
-			}
-			
-			if (array_key_exists("auth", $this->proxy)) {
-				curl_setopt($ch, CURLOPT_PROXYUSERPWD, $this->proxy["auth"]);
-			}
-			
-			if (array_key_exists("url", $this->proxy)) {
-				echo "Proxy Url";
-				curl_setopt($ch, CURLOPT_PROXY, $this->proxy["url"]);
-			}
-			
-			if (array_key_exists("port", $this->proxy)) {
-				echo "Proxy port";
-				curl_setopt($ch, CURLOPT_PROXYPORT, $this->proxy["port"]);
-			}
-			
-		}
+		+        echo 'inside curl if';
+        if (!empty($this->proxy)) {
+            echo 'inside proxy if';
+            if (array_key_exists('type', $this->proxy)) {
+                curl_setopt($ch, CURLOPT_PROXYTYPE, $this->proxy['type']);
+            }
+
+            if (array_key_exists('auth', $this->proxy)) {
+                curl_setopt($ch, CURLOPT_PROXYUSERPWD, $this->proxy['auth']);
+            }
+
+            if (array_key_exists('url', $this->proxy)) {
+                echo 'Proxy Url';
+                curl_setopt($ch, CURLOPT_PROXY, $this->proxy['url']);
+            }
+
+            if (array_key_exists('port', $this->proxy)) {
+                echo 'Proxy port';
+                curl_setopt($ch, CURLOPT_PROXYPORT, $this->proxy['port']);
+            }
+        }
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $result = curl_exec($ch);
         if ($result === false) {
