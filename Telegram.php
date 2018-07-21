@@ -3121,7 +3121,7 @@ class Telegram
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
         }
-		+        echo 'inside curl if';
+		echo 'inside curl if';
         if (!empty($this->proxy)) {
             echo 'inside proxy if';
             if (array_key_exists('type', $this->proxy)) {
