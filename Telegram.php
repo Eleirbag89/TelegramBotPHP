@@ -143,51 +143,44 @@ class Telegram
     /// Send a message
 
     /**
-     * Use this method to send text messages.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * * </tr>
-     * <tr>
-     * <td>text</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Text of the message to be sent</td>
-     * </tr>
-     * <tr>
-     * <td>parse_mode</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Send <em>Markdown</em>, if you want Telegram apps to show bold, italic and inline URLs in your bot's message. For the moment, only Telegram for Android supports this.</td>
-     * </tr>
-     * <tr>
-     * <td>disable_web_page_preview</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Disables link previews for links in this message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardHide or ForceReply</td>
-     * <td>Optional</td>
-     * <td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</td>
-     * </tr>
-     * </table>
+     * Use this method to send text messages.
+     * Values inside $content:
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * text
+     * String
+     * Yes
+     * Text of the message to be sent
+     * 
+     * parse_mode
+     * String
+     * Optional
+     * Send Markdown, if you want Telegram apps to show bold, italic and inline URLs in your bot's message. For the moment, only Telegram for Android supports this.
+     * 
+     * disable_web_page_preview
+     * Boolean
+     * Optional
+     * Disables link previews for links in this message
+     * 
+     * reply_to_message_id
+     * Integer
+     * Optional
+     * If the message is a reply, ID of the original message
+     * 
+     * reply_markup
+     * InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardHide or ForceReply
+     * Optional
+     * Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -199,39 +192,33 @@ class Telegram
     /// Forward a message
 
     /**
-     * Use this method to forward messages of any kind. On success, the sent Message is returned<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>from_chat_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the message silently. Users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>message_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique message identifier</td>
-     * </tr>
-     * </table>
+     * Use this method to forward messages of any kind. On success, the sent Message is returned Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * from_chat_id
+     * Integer
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * disable_notification
+     * Boolean
+     * Optional
+     * Sends the message silently. Users will receive a notification with no sound.
+     * 
+     * message_id
+     * Integer
+     * Yes
+     * Unique message identifier
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -245,51 +232,43 @@ class Telegram
     /// Send a photo
 
     /**
-     * Use this method to send photos. On success, the sent Message is returned.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>photo</td>
-     * <td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String</td>
-     * <td>Yes</td>
-     * <td>Photo to send. Pass a file_id as String to send a photo that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a photo from the Internet, or upload a new photo using multipart/form-data.</td>
-     * </tr>
-     * <tr>
-     * <td>caption</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Photo caption (may also be used when resending photos by <em>file_id</em>).</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the message silently. Users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply</td>
-     * <td>Optional</td>
-     * <td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</td>
-     * </tr>
-     * </table>
+     * Use this method to send photos. On success, the sent Message is returned. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * photo
+     * <a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String
+     * Yes
+     * Photo to send. Pass a file_id as String to send a photo that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a photo from the Internet, or upload a new photo using multipart/form-data.
+     * 
+     * caption
+     * String
+     * Optional
+     * Photo caption (may also be used when resending photos by file_id).
+     * 
+     * reply_to_message_id
+     * Integer
+     * Optional
+     * If the message is a reply, ID of the original message
+     * 
+     * disable_notification
+     * Boolean
+     * Optional
+     * Sends the message silently. Users will receive a notification with no sound.
+     * 
+     * reply_markup
+     * InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply
+     * Optional
+     * Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -302,63 +281,53 @@ class Telegram
 
     /**
      * Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.
-     * For sending voice messages, use the sendVoice method instead.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>audio</td>
-     * <td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String</td>
-     * <td>Yes</td>
-     * <td>Audio file to send. Pass a file_id as String to send an audio file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get an audio file from the Internet, or upload a new one using <strong>multipart/form-data</strong>.</td>
-     * </tr>
-     * <tr>
-     * <td>duration</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Duration of the audio in seconds</td>
-     * </tr>
-     * <tr>
-     * <td>performer</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Performer</td>
-     * </tr>
-     * <tr>
-     * <td>title</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Track name</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the message silently. Users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply</td>
-     * <td>Optional</td>
-     * <td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</td>
-     * </tr>
-     * </table>
+     * For sending voice messages, use the sendVoice method instead. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * audio
+     * <a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String
+     * Yes
+     * Audio file to send. Pass a file_id as String to send an audio file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get an audio file from the Internet, or upload a new one using multipart/form-data.
+     * 
+     * duration
+     * Integer
+     * Optional
+     * Duration of the audio in seconds
+     * 
+     * performer
+     * String
+     * Optional
+     * Performer
+     * 
+     * title
+     * String
+     * Optional
+     * Track name
+     * 
+     * disable_notification
+     * Boolean
+     * Optional
+     * Sends the message silently. Users will receive a notification with no sound.
+     * 
+     * reply_to_message_id
+     * Integer
+     * Optional
+     * If the message is a reply, ID of the original message
+     * 
+     * reply_markup
+     * InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply
+     * Optional
+     * Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -370,51 +339,43 @@ class Telegram
     /// Send a document
 
     /**
-     * Use this method to send general files. On success, the sent Message is returned. Bots can currently send files of any type of up to 50 MB in size, this limit may be changed in the future.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>document</td>
-     * <td>InputFile or String</td>
-     * <td>Yes</td>
-     * <td>File to send. Pass a file_id as String to send a file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using <strong>multipart/form-data</strong>.</td>
-     * </tr>
-     * <tr>
-     * <td>caption</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Document caption (may also be used when resending documents by file_id), 0-200 characters.</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the message silently. Users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply</td>
-     * <td>Optional</td>
-     * <td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</td>
-     * </tr>
-     * </table>
+     * Use this method to send general files. On success, the sent Message is returned. Bots can currently send files of any type of up to 50 MB in size, this limit may be changed in the future. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * document
+     * InputFile or String
+     * Yes
+     * File to send. Pass a file_id as String to send a file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data.
+     * 
+     * caption
+     * String
+     * Optional
+     * Document caption (may also be used when resending documents by file_id), 0-200 characters.
+     * 
+     * disable_notification
+     * Boolean
+     * Optional
+     * Sends the message silently. Users will receive a notification with no sound.
+     * 
+     * reply_to_message_id
+     * Integer
+     * Optional
+     * If the message is a reply, ID of the original message
+     * 
+     * reply_markup
+     * InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply
+     * Optional
+     * Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -426,39 +387,33 @@ class Telegram
     /// Send a sticker
 
     /**
-     * Use this method to send .webp stickers. On success, the sent Message is returned.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the message recipient — User or GroupChat id</td>
-     * </tr>
-     * <tr>
-     * <td>sticker</td>
-     * <td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String</td>
-     * <td>Yes</td>
-     * <td>Sticker to send. You can either pass a <em>file_id</em> as String to resend a sticker that is already on the Telegram servers, or upload a new sticker using <strong>multipart/form-data</strong>.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td>ReplyKeyboardMarkup or ReplyKeyboardHide or ForceReply</td>
-     * <td>Optional</td>
-     * <td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</td>
-     * </tr>
-     * </table>
+     * Use this method to send .webp stickers. On success, the sent Message is returned. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer
+     * Yes
+     * Unique identifier for the message recipient — User or GroupChat id
+     * 
+     * sticker
+     * <a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String
+     * Yes
+     * Sticker to send. You can either pass a file_id as String to resend a sticker that is already on the Telegram servers, or upload a new sticker using multipart/form-data.
+     * 
+     * reply_to_message_id
+     * Integer
+     * Optional
+     * If the message is a reply, ID of the original message
+     * 
+     * reply_markup
+     * ReplyKeyboardMarkup or ReplyKeyboardHide or ForceReply
+     * Optional
+     * Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -470,69 +425,58 @@ class Telegram
     /// Send a video
 
     /**
-     * Use this method to send video files, Telegram clients support mp4 videos (other formats may be sent as Document). On success, the sent Message is returned. Bots can currently send video files of up to 50 MB in size, this limit may be changed in the future.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the message recipient — User or GroupChat id</td>
-     * </tr>
-     * <tr>
-     * <td>video</td>
-     * <td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String</td>
-     * <td>Yes</td>
-     * <td>Video to send. Pass a file_id as String to send a video that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a video from the Internet, or upload a new video using <strong>multipart/form-data</strong>.</td>
-     * </tr>
-     * <tr>
-     * <td>duration</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Duration of sent video in seconds</td>
-     * </tr>
-     * <tr>
-     * <td>width</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Video width</td>
-     * </tr>
-     * <tr>
-     * <td>height</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Video height</td>
-     * </tr>
-     * <tr>
-     * <td>caption</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Video caption (may also be used when resending videos by <em>file_id</em>).</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the message silently. Users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply</td>
-     * <td>Optional</td>
-     * <td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</td>
-     * </tr>
-     * </table>
+     * Use this method to send video files, Telegram clients support mp4 videos (other formats may be sent as Document). On success, the sent Message is returned. Bots can currently send video files of up to 50 MB in size, this limit may be changed in the future. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer
+     * Yes
+     * Unique identifier for the message recipient — User or GroupChat id
+     * 
+     * video
+     * <a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String
+     * Yes
+     * Video to send. Pass a file_id as String to send a video that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a video from the Internet, or upload a new video using multipart/form-data.
+     * 
+     * duration
+     * Integer
+     * Optional
+     * Duration of sent video in seconds
+     * 
+     * width
+     * Integer
+     * Optional
+     * Video width
+     * 
+     * height
+     * Integer
+     * Optional
+     * Video height
+     * 
+     * caption
+     * String
+     * Optional
+     * Video caption (may also be used when resending videos by file_id).
+     * 
+     * disable_notification
+     * Boolean
+     * Optional
+     * Sends the message silently. Users will receive a notification with no sound.
+     * 
+     * reply_to_message_id
+     * Integer
+     * Optional
+     * If the message is a reply, ID of the original message
+     * 
+     * reply_markup
+     * InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply
+     * Optional
+     * Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -544,57 +488,48 @@ class Telegram
     /// Send a voice message
 
     /**
-     *  Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as Audio or Document). On success, the sent Message is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>voice</td>
-     * <td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String</td>
-     * <td>Yes</td>
-     * <td>Audio file to send. Pass a file_id as String to send a file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using <strong>multipart/form-data</strong>.</td>
-     * </tr>
-     * <tr>
-     * <td>caption</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Voice message caption, 0-200 characters</td>
-     * </tr>
-     * <tr>
-     * <td>duration</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Duration of sent audio in seconds</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the message silently. Users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply</td>
-     * <td>Optional</td>
-     * <td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</td>
-     * </tr>
-     * </table>
+     *  Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as Audio or Document). On success, the sent Message is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * voice
+     * <a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String
+     * Yes
+     * Audio file to send. Pass a file_id as String to send a file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data.
+     * 
+     * caption
+     * String
+     * Optional
+     * Voice message caption, 0-200 characters
+     * 
+     * duration
+     * Integer
+     * Optional
+     * Duration of sent audio in seconds
+     * 
+     * disable_notification
+     * Boolean
+     * Optional
+     * Sends the message silently. Users will receive a notification with no sound.
+     * 
+     * reply_to_message_id
+     * Integer
+     * Optional
+     * If the message is a reply, ID of the original message
+     * 
+     * reply_markup
+     * InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply
+     * Optional
+     * Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -606,57 +541,48 @@ class Telegram
     /// Send a location
 
     /**
-     *  Use this method to send point on the map. On success, the sent Message is returned.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>latitude</td>
-     * <td>Float number</td>
-     * <td>Yes</td>
-     * <td>Latitude of location</td>
-     * </tr>
-     * <tr>
-     * <td>longitude</td>
-     * <td>Float number</td>
-     * <td>Yes</td>
-     * <td>Longitude of location</td>
-     * </tr>
-     * <tr>
-     * <td>live_period</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Period in seconds for which the location will be updated (see <a href="https://telegram.org/blog/live-locations">Live Locations</a>, should be between 60 and 86400.</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the message silently. Users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td>InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply</td>
-     * <td>Optional</td>
-     * <td>Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</td>
-     * </tr>
-     * </table>
+     *  Use this method to send point on the map. On success, the sent Message is returned. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * latitude
+     * Float number
+     * Yes
+     * Latitude of location
+     * 
+     * longitude
+     * Float number
+     * Yes
+     * Longitude of location
+     * 
+     * live_period
+     * Integer
+     * Optional
+     * Period in seconds for which the location will be updated (see <a href="https://telegram.org/blog/live-locations">Live Locations</a>, should be between 60 and 86400.
+     * 
+     * disable_notification
+     * Boolean
+     * Optional
+     * Sends the message silently. Users will receive a notification with no sound.
+     * 
+     * reply_to_message_id
+     * Integer
+     * Optional
+     * If the message is a reply, ID of the original message
+     * 
+     * reply_markup
+     * InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply
+     * Optional
+     * Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -668,51 +594,43 @@ class Telegram
     /// Edit Message Live Location
 
     /**
-     * Use this method to edit live location messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). A location can be edited until its <em>live_period</em> expires or editing is explicitly disabled by a call to <a href="https://core.telegram.org/bots/api#stopmessagelivelocation">stopMessageLiveLocation</a>. On success, if the edited message was sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise <em>True</em> is returned.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Optional</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Identifier of the sent message</td>
-     * </tr>
-     * <tr>
-     * <td>inline_message_id</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Required if <em>chat_id</em> and <em>message_id</em> are not specified. Identifier of the inline message</td>
-     * </tr>
-     * <tr>
-     * <td>latitude</td>
-     * <td>Float number</td>
-     * <td>Yes</td>
-     * <td>Latitude of new location</td>
-     * </tr>
-     * <tr>
-     * <td>longitude</td>
-     * <td>Float number</td>
-     * <td>Yes</td>
-     * <td>Longitude of new location</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-     * <td>Optional</td>
-     * <td>A JSON-serialized object for a new <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>.</td>
-     * </tr>
-     * </table>
+     * Use this method to edit live location messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). A location can be edited until its live_period expires or editing is explicitly disabled by a call to <a href="https://core.telegram.org/bots/api#stopmessagelivelocation">stopMessageLiveLocation</a>. On success, if the edited message was sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Optional
+     * Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * message_id
+     * Integer
+     * Optional
+     * Required if inline_message_id is not specified. Identifier of the sent message
+     * 
+     * inline_message_id
+     * String
+     * Optional
+     * Required if chat_id and message_id are not specified. Identifier of the inline message
+     * 
+     * latitude
+     * Float number
+     * Yes
+     * Latitude of new location
+     * 
+     * longitude
+     * Float number
+     * Yes
+     * Longitude of new location
+     * 
+     * reply_markup
+     * <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a>
+     * Optional
+     * A JSON-serialized object for a new <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -724,39 +642,33 @@ class Telegram
     /// Stop Message Live Location
 
     /**
-     * Use this method to stop updating a live location message sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>) before <em>live_period</em> expires. On success, if the message was sent by the bot, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise <em>True</em> is returned.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Optional</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Identifier of the sent message</td>
-     * </tr>
-     * <tr>
-     * <td>inline_message_id</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Required if <em>chat_id</em> and <em>message_id</em> are not specified. Identifier of the inline message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-     * <td>Optional</td>
-     * <td>A JSON-serialized object for a new <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>.</td>
-     * </tr>
-     * </table>
+     * Use this method to stop updating a live location message sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>) before live_period expires. On success, if the message was sent by the bot, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Optional
+     * Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * message_id
+     * Integer
+     * Optional
+     * Required if inline_message_id is not specified. Identifier of the sent message
+     * 
+     * inline_message_id
+     * String
+     * Optional
+     * Required if chat_id and message_id are not specified. Identifier of the inline message
+     * 
+     * reply_markup
+     * <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a>
+     * Optional
+     * A JSON-serialized object for a new <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -768,21 +680,18 @@ class Telegram
     /// Set Chat Sticker Set
 
     /**
-     * Use this method to set a new group sticker set for a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Use the field <em>can_set_sticker_set</em> optionally returned in <a href="https://core.telegram.org/bots/api#getchat">getChat</a> requests to check if the bot can use this method. Returns <em>True</em> on success.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target supergroup (in the format <code>@supergroupusername</code>)</td>
-     * </tr>
-     * </table>
+     * Use this method to set a new group sticker set for a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Use the field can_set_sticker_set optionally returned in <a href="https://core.telegram.org/bots/api#getchat">getChat</a> requests to check if the bot can use this method. Returns True on success. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target supergroup (in the format <code>@supergroupusername</code>)
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -794,21 +703,18 @@ class Telegram
     /// Delete Chat Sticker Set
 
     /**
-     * Use this method to delete a group sticker set from a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Use the field <em>can_set_sticker_set</em> optionally returned in <a href="https://core.telegram.org/bots/api#getchat">getChat</a> requests to check if the bot can use this method. Returns <em>True</em> on success.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target supergroup (in the format <code>@supergroupusername</code>)</td>
-     * </tr>
-     * </table>
+     * Use this method to delete a group sticker set from a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Use the field can_set_sticker_set optionally returned in <a href="https://core.telegram.org/bots/api#getchat">getChat</a> requests to check if the bot can use this method. Returns True on success. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target supergroup (in the format <code>@supergroupusername</code>)
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -820,39 +726,33 @@ class Telegram
     /// Send Media Group
 
     /**
-     * Use this method to send a group of photos or videos as an album. On success, an array of the sent <a href="https://core.telegram.org/bots/api#message">Messages</a> is returned.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>media</td>
-     * <td>Array of <a href="https://core.telegram.org/bots/api#inputmedia">InputMedia</a></td>
-     * <td>Yes</td>
-     * <td>A JSON-serialized array describing photos and videos to be sent, must include 2–10 items</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the messages <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the messages are a reply, ID of the original message</td>
-     * </tr>
-     * </table>
+     * Use this method to send a group of photos or videos as an album. On success, an array of the sent <a href="https://core.telegram.org/bots/api#message">Messages</a> is returned. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * media
+     * Array of <a href="https://core.telegram.org/bots/api#inputmedia">InputMedia</a>
+     * Yes
+     * A JSON-serialized array describing photos and videos to be sent, must include 2–10 items
+     * 
+     * disable_notification
+     * Boolean
+     * Optional
+     * Sends the messages <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.
+     * 
+     * reply_to_message_id
+     * Integer
+     * Optional
+     * If the messages are a reply, ID of the original message
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -864,69 +764,58 @@ class Telegram
     /// Send Venue
 
     /**
-     * Use this method to send information about a venue. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>latitude</td>
-     * <td>Float number</td>
-     * <td>Yes</td>
-     * <td>Latitude of the venue</td>
-     * </tr>
-     * <tr>
-     * <td>longitude</td>
-     * <td>Float number</td>
-     * <td>Yes</td>
-     * <td>Longitude of the venue</td>
-     * </tr>
-     * <tr>
-     * <td>title</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Name of the venue</td>
-     * </tr>
-     * <tr>
-     * <td>address</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Address of the venue</td>
-     * </tr>
-     * <tr>
-     * <td>foursquare_id</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Foursquare identifier of the venue</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. iOS users will not receive a notification, Android users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardhide">ReplyKeyboardHide</a> or <a href="https://core.telegram.org/bots/api#forcereply">ForceReply</a></td>
-     * <td>Optional</td>
-     * <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to hide reply keyboard or to force a reply from the user.</td>
-     * </tr>
-     * </table>
+     * Use this method to send information about a venue. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * latitude
+     * Float number
+     * Yes
+     * Latitude of the venue
+     * 
+     * longitude
+     * Float number
+     * Yes
+     * Longitude of the venue
+     * 
+     * title
+     * String
+     * Yes
+     * Name of the venue
+     * 
+     * address
+     * String
+     * Yes
+     * Address of the venue
+     * 
+     * foursquare_id
+     * String
+     * Optional
+     * Foursquare identifier of the venue
+     * 
+     * disable_notification
+     * Boolean
+     * Optional
+     * Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. iOS users will not receive a notification, Android users will receive a notification with no sound.
+     * 
+     * reply_to_message_id
+     * Integer
+     * Optional
+     * If the message is a reply, ID of the original message
+     * 
+     * reply_markup
+     * <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardhide">ReplyKeyboardHide</a> or <a href="https://core.telegram.org/bots/api#forcereply">ForceReply</a>
+     * Optional
+     * Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to hide reply keyboard or to force a reply from the user.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -935,58 +824,50 @@ class Telegram
         return $this->endpoint('sendVenue', $content);
     }
 
-    //Send contact
-    /**Use this method to send phone contacts. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned.</p> <br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>phone_number</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Contact&#39;s phone number</td>
-     * </tr>
-     * <tr>
-     * <td>first_name</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Contact&#39;s first name</td>
-     * </tr>
-     * <tr>
-     * <td>last_name</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Contact&#39;s last name</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. iOS users will not receive a notification, Android users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardhide">ReplyKeyboardHide</a> or <a href="https://core.telegram.org/bots/api#forcereply">ForceReply</a></td>
-     * <td>Optional</td>
-     * <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to hide keyboard or to force a reply from the user.</td>
-     * </tr>
-     * </table>
+    /// Send contact
+    
+    /**Use this method to send phone contacts. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned.</p>  Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * phone_number
+     * String
+     * Yes
+     * Contact&#39;s phone number
+     * 
+     * first_name
+     * String
+     * Yes
+     * Contact&#39;s first name
+     * 
+     * last_name
+     * String
+     * Optional
+     * Contact&#39;s last name
+     * 
+     * disable_notification
+     * Boolean
+     * Optional
+     * Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. iOS users will not receive a notification, Android users will receive a notification with no sound.
+     * 
+     * reply_to_message_id
+     * Integer
+     * Optional
+     * If the message is a reply, ID of the original message
+     * 
+     * reply_markup
+     * <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardhide">ReplyKeyboardHide</a> or <a href="https://core.telegram.org/bots/api#forcereply">ForceReply</a>
+     * Optional
+     * Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to hide keyboard or to force a reply from the user.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply
      */
@@ -1002,27 +883,23 @@ class Telegram
      *
      * Example: The ImageBot needs some time to process a request and upload the image. Instead of sending a text message along the lines of “Retrieving image, please wait…”, the bot may use sendChatAction with action = upload_photo. The user will see a “sending photo” status for the bot.
      *
-     * We only recommend using this method when a response from the bot will take a noticeable amount of time to arrive.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the message recipient — User or GroupChat id</td>
-     * </tr>
-     * <tr>
-     * <td>action</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Type of action to broadcast. Choose one, depending on what the user is about to receive: <em>typing</em> for text messages, <em>upload_photo</em> for photos, <em>record_video</em> or <em>upload_video</em> for videos, <em>record_audio</em> or <em>upload_audio</em> for audio files, <em>upload_document</em> for general files, <em>find_location</em> for location data.</td>
-     * </tr>
-     * </table>
+     * We only recommend using this method when a response from the bot will take a noticeable amount of time to arrive. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer
+     * Yes
+     * Unique identifier for the message recipient — User or GroupChat id
+     * 
+     * action
+     * String
+     * Yes
+     * Type of action to broadcast. Choose one, depending on what the user is about to receive: typing for text messages, upload_photo for photos, record_video or upload_video for videos, record_audio or upload_audio for audio files, upload_document for general files, find_location for location data.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1034,33 +911,28 @@ class Telegram
     /// Get a list of profile pictures for a user
 
     /**
-     *  Use this method to get a list of profile pictures for a user. Returns a UserProfilePhotos object.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>user_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier of the target user</td>
-     * </tr>
-     * <tr>
-     * <td>offset</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Sequential number of the first photo to be returned. By default, all photos are returned.</td>
-     * </tr>
-     * <tr>
-     * <td>limit</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Limits the number of photos to be retrieved. Values between 1—100 are accepted. Defaults to 100.</td>
-     * </tr>
-     * </table>
+     *  Use this method to get a list of profile pictures for a user. Returns a UserProfilePhotos object. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * user_id
+     * Integer
+     * Yes
+     * Unique identifier of the target user
+     * 
+     * offset
+     * Integer
+     * Optional
+     * Sequential number of the first photo to be returned. By default, all photos are returned.
+     * 
+     * limit
+     * Integer
+     * Optional
+     * Limits the number of photos to be retrieved. Values between 1—100 are accepted. Defaults to 100.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1086,28 +958,24 @@ class Telegram
     /// Kick Chat Member
 
     /**
-     * Use this method to kick a user from a group or a supergroup. In the case of supergroups, the user will not be able to return to the group on their own using invite links, etc., unless <a href="https://core.telegram.org/bots/api#unbanchatmember">unbanned</a> first. The bot must be an administrator in the group for this to work. Returns <em>True</em> on success.<br>
-     * Note: This will method only work if the \˜All Members Are Admins\' setting is off in the target group. Otherwise members may only be removed by the group&#39;s creator or by the member that added them.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target group or username of the target supergroup (in the format \c \@supergroupusername)</td>
-     * </tr>
-     * <tr>
-     * <td>user_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier of the target user</td>
-     * </tr>
-     * </table>
+     * Use this method to kick a user from a group or a supergroup. In the case of supergroups, the user will not be able to return to the group on their own using invite links, etc., unless <a href="https://core.telegram.org/bots/api#unbanchatmember">unbanned</a> first. The bot must be an administrator in the group for this to work. Returns True on success.<br>
+     * Note: This will method only work if the \˜All Members Are Admins\' setting is off in the target group. Otherwise members may only be removed by the group&#39;s creator or by the member that added them. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target group or username of the target supergroup (in the format \c \@supergroupusername)
+     * 
+     * user_id
+     * Integer
+     * Yes
+     * Unique identifier of the target user
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1119,21 +987,18 @@ class Telegram
     /// Leave Chat
 
     /**
-     * Use this method for your bot to leave a group, supergroup or channel. Returns <em>True</em> on success.</p> <br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * </table>
+     * Use this method for your bot to leave a group, supergroup or channel. Returns True on success.</p>  Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target supergroup or channel (in the format \c \@channelusername)
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1145,27 +1010,23 @@ class Telegram
     /// Unban Chat Member
 
     /**
-     * Use this method to unban a previously kicked user in a supergroup. The user will <strong>not</strong> return to the group automatically, but will be able to join via link, etc. The bot must be an administrator in the group for this to work. Returns <em>True</em> on success.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target group or username of the target supergroup (in the format <code>@supergroupusername</code>)</td>
-     * </tr>
-     * <tr>
-     * <td>user_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier of the target user</td>
-     * </tr>
-     * </table>
+     * Use this method to unban a previously kicked user in a supergroup. The user will not return to the group automatically, but will be able to join via link, etc. The bot must be an administrator in the group for this to work. Returns True on success. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target group or username of the target supergroup (in the format <code>@supergroupusername</code>)
+     * 
+     * user_id
+     * Integer
+     * Yes
+     * Unique identifier of the target user
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1177,21 +1038,18 @@ class Telegram
     /// Get Chat Information
 
     /**
-     * Use this method to get up to date information about the chat (current name of the user for one-on-one conversations, current username of a user, group or channel, etc.). Returns a <a href="https://core.telegram.org/bots/api#chat">Chat</a> object on success.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * </table>
+     * Use this method to get up to date information about the chat (current name of the user for one-on-one conversations, current username of a user, group or channel, etc.). Returns a <a href="https://core.telegram.org/bots/api#chat">Chat</a> object on success. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target supergroup or channel (in the format \c \@channelusername)
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1201,21 +1059,18 @@ class Telegram
     }
 
     /**
-     * Use this method to get a list of administrators in a chat. On success, returns an Array of <a href="https://core.telegram.org/bots/api#chatmember">ChatMember</a> objects that contains information about all chat administrators except other bots. If the chat is a group or a supergroup and no administrators were appointed, only the creator will be returned.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * </table>
+     * Use this method to get a list of administrators in a chat. On success, returns an Array of <a href="https://core.telegram.org/bots/api#chatmember">ChatMember</a> objects that contains information about all chat administrators except other bots. If the chat is a group or a supergroup and no administrators were appointed, only the creator will be returned. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target supergroup or channel (in the format \c \@channelusername)
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1225,21 +1080,18 @@ class Telegram
     }
 
     /**
-     * Use this method to get the number of members in a chat. Returns <em>Int</em> on success.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * </table>
+     * Use this method to get the number of members in a chat. Returns Int on success. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target supergroup or channel (in the format \c \@channelusername)
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1249,27 +1101,23 @@ class Telegram
     }
 
     /**
-     * Use this method to get information about a member of a chat. Returns a <a href="https://core.telegram.org/bots/api#chatmember">ChatMember</a> object on success.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target supergroup or channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>user_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier of the target user</td>
-     * </tr>
-     * </table>
+     * Use this method to get information about a member of a chat. Returns a <a href="https://core.telegram.org/bots/api#chatmember">ChatMember</a> object on success. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target supergroup or channel (in the format \c \@channelusername)
+     * 
+     * user_id
+     * Integer
+     * Yes
+     * Unique identifier of the target user
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1279,57 +1127,48 @@ class Telegram
     }
 
     /**
-     * Use this method to send answers to an inline query. On success, <em>True</em> is returned.<br>No more than <strong>50</strong> results per query are allowed.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>inline_query_id</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the answered query</td>
-     * </tr>
-     * <tr>
-     * <td>results</td>
-     * <td>Array of <a href="https://core.telegram.org/bots/api#inlinequeryresult">InlineQueryResult</a></td>
-     * <td>Yes</td>
-     * <td>A JSON-serialized array of results for the inline query</td>
-     * </tr>
-     * <tr>
-     * <td>cache_time</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>The maximum amount of time in seconds that the result of the inline query may be cached on the server. Defaults to 300.</td>
-     * </tr>
-     * <tr>
-     * <td>is_personal</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Pass <em>True</em>, if results may be cached on the server side only for the user that sent the query. By default, results may be returned to any user who sends the same query</td>
-     * </tr>
-     * <tr>
-     * <td>next_offset</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Pass the offset that a client should send in the next query with the same text to receive more results. Pass an empty string if there are no more results or if you donâ€˜t support pagination. Offset length canâ€™t exceed 64 bytes.</td>
-     * </tr>
-     * <tr>
-     * <td>switch_pm_text</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>If passed, clients will display a button with specified text that switches the user to a private chat with the bot and sends the bot a start message with the parameter <em>switch_pm_parameter</em></td>
-     * </tr>
-     * <tr>
-     * <td>switch_pm_parameter</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Parameter for the start message sent to the bot when user presses the switch button<br><br><em>Example:</em> An inline bot that sends YouTube videos can ask the user to connect the bot to their YouTube account to adapt search results accordingly. To do this, it displays a â€˜Connect your YouTube accountâ€™ button above the results, or even before showing any. The user presses the button, switches to a private chat with the bot and, in doing so, passes a start parameter that instructs the bot to return an oauth link. Once done, the bot can offer a <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup"><em>switch_inline</em></a> button so that the user can easily return to the chat where they wanted to use the bot&#39;s inline capabilities.</td>
-     * </tr>
-     * </table>
+     * Use this method to send answers to an inline query. On success, True is returned.<br>No more than 50 results per query are allowed. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * inline_query_id
+     * String
+     * Yes
+     * Unique identifier for the answered query
+     * 
+     * results
+     * Array of <a href="https://core.telegram.org/bots/api#inlinequeryresult">InlineQueryResult</a>
+     * Yes
+     * A JSON-serialized array of results for the inline query
+     * 
+     * cache_time
+     * Integer
+     * Optional
+     * The maximum amount of time in seconds that the result of the inline query may be cached on the server. Defaults to 300.
+     * 
+     * is_personal
+     * Boolean
+     * Optional
+     * Pass True, if results may be cached on the server side only for the user that sent the query. By default, results may be returned to any user who sends the same query
+     * 
+     * next_offset
+     * String
+     * Optional
+     * Pass the offset that a client should send in the next query with the same text to receive more results. Pass an empty string if there are no more results or if you donâ€˜t support pagination. Offset length canâ€™t exceed 64 bytes.
+     * 
+     * switch_pm_text
+     * String
+     * Optional
+     * If passed, clients will display a button with specified text that switches the user to a private chat with the bot and sends the bot a start message with the parameter switch_pm_parameter
+     * 
+     * switch_pm_parameter
+     * String
+     * Optional
+     * Parameter for the start message sent to the bot when user presses the switch button<br><br>Example: An inline bot that sends YouTube videos can ask the user to connect the bot to their YouTube account to adapt search results accordingly. To do this, it displays a â€˜Connect your YouTube accountâ€™ button above the results, or even before showing any. The user presses the button, switches to a private chat with the bot and, in doing so, passes a start parameter that instructs the bot to return an oauth link. Once done, the bot can offer a <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">switch_inline</a> button so that the user can easily return to the chat where they wanted to use the bot&#39;s inline capabilities.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1341,57 +1180,48 @@ class Telegram
     /// Set Game Score
 
     /**
-     * Use this method to set the score of the specified user in a game. On success, if the message was sent by the bot, returns the edited Message, otherwise returns <em>True</em>. Returns an error, if the new score is not greater than the user&#39;s current score in the chat and <em>force</em> is <em>False</em>.<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>user_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>User identifier</td>
-     * </tr>
-     * <tr>
-     * <td>score</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>New score, must be non-negative</td>
-     * </tr>
-     * <tr>
-     * <td>force</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Pass True, if the high score is allowed to decrease. This can be useful when fixing mistakes or banning cheaters</td>
-     * </tr>
-     * <tr>
-     * <td>disable_edit_message</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Pass True, if the game message should not be automatically edited to include the current scoreboard</td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat</td>
-     * </tr>
-     * <tr>
-     * <td>message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Identifier of the sent message</td>
-     * </tr>
-     * <tr>
-     * <td>inline_message_id</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Required if <em>chat_id</em> and <em>message_id</em> are not specified. Identifier of the inline message</td>
-     * </tr>
-     * </table>
+     * Use this method to set the score of the specified user in a game. On success, if the message was sent by the bot, returns the edited Message, otherwise returns True. Returns an error, if the new score is not greater than the user&#39;s current score in the chat and force is False. 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * user_id
+     * Integer
+     * Yes
+     * User identifier
+     * 
+     * score
+     * Integer
+     * Yes
+     * New score, must be non-negative
+     * 
+     * force
+     * Boolean
+     * Optional
+     * Pass True, if the high score is allowed to decrease. This can be useful when fixing mistakes or banning cheaters
+     * 
+     * disable_edit_message
+     * Boolean
+     * Optional
+     * Pass True, if the game message should not be automatically edited to include the current scoreboard
+     * 
+     * chat_id
+     * Integer
+     * Optional
+     * Required if inline_message_id is not specified. Unique identifier for the target chat
+     * 
+     * message_id
+     * Integer
+     * Optional
+     * Required if inline_message_id is not specified. Identifier of the sent message
+     * 
+     * inline_message_id
+     * String
+     * Optional
+     * Required if chat_id and message_id are not specified. Identifier of the inline message
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1403,33 +1233,28 @@ class Telegram
     /// Answer a callback Query
 
     /**
-     * Use this method to send answers to callback queries sent from inline keyboards. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, <em>True</em> is returned.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>callback_query_id</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the query to be answered</td>
-     * </tr>
-     * <tr>
-     * <td>text</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Text of the notification. If not specified, nothing will be shown to the user</td>
-     * </tr>
-     * <tr>
-     * <td>show_alert</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>If <em>true</em>, an alert will be shown by the client instead of a notification at the top of the chat screen. Defaults to <em>false</em>.</td>
-     * </tr>
-     * </table>
+     * Use this method to send answers to callback queries sent from inline keyboards. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, True is returned. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * callback_query_id
+     * String
+     * Yes
+     * Unique identifier for the query to be answered
+     * 
+     * text
+     * String
+     * Optional
+     * Text of the notification. If not specified, nothing will be shown to the user
+     * 
+     * show_alert
+     * Boolean
+     * Optional
+     * If true, an alert will be shown by the client instead of a notification at the top of the chat screen. Defaults to false.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1439,57 +1264,48 @@ class Telegram
     }
 
     /**
-     * Use this method to edit text messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise <em>True</em> is returned.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>No</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>message_id</td>
-     * <td>Integer</td>
-     * <td>No</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier of the sent message</td>
-     * </tr>
-     * <tr>
-     * <td>inline_message_id</td>
-     * <td>String</td>
-     * <td>No</td>
-     * <td>Required if <em>chat_id</em> and <em>message_id</em> are not specified. Identifier of the inline message</td>
-     * </tr>
-     * <tr>
-     * <td>text</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>New text of the message</td>
-     * </tr>
-     * <tr>
-     * <td>parse_mode</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Send <a href="https://core.telegram.org/bots/api#markdown-style"><em>Markdown</em></a> or <a href="https://core.telegram.org/bots/api#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="https://core.telegram.org/bots/api#formatting-options">bold, italic, fixed-width text or inline URLs</a> in your bot&#39;s message.</td>
-     * </tr>
-     * <tr>
-     * <td>disable_web_page_preview</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Disables link previews for links in this message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-     * <td>Optional</td>
-     * <td>A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>.</td>
-     * </tr>
-     * </table>
+     * Use this method to edit text messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * No
+     * Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * message_id
+     * Integer
+     * No
+     * Required if inline_message_id is not specified. Unique identifier of the sent message
+     * 
+     * inline_message_id
+     * String
+     * No
+     * Required if chat_id and message_id are not specified. Identifier of the inline message
+     * 
+     * text
+     * String
+     * Yes
+     * New text of the message
+     * 
+     * parse_mode
+     * String
+     * Optional
+     * Send <a href="https://core.telegram.org/bots/api#markdown-style">Markdown</a> or <a href="https://core.telegram.org/bots/api#html-style">HTML</a>, if you want Telegram apps to show <a href="https://core.telegram.org/bots/api#formatting-options">bold, italic, fixed-width text or inline URLs</a> in your bot&#39;s message.
+     * 
+     * disable_web_page_preview
+     * Boolean
+     * Optional
+     * Disables link previews for links in this message
+     * 
+     * reply_markup
+     * <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a>
+     * Optional
+     * A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1499,45 +1315,38 @@ class Telegram
     }
 
     /**
-     * Use this method to edit captions of messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise <em>True</em> is returned.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>No</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>message_id</td>
-     * <td>Integer</td>
-     * <td>No</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier of the sent message</td>
-     * </tr>
-     * <tr>
-     * <td>inline_message_id</td>
-     * <td>String</td>
-     * <td>No</td>
-     * <td>Required if <em>chat_id</em> and <em>message_id</em> are not specified. Identifier of the inline message</td>
-     * </tr>
-     * <tr>
-     * <td>caption</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>New caption of the message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-     * <td>Optional</td>
-     * <td>A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>.</td>
-     * </tr>
-     * </table>
+     * Use this method to edit captions of messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * No
+     * Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * message_id
+     * Integer
+     * No
+     * Required if inline_message_id is not specified. Unique identifier of the sent message
+     * 
+     * inline_message_id
+     * String
+     * No
+     * Required if chat_id and message_id are not specified. Identifier of the inline message
+     * 
+     * caption
+     * String
+     * Optional
+     * New caption of the message
+     * 
+     * reply_markup
+     * <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a>
+     * Optional
+     * A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1547,39 +1356,33 @@ class Telegram
     }
 
     /**
-     * Use this method to edit only the reply markup of messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>).  On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise <em>True</em> is returned.<br/>Values inside $content:<br/>
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>No</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>message_id</td>
-     * <td>Integer</td>
-     * <td>No</td>
-     * <td>Required if <em>inline_message_id</em> is not specified. Unique identifier of the sent message</td>
-     * </tr>
-     * <tr>
-     * <td>inline_message_id</td>
-     * <td>String</td>
-     * <td>No</td>
-     * <td>Required if <em>chat_id</em> and <em>message_id</em> are not specified. Identifier of the inline message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-     * <td>Optional</td>
-     * <td>A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>.</td>
-     * </tr>
-     * </table>
+     * Use this method to edit only the reply markup of messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>).  On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content: 
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * No
+     * Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * message_id
+     * Integer
+     * No
+     * Required if inline_message_id is not specified. Unique identifier of the sent message
+     * 
+     * inline_message_id
+     * String
+     * No
+     * Required if chat_id and message_id are not specified. Identifier of the inline message
+     * 
+     * reply_markup
+     * <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a>
+     * Optional
+     * A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1812,22 +1615,27 @@ class Telegram
         return $this->data['callback_query']['data'];
     }
 
-    /// Get the Get the message of the current callback
+    /// Get the message of the current callback
 
     /**
-     * \return the Message.
+     * \return the Callback Message.
      */
     public function Callback_Message()
     {
         return $this->data['callback_query']['message'];
     }
 
+    /// Get the message_id of the current callback
+
+    /**
+     * \return the Callback MessageID.
+     */
     public function Callback_MessageID()
     {
         return $this->data['callback_query']['message']['message_id'];
     }
 
-    /// Get the Get the chati_id of the current callback
+    /// Get the chat_id of the current callback
 
     /**
      * \deprecated Use ChatId() instead
@@ -2125,140 +1933,117 @@ class Telegram
 
     /**
      * Use this method to send invoices. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target private chat</td>
-     * </tr>
-     * <tr>
-     * <td>title</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Product name</td>
-     * </tr>
-     * <tr>
-     * <td>description</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Product description</td>
-     * </tr>
-     * <tr>
-     * <td>payload</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Bot-defined invoice payload, 1-128 bytes. This will not be displayed to the user, use for your internal processes.</td>
-     * </tr>
-     * <tr>
-     * <td>provider_token</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Payments provider token, obtained via <a href="/">Botfather</a></td>
-     * </tr>
-     * <tr>
-     * <td>start_parameter</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Unique deep-linking parameter that can be used to generate this invoice when used as a start parameter</td>
-     * </tr>
-     * <tr>
-     * <td>currency</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Three-letter ISO 4217 currency code, see <a href="https://core.telegram.org/bots/payments#supported-currencies">more on currencies</a></td>
-     * </tr>
-     * <tr>
-     * <td>prices</td>
-     * <td>Array of <a href="https://core.telegram.org/bots/api#labeledprice">LabeledPrice</a></td>
-     * <td>Yes</td>
-     * <td>Price breakdown, a list of components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.)</td>
-     * </tr>
-     * <tr>
-     * <td>provider_data</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>JSON-encoded data about the invoice, which will be shared with the payment provider. A detailed description of required fields should be provided by the payment provider.</td>
-     * </tr>
-     * <tr>
-     * <td>photo_url</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>URL of the product photo for the invoice. Can be a photo of the goods or a marketing image for a service. People like it better when they see what they are paying for.</td>
-     * </tr>
-     * <tr>
-     * <td>photo_size</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Photo size</td>
-     * </tr>
-     * <tr>
-     * <td>photo_width</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Photo width</td>
-     * </tr>
-     * <tr>
-     * <td>photo_height</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Photo height</td>
-     * </tr>
-     * <tr>
-     * <td>need_name</td>
-     * <td>Bool</td>
-     * <td>Optional</td>
-     * <td>Pass <em>True</em>, if you require the user's full name to complete the order</td>
-     * </tr>
-     * <tr>
-     * <td>need_phone_number</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Pass <em>True</em>, if you require the user's phone number to complete the order</td>
-     * </tr>
-     * <tr>
-     * <td>need_email</td>
-     * <td>Bool</td>
-     * <td>Optional</td>
-     * <td>Pass <em>True</em>, if you require the user's email to complete the order</td>
-     * </tr>
-     * <tr>
-     * <td>need_shipping_address</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Pass <em>True</em>, if you require the user's shipping address to complete the order</td>
-     * </tr>
-     * <tr>
-     * <td>is_flexible</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Pass <em>True</em>, if the final price depends on the shipping method</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-     * <td>Optional</td>
-     * <td>A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>. If empty, one 'Pay <code>total price</code>' button will be shown. If not empty, the first button must be a Pay button.</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer
+     * Yes
+     * Unique identifier for the target private chat
+     * 
+     * title
+     * String
+     * Yes
+     * Product name
+     * 
+     * description
+     * String
+     * Yes
+     * Product description
+     * 
+     * payload
+     * String
+     * Yes
+     * Bot-defined invoice payload, 1-128 bytes. This will not be displayed to the user, use for your internal processes.
+     * 
+     * provider_token
+     * String
+     * Yes
+     * Payments provider token, obtained via <a href="/">Botfather</a>
+     * 
+     * start_parameter
+     * String
+     * Yes
+     * Unique deep-linking parameter that can be used to generate this invoice when used as a start parameter
+     * 
+     * currency
+     * String
+     * Yes
+     * Three-letter ISO 4217 currency code, see <a href="https://core.telegram.org/bots/payments#supported-currencies">more on currencies</a>
+     * 
+     * prices
+     * Array of <a href="https://core.telegram.org/bots/api#labeledprice">LabeledPrice</a>
+     * Yes
+     * Price breakdown, a list of components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.)
+     * 
+     * provider_data
+     * String
+     * Optional
+     * JSON-encoded data about the invoice, which will be shared with the payment provider. A detailed description of required fields should be provided by the payment provider.
+     * 
+     * photo_url
+     * String
+     * Optional
+     * URL of the product photo for the invoice. Can be a photo of the goods or a marketing image for a service. People like it better when they see what they are paying for.
+     * 
+     * photo_size
+     * Integer
+     * Optional
+     * Photo size
+     * 
+     * photo_width
+     * Integer
+     * Optional
+     * Photo width
+     * 
+     * photo_height
+     * Integer
+     * Optional
+     * Photo height
+     * 
+     * need_name
+     * Bool
+     * Optional
+     * Pass True, if you require the user's full name to complete the order
+     * 
+     * need_phone_number
+     * Boolean
+     * Optional
+     * Pass True, if you require the user's phone number to complete the order
+     * 
+     * need_email
+     * Bool
+     * Optional
+     * Pass True, if you require the user's email to complete the order
+     * 
+     * need_shipping_address
+     * Boolean
+     * Optional
+     * Pass True, if you require the user's shipping address to complete the order
+     * 
+     * is_flexible
+     * Boolean
+     * Optional
+     * Pass True, if the final price depends on the shipping method
+     * 
+     * disable_notification
+     * Boolean
+     * Optional
+     * Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.
+     * 
+     * reply_to_message_id
+     * Integer
+     * Optional
+     * If the message is a reply, ID of the original message
+     * 
+     * reply_markup
+     * <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a>
+     * Optional
+     * A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>. If empty, one 'Pay <code>total price</code>' button will be shown. If not empty, the first button must be a Pay button.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2270,39 +2055,33 @@ class Telegram
     /// Answer a shipping query
 
     /**
-     * Once the user has confirmed their payment and shipping details, the Bot API sends the final confirmation in the form of an <a href="https://core.telegram.org/bots/api#updates">Update</a> with the field <em>pre_checkout_query</em>. Use this method to respond to such pre-checkout queries. On success, True is returned. <strong>Note:</strong> The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>shipping_query_id</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the query to be answered</td>
-     * </tr>
-     * <tr>
-     * <td>ok</td>
-     * <td>Boolean</td>
-     * <td>Yes</td>
-     * <td>Specify True if delivery to the specified address is possible and False if there are any problems (for example, if delivery to the specified address is not possible)</td>
-     * </tr>
-     * <tr>
-     * <td>shipping_options</td>
-     * <td>Array of <a href="https://core.telegram.org/bots/api#shippingoption">ShippingOption</a></td>
-     * <td>Optional</td>
-     * <td>Required if <em>ok</em> is True. A JSON-serialized array of available shipping options.</td>
-     * </tr>
-     * <tr>
-     * <td>error_message</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Required if <em>ok</em> is False. Error message in human readable form that explains why it is impossible to complete the order (e.g. "Sorry, delivery to your desired address is unavailable'). Telegram will display this message to the user.</td>
-     * </tr>
-     * </table>
+     * Once the user has confirmed their payment and shipping details, the Bot API sends the final confirmation in the form of an <a href="https://core.telegram.org/bots/api#updates">Update</a> with the field pre_checkout_query. Use this method to respond to such pre-checkout queries. On success, True is returned. Note: The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent.
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * shipping_query_id
+     * String
+     * Yes
+     * Unique identifier for the query to be answered
+     * 
+     * ok
+     * Boolean
+     * Yes
+     * Specify True if delivery to the specified address is possible and False if there are any problems (for example, if delivery to the specified address is not possible)
+     * 
+     * shipping_options
+     * Array of <a href="https://core.telegram.org/bots/api#shippingoption">ShippingOption</a>
+     * Optional
+     * Required if ok is True. A JSON-serialized array of available shipping options.
+     * 
+     * error_message
+     * String
+     * Optional
+     * Required if ok is False. Error message in human readable form that explains why it is impossible to complete the order (e.g. "Sorry, delivery to your desired address is unavailable'). Telegram will display this message to the user.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2314,33 +2093,28 @@ class Telegram
     /// Answer a PreCheckout query
 
     /**
-     * Once the user has confirmed their payment and shipping details, the Bot API sends the final confirmation in the form of an <a href="https://core.telegram.org/bots/api#">Update</a> with the field <em>pre_checkout_query</em>. Use this method to respond to such pre-checkout queries. On success, True is returned. <strong>Note:</strong> The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>pre_checkout_query_id</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the query to be answered</td>
-     * </tr>
-     * <tr>
-     * <td>ok</td>
-     * <td>Boolean</td>
-     * <td>Yes</td>
-     * <td>Specify <em>True</em> if everything is alright (goods are available, etc.) and the bot is ready to proceed with the order. Use <em>False</em> if there are any problems.</td>
-     * </tr>
-     * <tr>
-     * <td>error_message</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Required if <em>ok</em> is <em>False</em>. Error message in human readable form that explains the reason for failure to proceed with the checkout (e.g. "Sorry, somebody just bought the last of our amazing black T-shirts while you were busy filling out your payment details. Please choose a different color or garment!"). Telegram will display this message to the user.</td>
-     * </tr>
-     * </table>
+     * Once the user has confirmed their payment and shipping details, the Bot API sends the final confirmation in the form of an <a href="https://core.telegram.org/bots/api#">Update</a> with the field pre_checkout_query. Use this method to respond to such pre-checkout queries. On success, True is returned. Note: The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent.
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * pre_checkout_query_id
+     * String
+     * Yes
+     * Unique identifier for the query to be answered
+     * 
+     * ok
+     * Boolean
+     * Yes
+     * Specify True if everything is alright (goods are available, etc.) and the bot is ready to proceed with the order. Use False if there are any problems.
+     * 
+     * error_message
+     * String
+     * Optional
+     * Required if ok is False. Error message in human readable form that explains the reason for failure to proceed with the checkout (e.g. "Sorry, somebody just bought the last of our amazing black T-shirts while you were busy filling out your payment details. Please choose a different color or garment!"). Telegram will display this message to the user.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2353,56 +2127,47 @@ class Telegram
 
     /**
      * As of <a href="https://telegram.org/blog/video-messages-and-telescope">v.4.0</a>, Telegram clients support rounded square mp4 videos of up to 1 minute long. Use this method to send video messages. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>video_note</td>
-     * <td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String</td>
-     * <td>Yes</td>
-     * <td>Video note to send. Pass a file_id as String to send a video note that exists on the Telegram servers (recommended) or upload a new video using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>. Sending video notes by a URL is currently unsupported</td>
-     * </tr>
-     * <tr>
-     * <td>duration</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Duration of sent video in seconds</td>
-     * </tr>
-     * <tr>
-     * <td>length</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>Video width and height</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. iOS users will not receive a notification, Android users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="https://core.telegram.org/bots/api#forcereply">ForceReply</a></td>
-     * <td>Optional</td>
-     * <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * video_note
+     * <a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String
+     * Yes
+     * Video note to send. Pass a file_id as String to send a video note that exists on the Telegram servers (recommended) or upload a new video using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>. Sending video notes by a URL is currently unsupported
+     * 
+     * duration
+     * Integer
+     * Optional
+     * Duration of sent video in seconds
+     * 
+     * length
+     * Integer
+     * Optional
+     * Video width and height
+     * 
+     * disable_notification
+     * Boolean
+     * Optional
+     * Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. iOS users will not receive a notification, Android users will receive a notification with no sound.
+     * 
+     * reply_to_message_id
+     * Integer
+     * Optional
+     * If the message is a reply, ID of the original message
+     * 
+     * reply_markup
+     * <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="https://core.telegram.org/bots/api#forcereply">ForceReply</a>
+     * Optional
+     * Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2415,49 +2180,41 @@ class Telegram
 
     /**
      * Use this method to restrict a user in a supergroup. The bot must be an administrator in the supergroup for this to work and must have the appropriate admin rights. Pass True for all boolean parameters to lift restrictions from a user. Returns True on success.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>photo</td>
-     * <td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String</td>
-     * <td>Yes</td>
-     * <td>Photo to send. Pass a file_id as String to send a photo that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a photo from the Internet, or upload a new photo using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a></td>
-     * </tr>
-     * <tr>
-     * <td>caption</td>
-     * <td>String</td>
-     * <td>Optional</td>
-     * <td>Photo caption (may also be used when resending photos by <em>file_id</em>), 0-200 characters</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
-     * </tr>
-     * <tr>
-     * <td>reply_to_message_id</td>
-     * <td>Integer</td>
-     * <td>Optional</td>
-     * <td>If the message is a reply, ID of the original message</td>
-     * </tr>
-     * <tr>
-     * <td>reply_markup</td>
-     * <td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="https://core.telegram.org/bots/api#forcereply">ForceReply</a></td>
-     * <td>Optional</td>
-     * <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * photo
+     * <a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String
+     * Yes
+     * Photo to send. Pass a file_id as String to send a photo that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a photo from the Internet, or upload a new photo using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>
+     * 
+     * caption
+     * String
+     * Optional
+     * Photo caption (may also be used when resending photos by file_id), 0-200 characters
+     * 
+     * disable_notification
+     * Boolean
+     * Optional
+     * Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.
+     * 
+     * reply_to_message_id
+     * Integer
+     * Optional
+     * If the message is a reply, ID of the original message
+     * 
+     * reply_markup
+     * <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="https://core.telegram.org/bots/api#forcereply">ForceReply</a>
+     * Optional
+     * Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2470,74 +2227,62 @@ class Telegram
 
     /**
      * Use this method to promote or demote a user in a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Pass False for all boolean parameters to demote a user. Returns True on success
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>user_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Unique identifier of the target user</td>
-     * </tr>
-     * <tr>
-     * <td>can_change_info</td>
-     * <td>Boolean</td>
-     * <td>No</td>
-     * <td>Pass True, if the administrator can change chat title, photo and other settings</td>
-     * </tr>
-     * <tr>
-     * <td>can_post_messages</td>
-     * <td>Boolean</td>
-     * <td>No</td>
-     * <td>Pass True, if the administrator can create channel posts, channels only</td>
-     * </tr>
-     * <tr>
-     * <td>can_edit_messages</td>
-     * <td>Boolean</td>
-     * <td>No</td>
-     * <td>Pass True, if the administrator can edit messages of other users, channels only</td>
-     * </tr>
-     * <tr>
-     * <td>can_delete_messages</td>
-     * <td>Boolean</td>
-     * <td>No</td>
-     * <td>Pass True, if the administrator can delete messages of other users</td>
-     * </tr>
-     * <tr>
-     * <td>can_invite_users</td>
-     * <td>Boolean</td>
-     * <td>No</td>
-     * <td>Pass True, if the administrator can invite new users to the chat</td>
-     * </tr>
-     * <tr>
-     * <td>can_restrict_members</td>
-     * <td>Boolean</td>
-     * <td>No</td>
-     * <td>Pass True, if the administrator can restrict, ban or unban chat members</td>
-     * </tr>
-     * <tr>
-     * <td>can_pin_messages</td>
-     * <td>Boolean</td>
-     * <td>No</td>
-     * <td>Pass True, if the administrator can pin messages, supergroups only</td>
-     * </tr>
-     * <tr>
-     * <td>can_promote_members</td>
-     * <td>Boolean</td>
-     * <td>No</td>
-     * <td>Pass True, if the administrator can add new administrators with a subset of his own privileges or demote administrators that he has promoted, directly or indirectly (promoted by administrators that were appointed by him)</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * user_id
+     * Integer
+     * Yes
+     * Unique identifier of the target user
+     * 
+     * can_change_info
+     * Boolean
+     * No
+     * Pass True, if the administrator can change chat title, photo and other settings
+     * 
+     * can_post_messages
+     * Boolean
+     * No
+     * Pass True, if the administrator can create channel posts, channels only
+     * 
+     * can_edit_messages
+     * Boolean
+     * No
+     * Pass True, if the administrator can edit messages of other users, channels only
+     * 
+     * can_delete_messages
+     * Boolean
+     * No
+     * Pass True, if the administrator can delete messages of other users
+     * 
+     * can_invite_users
+     * Boolean
+     * No
+     * Pass True, if the administrator can invite new users to the chat
+     * 
+     * can_restrict_members
+     * Boolean
+     * No
+     * Pass True, if the administrator can restrict, ban or unban chat members
+     * 
+     * can_pin_messages
+     * Boolean
+     * No
+     * Pass True, if the administrator can pin messages, supergroups only
+     * 
+     * can_promote_members
+     * Boolean
+     * No
+     * Pass True, if the administrator can add new administrators with a subset of his own privileges or demote administrators that he has promoted, directly or indirectly (promoted by administrators that were appointed by him)
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2550,20 +2295,17 @@ class Telegram
 
     /**
      * Use this method to export an invite link to a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns exported invite link as String on success.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2576,26 +2318,22 @@ class Telegram
 
     /**
      * Use this method to set a new profile photo for the chat. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note: In regular groups (non-supergroups), this method will only work if the ‘All Members Are Admins’ setting is off in the target group.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>photo</td>
-     * <td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a></td>
-     * <td>Yes</td>
-     * <td>New chat photo, uploaded using multipart/form-data</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * photo
+     * <a href="https://core.telegram.org/bots/api#inputfile">InputFile</a>
+     * Yes
+     * New chat photo, uploaded using multipart/form-data
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2608,20 +2346,17 @@ class Telegram
 
     /**
      * Use this method to delete a chat photo. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note: In regular groups (non-supergroups), this method will only work if the ‘All Members Are Admins’ setting is off in the target group.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2634,26 +2369,22 @@ class Telegram
 
     /**
      * Use this method to change the title of a chat. Titles can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. Note: In regular groups (non-supergroups), this method will only work if the ‘All Members Are Admins’ setting is off in the target group.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>title</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>New chat title, 1-255 characters</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * title
+     * String
+     * Yes
+     * New chat title, 1-255 characters
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2666,26 +2397,22 @@ class Telegram
 
     /**
      * Use this method to change the description of a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>description</td>
-     * <td>String</td>
-     * <td>No</td>
-     * <td>New chat description, 0-255 characters</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * description
+     * String
+     * No
+     * New chat description, 0-255 characters
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2698,32 +2425,27 @@ class Telegram
 
     /**
      * Use this method to pin a message in a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>message_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Identifier of a message to pin</td>
-     * </tr>
-     * <tr>
-     * <td>disable_notification</td>
-     * <td>Boolean</td>
-     * <td>No</td>
-     * <td>Pass <em>True</em>, if it is not necessary to send a notification to all group members about the new pinned message</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * message_id
+     * Integer
+     * Yes
+     * Identifier of a message to pin
+     * 
+     * disable_notification
+     * Boolean
+     * No
+     * Pass True, if it is not necessary to send a notification to all group members about the new pinned message
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2736,20 +2458,17 @@ class Telegram
 
     /**
      * Use this method to unpin a message in a supergroup chat. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2762,20 +2481,17 @@ class Telegram
 
     /**
      * Use this method to get a sticker set. On success, a StickerSet object is returned.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>name</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Short name of the sticker set that is used in <code>t.me/addstickers/</code> URLs (e.g., <em>animals</em>)</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * name
+     * String
+     * Yes
+     * Short name of the sticker set that is used in <code>t.me/addstickers/</code> URLs (e.g., animals)
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2788,26 +2504,22 @@ class Telegram
 
     /**
      * Use this method to upload a .png file with a sticker for later use in createNewStickerSet and addStickerToSet methods (can be used multiple times). Returns the uploaded File on success.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>user_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>User identifier of sticker file owner</td>
-     * </tr>
-     * <tr>
-     * <td>png_sticker</td>
-     * <td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a></td>
-     * <td>Yes</td>
-     * <td><strong>Png</strong> image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a></td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * user_id
+     * Integer
+     * Yes
+     * User identifier of sticker file owner
+     * 
+     * png_sticker
+     * <a href="https://core.telegram.org/bots/api#inputfile">InputFile</a>
+     * Yes
+     * Png image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2820,56 +2532,47 @@ class Telegram
 
     /**
      * Use this method to create new sticker set owned by a user. The bot will be able to edit the created sticker set. Returns True on success.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>user_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>User identifier of created sticker set owner</td>
-     * </tr>
-     * <tr>
-     * <td>name</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Short name of sticker set, to be used in <code>t.me/addstickers/</code> URLs (e.g., <em>animals</em>). Can contain only english letters, digits and underscores. Must begin with a letter, can't contain consecutive underscores and must end in <em>“_by_&lt;bot username&gt;”</em>. <em>&lt;bot_username&gt;</em> is case insensitive. 1-64 characters.</td>
-     * </tr>
-     * <tr>
-     * <td>title</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Sticker set title, 1-64 characters</td>
-     * </tr>
-     * <tr>
-     * <td>png_sticker</td>
-     * <td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String</td>
-     * <td>Yes</td>
-     * <td><strong>Png</strong> image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. Pass a <em>file_id</em> as a String to send a file that already exists on the Telegram servers, pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a></td>
-     * </tr>
-     * <tr>
-     * <td>emojis</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>One or more emoji corresponding to the sticker</td>
-     * </tr>
-     * <tr>
-     * <td>is_masks</td>
-     * <td>Boolean</td>
-     * <td>Optional</td>
-     * <td>Pass <em>True</em>, if a set of mask stickers should be created</td>
-     * </tr>
-     * <tr>
-     * <td>mask_position</td>
-     * <td><a href="https://core.telegram.org/bots/api#maskposition">MaskPosition</a></td>
-     * <td>Optional</td>
-     * <td>Position where the mask should be placed on faces</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * user_id
+     * Integer
+     * Yes
+     * User identifier of created sticker set owner
+     * 
+     * name
+     * String
+     * Yes
+     * Short name of sticker set, to be used in <code>t.me/addstickers/</code> URLs (e.g., animals). Can contain only english letters, digits and underscores. Must begin with a letter, can't contain consecutive underscores and must end in “_by_&lt;bot username&gt;”. &lt;bot_username&gt; is case insensitive. 1-64 characters.
+     * 
+     * title
+     * String
+     * Yes
+     * Sticker set title, 1-64 characters
+     * 
+     * png_sticker
+     * <a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String
+     * Yes
+     * Png image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. Pass a file_id as a String to send a file that already exists on the Telegram servers, pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>
+     * 
+     * emojis
+     * String
+     * Yes
+     * One or more emoji corresponding to the sticker
+     * 
+     * is_masks
+     * Boolean
+     * Optional
+     * Pass True, if a set of mask stickers should be created
+     * 
+     * mask_position
+     * <a href="https://core.telegram.org/bots/api#maskposition">MaskPosition</a>
+     * Optional
+     * Position where the mask should be placed on faces
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2882,44 +2585,37 @@ class Telegram
 
     /**
      * Use this method to add a new sticker to a set created by the bot. Returns True on success.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>user_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>User identifier of sticker set owner</td>
-     * </tr>
-     * <tr>
-     * <td>name</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>Sticker set name</td>
-     * </tr>
-     * <tr>
-     * <td>png_sticker</td>
-     * <td><a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String</td>
-     * <td>Yes</td>
-     * <td><strong>Png</strong> image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. Pass a <em>file_id</em> as a String to send a file that already exists on the Telegram servers, pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a></td>
-     * </tr>
-     * <tr>
-     * <td>emojis</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>One or more emoji corresponding to the sticker</td>
-     * </tr>
-     * <tr>
-     * <td>mask_position</td>
-     * <td><a href="https://core.telegram.org/bots/api#maskposition">MaskPosition</a></td>
-     * <td>Optional</td>
-     * <td>Position where the mask should be placed on faces</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * user_id
+     * Integer
+     * Yes
+     * User identifier of sticker set owner
+     * 
+     * name
+     * String
+     * Yes
+     * Sticker set name
+     * 
+     * png_sticker
+     * <a href="https://core.telegram.org/bots/api#inputfile">InputFile</a> or String
+     * Yes
+     * Png image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. Pass a file_id as a String to send a file that already exists on the Telegram servers, pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files »</a>
+     * 
+     * emojis
+     * String
+     * Yes
+     * One or more emoji corresponding to the sticker
+     * 
+     * mask_position
+     * <a href="https://core.telegram.org/bots/api#maskposition">MaskPosition</a>
+     * Optional
+     * Position where the mask should be placed on faces
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2932,26 +2628,22 @@ class Telegram
 
     /**
      * Use this method to move a sticker in a set created by the bot to a specific position . Returns True on success.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>sticker</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>File identifier of the sticker</td>
-     * </tr>
-     * <tr>
-     * <td>position</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>New sticker position in the set, zero-based</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * sticker
+     * String
+     * Yes
+     * File identifier of the sticker
+     * 
+     * position
+     * Integer
+     * Yes
+     * New sticker position in the set, zero-based
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2964,20 +2656,17 @@ class Telegram
 
     /**
      * Use this method to delete a sticker from a set created by the bot. Returns True on success.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>sticker</td>
-     * <td>String</td>
-     * <td>Yes</td>
-     * <td>File identifier of the sticker</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * sticker
+     * String
+     * Yes
+     * File identifier of the sticker
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -2990,26 +2679,22 @@ class Telegram
 
     /**
      * Use this method to delete a message. A message can only be deleted if it was sent less than 48 hours ago. Any such recently sent outgoing message may be deleted. Additionally, if the bot is an administrator in a group chat, it can delete any message. If the bot is an administrator in a supergroup, it can delete messages from any other user and service messages about people joining or leaving the group (other types of service messages may only be removed by the group creator). In channels, bots can only remove their own messages. Returns True on success.
-     * <table>
-     * <tr>
-     * <td><strong>Parameters</strong></td>
-     * <td><strong>Type</strong></td>
-     * <td><strong>Required</strong></td>
-     * <td><strong>Description</strong></td>
-     * </tr>
-     * <tr>
-     * <td>chat_id</td>
-     * <td>Integer or String</td>
-     * <td>Yes</td>
-     * <td>Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)</td>
-     * </tr>
-     * <tr>
-     * <td>message_id</td>
-     * <td>Integer</td>
-     * <td>Yes</td>
-     * <td>Identifier of the message to delete</td>
-     * </tr>
-     * </table>
+     * 
+     * Parameters
+     * Type
+     * Required
+     * Description
+     * 
+     * chat_id
+     * Integer or String
+     * Yes
+     * Unique identifier for the target chat or username of the target channel (in the format \c \@channelusername)
+     * 
+     * message_id
+     * Integer
+     * Yes
+     * Identifier of the message to delete
+     * 
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
