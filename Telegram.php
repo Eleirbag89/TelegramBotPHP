@@ -1975,12 +1975,16 @@ class Telegram
      * \param $options Array of Array of InlineKeyboardButton; Array of button rows, each represented by an Array of InlineKeyboardButton
      * \return the requested keyboard as Json.
      */
-    public function buildInlineKeyBoard(array $options)
+    public function buildInlineKeyBoard(array $options, $encode = true)
     {
         $replyMarkup = [
             'inline_keyboard' => $options,
         ];
-        $encodedMarkup = json_encode($replyMarkup, true);
+        if($encode) {
+            $encodedMarkup = json_encode($replyMarkup, true);
+        } else {
+            $encodedMarkup = $replyMarkup;
+        }
 
         return $encodedMarkup;
     }
