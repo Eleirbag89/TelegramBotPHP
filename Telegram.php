@@ -1768,7 +1768,11 @@ class Telegram
      */
     public function Inline_Query()
     {
-        return $this->data['inline_query'];
+        if(isset($this->data['inline_query'])) {
+            return @$this->data['inline_query'];
+        } else {
+            return false;
+        }
     }
 
     /// Get the callback_query of the current update
