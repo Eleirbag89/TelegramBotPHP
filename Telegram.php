@@ -192,7 +192,7 @@ class Telegram
     /// Forward a message
 
     /**
-     * Use this method to forward messages of any kind. On success, the sent Message is returned
+     * Use this method to forward messages of any kind. On success, the sent Message is returned.
      *
      * Parameters
      * Type
@@ -826,7 +826,8 @@ class Telegram
 
     /// Send contact
 
-    /**Use this method to send phone contacts. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned.</p> 
+    /**
+     * Use this method to send phone contacts. On success, the sent Message is returned.
      *
      * Parameters
      * Type
@@ -987,7 +988,7 @@ class Telegram
     /// Leave Chat
 
     /**
-     * Use this method for your bot to leave a group, supergroup or channel. Returns True on success.</p> 
+     * Use this method for your bot to leave a group, supergroup or channel. Returns True on success.
      *
      * Parameters
      * Type
