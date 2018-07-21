@@ -1735,8 +1735,10 @@ class Telegram
         if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['message_id'];
         }
-
-        return $this->data['message']['message_id'];
+        if ($type == self::INLINE_QUERY) {
+            return @$this->data['inline_query']['id'];
+        }
+        return @$this->data["message"]["message_id"];
     }
 
     /// Get the reply_to_message message_id of the current message
