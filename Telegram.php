@@ -237,6 +237,7 @@ class Telegram
      */
     public function forwardMessage(array $content)
     {
+        $content['text'] = " " . $content['text'];
         return $this->endpoint('forwardMessage', $content);
     }
 
