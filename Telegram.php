@@ -1799,7 +1799,7 @@ class Telegram
         return $this->data['callback_query']['id'];
     }
 
-    /// Get the Get the data of the current callback
+    /// Get the data of the current callback
 
     /**
      * \deprecated Use Text() instead
