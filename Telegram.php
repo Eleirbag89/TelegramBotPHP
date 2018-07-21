@@ -1678,8 +1678,15 @@ class Telegram
         if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['text'];
         }
-
-        return @$this->data['message']['text'];
+        if ($type == self::INLINE_QUERY) {
+            return @$this->data["inline_query"]["query"];
+        } else {
+            if(isset($this->data["message"]["text"])) {
+                return @$this->data["message"]["text"];
+            } else {
+                return "";
+            }
+        }
     }
 
     public function Caption()
