@@ -76,7 +76,7 @@ class Telegram
     private $data = [];
     private $updates = [];
     private $log_errors;
-    private $proxy;
+    private $proxy = [];
 
     /// Class constructor
 
@@ -84,7 +84,7 @@ class Telegram
      * Create a Telegram instance from the bot token
      * \param $bot_token the bot token
      * \param $log_errors enable or disable the logging
-	 * \param $proxy array with the proxy configuration (url, port, type, auth)
+     * \param $proxy array with the proxy configuration (url, port, type, auth)
      * \return an instance of the class.
      */
     public function __construct($bot_token, $log_errors = true, array $proxy = [])
@@ -92,7 +92,7 @@ class Telegram
         $this->bot_token = $bot_token;
         $this->data = $this->getData();
         $this->log_errors = $log_errors;
-	    $this->proxy = $proxy;
+        $this->proxy = $proxy;
     }
 
     /// Do requests to Telegram Bot API
@@ -1738,6 +1738,7 @@ class Telegram
         if ($type == self::INLINE_QUERY) {
             return @$this->data['inline_query']['id'];
         }
+
         return @$this->data['message']['message_id'];
     }
 
@@ -1862,6 +1863,7 @@ class Telegram
         if ($type == self::INLINE_QUERY) {
             return @$this->data['inline_query']['from']['first_name'];
         }
+
         return @$this->data['message']['from']['first_name'];
     }
 
@@ -1947,6 +1949,7 @@ class Telegram
         if ($type == self::INLINE_QUERY) {
             return @$this->data['inline_query']['from']['id'];
         }
+
         return @$this->data['message']['from']['id'];
     }
 
