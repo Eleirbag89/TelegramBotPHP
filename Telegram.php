@@ -1820,6 +1820,11 @@ class Telegram
         return $this->data['callback_query']['message'];
     }
 
+    public function Callback_MessageID()
+    {
+        return $this->data['callback_query']['message']['message_id'];
+    }
+
     /// Get the Get the chati_id of the current callback
 
     /**
