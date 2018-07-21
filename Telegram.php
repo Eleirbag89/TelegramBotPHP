@@ -63,6 +63,14 @@ class Telegram
      * Constant for type Channel Post.
      */
     const CHANNEL_POST = 'channel_post';
+    /**
+    * Constant for type Contact.
+    */
+    const STICKER = 'sticker';
+    /**
+    * Constant for type Video Note.
+    */
+    const VIDEONOTE = 'video_note';
 
     private $bot_token = '';
     private $data = [];
@@ -3043,6 +3051,12 @@ class Telegram
         }
         if (isset($update['channel_post'])) {
             return self::CHANNEL_POST;
+        }
+        if (isset($update['message']['video_note'])) {
+            return self::VIDEONOTE;
+        }
+        if (isset($update['message']['sticker'])) {
+            return self::STICKER;
         }
 
         return false;
