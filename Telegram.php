@@ -1859,8 +1859,10 @@ class Telegram
         if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['from']['first_name'];
         }
-
-        return @$this->data['message']['from']['first_name'];
+        if ($type == self::INLINE_QUERY) {
+            return @$this->data["inline_query"]["from"]["first_name"];
+        }
+        return @$this->data["message"]["from"]["first_name"];
     }
 
     /// Get the last name of the user
@@ -1876,8 +1878,15 @@ class Telegram
         if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['from']['last_name'];
         }
-
-        return @$this->data['message']['from']['last_name'];
+        if ($type == self::INLINE_QUERY) {
+            return @$this->data["inline_query"]["from"]["last_name"];
+        } else {
+            if(isset($this->data["message"]["from"]["last_name"])) {
+                return @$this->data["message"]["from"]["last_name"];
+            } else {
+                return "";
+            } 
+        }
     }
 
     /// Get the username of the user
@@ -1893,8 +1902,15 @@ class Telegram
         if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['from']['username'];
         }
-
-        return @$this->data['message']['from']['username'];
+        if ($type == self::INLINE_QUERY) {
+            return @$this->data["inline_query"]["from"]["username"];
+        } else {
+            if(isset($this->data["message"]["from"]["username"])) {
+                return @$this->data["message"]["from"]["username"];
+            } else {
+                return "";
+            }
+        }
     }
 
     /// Get the location in the message
@@ -1928,8 +1944,10 @@ class Telegram
         if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['from']['id'];
         }
-
-        return $this->data['message']['from']['id'];
+        if($type == self::INLINE_QUERY) {
+            return @$this->data["inline_query"]["from"]["id"];
+        }
+        return @$this->data["message"]["from"]["id"];
     }
 
     /// Get user's id of current forwarded message
