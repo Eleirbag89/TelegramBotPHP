@@ -193,7 +193,7 @@ class Telegram
     /// Forward a message
 
     /**
-     * Use this method to forward messages of any kind. On success, the sent Message is returned Values inside $content: 
+     * Use this method to forward messages of any kind. On success, the sent Message is returned Values inside $content:
      *
      * Parameters
      * Type
@@ -233,7 +233,7 @@ class Telegram
     /// Send a photo
 
     /**
-     * Use this method to send photos. On success, the sent Message is returned. Values inside $content: 
+     * Use this method to send photos. On success, the sent Message is returned. Values inside $content:
      *
      * Parameters
      * Type
@@ -282,7 +282,7 @@ class Telegram
 
     /**
      * Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.
-     * For sending voice messages, use the sendVoice method instead. Values inside $content: 
+     * For sending voice messages, use the sendVoice method instead. Values inside $content:
      *
      * Parameters
      * Type
@@ -340,7 +340,7 @@ class Telegram
     /// Send a document
 
     /**
-     * Use this method to send general files. On success, the sent Message is returned. Bots can currently send files of any type of up to 50 MB in size, this limit may be changed in the future. Values inside $content: 
+     * Use this method to send general files. On success, the sent Message is returned. Bots can currently send files of any type of up to 50 MB in size, this limit may be changed in the future. Values inside $content:
      *
      * Parameters
      * Type
@@ -388,7 +388,7 @@ class Telegram
     /// Send a sticker
 
     /**
-     * Use this method to send .webp stickers. On success, the sent Message is returned. Values inside $content: 
+     * Use this method to send .webp stickers. On success, the sent Message is returned. Values inside $content:
      *
      * Parameters
      * Type
@@ -426,7 +426,7 @@ class Telegram
     /// Send a video
 
     /**
-     * Use this method to send video files, Telegram clients support mp4 videos (other formats may be sent as Document). On success, the sent Message is returned. Bots can currently send video files of up to 50 MB in size, this limit may be changed in the future. Values inside $content: 
+     * Use this method to send video files, Telegram clients support mp4 videos (other formats may be sent as Document). On success, the sent Message is returned. Bots can currently send video files of up to 50 MB in size, this limit may be changed in the future. Values inside $content:
      *
      * Parameters
      * Type
@@ -489,7 +489,7 @@ class Telegram
     /// Send a voice message
 
     /**
-     *  Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as Audio or Document). On success, the sent Message is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future. Values inside $content: 
+     *  Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as Audio or Document). On success, the sent Message is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future. Values inside $content:
      *
      * Parameters
      * Type
@@ -542,7 +542,7 @@ class Telegram
     /// Send a location
 
     /**
-     *  Use this method to send point on the map. On success, the sent Message is returned. Values inside $content: 
+     *  Use this method to send point on the map. On success, the sent Message is returned. Values inside $content:
      *
      * Parameters
      * Type
@@ -595,7 +595,7 @@ class Telegram
     /// Edit Message Live Location
 
     /**
-     * Use this method to edit live location messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). A location can be edited until its live_period expires or editing is explicitly disabled by a call to <a href="https://core.telegram.org/bots/api#stopmessagelivelocation">stopMessageLiveLocation</a>. On success, if the edited message was sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content: 
+     * Use this method to edit live location messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). A location can be edited until its live_period expires or editing is explicitly disabled by a call to <a href="https://core.telegram.org/bots/api#stopmessagelivelocation">stopMessageLiveLocation</a>. On success, if the edited message was sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content:
      *
      * Parameters
      * Type
@@ -643,7 +643,7 @@ class Telegram
     /// Stop Message Live Location
 
     /**
-     * Use this method to stop updating a live location message sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>) before live_period expires. On success, if the message was sent by the bot, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content: 
+     * Use this method to stop updating a live location message sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>) before live_period expires. On success, if the message was sent by the bot, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content:
      *
      * Parameters
      * Type
@@ -681,7 +681,7 @@ class Telegram
     /// Set Chat Sticker Set
 
     /**
-     * Use this method to set a new group sticker set for a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Use the field can_set_sticker_set optionally returned in <a href="https://core.telegram.org/bots/api#getchat">getChat</a> requests to check if the bot can use this method. Returns True on success. Values inside $content: 
+     * Use this method to set a new group sticker set for a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Use the field can_set_sticker_set optionally returned in <a href="https://core.telegram.org/bots/api#getchat">getChat</a> requests to check if the bot can use this method. Returns True on success. Values inside $content:
      *
      * Parameters
      * Type
@@ -704,7 +704,7 @@ class Telegram
     /// Delete Chat Sticker Set
 
     /**
-     * Use this method to delete a group sticker set from a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Use the field can_set_sticker_set optionally returned in <a href="https://core.telegram.org/bots/api#getchat">getChat</a> requests to check if the bot can use this method. Returns True on success. Values inside $content: 
+     * Use this method to delete a group sticker set from a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Use the field can_set_sticker_set optionally returned in <a href="https://core.telegram.org/bots/api#getchat">getChat</a> requests to check if the bot can use this method. Returns True on success. Values inside $content:
      *
      * Parameters
      * Type
@@ -727,7 +727,7 @@ class Telegram
     /// Send Media Group
 
     /**
-     * Use this method to send a group of photos or videos as an album. On success, an array of the sent <a href="https://core.telegram.org/bots/api#message">Messages</a> is returned. Values inside $content: 
+     * Use this method to send a group of photos or videos as an album. On success, an array of the sent <a href="https://core.telegram.org/bots/api#message">Messages</a> is returned. Values inside $content:
      *
      * Parameters
      * Type
@@ -765,7 +765,7 @@ class Telegram
     /// Send Venue
 
     /**
-     * Use this method to send information about a venue. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned. Values inside $content: 
+     * Use this method to send information about a venue. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned. Values inside $content:
      *
      * Parameters
      * Type
@@ -827,7 +827,7 @@ class Telegram
 
     /// Send contact
     
-    /**Use this method to send phone contacts. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned.</p>  Values inside $content: 
+    /**Use this method to send phone contacts. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned.</p>  Values inside $content:
      *
      * Parameters
      * Type
@@ -884,7 +884,7 @@ class Telegram
      *
      * Example: The ImageBot needs some time to process a request and upload the image. Instead of sending a text message along the lines of “Retrieving image, please wait…”, the bot may use sendChatAction with action = upload_photo. The user will see a “sending photo” status for the bot.
      *
-     * We only recommend using this method when a response from the bot will take a noticeable amount of time to arrive. Values inside $content: 
+     * We only recommend using this method when a response from the bot will take a noticeable amount of time to arrive. Values inside $content:
      *
      * Parameters
      * Type
@@ -912,7 +912,7 @@ class Telegram
     /// Get a list of profile pictures for a user
 
     /**
-     *  Use this method to get a list of profile pictures for a user. Returns a UserProfilePhotos object. Values inside $content: 
+     *  Use this method to get a list of profile pictures for a user. Returns a UserProfilePhotos object. Values inside $content:
      *
      * Parameters
      * Type
@@ -960,7 +960,7 @@ class Telegram
 
     /**
      * Use this method to kick a user from a group or a supergroup. In the case of supergroups, the user will not be able to return to the group on their own using invite links, etc., unless <a href="https://core.telegram.org/bots/api#unbanchatmember">unbanned</a> first. The bot must be an administrator in the group for this to work. Returns True on success.<br>
-     * Note: This will method only work if the \˜All Members Are Admins\' setting is off in the target group. Otherwise members may only be removed by the group&#39;s creator or by the member that added them. Values inside $content: 
+     * Note: This will method only work if the \˜All Members Are Admins\' setting is off in the target group. Otherwise members may only be removed by the group&#39;s creator or by the member that added them. Values inside $content:
      *
      * Parameters
      * Type
@@ -988,7 +988,7 @@ class Telegram
     /// Leave Chat
 
     /**
-     * Use this method for your bot to leave a group, supergroup or channel. Returns True on success.</p>  Values inside $content: 
+     * Use this method for your bot to leave a group, supergroup or channel. Returns True on success.</p>  Values inside $content:
      *
      * Parameters
      * Type
@@ -1011,7 +1011,7 @@ class Telegram
     /// Unban Chat Member
 
     /**
-     * Use this method to unban a previously kicked user in a supergroup. The user will not return to the group automatically, but will be able to join via link, etc. The bot must be an administrator in the group for this to work. Returns True on success. Values inside $content: 
+     * Use this method to unban a previously kicked user in a supergroup. The user will not return to the group automatically, but will be able to join via link, etc. The bot must be an administrator in the group for this to work. Returns True on success. Values inside $content:
      *
      * Parameters
      * Type
@@ -1039,7 +1039,7 @@ class Telegram
     /// Get Chat Information
 
     /**
-     * Use this method to get up to date information about the chat (current name of the user for one-on-one conversations, current username of a user, group or channel, etc.). Returns a <a href="https://core.telegram.org/bots/api#chat">Chat</a> object on success. Values inside $content: 
+     * Use this method to get up to date information about the chat (current name of the user for one-on-one conversations, current username of a user, group or channel, etc.). Returns a <a href="https://core.telegram.org/bots/api#chat">Chat</a> object on success. Values inside $content:
      *
      * Parameters
      * Type
@@ -1060,7 +1060,7 @@ class Telegram
     }
 
     /**
-     * Use this method to get a list of administrators in a chat. On success, returns an Array of <a href="https://core.telegram.org/bots/api#chatmember">ChatMember</a> objects that contains information about all chat administrators except other bots. If the chat is a group or a supergroup and no administrators were appointed, only the creator will be returned. Values inside $content: 
+     * Use this method to get a list of administrators in a chat. On success, returns an Array of <a href="https://core.telegram.org/bots/api#chatmember">ChatMember</a> objects that contains information about all chat administrators except other bots. If the chat is a group or a supergroup and no administrators were appointed, only the creator will be returned. Values inside $content:
      *
      * Parameters
      * Type
@@ -1081,7 +1081,7 @@ class Telegram
     }
 
     /**
-     * Use this method to get the number of members in a chat. Returns Int on success. Values inside $content: 
+     * Use this method to get the number of members in a chat. Returns Int on success. Values inside $content:
      *
      * Parameters
      * Type
@@ -1102,7 +1102,7 @@ class Telegram
     }
 
     /**
-     * Use this method to get information about a member of a chat. Returns a <a href="https://core.telegram.org/bots/api#chatmember">ChatMember</a> object on success. Values inside $content: 
+     * Use this method to get information about a member of a chat. Returns a <a href="https://core.telegram.org/bots/api#chatmember">ChatMember</a> object on success. Values inside $content:
      *
      * Parameters
      * Type
@@ -1128,7 +1128,7 @@ class Telegram
     }
 
     /**
-     * Use this method to send answers to an inline query. On success, True is returned.<br>No more than 50 results per query are allowed. Values inside $content: 
+     * Use this method to send answers to an inline query. On success, True is returned.<br>No more than 50 results per query are allowed. Values inside $content:
      *
      * Parameters
      * Type
@@ -1234,7 +1234,7 @@ class Telegram
     /// Answer a callback Query
 
     /**
-     * Use this method to send answers to callback queries sent from inline keyboards. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, True is returned. Values inside $content: 
+     * Use this method to send answers to callback queries sent from inline keyboards. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, True is returned. Values inside $content:
      *
      * Parameters
      * Type
@@ -1265,7 +1265,7 @@ class Telegram
     }
 
     /**
-     * Use this method to edit text messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content: 
+     * Use this method to edit text messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content:
      *
      * Parameters
      * Type
@@ -1316,7 +1316,7 @@ class Telegram
     }
 
     /**
-     * Use this method to edit captions of messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content: 
+     * Use this method to edit captions of messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>). On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content:
      *
      * Parameters
      * Type
@@ -1357,7 +1357,7 @@ class Telegram
     }
 
     /**
-     * Use this method to edit only the reply markup of messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>).  On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content: 
+     * Use this method to edit only the reply markup of messages sent by the bot or via the bot (for <a href="https://core.telegram.org/bots/api#inline-mode">inline bots</a>).  On success, if edited message is sent by the bot, the edited <a href="https://core.telegram.org/bots/api#message">Message</a> is returned, otherwise True is returned. Values inside $content:
      *
      * Parameters
      * Type
