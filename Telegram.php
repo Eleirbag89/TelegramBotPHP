@@ -1811,7 +1811,7 @@ class Telegram
      * \param $selective Boolean Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's message is a reply (has reply_to_message_id), sender of the original message.
      * \return the requested keyboard as Json.
      */
-    public function buildKeyBoard(array $options, $onetime = false, $resize = true, $selective = true)
+    public function buildKeyboard(array $options, $onetime = false, $resize = true, $selective = true)
     {
         $replyMarkup = [
             'keyboard'          => $options,
@@ -1830,7 +1830,7 @@ class Telegram
      * \param $options Array of Array of InlineKeyboardButton; Array of button rows, each represented by an Array of InlineKeyboardButton
      * \return the requested keyboard as Json.
      */
-    public function buildInlineKeyBoard(array $options, $encode = true)
+    public function buildInlineKeyboard(array $options, $encode = true)
     {
         $replyMarkup = [
             'inline_keyboard' => $options,
@@ -1903,7 +1903,7 @@ class Telegram
      * \param $selective Boolean Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's message is a reply (has reply_to_message_id), sender of the original message.
      * \return the requested keyboard hide as Array.
      */
-    public function buildKeyBoardHide($selective = true)
+    public function buildKeyboardHide($selective = true)
     {
         $replyMarkup = [
             'remove_keyboard' => true,
