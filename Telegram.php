@@ -1494,7 +1494,12 @@ class Telegram
             }
         }
     }
+    
+    /// Get the caption of the current message
 
+    /**
+     * \return the String message's caption.
+     */
     public function Caption()
     {
         return @$this->data['message']['caption'];
