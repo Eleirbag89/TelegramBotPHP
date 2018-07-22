@@ -1494,7 +1494,7 @@ class Telegram
             }
         }
     }
-    
+
     /// Get the caption of the current message
 
     /**
@@ -1788,7 +1788,7 @@ class Telegram
      */
     public function messageFromGroup()
     {
-        if ($this->data['message']['chat']['type'] == 'private') {
+        if ($this->chatType() == 'private') {
             return false;
         }
 
@@ -2801,6 +2801,32 @@ class Telegram
         }
 
         return false;
+    }
+
+    /// Return current chat type
+
+    /**
+     * Return current chat type.
+     *
+     * @return string
+     */
+    public function chatType()
+    {
+        if ($this->data['message']['chat']['type']) {
+            if ($this->data['message']['chat']['type'] == 'private') {
+                return "private";
+            } elseif ($this->data['message']['chat']['type'] == 'group') {
+                return "group";
+            } elseif ($this->data['message']['chat']['type'] == 'supergroup') {
+                return "supergroup";
+            }
+        } else {
+            if ($this->data['channel_post']['chat']['type']) {
+                return "channel";
+            }
+        }
+
+        return true;
     }
 
     private function sendAPIRequest($url, array $content, $post = true)
