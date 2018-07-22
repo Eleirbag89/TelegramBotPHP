@@ -2814,15 +2814,15 @@ class Telegram
     {
         if ($this->data['message']['chat']['type']) {
             if ($this->data['message']['chat']['type'] == 'private') {
-                return "private";
+                return 'private';
             } elseif ($this->data['message']['chat']['type'] == 'group') {
-                return "group";
+                return 'group';
             } elseif ($this->data['message']['chat']['type'] == 'supergroup') {
-                return "supergroup";
+                return 'supergroup';
             }
         } else {
             if ($this->data['channel_post']['chat']['type']) {
-                return "channel";
+                return 'channel';
             }
         }
 
