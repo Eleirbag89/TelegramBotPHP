@@ -1,0 +1,39 @@
+<php
+/**
+ *telegram bot example.
+ *@author  Gabriele Grillo <gabry.grillo@alice.it>
+ *https://github.com/Eleirbag89/TelegramBotPHP
+  */
+  include("Telegram.php");
+    date_default_timezone_set("asia/tehran");
+
+    // Set the bot TOKEN
+    $bot_id = "YOUR-TOKEN";
+    // Instances the class
+    $telegram = new Telegram($bot_id);
+    
+    $result =$telegram->getData();
+
+//Take text and chat_id from the message
+$text            =$telegram->Text();
+$chat_id         =$telegram->Chat();
+$username        =$telegram->Username();
+$name            =$telegram->fristname();
+$family          =$telegram->lastname();
+$callback_data   =$telegram->callback_data();
+$callback_query  =$telegram->callback_query();
+$callback_chat_id=$telegram->callback_chatID();
+$callback_id     =$telegram->callback_ID();
+$message_id      =$telegram->messageID();
+$user_id         =$telegram->UserID();
+
+
+if(!is_null($text) && !is_null($chat_id)){
+
+         $content = array('chat_id' => $chat_id, 'text' => $user_id);
+
+        $telegram->sendMessage(4content);
+
+} 
+
+ 
