@@ -66,7 +66,7 @@ class Telegram
     /**
      * Constant for type animation.
      */
-    const ANIMATION = 'animation'	
+    const ANIMATION = 'animation';
 
     private $bot_token = '';
     private $data = [];
