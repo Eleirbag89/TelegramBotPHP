@@ -48,6 +48,10 @@ class Telegram
      */
     const VOICE = 'voice';
     /**
+     * Constant for type animation.
+     */
+    const ANIMATION = 'animation';	
+    /**
      * Constant for type Document.
      */
     const DOCUMENT = 'document';
@@ -63,10 +67,6 @@ class Telegram
      * Constant for type Channel Post.
      */
     const CHANNEL_POST = 'channel_post';
-    /**
-     * Constant for type animation.
-     */
-    const ANIMATION = 'animation';
 
     private $bot_token = '';
     private $data = [];
