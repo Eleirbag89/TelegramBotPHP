@@ -50,7 +50,7 @@ class Telegram
     /**
      * Constant for type animation.
      */
-    const ANIMATION = 'animation';	
+    const ANIMATION = 'animation';
     /**
      * Constant for type Document.
      */
@@ -72,23 +72,23 @@ class Telegram
     private $data = [];
     private $updates = [];
     private $log_errors;
-	private $proxy;
+    private $proxy;
 
     /// Class constructor
 
     /**
      * Create a Telegram instance from the bot token
      * \param $bot_token the bot token
-	 * \param $log_errors enable or disable the logging
-	 * \param $proxy array with the proxy configuration (url, port, type, auth)
+     * \param $log_errors enable or disable the logging
+     * \param $proxy array with the proxy configuration (url, port, type, auth)
      * \return an instance of the class.
      */
-    public function __construct($bot_token, $log_errors = true, array $proxy=array())
+    public function __construct($bot_token, $log_errors = true, array $proxy = [])
     {
         $this->bot_token = $bot_token;
         $this->data = $this->getData();
         $this->log_errors = $log_errors;
-		$this->proxy = $proxy;
+        $this->proxy = $proxy;
     }
 
     /// Do requests to Telegram Bot API
@@ -3041,13 +3041,13 @@ class Telegram
         }
         if (isset($update['message']['reply_to_message'])) {
             return self::REPLY;
-        }	    
+        }
         if (isset($update['message']['animation'])) {
             return self::ANIMATION;
-        }	    
+        }
         if (isset($update['message']['document'])) {
             return self::DOCUMENT;
-        }	    
+        }
         if (isset($update['channel_post'])) {
             return self::CHANNEL_POST;
         }
@@ -3069,34 +3069,33 @@ class Telegram
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
         }
-// 		echo "inside curl if";
-		if (!empty($this->proxy)) {
-// 			echo "inside proxy if";
-			if (array_key_exists("type", $this->proxy)) {
-				curl_setopt($ch, CURLOPT_PROXYTYPE, $this->proxy["type"]);
-			}
-			
-			if (array_key_exists("auth", $this->proxy)) {
-				curl_setopt($ch, CURLOPT_PROXYUSERPWD, $this->proxy["auth"]);
-			}
-			
-			if (array_key_exists("url", $this->proxy)) {
-// 				echo "Proxy Url";
-				curl_setopt($ch, CURLOPT_PROXY, $this->proxy["url"]);
-			}
-			
-			if (array_key_exists("port", $this->proxy)) {
-// 				echo "Proxy port";
-				curl_setopt($ch, CURLOPT_PROXYPORT, $this->proxy["port"]);
-			}
-			
-		}
+        // 		echo "inside curl if";
+        if (!empty($this->proxy)) {
+            // 			echo "inside proxy if";
+            if (array_key_exists('type', $this->proxy)) {
+                curl_setopt($ch, CURLOPT_PROXYTYPE, $this->proxy['type']);
+            }
+
+            if (array_key_exists('auth', $this->proxy)) {
+                curl_setopt($ch, CURLOPT_PROXYUSERPWD, $this->proxy['auth']);
+            }
+
+            if (array_key_exists('url', $this->proxy)) {
+                // 				echo "Proxy Url";
+                curl_setopt($ch, CURLOPT_PROXY, $this->proxy['url']);
+            }
+
+            if (array_key_exists('port', $this->proxy)) {
+                // 				echo "Proxy port";
+                curl_setopt($ch, CURLOPT_PROXYPORT, $this->proxy['port']);
+            }
+        }
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $result = curl_exec($ch);
         if ($result === false) {
             $result = json_encode(['ok'=>false, 'curl_error_code' => curl_errno($ch), 'curl_error' => curl_error($ch)]);
         }
-		echo $result;
+        echo $result;
         curl_close($ch);
         if ($this->log_errors) {
             if (class_exists('TelegramErrorLogger')) {
