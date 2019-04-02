@@ -416,6 +416,94 @@ class Telegram
     {
         return $this->endpoint('sendDocument', $content);
     }
+	
+    /// Send an animation
+
+    /**
+     * Use this method to send animation files (GIF or H.264/MPEG-4 AVC video without sound). On success, the sent Message is returned. Bots can currently send animation files of up to 50 MB in size, this limit may be changed in the future.<br/>Values inside $content:<br/>
+	* </table>
+	* <tr>
+	* <th>Parameter</th>
+	* <th>Type</th>
+	* <th>Required</th>
+	* <th>Description</th>
+	* </tr>
+	* </thead>
+	* <tbody>
+	* <tr>
+	* <td>chat_id</td>
+	* <td>Integer or String</td>
+	* <td>Yes</td>
+	* <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
+	* </tr>
+	* <tr>
+	* <td>animation</td>
+	* <td><a href="#inputfile">InputFile</a> or String</td>
+	* <td>Yes</td>
+	* <td>Animation to send. Pass a file_id as String to send an animation that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get an animation from the Internet, or upload a new animation using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a></td>
+	* </tr>
+	* <tr>
+	* <td>duration</td>
+	* <td>Integer</td>
+	* <td>Optional</td>
+	* <td>Duration of sent animation in seconds</td>
+	* </tr>
+	* <tr>
+	* <td>width</td>
+	* <td>Integer</td>
+	* <td>Optional</td>
+	* <td>Animation width</td>
+	* </tr>
+	* <tr>
+	* <td>height</td>
+	* <td>Integer</td>
+	* <td>Optional</td>
+	* <td>Animation height</td>
+	* </tr>
+	* <tr>
+	* <td>thumb</td>
+	* <td><a href="#inputfile">InputFile</a> or String</td>
+	* <td>Optional</td>
+	* <td>Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail‘s width and height should not exceed 90. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can’t be reused and can be only uploaded as a new file, so you can pass “attach://&lt;file_attach_name&gt;” if the thumbnail was uploaded using multipart/form-data under &lt;file_attach_name&gt;. <a href="#sending-files">More info on Sending Files »</a></td>
+	* </tr>
+	* <tr>
+	* <td>caption</td>
+	* <td>String</td>
+	* <td>Optional</td>
+	* <td>Animation caption (may also be used when resending animation by <em>file_id</em>), 0-1024 characters</td>
+	* </tr>
+	* <tr>
+	* <td>parse_mode</td>
+	* <td>String</td>
+	* <td>Optional</td>
+	* <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-* options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+	* </tr>
+	* <tr>
+	* <td>disable_notification</td>
+	* <td>Boolean</td>
+	* <td>Optional</td>
+	* <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+	* </tr>
+	* <tr>
+	* <td>reply_to_message_id</td>
+	* <td>Integer</td>
+	* <td>Optional</td>
+	* <td>If the message is a reply, ID of the original message</td>
+	* </tr>
+	* <tr>
+	* <td>reply_markup</td>
+	* <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
+	* <td>Optional</td>
+	* <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
+	* </tr>
+	* </table>
+     * \param $content the request parameters as array
+     * \return the JSON Telegram's reply.
+     */
+    public function sendAnimation(array $content)
+    {
+        return $this->endpoint('sendAnimation', $content);
+    }	
 
     /// Send a sticker
 
