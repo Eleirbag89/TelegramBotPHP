@@ -189,7 +189,15 @@ class Telegram
      */
     public function sendMessage(array $content)
     {
-        return $this->endpoint('sendMessage', $content);
+        $text = $content['text'];
+        do {
+            //Cut the message and send the first message
+            $content['text'] = mb_substr($text, 0, 4096);
+            $response = $this->endpoint('sendMessage', $content);
+            //Prepare the next message
+            $text = mb_substr($text, 4096);
+        } while (mb_strlen($text, 'UTF-8') > 0);
+        return $response;
     }
 
     /// Forward a message
