@@ -11,7 +11,8 @@
     "license": "MIT",
     "minimum-stability": "alpha",
     "require": {
-        "php": ">=5.0"
+        "php": ">=5.0",
+      "ext-mbstring": "*"
     },
     "autoload": {
         "files": ["Telegram.php", "TelegramErrorLogger.php"]
