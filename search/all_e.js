@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['sendanimation',['sendAnimation',['../class_telegram.html#a495012334b9a9e564abcc7b4297b3d27',1,'Telegram']]],
   ['sendaudio',['sendAudio',['../class_telegram.html#a178b081bbab51f83caa31e554b3e2ffe',1,'Telegram']]],
   ['sendchataction',['sendChatAction',['../class_telegram.html#aa8c4c54f8f2fcbb53de050458fb176b7',1,'Telegram']]],
   ['sendcontact',['sendContact',['../class_telegram.html#a5ba4fd675a877d995bb0d7305aa56324',1,'Telegram']]],

@@ -118,6 +118,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a25569ca763bd149891d86b89bc66cf54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a25569ca763bd149891d86b89bc66cf54">sendDocument</a> (array $content)</td></tr>
 <tr class="memdesc:a25569ca763bd149891d86b89bc66cf54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a document.  <a href="#a25569ca763bd149891d86b89bc66cf54">More...</a><br/></td></tr>
 <tr class="separator:a25569ca763bd149891d86b89bc66cf54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a495012334b9a9e564abcc7b4297b3d27"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a495012334b9a9e564abcc7b4297b3d27">sendAnimation</a> (array $content)</td></tr>
+<tr class="memdesc:a495012334b9a9e564abcc7b4297b3d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an animation.  <a href="#a495012334b9a9e564abcc7b4297b3d27">More...</a><br/></td></tr>
+<tr class="separator:a495012334b9a9e564abcc7b4297b3d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a176d232d8e7941184698447902beb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_telegram.html#a0a176d232d8e7941184698447902beb6">sendSticker</a> (array $content)</td></tr>
 <tr class="memdesc:a0a176d232d8e7941184698447902beb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a sticker.  <a href="#a0a176d232d8e7941184698447902beb6">More...</a><br/></td></tr>
 <tr class="separator:a0a176d232d8e7941184698447902beb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2164,6 +2167,82 @@ Values inside $content:<br/>
 <tr>
 <td>reply_markup </td><td><a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="https://core.telegram.org/bots/api#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="https://core.telegram.org/bots/api#forcereply">ForceReply</a> </td><td>Optional </td><td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.  </td></tr>
 </table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON <a class="el" href="class_telegram.html">Telegram</a>'s reply. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a495012334b9a9e564abcc7b4297b3d27"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sendAnimation </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send an animation. </p>
+<p>Use this method to send animation files (GIF or H.264/MPEG-4 AVC video without sound). On success, the sent Message is returned. Bots can currently send animation files of up to 50 MB in size, this limit may be changed in the future.<br/>
+Values inside $content:<br/>
+ </p>
+<p>Parameter </p>
+<p>Type </p>
+<p>Required </p>
+<p>Description  &lt;/thead&gt; &lt;tbody&gt; </p>
+<p>chat_id </p>
+<p>Integer or String </p>
+<p>Yes </p>
+<p>Unique identifier for the target chat or username of the target channel (in the format <code></code>)  </p>
+<p>animation </p>
+<p><a href="#inputfile">InputFile</a> or String </p>
+<p>Yes </p>
+<p>Animation to send. Pass a file_id as String to send an animation that exists on the <a class="el" href="class_telegram.html">Telegram</a> servers (recommended), pass an HTTP URL as a String for <a class="el" href="class_telegram.html">Telegram</a> to get an animation from the Internet, or upload a new animation using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a>  </p>
+<p>duration </p>
+<p>Integer </p>
+<p>Optional </p>
+<p>Duration of sent animation in seconds  </p>
+<p>width </p>
+<p>Integer </p>
+<p>Optional </p>
+<p>Animation width  </p>
+<p>height </p>
+<p>Integer </p>
+<p>Optional </p>
+<p>Animation height  </p>
+<p>thumb </p>
+<p><a href="#inputfile">InputFile</a> or String </p>
+<p>Optional </p>
+<p>Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail‘s width and height should not exceed 90. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can’t be reused and can be only uploaded as a new file, so you can pass “attach://&lt;file_attach_name&gt;” if the thumbnail was uploaded using multipart/form-data under &lt;file_attach_name&gt;. <a href="#sending-files">More info on Sending Files »</a>  </p>
+<p>caption </p>
+<p>String </p>
+<p>Optional </p>
+<p>Animation caption (may also be used when resending animation by <em>file_id</em>), 0-1024 characters  </p>
+<p>parse_mode </p>
+<p>String </p>
+<p>Optional </p>
+<p>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want <a class="el" href="class_telegram.html">Telegram</a> apps to show <a href="#formatting-* options">bold, italic, fixed-width text or inline URLs</a> in the media caption.  </p>
+<p>disable_notification </p>
+<p>Boolean </p>
+<p>Optional </p>
+<p>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.  </p>
+<p>reply_to_message_id </p>
+<p>Integer </p>
+<p>Optional </p>
+<p>If the message is a reply, ID of the original message  </p>
+<p>reply_markup </p>
+<p><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a> </p>
+<p>Optional </p>
+<p>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.  </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">$content</td><td>the request parameters as array </td></tr>

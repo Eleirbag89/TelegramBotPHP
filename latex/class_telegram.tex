@@ -22,6 +22,8 @@
 \begin{DoxyCompactList}\small\item\em Send an audio. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a25569ca763bd149891d86b89bc66cf54}{send\-Document} (array \$content)
 \begin{DoxyCompactList}\small\item\em Send a document. \end{DoxyCompactList}\item 
+\hyperlink{class_telegram_a495012334b9a9e564abcc7b4297b3d27}{send\-Animation} (array \$content)
+\begin{DoxyCompactList}\small\item\em Send an animation. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a0a176d232d8e7941184698447902beb6}{send\-Sticker} (array \$content)
 \begin{DoxyCompactList}\small\item\em Send a sticker. \end{DoxyCompactList}\item 
 \hyperlink{class_telegram_a789f27ed21d8a1232cc60832efdab17f}{send\-Video} (array \$content)
@@ -1459,6 +1461,125 @@ disable\-\_\-notification &Boolean &Optional &Sends the message \href{https://te
 reply\-\_\-to\-\_\-message\-\_\-id &Integer &Optional &If the message is a reply, I\-D of the original message  \\\cline{1-4}
 reply\-\_\-markup &\href{https://core.telegram.org/bots/api#inlinekeyboardmarkup}{\tt Inline\-Keyboard\-Markup} or \href{https://core.telegram.org/bots/api#replykeyboardmarkup}{\tt Reply\-Keyboard\-Markup} or \href{https://core.telegram.org/bots/api#replykeyboardremove}{\tt Reply\-Keyboard\-Remove} or \href{https://core.telegram.org/bots/api#forcereply}{\tt Force\-Reply} &Optional &Additional interface options. A J\-S\-O\-N-\/serialized object for an \href{https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating}{\tt inline keyboard}, \href{https://core.telegram.org/bots#keyboards}{\tt custom reply keyboard}, instructions to remove reply keyboard or to force a reply from the user.  \\\cline{1-4}
 \end{TabularC}
+
+\begin{DoxyParams}{Parameters}
+{\em \$content} & the request parameters as array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the J\-S\-O\-N \hyperlink{class_telegram}{Telegram}'s reply. 
+\end{DoxyReturn}
+\hypertarget{class_telegram_a495012334b9a9e564abcc7b4297b3d27}{\index{Telegram@{Telegram}!send\-Animation@{send\-Animation}}
+\index{send\-Animation@{send\-Animation}!Telegram@{Telegram}}
+\subsubsection[{send\-Animation}]{\setlength{\rightskip}{0pt plus 5cm}send\-Animation (
+\begin{DoxyParamCaption}
+\item[{array}]{\$content}
+\end{DoxyParamCaption}
+)}}\label{class_telegram_a495012334b9a9e564abcc7b4297b3d27}
+
+
+Send an animation. 
+
+Use this method to send animation files (G\-I\-F or H.\-264/\-M\-P\-E\-G-\/4 A\-V\-C video without sound). On success, the sent Message is returned. Bots can currently send animation files of up to 50 M\-B in size, this limit may be changed in the future.\par
+Values inside \$content\-:\par
+ 
+
+Parameter 
+
+Type 
+
+Required 
+
+Description  $<$/thead$>$ $<$tbody$>$ 
+
+chat\-\_\-id 
+
+Integer or String 
+
+Yes 
+
+Unique identifier for the target chat or username of the target channel (in the format {\ttfamily })  
+
+animation 
+
+\href{#inputfile}{\tt Input\-File} or String 
+
+Yes 
+
+Animation to send. Pass a file\-\_\-id as String to send an animation that exists on the \hyperlink{class_telegram}{Telegram} servers (recommended), pass an H\-T\-T\-P U\-R\-L as a String for \hyperlink{class_telegram}{Telegram} to get an animation from the Internet, or upload a new animation using multipart/form-\/data. \href{#sending-files}{\tt More info on Sending Files »}  
+
+duration 
+
+Integer 
+
+Optional 
+
+Duration of sent animation in seconds  
+
+width 
+
+Integer 
+
+Optional 
+
+Animation width  
+
+height 
+
+Integer 
+
+Optional 
+
+Animation height  
+
+thumb 
+
+\href{#inputfile}{\tt Input\-File} or String 
+
+Optional 
+
+Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-\/side. The thumbnail should be in J\-P\-E\-G format and less than 200 k\-B in size. A thumbnail‘s width and height should not exceed 90. Ignored if the file is not uploaded using multipart/form-\/data. Thumbnails can’t be reused and can be only uploaded as a new file, so you can pass “attach\-://$<$file\-\_\-attach\-\_\-name$>$” if the thumbnail was uploaded using multipart/form-\/data under $<$file\-\_\-attach\-\_\-name$>$. \href{#sending-files}{\tt More info on Sending Files »}  
+
+caption 
+
+String 
+
+Optional 
+
+Animation caption (may also be used when resending animation by {\itshape file\-\_\-id}), 0-\/1024 characters  
+
+parse\-\_\-mode 
+
+String 
+
+Optional 
+
+Send \href{#markdown-style}{\tt {\itshape Markdown}} or \href{#html-style}{\tt {\itshape H\-T\-M\-L}}, if you want \hyperlink{class_telegram}{Telegram} apps to show \href{#formatting-* options}{\tt bold, italic, fixed-\/width text or inline U\-R\-Ls} in the media caption.  
+
+disable\-\_\-notification 
+
+Boolean 
+
+Optional 
+
+Sends the message \href{https://telegram.org/blog/channels-2-0#silent-messages}{\tt silently}. Users will receive a notification with no sound.  
+
+reply\-\_\-to\-\_\-message\-\_\-id 
+
+Integer 
+
+Optional 
+
+If the message is a reply, I\-D of the original message  
+
+reply\-\_\-markup 
+
+\href{#inlinekeyboardmarkup}{\tt Inline\-Keyboard\-Markup} or \href{#replykeyboardmarkup}{\tt Reply\-Keyboard\-Markup} or \href{#replykeyboardremove}{\tt Reply\-Keyboard\-Remove} or \href{#forcereply}{\tt Force\-Reply} 
+
+Optional 
+
+Additional interface options. A J\-S\-O\-N-\/serialized object for an \href{https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating}{\tt inline keyboard}, \href{https://core.telegram.org/bots#keyboards}{\tt custom reply keyboard}, instructions to remove reply keyboard or to force a reply from the user.  
+
 
 \begin{DoxyParams}{Parameters}
 {\em \$content} & the request parameters as array \\
