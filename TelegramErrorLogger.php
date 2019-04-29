@@ -63,10 +63,10 @@ class TelegramErrorLogger
     private function _log_to_file($error_text)
     {
         try {
-            $dir_name="logs";
-			if (!is_dir($dir_name)) {
-				mkdir($dir_name);
-			}
+            $dir_name = 'logs';
+            if (!is_dir($dir_name)) {
+                mkdir($dir_name);
+            }
             $fileName = $dir_name.'/'.__CLASS__.'-'.date('Y-m-d').'.txt';
             $myFile = fopen($fileName, 'a+');
             $date = '============[Date]============';
