@@ -52,6 +52,10 @@ class Telegram
      */
     const ANIMATION = 'animation';
     /**
+     * Constant for type sticker.
+     */
+    const STICKER = 'sticker';	
+    /**
      * Constant for type Document.
      */
     const DOCUMENT = 'document';
@@ -3133,6 +3137,9 @@ class Telegram
         if (isset($update['message']['animation'])) {
             return self::ANIMATION;
         }
+	if (isset($update['message']['sticker'])) {
+            return self::STICKER;
+        }	    
         if (isset($update['message']['document'])) {
             return self::DOCUMENT;
         }
