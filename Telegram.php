@@ -1771,7 +1771,11 @@ class Telegram
 
     public function Caption()
     {
-        return @$this->data['message']['caption'];
+	$type = $this->getUpdateType(); 
+	if ($type == self::CHANNEL_POST) { 
+		return @$this->data['channel_post']['caption']; 
+	} 
+	return @$this->data['message']['caption']; 
     }
 
     /// Get the chat_id of the current message
