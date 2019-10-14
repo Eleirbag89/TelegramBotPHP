@@ -225,18 +225,13 @@ List of Bots using the library
 ------------
 
 Let me know using this [Issue](https://github.com/Eleirbag89/TelegramBotPHP/issues/80) if you have made a bot using this API, I will add it to this section.    
-* [Notifyadbot](https://telegram.me/notifyadbot) - Lang : Persian/Farsi (Down as 16/09/17)
-* [Partners_shakibonline_bot](https://telegram.me/Partners_shakibonline_bot) - Lang : Persian/Farsi (Down as 16/09/17)
-* [Pishvazrobot](https://t.me/pishvazrobot) - Lang : Persian/Farsi - the most comprehensive bot for searching and listening to more than 100,000 RBT sound for two most popular and famous mobile operator in iran - MTN Irancell and Hamrahe Aval
 * [iHarfBot](https://t.me/iHarfBot) - Lang: Persian/Farsi
 * [AsansorBot](https://t.me/AsansorBot) - Lang: Persian/Farsi
-* [IDPbot](https://t.me/IDPbot) - Lang: Persian/Farsi
+* [IDPbot](https://t.me/IDPbot) - Lang: Persian/Farsi (Down as 14/10/2019)
 * [Evil Insult Generator](https://telegram.me/EvilInsultGeneratorBot) - Lang English/German
-* [ibelitbot](https://telegram.me/ibelitbot) -Lang Persian
-* [skydrivebot](https://telegram.me/skydrivebot) - Lang Persian - Instagram Post Downloader - Youtube Link Generator
+* [ibelitbot](https://telegram.me/ibelitbot) -Lang Persian (Down as 14/10/2019)
 * [Advanced Pools Bot](https://telegram.me/apollbot) - Lang Italian/English([Contribute](https://poeditor.com/join/project/NMAUjrAZ5f))
 * [Btn_Bot](https://telegram.me/Btn_Bot) - Lang pt-BR - Cria botões transparente para publicações.
-* [snesgamesbot](https://telegram.me/snesgamesbot) - Lang: pt-BR/Espanhol/Inglês - Download de ROMs para emuladores do SNES
 * [DiffSGLaPuntabot](https://telegram.me/DiffSGLaPuntabot) [DiffGravinaCTbot](https://telegram.me/DiffGravinaCTbot) [DiffAdranobot](https://t.me/DiffAdranobot) - Lang: it/Italian - Bots to handle Recycling in San Giovanni La Punta, Gravina and Adrano (OpenSource Template https://github.com/Gualty/BOTDifferenziata)
 * [GoBot](https://t.me/CoReYe_PGO_bot)
 * [RaidBot](https://t.me/CoReYe_PGO_Raid_bot)
