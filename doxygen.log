@@ -92,19 +92,19 @@ Computing dependencies between directories...
 Generating citations page...
 Counting data structures...
 Resolving user defined r/home/travis/build/Eleirbag89/TelegramBotPHP/README.md:20: warning: Illegal command BotFather as part of a <a>..</a> block
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1768: warning: Member Caption() (function) of class Telegram is not documented.
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2040: warning: Found unknown command `\mentioned'
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2128: warning: Found unknown command `\mentioned'
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:891: warning: Found unknown command `\supergroupusername'
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1157: warning: Unsupported xml/html tag <token> found
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1157: warning: Unsupported xml/html tag <file_path> found
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1157: warning: Unsupported xml/html tag <file_path> found
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:431: warning: Unsupported xml/html tag </thead> found
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:432: warning: Unsupported xml/html tag <tbody> found
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:437: warning: Found unknown command `\channelusername'
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:865: warning: Found unknown command `\supergroupusername'
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1698: warning: Unsupported xml/html tag <token> found
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1242: warning: Found unknown command `\supergroupusername'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1772: warning: Member Caption() (function) of class Telegram is not documented.
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2044: warning: Found unknown command `\mentioned'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2132: warning: Found unknown command `\mentioned'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:895: warning: Found unknown command `\supergroupusername'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1161: warning: Unsupported xml/html tag <token> found
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1161: warning: Unsupported xml/html tag <file_path> found
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1161: warning: Unsupported xml/html tag <file_path> found
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:435: warning: Unsupported xml/html tag </thead> found
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:436: warning: Unsupported xml/html tag <tbody> found
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:441: warning: Found unknown command `\channelusername'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:869: warning: Found unknown command `\supergroupusername'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1702: warning: Unsupported xml/html tag <token> found
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1246: warning: Found unknown command `\supergroupusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/TelegramErrorLogger.php:16: warning: The following parameters of TelegramErrorLogger\log($result,$content,$use_rt=true) are not documented:
   parameter '$use_rt'
 eferences...
@@ -141,5 +141,5 @@ Generating file index...
 Generating file member index...
 Generating example index...
 finalizing index lists...
-lookup cache used 100/65536 hits=200 misses=100
+lookup cache used 101/65536 hits=202 misses=101
 finished...
