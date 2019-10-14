@@ -93,8 +93,8 @@ Generating citations page...
 Counting data structures...
 Resolving user defined r/home/travis/build/Eleirbag89/TelegramBotPHP/README.md:20: warning: Illegal command BotFather as part of a <a>..</a> block
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1772: warning: Member Caption() (function) of class Telegram is not documented.
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2044: warning: Found unknown command `\mentioned'
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2132: warning: Found unknown command `\mentioned'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2048: warning: Found unknown command `\mentioned'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2136: warning: Found unknown command `\mentioned'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:895: warning: Found unknown command `\supergroupusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1161: warning: Unsupported xml/html tag <token> found
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1161: warning: Unsupported xml/html tag <file_path> found
