@@ -3190,7 +3190,6 @@ class Telegram
         if ($result === false) {
             $result = json_encode(['ok'=>false, 'curl_error_code' => curl_errno($ch), 'curl_error' => curl_error($ch)]);
         }
-        echo $result;
         curl_close($ch);
         if ($this->log_errors) {
             if (class_exists('TelegramErrorLogger')) {
