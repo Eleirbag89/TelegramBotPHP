@@ -264,7 +264,6 @@ You can contact me [via Telegram](https://telegram.me/ggrillo) but if you have a
 Support me
 ------------
 
-You can buy me a beer or two using [Paypal](https://paypal.me/eleirbag89)    
-or support me using Flattr.    
+You can support me using via LiberaPay [![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/eleirbag89/donate)
 
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=eleirbag89&url=https://github.com/Eleirbag89/TelegramBotPHP&title=TelegramBotPHP&language=&tags=github&category=software) 
+or buy me a beer or two using [Paypal](https://paypal.me/eleirbag89). 
