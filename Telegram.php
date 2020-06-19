@@ -2038,6 +2038,7 @@ class Telegram
         if ($this->data['message']['chat']['type'] != 'private') {
             return $this->data['message']['chat']['title'];
         }
+        return '';
     }
 
     /// Set a custom keyboard
