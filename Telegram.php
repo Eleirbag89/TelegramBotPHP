@@ -1946,8 +1946,11 @@ class Telegram
         if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['from']['last_name'];
         }
+        if ($type == self::MESSAGE) {
+            return @$this->data['message']['from']['last_name'];
+        }
 
-        return @$this->data['message']['from']['last_name'];
+        return '';
     }
 
     /// Get the username of the user
