@@ -54,7 +54,7 @@ class Telegram
     /**
      * Constant for type sticker.
      */
-    const STICKER = 'sticker';	
+    const STICKER = 'sticker';
     /**
      * Constant for type Document.
      */
@@ -106,7 +106,7 @@ class Telegram
      */
     public function endpoint($api, array $content, $post = true)
     {
-        $url = 'https://api.telegram.org/bot'.$this->bot_token.'/'.$api;
+        $url = 'https://api.telegram.org/bot' . $this->bot_token . '/' . $api;
         if ($post) {
             $reply = $this->sendAPIRequest($url, $content);
         } else {
@@ -420,87 +420,87 @@ class Telegram
     {
         return $this->endpoint('sendDocument', $content);
     }
-	
+
     /// Send an animation
 
     /**
      * Use this method to send animation files (GIF or H.264/MPEG-4 AVC video without sound). On success, the sent Message is returned. Bots can currently send animation files of up to 50 MB in size, this limit may be changed in the future.<br/>Values inside $content:<br/>
-	* </table>
-	* <tr>
-	* <th>Parameter</th>
-	* <th>Type</th>
-	* <th>Required</th>
-	* <th>Description</th>
-	* </tr>
-	* </thead>
-	* <tbody>
-	* <tr>
-	* <td>chat_id</td>
-	* <td>Integer or String</td>
-	* <td>Yes</td>
-	* <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
-	* </tr>
-	* <tr>
-	* <td>animation</td>
-	* <td><a href="#inputfile">InputFile</a> or String</td>
-	* <td>Yes</td>
-	* <td>Animation to send. Pass a file_id as String to send an animation that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get an animation from the Internet, or upload a new animation using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a></td>
-	* </tr>
-	* <tr>
-	* <td>duration</td>
-	* <td>Integer</td>
-	* <td>Optional</td>
-	* <td>Duration of sent animation in seconds</td>
-	* </tr>
-	* <tr>
-	* <td>width</td>
-	* <td>Integer</td>
-	* <td>Optional</td>
-	* <td>Animation width</td>
-	* </tr>
-	* <tr>
-	* <td>height</td>
-	* <td>Integer</td>
-	* <td>Optional</td>
-	* <td>Animation height</td>
-	* </tr>
-	* <tr>
-	* <td>thumb</td>
-	* <td><a href="#inputfile">InputFile</a> or String</td>
-	* <td>Optional</td>
-	* <td>Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail‘s width and height should not exceed 90. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can’t be reused and can be only uploaded as a new file, so you can pass “attach://&lt;file_attach_name&gt;” if the thumbnail was uploaded using multipart/form-data under &lt;file_attach_name&gt;. <a href="#sending-files">More info on Sending Files »</a></td>
-	* </tr>
-	* <tr>
-	* <td>caption</td>
-	* <td>String</td>
-	* <td>Optional</td>
-	* <td>Animation caption (may also be used when resending animation by <em>file_id</em>), 0-1024 characters</td>
-	* </tr>
-	* <tr>
-	* <td>parse_mode</td>
-	* <td>String</td>
-	* <td>Optional</td>
-	* <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-* options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
-	* </tr>
-	* <tr>
-	* <td>disable_notification</td>
-	* <td>Boolean</td>
-	* <td>Optional</td>
-	* <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
-	* </tr>
-	* <tr>
-	* <td>reply_to_message_id</td>
-	* <td>Integer</td>
-	* <td>Optional</td>
-	* <td>If the message is a reply, ID of the original message</td>
-	* </tr>
-	* <tr>
-	* <td>reply_markup</td>
-	* <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
-	* <td>Optional</td>
-	* <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
-	* </tr>
-	* </table>
+     * </table>
+     * <tr>
+     * <th>Parameter</th>
+     * <th>Type</th>
+     * <th>Required</th>
+     * <th>Description</th>
+     * </tr>
+     * </thead>
+     * <tbody>
+     * <tr>
+     * <td>chat_id</td>
+     * <td>Integer or String</td>
+     * <td>Yes</td>
+     * <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
+     * </tr>
+     * <tr>
+     * <td>animation</td>
+     * <td><a href="#inputfile">InputFile</a> or String</td>
+     * <td>Yes</td>
+     * <td>Animation to send. Pass a file_id as String to send an animation that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get an animation from the Internet, or upload a new animation using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a></td>
+     * </tr>
+     * <tr>
+     * <td>duration</td>
+     * <td>Integer</td>
+     * <td>Optional</td>
+     * <td>Duration of sent animation in seconds</td>
+     * </tr>
+     * <tr>
+     * <td>width</td>
+     * <td>Integer</td>
+     * <td>Optional</td>
+     * <td>Animation width</td>
+     * </tr>
+     * <tr>
+     * <td>height</td>
+     * <td>Integer</td>
+     * <td>Optional</td>
+     * <td>Animation height</td>
+     * </tr>
+     * <tr>
+     * <td>thumb</td>
+     * <td><a href="#inputfile">InputFile</a> or String</td>
+     * <td>Optional</td>
+     * <td>Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail‘s width and height should not exceed 90. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can’t be reused and can be only uploaded as a new file, so you can pass “attach://&lt;file_attach_name&gt;” if the thumbnail was uploaded using multipart/form-data under &lt;file_attach_name&gt;. <a href="#sending-files">More info on Sending Files »</a></td>
+     * </tr>
+     * <tr>
+     * <td>caption</td>
+     * <td>String</td>
+     * <td>Optional</td>
+     * <td>Animation caption (may also be used when resending animation by <em>file_id</em>), 0-1024 characters</td>
+     * </tr>
+     * <tr>
+     * <td>parse_mode</td>
+     * <td>String</td>
+     * <td>Optional</td>
+     * <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-* options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+     * </tr>
+     * <tr>
+     * <td>disable_notification</td>
+     * <td>Boolean</td>
+     * <td>Optional</td>
+     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+     * </tr>
+     * <tr>
+     * <td>reply_to_message_id</td>
+     * <td>Integer</td>
+     * <td>Optional</td>
+     * <td>If the message is a reply, ID of the original message</td>
+     * </tr>
+     * <tr>
+     * <td>reply_markup</td>
+     * <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
+     * <td>Optional</td>
+     * <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
+     * </tr>
+     * </table>
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1022,6 +1022,7 @@ class Telegram
     }
 
     //Send contact
+
     /**Use this method to send phone contacts. On success, the sent <a href="https://core.telegram.org/bots/api#message">Message</a> is returned.</p> <br/>Values inside $content:<br/>
      * <table>
      * <tr>
@@ -1683,7 +1684,7 @@ class Telegram
      */
     public function downloadFile($telegram_file_path, $local_file_path)
     {
-        $file_url = 'https://api.telegram.org/file/bot'.$this->bot_token.'/'.$telegram_file_path;
+        $file_url = 'https://api.telegram.org/file/bot' . $this->bot_token . '/' . $telegram_file_path;
         $in = fopen($file_url, 'rb');
         $out = fopen($local_file_path, 'wb');
 
@@ -1771,11 +1772,11 @@ class Telegram
 
     public function Caption()
     {
-	$type = $this->getUpdateType(); 
-	if ($type == self::CHANNEL_POST) { 
-		return @$this->data['channel_post']['caption']; 
-	} 
-	return @$this->data['message']['caption']; 
+        $type = $this->getUpdateType();
+        if ($type == self::CHANNEL_POST) {
+            return @$this->data['channel_post']['caption'];
+        }
+        return @$this->data['message']['caption'];
     }
 
     /// Get the chat_id of the current message
@@ -2051,10 +2052,10 @@ class Telegram
     public function buildKeyBoard(array $options, $onetime = false, $resize = false, $selective = true)
     {
         $replyMarkup = [
-            'keyboard'          => $options,
+            'keyboard' => $options,
             'one_time_keyboard' => $onetime,
-            'resize_keyboard'   => $resize,
-            'selective'         => $selective,
+            'resize_keyboard' => $resize,
+            'selective' => $selective,
         ];
         $encodedMarkup = json_encode($replyMarkup, true);
 
@@ -2089,8 +2090,15 @@ class Telegram
      * \param $pay  Boolean Optional. Specify True, to send a <a href="https://core.telegram.org/bots/api#payments">Pay button</a>.
      * \return the requested button as Array.
      */
-    public function buildInlineKeyboardButton($text, $url = '', $callback_data = '', $switch_inline_query = null, $switch_inline_query_current_chat = null, $callback_game = '', $pay = '')
-    {
+    public function buildInlineKeyboardButton(
+        $text,
+        $url = '',
+        $callback_data = '',
+        $switch_inline_query = null,
+        $switch_inline_query_current_chat = null,
+        $callback_game = '',
+        $pay = ''
+    ) {
         $replyMarkup = [
             'text' => $text,
         ];
@@ -2122,8 +2130,8 @@ class Telegram
     public function buildKeyboardButton($text, $request_contact = false, $request_location = false)
     {
         $replyMarkup = [
-            'text'             => $text,
-            'request_contact'  => $request_contact,
+            'text' => $text,
+            'request_contact' => $request_contact,
             'request_location' => $request_location,
         ];
 
@@ -2140,7 +2148,7 @@ class Telegram
     {
         $replyMarkup = [
             'remove_keyboard' => true,
-            'selective'       => $selective,
+            'selective' => $selective,
         ];
         $encodedMarkup = json_encode($replyMarkup, true);
 
@@ -2156,7 +2164,7 @@ class Telegram
     {
         $replyMarkup = [
             'force_reply' => true,
-            'selective'   => $selective,
+            'selective' => $selective,
         ];
         $encodedMarkup = json_encode($replyMarkup, true);
 
@@ -3075,7 +3083,7 @@ class Telegram
         $content = ['offset' => $offset, 'limit' => $limit, 'timeout' => $timeout];
         $this->updates = $this->endpoint('getUpdates', $content);
         if ($update) {
-            if (array_key_exists('result', $this->updates) && is_array($this->updates['result']) && count($this->updates['result']) >= 1) { //for CLI working.
+            if (is_array($this->updates['result']) && count($this->updates['result']) >= 1) { //for CLI working.
                 $last_element_id = $this->updates['result'][count($this->updates['result']) - 1]['update_id'] + 1;
                 $content = ['offset' => $last_element_id, 'limit' => '1', 'timeout' => $timeout];
                 $this->endpoint('getUpdates', $content);
@@ -3141,9 +3149,9 @@ class Telegram
         if (isset($update['message']['animation'])) {
             return self::ANIMATION;
         }
-	if (isset($update['message']['sticker'])) {
+        if (isset($update['message']['sticker'])) {
             return self::STICKER;
-        }	    
+        }
         if (isset($update['message']['document'])) {
             return self::DOCUMENT;
         }
@@ -3157,7 +3165,7 @@ class Telegram
     private function sendAPIRequest($url, array $content, $post = true)
     {
         if (isset($content['chat_id'])) {
-            $url = $url.'?chat_id='.$content['chat_id'];
+            $url = $url . '?chat_id=' . $content['chat_id'];
             unset($content['chat_id']);
         }
         $ch = curl_init();
@@ -3192,7 +3200,9 @@ class Telegram
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $result = curl_exec($ch);
         if ($result === false) {
-            $result = json_encode(['ok'=>false, 'curl_error_code' => curl_errno($ch), 'curl_error' => curl_error($ch)]);
+            $result = json_encode(
+                ['ok' => false, 'curl_error_code' => curl_errno($ch), 'curl_error' => curl_error($ch)]
+            );
         }
         curl_close($ch);
         if ($this->log_errors) {
@@ -3211,7 +3221,7 @@ if (!function_exists('curl_file_create')) {
     function curl_file_create($filename, $mimetype = '', $postname = '')
     {
         return "@$filename;filename="
-        .($postname ?: basename($filename))
-        .($mimetype ? ";type=$mimetype" : '');
+            . ($postname ?: basename($filename))
+            . ($mimetype ? ";type=$mimetype" : '');
     }
 }
