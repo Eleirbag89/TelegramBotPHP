@@ -1,5 +1,5 @@
 {
-    "name": "telegram_bot_php/telegrambotphp",
+    "name": "lyucean/telegram_bot_php",
     "description": "A very simple PHP Telegram Bot API",
     "type": "library",
     "authors": [
