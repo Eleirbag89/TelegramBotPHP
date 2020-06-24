@@ -85,11 +85,11 @@ if (!is_null($text) && !is_null($chat_id)) {
     } elseif ($text == '/inlinekeyboard') {
         // Shows the Inline Keyboard and Trigger a callback on a button press
         $option = [
-                [
+            [
                 $telegram->buildInlineKeyBoardButton('Callback 1', $url = '', $callback_data = '1'),
                 $telegram->buildInlineKeyBoardButton('Callback 2', $url = '', $callback_data = '2'),
-                ],
-            ];
+            ],
+        ];
 
         $keyb = $telegram->buildInlineKeyBoard($option);
         $content = ['chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => 'This is an InlineKeyboard Test with Callbacks'];
