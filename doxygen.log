@@ -93,8 +93,8 @@ Generating citations page...
 Counting data structures...
 Resolving user defined r/home/travis/build/Eleirbag89/TelegramBotPHP/README.md:20: warning: Illegal command BotFather as part of a <a>..</a> block
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1773: warning: Member Caption() (function) of class Telegram is not documented.
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2053: warning: Found unknown command `\mentioned'
-/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2148: warning: Found unknown command `\mentioned'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2055: warning: Found unknown command `\mentioned'
+/home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:2150: warning: Found unknown command `\mentioned'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:895: warning: Found unknown command `\supergroupusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1162: warning: Unsupported xml/html tag <token> found
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1162: warning: Unsupported xml/html tag <file_path> found
@@ -105,7 +105,7 @@ Resolving user defined r/home/travis/build/Eleirbag89/TelegramBotPHP/README.md:2
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:869: warning: Found unknown command `\supergroupusername'
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1703: warning: Unsupported xml/html tag <token> found
 /home/travis/build/Eleirbag89/TelegramBotPHP/Telegram.php:1247: warning: Found unknown command `\supergroupusername'
-/home/travis/build/Eleirbag89/TelegramBotPHP/TelegramErrorLogger.php:16: warning: The following parameters of TelegramErrorLogger\log($result,$content,$use_rt=true) are not documented:
+/home/travis/build/Eleirbag89/TelegramBotPHP/TelegramErrorLogger.php:15: warning: The following parameters of TelegramErrorLogger\log($result,$content,$use_rt=true) are not documented:
   parameter '$use_rt'
 eferences...
 Finding anchors and sections in the documentation...
