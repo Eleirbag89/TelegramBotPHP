@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Telegram Error Logger Class.
  *
