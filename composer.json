@@ -1,5 +1,5 @@
 {
-    "name": "eleirbag89/telegrambotphp",
+    "name": "lyucean/telegram_bot_php",
     "description": "A very simple PHP Telegram Bot API",
     "type": "library",
     "authors": [
@@ -11,7 +11,9 @@
     "license": "MIT",
     "minimum-stability": "alpha",
     "require": {
-        "php": ">=5.0"
+        "php": ">=5.0",
+        "ext-json": "*",
+        "ext-curl": "*"
     },
     "autoload": {
         "files": ["Telegram.php", "TelegramErrorLogger.php"]
