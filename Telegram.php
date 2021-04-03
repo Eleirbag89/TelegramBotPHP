@@ -1896,7 +1896,7 @@ class Telegram
         return $this->data['callback_query']['message'];
     }
 
-    /// Get the Get the chati_id of the current callback
+    /// Get the Get the chat_id of the current callback
 
     /**
      * \deprecated Use ChatId() instead
@@ -1906,6 +1906,17 @@ class Telegram
     {
         return $this->data['callback_query']['message']['chat']['id'];
     }
+    
+    /// Get the Get the from_id of the current callback
+
+    /**
+     * \return the String callback_query from_id.
+     */
+    public function Callback_FromID()
+    {
+        return $this->data['callback_query']['from']['id'];
+    }
+
 
     /// Get the date of the current message
 
