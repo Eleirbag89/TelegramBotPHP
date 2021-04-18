@@ -8,7 +8,7 @@
 [![StyleCI](https://styleci.io/repos/38492095/shield?branch=master)](https://styleci.io/repos/38492095)
 
 A very simple PHP [Telegram Bot API](https://core.telegram.org/bots).    
-Compliant with the November 17, 2017 Telegram Bot API update.
+Compliant with the April 18, 2021 Telegram Bot API update.
 
 Requirements
 ---------
@@ -41,13 +41,13 @@ Note: If you don't have Composer you can download it [HERE](https://getcomposer.
 
 #### Using release archives
 
-https://github.com/Eleirbag89/TelegramBotPHP/releases
+https://github.com/sjomurodov/TelegramBotPHP/releases
 
 #### Using Git
 
 From a project directory, run:
 ```
-git clone https://github.com/Eleirbag89/TelegramBotPHP.git
+git clone https://github.com/sjomurodov/TelegramBotPHP.git
 ```
 
 Installation
@@ -224,12 +224,13 @@ Check [ForceReply](https://core.telegram.org/bots/api#forcereply) for more info.
 List of Bots using the library
 ------------
 
-Let me know using this [Issue](https://github.com/Eleirbag89/TelegramBotPHP/issues/80) if you have made a bot using this API, I will add it to this section.    
-* [iHarfBot](https://t.me/iHarfBot) - Lang: Persian/Farsi
-* [AsansorBot](https://t.me/AsansorBot) - Lang: Persian/Farsi
-* [IDPbot](https://t.me/IDPbot) - Lang: Persian/Farsi (Down as 14/10/2019)
-* [Evil Insult Generator](https://telegram.me/EvilInsultGeneratorBot) - Lang English/German
-* [ibelitbot](https://telegram.me/ibelitbot) -Lang Persian (Down as 14/10/2019)
+Let me know using this [Issue](https://github.com/Sjomurodov/TelegramBotPHP/issues/80) if you have made a bot using this API, I will add it to this section.    
+* [SMSUcellBot](https://t.me/MSUcellBot) - Lang: Uzbek
+* [Uzcardpay_bot](https://t.me/Uzcardpay_bot) - Lang: Uzbek/Russian
+* [O_paybot](https://t.me/O_paybot) - Lang: Uzbek/Russian
+* [ProPaymentBot](https://t.me/ProPaymentBot) - Lang: Uzbek
+* [DastyorBot](https://t.me/DastyorBot) - Lang: Uzbek
+* 
 * [Advanced Pools Bot](https://telegram.me/apollbot) - Lang Italian/English([Contribute](https://poeditor.com/join/project/NMAUjrAZ5f))
 * [Btn_Bot](https://telegram.me/Btn_Bot) - Lang pt-BR - Cria botões transparente para publicações.
 * [DiffSGLaPuntabot](https://telegram.me/DiffSGLaPuntabot) [DiffGravinaCTbot](https://telegram.me/DiffGravinaCTbot) [DiffAdranobot](https://t.me/DiffAdranobot) - Lang: it/Italian - Bots to handle Recycling in San Giovanni La Punta, Gravina and Adrano (OpenSource Template https://github.com/Gualty/BOTDifferenziata)
@@ -259,11 +260,11 @@ All kinds of contributions are welcome - code, tests, documentation, bug reports
 Contact me
 ------------
 
-You can contact me [via Telegram](https://telegram.me/ggrillo) but if you have an issue please [open](https://github.com/Eleirbag89/TelegramBotPHP/issues) one.
+You can contact me [via Telegram](https://telegram.me/ads_buy) but if you have an issue please [open](https://github.com/sjomurodov/TelegramBotPHP/issues) one.
 
 Support me
 ------------
 
-You can support me using via LiberaPay [![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/eleirbag89/donate)
+You can support me using via LiberaPay [![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/sjomurodov/donate)
 
-or buy me a beer or two using [Paypal](https://paypal.me/eleirbag89). 
+or buy me a beer or two using [Paypal](https://paypal.me/sjomurodov). 
