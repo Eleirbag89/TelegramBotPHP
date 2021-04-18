@@ -196,6 +196,11 @@ class Telegram
         return $this->endpoint('sendMessage', $content);
     }
 
+    public function copyMessage(array $content)
+    {
+        return $this->endpoint('copyMessage', $content);
+    }
+    
     /// Forward a message
 
     /**
@@ -3182,9 +3187,9 @@ class Telegram
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
         }
-        // 		echo "inside curl if";
+        //      echo "inside curl if";
         if (!empty($this->proxy)) {
-            // 			echo "inside proxy if";
+            //          echo "inside proxy if";
             if (array_key_exists('type', $this->proxy)) {
                 curl_setopt($ch, CURLOPT_PROXYTYPE, $this->proxy['type']);
             }
@@ -3194,12 +3199,12 @@ class Telegram
             }
 
             if (array_key_exists('url', $this->proxy)) {
-                // 				echo "Proxy Url";
+                //              echo "Proxy Url";
                 curl_setopt($ch, CURLOPT_PROXY, $this->proxy['url']);
             }
 
             if (array_key_exists('port', $this->proxy)) {
-                // 				echo "Proxy port";
+                //              echo "Proxy port";
                 curl_setopt($ch, CURLOPT_PROXYPORT, $this->proxy['port']);
             }
         }
