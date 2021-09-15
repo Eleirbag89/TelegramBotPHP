@@ -16,6 +16,8 @@
         "ext-curl": "*"
     },
     "autoload": {
-        "files": ["Telegram.php", "TelegramErrorLogger.php"]
+        "psr-4": {
+            "Eleirbag89\\":"src/eleirbag89/"
+        }
     }
 }
