@@ -59,6 +59,8 @@ After downloading by using Composer, you can include Composer's autoloader:
 ```php
 include (__DIR__ . '/vendor/autoload.php');
 
+use Eleirbag89\Telegram\Telegram;
+
 $telegram = new Telegram('YOUR TELEGRAM TOKEN HERE');
 ```
 
