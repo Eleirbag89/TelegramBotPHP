@@ -1772,7 +1772,8 @@ class Telegram
             return @$this->data['edited_message']['text'];
         }
 
-        return @$this->data['message']['text'];
+		$message = $this->data['message'];
+        return @(isset($message['text']) ? $message['text'] : null);
     }
 
     public function Caption()
