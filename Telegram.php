@@ -1988,6 +1988,9 @@ class Telegram
         if ($type == self::EDITED_MESSAGE) {
             return $this->data['edited_message']['from'];
         }
+		
+		return $this->data['message']['from'];
+	}
 
         return $this->data['message']['from'];
     }
