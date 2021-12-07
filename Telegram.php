@@ -1925,56 +1925,48 @@ class Telegram
     /// Get the first name of the user
     public function FirstName()
     {
-        $type = $this->getUpdateType();
-        if ($type == self::CALLBACK_QUERY) {
-            return @$this->data['callback_query']['from']['first_name'];
-        }
-        if ($type == self::CHANNEL_POST) {
-            return @$this->data['channel_post']['from']['first_name'];
-        }
-        if ($type == self::EDITED_MESSAGE) {
-            return @$this->data['edited_message']['from']['first_name'];
-        }
-
-        return @$this->data['message']['from']['first_name'];
+		$from = $this->getBestUserFrom();
+		if(isset($from['first_name'])){
+			return @$from['first_name'];
+		}
+        return null;
+		
     }
 
     /// Get the last name of the user
     public function LastName()
-    {
-        $type = $this->getUpdateType();
-        if ($type == self::CALLBACK_QUERY) {
-            return @$this->data['callback_query']['from']['last_name'];
-        }
-        if ($type == self::CHANNEL_POST) {
-            return @$this->data['channel_post']['from']['last_name'];
-        }
-        if ($type == self::EDITED_MESSAGE) {
-            return @$this->data['edited_message']['from']['last_name'];
-        }
-        if ($type == self::MESSAGE) {
-            return @$this->data['message']['from']['last_name'];
-        }
-
+    {		
+		$from = $this->getBestUserFrom();
+		if(isset($from['last_name'])){
+			return @$from['last_name'];
+		}
         return '';
     }
 
     /// Get the username of the user
     public function Username()
     {
-        $type = $this->getUpdateType();
+		$from = $this->getBestUserFrom();
+		if(isset($from['username'])){
+			return @$from['username'];
+		}
+        return null;
+    }
+	
+	private function getBestUserFrom(){
+		$type = $this->getUpdateType();
         if ($type == self::CALLBACK_QUERY) {
-            return @$this->data['callback_query']['from']['username'];
+			return $this->data['callback_query']['from'];
         }
         if ($type == self::CHANNEL_POST) {
-            return @$this->data['channel_post']['from']['username'];
+			return $this->data['channel_post']['from'];
         }
         if ($type == self::EDITED_MESSAGE) {
-            return @$this->data['edited_message']['from']['username'];
+			return $this->data['edited_message']['from'];
         }
-
-        return @$this->data['message']['from']['username'];
-    }
+		
+		return $this->data['message']['from'];
+	}
 
     /// Get the location in the message
     public function Location()
