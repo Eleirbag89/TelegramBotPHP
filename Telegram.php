@@ -1740,6 +1740,17 @@ class Telegram
         return $this->endpoint('deleteWebhook', [], false);
     }
 
+    /// Get the WebHookInfo for the bot
+
+    /**
+     *  Use this method to get current webhook status. Requires no parameters. On success, returns a <a href="https://core.telegram.org/bots/api#webhookinfo">WebhookInfo</a> object. If the bot is using <a href="https://core.telegram.org/bots/api#getupdates">getUpdates</a>, will return an object with the url field empty.
+     * \return the JSON Telegram's reply.
+     */
+    public function getWebhookInfo()
+    {
+        return $this->endpoint('getWebhookInfo', [], false);
+    }
+
     /// Get the data of the current message
 
     /** Get the POST request of a user in a Webhook or the message actually processed in a getUpdates() enviroment.
