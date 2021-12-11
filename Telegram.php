@@ -67,14 +67,14 @@ class Telegram
      * Constant for type Contact.
      */
     const CONTACT = 'contact';
-	/**
-	 * Constant for type New Chat Member
-	 */
-	const NEW_CHAT_MEMBER = 'new_chat_member';
-	 /**
-	 * Constant for type Left Chat Member
-	 */
-	const LEFT_CHAT_MEMBER = 'left_chat_member';
+    /**
+     * Constant for type New Chat Member
+     */
+    const NEW_CHAT_MEMBER = 'new_chat_member';
+     /**
+     * Constant for type Left Chat Member
+     */
+    const LEFT_CHAT_MEMBER = 'left_chat_member';
     /**
      * Constant for type Channel Post.
      */
@@ -210,7 +210,7 @@ class Telegram
     }
     
     /// Forward a message
-
+    
     /**
      * Use this method to forward messages of any kind. On success, the sent Message is returned<br/>Values inside $content:<br/>
      * <table>
@@ -1791,7 +1791,7 @@ class Telegram
             return @$this->data['edited_message']['text'];
         }
 
-		$message = $this->data['message'];
+        $message = $this->data['message'];
         return @(isset($message['text']) ? $message['text'] : null);
     }
 
@@ -1945,47 +1945,46 @@ class Telegram
     /// Get the first name of the user
     public function FirstName()
     {
-		$from = $this->getBestUserFrom();
-		if(isset($from['first_name'])){
-			return @$from['first_name'];
-		}
+        $from = $this->getBestUserFrom();
+        if(isset($from['first_name'])){
+            return @$from['first_name'];
+        }
         return null;
-		
     }
 
     /// Get the last name of the user
     public function LastName()
     {		
-		$from = $this->getBestUserFrom();
-		if(isset($from['last_name'])){
-			return @$from['last_name'];
-		}
+        $from = $this->getBestUserFrom();
+        if(isset($from['last_name'])){
+            return @$from['last_name'];
+        }
         return '';
     }
 
     /// Get the username of the user
     public function Username()
     {
-		$from = $this->getBestUserFrom();
-		if(isset($from['username'])){
-			return @$from['username'];
-		}
+        $from = $this->getBestUserFrom();
+        if(isset($from['username'])){
+            return @$from['username'];
+        }
         return null;
     }
 	
 	private function getBestUserFrom(){
-		$type = $this->getUpdateType();
+        $type = $this->getUpdateType();
         if ($type == self::CALLBACK_QUERY) {
-			return $this->data['callback_query']['from'];
+            return $this->data['callback_query']['from'];
         }
         if ($type == self::CHANNEL_POST) {
-			return $this->data['channel_post']['from'];
+            return $this->data['channel_post']['from'];
         }
         if ($type == self::EDITED_MESSAGE) {
-			return $this->data['edited_message']['from'];
+            return $this->data['edited_message']['from'];
         }
-		
-		return $this->data['message']['from'];
+        
+        return $this->data['message']['from'];
 	}
 
     /// Get the location in the message
@@ -3178,10 +3177,10 @@ class Telegram
         if (isset($update['message']['document'])) {
             return self::DOCUMENT;
         }
-		if (isset($update['message']['new_chat_member'])) {
+        if (isset($update['message']['new_chat_member'])) {
             return self::NEW_CHAT_MEMBER;
         }
-		if (isset($update['message']['left_chat_member'])) {
+        if (isset($update['message']['left_chat_member'])) {
             return self::LEFT_CHAT_MEMBER;
         }
         if (isset($update['channel_post'])) {
@@ -3202,7 +3201,7 @@ class Telegram
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         if ($post) {
-			curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($content));
         }
