@@ -68,11 +68,11 @@ class Telegram
      */
     const CONTACT = 'contact';
     /**
-     * Constant for type New Chat Member
+     * Constant for type New Chat Member.
      */
     const NEW_CHAT_MEMBER = 'new_chat_member';
     /**
-     * Constant for type Left Chat Member
+     * Constant for type Left Chat Member.
      */
     const LEFT_CHAT_MEMBER = 'left_chat_member';
     /**
@@ -208,9 +208,9 @@ class Telegram
     {
         return $this->endpoint('copyMessage', $content);
     }
-    
+
     /// Forward a message
-    
+
     /**
      * Use this method to forward messages of any kind. On success, the sent Message is returned<br/>Values inside $content:<br/>
      * <table>
@@ -1792,6 +1792,7 @@ class Telegram
         }
 
         $message = $this->data['message'];
+
         return @(isset($message['text']) ? $message['text'] : null);
     }
 
@@ -1946,19 +1947,21 @@ class Telegram
     public function FirstName()
     {
         $from = $this->getBestUserFrom();
-        if(isset($from['first_name'])){
+        if (isset($from['first_name'])) {
             return @$from['first_name'];
         }
+
         return null;
     }
 
     /// Get the last name of the user
     public function LastName()
-    {		
+    {
         $from = $this->getBestUserFrom();
-        if(isset($from['last_name'])){
+        if (isset($from['last_name'])) {
             return @$from['last_name'];
         }
+
         return '';
     }
 
@@ -1966,13 +1969,15 @@ class Telegram
     public function Username()
     {
         $from = $this->getBestUserFrom();
-        if(isset($from['username'])){
+        if (isset($from['username'])) {
             return @$from['username'];
         }
+
         return null;
     }
-	
-	private function getBestUserFrom(){
+
+    private function getBestUserFrom()
+    {
         $type = $this->getUpdateType();
         if ($type == self::CALLBACK_QUERY) {
             return $this->data['callback_query']['from'];
@@ -1983,9 +1988,9 @@ class Telegram
         if ($type == self::EDITED_MESSAGE) {
             return $this->data['edited_message']['from'];
         }
-        
+
         return $this->data['message']['from'];
-	}
+    }
 
     /// Get the location in the message
     public function Location()
@@ -3201,7 +3206,7 @@ class Telegram
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         if ($post) {
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+            curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type:application/json']);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($content));
         }
