@@ -1726,12 +1726,12 @@ class Telegram
      * \param $certificate InputFile Upload your public key certificate so that the root certificate in use can be checked
      * \return the JSON Telegram's reply.
      */
-    public function setWebhook($url, $certificate = '')
+    public function setWebhook($url, $certificate = '', $dropPendingUpdates)
     {
         if ($certificate == '') {
-            $requestBody = ['url' => $url];
+            $requestBody = ['url' => $url, 'drop_pending_updates' => $dropPendingUpdates];
         } else {
-            $requestBody = ['url' => $url, 'certificate' => "@$certificate"];
+            $requestBody = ['url' => $url, 'certificate' => "@$certificate", 'drop_pending_updates' => $dropPendingUpdates];
         }
 
         return $this->endpoint('setWebhook', $requestBody, true);
@@ -1743,9 +1743,9 @@ class Telegram
      *  Use this method to remove webhook integration if you decide to switch back to <a href="https://core.telegram.org/bots/api#getupdates">getUpdates</a>. Returns True on success. Requires no parameters.
      * \return the JSON Telegram's reply.
      */
-    public function deleteWebhook()
+    public function deleteWebhook($dropPendingUpdates = false)
     {
-        return $this->endpoint('deleteWebhook', [], false);
+        return $this->endpoint('deleteWebhook', ['drop_pending_updates' => $dropPendingUpdates], false);
     }
 
     /// Get the WebHookInfo for the bot
