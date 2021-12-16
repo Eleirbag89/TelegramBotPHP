@@ -67,14 +67,14 @@ class Telegram
      * Constant for type Contact.
      */
     const CONTACT = 'contact';
-	/**
-	 * Constant for type New Chat Member
-	 */
-	const NEW_CHAT_MEMBER = 'new_chat_member';
-	 /**
-	 * Constant for type Left Chat Member
-	 */
-	const LEFT_CHAT_MEMBER = 'left_chat_member';
+    /**
+     * Constant for type New Chat Member.
+     */
+    const NEW_CHAT_MEMBER = 'new_chat_member';
+    /**
+     * Constant for type Left Chat Member.
+     */
+    const LEFT_CHAT_MEMBER = 'left_chat_member';
     /**
      * Constant for type New Chat Member.
      */
@@ -2039,9 +2039,9 @@ class Telegram
         if ($type == self::EDITED_MESSAGE) {
             return $this->data['edited_message']['from'];
         }
-		
-		return $this->data['message']['from'];
-	}
+
+        return $this->data['message']['from'];
+    }
 
     /// Get the location in the message
     public function Location()
