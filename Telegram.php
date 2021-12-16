@@ -2043,9 +2043,6 @@ class Telegram
 		return $this->data['message']['from'];
 	}
 
-        return $this->data['message']['from'];
-    }
-
     /// Get the location in the message
     public function Location()
     {
