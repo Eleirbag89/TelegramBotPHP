@@ -67,14 +67,14 @@ class Telegram
      * Constant for type Contact.
      */
     const CONTACT = 'contact';
-	/**
-	 * Constant for type New Chat Member
-	 */
-	const NEW_CHAT_MEMBER = 'new_chat_member';
-	 /**
-	 * Constant for type Left Chat Member
-	 */
-	const LEFT_CHAT_MEMBER = 'left_chat_member';
+    /**
+     * Constant for type New Chat Member.
+     */
+    const NEW_CHAT_MEMBER = 'new_chat_member';
+    /**
+     * Constant for type Left Chat Member.
+     */
+    const LEFT_CHAT_MEMBER = 'left_chat_member';
     /**
      * Constant for type Channel Post.
      */
@@ -208,7 +208,7 @@ class Telegram
     {
         return $this->endpoint('copyMessage', $content);
     }
-    
+
     /// Forward a message
 
     /**
@@ -1760,14 +1760,36 @@ class Telegram
      * If you'd like to make sure that the Webhook request comes from Telegram, we recommend using a secret path in the URL, e.g. https://www.example.com/<token>. Since nobody else knows your botâ€˜s token, you can be pretty sure itâ€™s us.
      * \param $url String HTTPS url to send updates to. Use an empty string to remove webhook integration
      * \param $certificate InputFile Upload your public key certificate so that the root certificate in use can be checked
+     * \param $ipAddress String The fixed IP address which will be used to send webhook requests instead of the IP address resolved through DNS
+     * \param $maxConnections int Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery, 1-100. Defaults to 40. Use lower values to limit the load on your bot's server, and higher values to increase your bot's throughput.
+     * \param $allowedUpdate bool A JSON-serialized list of the update types you want your bot to receive. For example, specify [“message”, “edited_channel_post”, “callback_query”] to only receive updates of these types. See Update for a complete list of available update types. Specify an empty list to receive all update types except chat_member (default). If not specified, the previous setting will be used. Please note that this parameter doesn't affect updates created before the call to the setWebhook, so unwanted updates may be received for a short period of time.
+     * \param $dropPendingUpdates bool Pass True to drop all pending updates
      * \return the JSON Telegram's reply.
      */
-    public function setWebhook($url, $certificate = '', $dropPendingUpdates)
+    public function setWebhook($url, $certificate = null, $ipAddress = null, $maxConnections = null, $allowedUpdate = null, $dropPendingUpdates = false)
     {
-        if ($certificate == '') {
-            $requestBody = ['url' => $url, 'drop_pending_updates' => $dropPendingUpdates];
-        } else {
-            $requestBody = ['url' => $url, 'certificate' => "@$certificate", 'drop_pending_updates' => $dropPendingUpdates];
+        $requestBody = [];
+
+        $requestBody += ['url' => $url];
+
+        if (!empty($certificate)) {
+            $requestBody += ['certificate' => "@$certificate"];
+        }
+
+        if (isset($ipAddress)) {
+            $requestBody += ['ip_address' => $ipAddress];
+        }
+
+        if (isset($maxConnections)) {
+            $requestBody += ['max_connections' => $maxConnections];
+        }
+
+        if (isset($allowedUpdate)) {
+            $requestBody += ['allowed_updates' => $allowedUpdate];
+        }
+
+        if ($dropPendingUpdates == true) {
+            $requestBody += ['drop_pending_updates' => $dropPendingUpdates];
         }
 
         return $this->endpoint('setWebhook', $requestBody, true);
@@ -1835,7 +1857,8 @@ class Telegram
             return @$this->data['edited_message']['text'];
         }
 
-		$message = $this->data['message'];
+        $message = $this->data['message'];
+
         return @(isset($message['text']) ? $message['text'] : null);
     }
 
@@ -1975,7 +1998,7 @@ class Telegram
     {
         return $this->data['callback_query']['message']['chat']['id'];
     }
-    
+
     /// Get the Get the from_id of the current callback
 
     /**
@@ -1985,7 +2008,6 @@ class Telegram
     {
         return $this->data['callback_query']['from']['id'];
     }
-
 
     /// Get the date of the current message
 
@@ -2000,48 +2022,51 @@ class Telegram
     /// Get the first name of the user
     public function FirstName()
     {
-		$from = $this->getBestUserFrom();
-		if(isset($from['first_name'])){
-			return @$from['first_name'];
-		}
+        $from = $this->getBestUserFrom();
+        if (isset($from['first_name'])) {
+            return @$from['first_name'];
+        }
+
         return null;
-		
     }
 
     /// Get the last name of the user
     public function LastName()
-    {		
-		$from = $this->getBestUserFrom();
-		if(isset($from['last_name'])){
-			return @$from['last_name'];
-		}
+    {
+        $from = $this->getBestUserFrom();
+        if (isset($from['last_name'])) {
+            return @$from['last_name'];
+        }
+
         return '';
     }
 
     /// Get the username of the user
     public function Username()
     {
-		$from = $this->getBestUserFrom();
-		if(isset($from['username'])){
-			return @$from['username'];
-		}
+        $from = $this->getBestUserFrom();
+        if (isset($from['username'])) {
+            return @$from['username'];
+        }
+
         return null;
     }
-	
-	private function getBestUserFrom(){
-		$type = $this->getUpdateType();
+
+    private function getBestUserFrom()
+    {
+        $type = $this->getUpdateType();
         if ($type == self::CALLBACK_QUERY) {
-			return $this->data['callback_query']['from'];
+            return $this->data['callback_query']['from'];
         }
         if ($type == self::CHANNEL_POST) {
-			return $this->data['channel_post']['from'];
+            return $this->data['channel_post']['from'];
         }
         if ($type == self::EDITED_MESSAGE) {
-			return $this->data['edited_message']['from'];
+            return $this->data['edited_message']['from'];
         }
-		
-		return $this->data['message']['from'];
-	}
+
+        return $this->data['message']['from'];
+    }
 
     /// Get the location in the message
     public function Location()
@@ -3233,10 +3258,10 @@ class Telegram
         if (isset($update['message']['document'])) {
             return self::DOCUMENT;
         }
-		if (isset($update['message']['new_chat_member'])) {
+        if (isset($update['message']['new_chat_member'])) {
             return self::NEW_CHAT_MEMBER;
         }
-		if (isset($update['message']['left_chat_member'])) {
+        if (isset($update['message']['left_chat_member'])) {
             return self::LEFT_CHAT_MEMBER;
         }
         if (isset($update['channel_post'])) {
@@ -3257,7 +3282,7 @@ class Telegram
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         if ($post) {
-			curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type:application/json']);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type:application/json']);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($content));
         }
