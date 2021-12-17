@@ -196,6 +196,11 @@ class Telegram
         return $this->endpoint('sendMessage', $content);
     }
 
+    public function copyMessage(array $content)
+    {
+        return $this->endpoint('copyMessage', $content);
+    }
+    
     /// Forward a message
 
     /**
