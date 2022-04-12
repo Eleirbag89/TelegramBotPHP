@@ -23,7 +23,7 @@ $chat_id = $telegram->ChatID();
 
 // Test CallBack
 $callback_query = $telegram->Callback_Query();
-if ($callback_query !== null && $callback_query != '') {
+if (!empty($callback_query)) {
     $reply = 'Callback value '.$telegram->Callback_Data();
     $content = ['chat_id' => $telegram->Callback_ChatID(), 'text' => $reply];
     $telegram->sendMessage($content);
@@ -34,7 +34,7 @@ if ($callback_query !== null && $callback_query != '') {
 
 //Test Inline
 $data = $telegram->getData();
-if ($data['inline_query'] !== null && $data['inline_query'] != '') {
+if (!empty($data['inline_query'])) {
     $query = $data['inline_query']['query'];
     // GIF Examples
     if (strpos('testText', $query) !== false) {
