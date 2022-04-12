@@ -115,6 +115,13 @@ class Telegram
 
         return json_decode($reply, true);
     }
+    
+    public function finderror($msg){
+        $content = ['chat_id' => $this->ChatID(), 'text' => $msg];
+        $this->endpoint('sendMessage', $content);
+        $this->respondSuccess();
+        throw new Exception($msg);
+    }
 
     /// A method for testing your bot.
 
@@ -193,7 +200,26 @@ class Telegram
      */
     public function sendMessage(array $content)
     {
-        return $this->endpoint('sendMessage', $content);
+        $extras = [
+            'split'    => 4096,
+            'encoding' => mb_internal_encoding(),
+        ];
+
+        $text       = $content['text'];
+        $encoding   = $extras['encoding'];
+        $max_length = $extras['split'] ?: mb_strlen($text, $encoding);
+
+        $responses = [];
+
+        do {
+            // Chop off and send the first message.
+            $content['text'] = mb_substr($text, 0, $max_length, $encoding);
+            $responses[]  = $this->endpoint('sendMessage', $content);
+
+            // Prepare the next message.
+            $text = mb_substr($text, $max_length, null, $encoding);
+        } while ($text !== '');
+        return $responses;
     }
 
     /// Forward a message
@@ -1332,7 +1358,7 @@ class Telegram
      */
     public function getChatMembersCount(array $content)
     {
-        return $this->endpoint('getChatMembersCount', $content);
+        return $this->endpoint('getChatMemberCount', $content);
     }
 
     /**
