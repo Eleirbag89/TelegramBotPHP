@@ -9,7 +9,7 @@ class TelegramErrorLogger
 {
     private static $self;
 
-    /// Log request and response parameters from/to Telegrsm API
+    /// Log request and response parameters from/to Telegram API
 
     /**
      * Prints the list of parameters from/to Telegram's API endpoint
