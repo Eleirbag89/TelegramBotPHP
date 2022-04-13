@@ -2042,7 +2042,19 @@ class Telegram
 
         return true;
     }
-
+    
+    /// Get the contact phone number
+    /**
+     *  \return a String of the contact phone number.
+     */
+    public function getContactPhoneNumber() 
+    { 
+        if ($this->getUpdateType() == self::CONTACT) {
+            return $this->data["message"]["contact"]["phone_number"]; 
+        }
+        return '';
+    }
+    
     /// Get the title of the group chat
 
     /**
