@@ -1906,7 +1906,7 @@ class Telegram
     {
         return $this->data['callback_query']['message']['chat']['id'];
     }
-    
+
     /// Get the Get the from_id of the current callback
 
     /**
@@ -1916,7 +1916,6 @@ class Telegram
     {
         return $this->data['callback_query']['from']['id'];
     }
-
 
     /// Get the date of the current message
 
@@ -2042,19 +2041,20 @@ class Telegram
 
         return true;
     }
-    
+
     /// Get the contact phone number
     /**
      *  \return a String of the contact phone number.
      */
-    public function getContactPhoneNumber() 
-    { 
+    public function getContactPhoneNumber()
+    {
         if ($this->getUpdateType() == self::CONTACT) {
-            return $this->data["message"]["contact"]["phone_number"]; 
+            return $this->data['message']['contact']['phone_number'];
         }
+
         return '';
     }
-    
+
     /// Get the title of the group chat
 
     /**
