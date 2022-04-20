@@ -1,0 +1,21 @@
+{
+    "name": "eleirbag89/telegrambotphp",
+    "description": "A very simple PHP Telegram Bot API",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Gabriele Grillo",
+            "email": "gabry.grillo@alice.it"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "alpha",
+    "require": {
+        "php": ">=5.0",
+        "ext-json": "*",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "files": ["Telegram.php", "TelegramErrorLogger.php"]
+    }
+}

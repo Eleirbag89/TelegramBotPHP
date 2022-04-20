@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['getchat_0',['getChat',['../class_telegram.html#a84b0d627829ac32122cf771094f3cffb',1,'Telegram']]],
+  ['getchatadministrators_1',['getChatAdministrators',['../class_telegram.html#a9ef409fa4668818b134c349553ccebd9',1,'Telegram']]],
+  ['getchatmember_2',['getChatMember',['../class_telegram.html#a744f71c0b62f310e2b2c665071509fec',1,'Telegram']]],
+  ['getchatmembercount_3',['getChatMemberCount',['../class_telegram.html#acb83329c6702a26bf39a89d63c43e4bc',1,'Telegram']]],
+  ['getchatmemberscount_4',['getChatMembersCount',['../class_telegram.html#aaeb16972df57138d5efa3579085ebb5f',1,'Telegram']]],
+  ['getchatmenubutton_5',['getChatMenuButton',['../class_telegram.html#aff810596f6faf07464ec4ed13fd092bf',1,'Telegram']]],
+  ['getcontactphonenumber_6',['getContactPhoneNumber',['../class_telegram.html#ac89d63bb6ae10fabe81190509ab63309',1,'Telegram']]],
+  ['getdata_7',['getData',['../class_telegram.html#a81a67162a6288d78fc4c55283325f0b4',1,'Telegram']]],
+  ['getfile_8',['getFile',['../class_telegram.html#acb201ffc034063cfd347962c49ad5ad9',1,'Telegram']]],
+  ['getgamehighscores_9',['getGameHighScores',['../class_telegram.html#aa57b34728cd20d11a50d5ba0e91efcbb',1,'Telegram']]],
+  ['getme_10',['getMe',['../class_telegram.html#a6bc057a9b0c03f8147a4294936b2494b',1,'Telegram']]],
+  ['getmycommands_11',['getMyCommands',['../class_telegram.html#a29dcb89f604ec4363133b3e6f66500ba',1,'Telegram']]],
+  ['getmydefaultadministratorrights_12',['getMyDefaultAdministratorRights',['../class_telegram.html#a4efaef09b753dc39d24d3ba26a852685',1,'Telegram']]],
+  ['getstickerset_13',['getStickerSet',['../class_telegram.html#a5000eba932fd5faad00805e7014cf986',1,'Telegram']]],
+  ['getupdates_14',['getUpdates',['../class_telegram.html#adb467486d3d5e83ce21a03e00f17b16c',1,'Telegram']]],
+  ['getupdatetype_15',['getUpdateType',['../class_telegram.html#a291f955d4bae8e89b42e0a762b9bcc33',1,'Telegram']]],
+  ['getuserprofilephotos_16',['getUserProfilePhotos',['../class_telegram.html#af2245dc488830eb7add02c35e8dcf492',1,'Telegram']]]
+];
