@@ -280,7 +280,7 @@ class Telegram
     /// Send a location
 
     /**
-    * See <a href="https://core.telegram.org/bots/api#sendlocation">sendLocation</a> for the input values
+     * See <a href="https://core.telegram.org/bots/api#sendlocation">sendLocation</a> for the input values
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -363,10 +363,10 @@ class Telegram
 
     //Send contact
 
-    /** 
+    /**
      * See <a href="https://core.telegram.org/bots/api#sendcontact">sendContact</a> for the input values
      * \param $content the request parameters as array
-     * \return the JSON Telegram's reply
+     * \return the JSON Telegram's reply.
      */
     public function sendContact(array $content)
     {
@@ -378,7 +378,7 @@ class Telegram
     /**
      * See <a href="https://core.telegram.org/bots/api#sendpoll">sendPoll</a> for the input values
      * \param $content the request parameters as array
-     * \return the JSON Telegram's reply
+     * \return the JSON Telegram's reply.
      */
     public function sendPoll(array $content)
     {
@@ -390,7 +390,7 @@ class Telegram
     /**
      * See <a href="https://core.telegram.org/bots/api#senddice">sendDice</a> for the input values
      * \param $content the request parameters as array
-     * \return the JSON Telegram's reply
+     * \return the JSON Telegram's reply.
      */
     public function sendDice(array $content)
     {
@@ -1332,7 +1332,7 @@ class Telegram
     /// Promote Chat Member
 
     /**
-    * See <a href="https://core.telegram.org/bots/api#promotechatmember">promoteChatMember</a> for the input values
+     * See <a href="https://core.telegram.org/bots/api#promotechatmember">promoteChatMember</a> for the input values
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1344,7 +1344,7 @@ class Telegram
     /// Set chat Administrator custom title
 
     /**
-    * See <a href="https://core.telegram.org/bots/api#setchatadministratorcustomtitle">setChatAdministratorCustomTitle</a> for the input values
+     * See <a href="https://core.telegram.org/bots/api#setchatadministratorcustomtitle">setChatAdministratorCustomTitle</a> for the input values
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1356,7 +1356,7 @@ class Telegram
     /// Ban a channel chat in a super group or channel
 
     /**
-    * See <a href="https://core.telegram.org/bots/api#banchatsenderchat">banChatSenderChat</a> for the input values
+     * See <a href="https://core.telegram.org/bots/api#banchatsenderchat">banChatSenderChat</a> for the input values
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1368,7 +1368,7 @@ class Telegram
     /// Unban a channel chat in a super group or channel
 
     /**
-    * See <a href="https://core.telegram.org/bots/api#unbanchatsenderchat">unbanChatSenderChat</a> for the input values
+     * See <a href="https://core.telegram.org/bots/api#unbanchatsenderchat">unbanChatSenderChat</a> for the input values
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
@@ -1380,7 +1380,7 @@ class Telegram
     /// Set default chat permission for all members
 
     /**
-    * See <a href="https://core.telegram.org/bots/api#setchatpermissions">setChatPermissions</a> for the input values
+     * See <a href="https://core.telegram.org/bots/api#setchatpermissions">setChatPermissions</a> for the input values
      * \param $content the request parameters as array
      * \return the JSON Telegram's reply.
      */
