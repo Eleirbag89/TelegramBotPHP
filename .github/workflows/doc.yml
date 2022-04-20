@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  deploy:
+  generate-doc:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout source
@@ -20,4 +20,4 @@ jobs:
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./html
