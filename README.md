@@ -1,5 +1,5 @@
 # TelegramBotPHP
-[![API](https://img.shields.io/badge/Telegram%20Bot%20API-November%2017%2C%202017-36ade1.svg)](https://core.telegram.org/bots/api)
+[![API](https://img.shields.io/badge/Telegram%20Bot%20API-April%2016%2C%202022-36ade1.svg)](https://core.telegram.org/bots/api)
 ![PHP](https://img.shields.io/badge/php-%3E%3D5.3-8892bf.svg)
 ![CURL](https://img.shields.io/badge/cURL-required-green.svg)
 
@@ -220,21 +220,6 @@ buildForceReply($selective=true)
 ```
 Show a Reply interface to the user.  
 Check [ForceReply](https://core.telegram.org/bots/api#forcereply) for more info.
-
-List of Bots using the library
-------------
-
-Let me know using this [Issue](https://github.com/Eleirbag89/TelegramBotPHP/issues/80) if you have made a bot using this API, I will add it to this section.    
-* [iHarfBot](https://t.me/iHarfBot) - Lang: Persian/Farsi
-* [AsansorBot](https://t.me/AsansorBot) - Lang: Persian/Farsi
-* [IDPbot](https://t.me/IDPbot) - Lang: Persian/Farsi (Down as 14/10/2019)
-* [Evil Insult Generator](https://telegram.me/EvilInsultGeneratorBot) - Lang English/German
-* [ibelitbot](https://telegram.me/ibelitbot) -Lang Persian (Down as 14/10/2019)
-* [Advanced Pools Bot](https://telegram.me/apollbot) - Lang Italian/English([Contribute](https://poeditor.com/join/project/NMAUjrAZ5f))
-* [Btn_Bot](https://telegram.me/Btn_Bot) - Lang pt-BR - Cria botões transparente para publicações.
-* [DiffSGLaPuntabot](https://telegram.me/DiffSGLaPuntabot) [DiffGravinaCTbot](https://telegram.me/DiffGravinaCTbot) [DiffAdranobot](https://t.me/DiffAdranobot) - Lang: it/Italian - Bots to handle Recycling in San Giovanni La Punta, Gravina and Adrano (OpenSource Template https://github.com/Gualty/BOTDifferenziata)
-* [GoBot](https://t.me/CoReYe_PGO_bot)
-* [RaidBot](https://t.me/CoReYe_PGO_Raid_bot)
 
 Emoticons
 ------------
