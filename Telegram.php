@@ -526,7 +526,7 @@ class Telegram
      */
     public function getChatMembersCount(array $content)
     {
-        return $this->getChatMemberCount('getChatMembersCount', $content);
+        return $this->getChatMemberCount($content);
     }
 
     /**
