@@ -71,6 +71,14 @@ class Telegram
      * Constant for type Channel Post.
      */
     const CHANNEL_POST = 'channel_post';
+    /**
+     * Constant for type New Chat Member.
+     */
+    const NEW_CHAT_MEMBER = 'new_chat_member';
+    /**
+     * Constant for type Left Chat Member.
+     */
+    const LEFT_CHAT_MEMBER = 'left_chat_member';
 
     private $bot_token = '';
     private $data = [];
@@ -1726,6 +1734,12 @@ class Telegram
         }
         if (isset($update['message']['document'])) {
             return self::DOCUMENT;
+        }
+        if (isset($update['message']['new_chat_member'])) {
+            return self::NEW_CHAT_MEMBER;
+        }
+        if (isset($update['message']['left_chat_member'])) {
+            return self::LEFT_CHAT_MEMBER;
         }
         if (isset($update['channel_post'])) {
             return self::CHANNEL_POST;
