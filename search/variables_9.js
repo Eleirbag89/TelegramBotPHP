@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sticker_0',['STICKER',['../class_telegram.html#a93cf5be4fb0abdcdd56c1ac0b9a8c162',1,'Telegram']]]
+  ['reply_0',['REPLY',['../class_telegram.html#acb63774895b195d4c22afe2b089a3ddd',1,'Telegram']]]
 ];

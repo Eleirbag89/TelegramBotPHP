@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['photo_0',['PHOTO',['../class_telegram.html#a0aeb08e94e66f9d958f565530b6b6a80',1,'Telegram']]]
+  ['new_5fchat_5fmember_0',['NEW_CHAT_MEMBER',['../class_telegram.html#ab56918e73edafe0114cdc303b003aa32',1,'Telegram']]]
 ];
