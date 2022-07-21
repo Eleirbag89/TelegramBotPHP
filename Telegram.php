@@ -862,6 +862,30 @@ class Telegram
 
         return $this->data['message']['chat']['id'];
     }
+    /**
+     * \return the Array chat.
+     */
+    public function Chat()
+    {
+        $type = $this->getUpdateType();
+        if ($type == self::CALLBACK_QUERY) {
+            return @$this->data['callback_query']['message']['chat'];
+        }
+        if ($type == self::CHANNEL_POST) {
+            return @$this->data['channel_post']['chat'];
+        }
+        if ($type == self::EDITED_MESSAGE) {
+            return @$this->data['edited_message']['chat'];
+        }
+        if ($type == self::INLINE_QUERY) {
+            return @$this->data['inline_query']['from'];
+        }
+        if ($type == self::MY_CHAT_MEMBER) {
+            return @$this->data['my_chat_member']['chat'];
+        }
+
+        return $this->data['message']['chat'];
+    }
 
     /// Get the message_id of the current message
 
