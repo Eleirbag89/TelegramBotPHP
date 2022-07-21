@@ -1745,7 +1745,7 @@ class Telegram
         if (isset($update['message']['left_chat_member'])) {
             return self::LEFT_CHAT_MEMBER;
         }
-        if (isset($update['message']['my_chat_member'])) {
+        if (isset($update['my_chat_member'])) {
             return self::MY_CHAT_MEMBER;
         }
         if (isset($update['channel_post'])) {
