@@ -856,6 +856,9 @@ class Telegram
         if ($type == self::INLINE_QUERY) {
             return @$this->data['inline_query']['from']['id'];
         }
+        if ($type == self::MY_CHAT_MEMBER) {
+            return @$this->data['my_chat_member']['chat']['id'];
+        }
 
         return $this->data['message']['chat']['id'];
     }
