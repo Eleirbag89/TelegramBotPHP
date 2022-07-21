@@ -843,24 +843,8 @@ class Telegram
      */
     public function ChatID()
     {
-        $type = $this->getUpdateType();
-        if ($type == self::CALLBACK_QUERY) {
-            return @$this->data['callback_query']['message']['chat']['id'];
-        }
-        if ($type == self::CHANNEL_POST) {
-            return @$this->data['channel_post']['chat']['id'];
-        }
-        if ($type == self::EDITED_MESSAGE) {
-            return @$this->data['edited_message']['chat']['id'];
-        }
-        if ($type == self::INLINE_QUERY) {
-            return @$this->data['inline_query']['from']['id'];
-        }
-        if ($type == self::MY_CHAT_MEMBER) {
-            return @$this->data['my_chat_member']['chat']['id'];
-        }
-
-        return $this->data['message']['chat']['id'];
+        $chat = $this->Chat();
+        return $chat['id'];
     }
     /**
      * \return the Array chat.
