@@ -79,6 +79,10 @@ class Telegram
      * Constant for type Left Chat Member.
      */
     const LEFT_CHAT_MEMBER = 'left_chat_member';
+    /**
+     * Constant for type My Chat Member.
+     */
+    const MY_CHAT_MEMBER = 'my_chat_member';
 
     private $bot_token = '';
     private $data = [];
@@ -1740,6 +1744,9 @@ class Telegram
         }
         if (isset($update['message']['left_chat_member'])) {
             return self::LEFT_CHAT_MEMBER;
+        }
+        if (isset($update['message']['my_chat_member'])) {
+            return self::MY_CHAT_MEMBER;
         }
         if (isset($update['channel_post'])) {
             return self::CHANNEL_POST;
