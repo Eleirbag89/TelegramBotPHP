@@ -79,12 +79,17 @@ class Telegram
      * Constant for type Left Chat Member.
      */
     const LEFT_CHAT_MEMBER = 'left_chat_member';
+    /**
+     * Constant for type My Chat Member.
+     */
+    const MY_CHAT_MEMBER = 'my_chat_member';
 
     private $bot_token = '';
     private $data = [];
     private $updates = [];
     private $log_errors;
     private $proxy;
+    private $update_type;
 
     /// Class constructor
 
@@ -114,7 +119,7 @@ class Telegram
      */
     public function endpoint($api, array $content, $post = true)
     {
-        $url = 'https://api.telegram.org/bot'.$this->bot_token.'/'.$api;
+        $url = 'https://api.telegram.org/bot' . $this->bot_token . '/' . $api;
         if ($post) {
             $reply = $this->sendAPIRequest($url, $content);
         } else {
@@ -736,7 +741,7 @@ class Telegram
      */
     public function downloadFile($telegram_file_path, $local_file_path)
     {
-        $file_url = 'https://api.telegram.org/file/bot'.$this->bot_token.'/'.$telegram_file_path;
+        $file_url = 'https://api.telegram.org/file/bot' . $this->bot_token . '/' . $telegram_file_path;
         $in = fopen($file_url, 'rb');
         $out = fopen($local_file_path, 'wb');
 
@@ -839,21 +844,33 @@ class Telegram
      */
     public function ChatID()
     {
+        $chat = $this->Chat();
+        return $chat['id'];
+    }
+
+    /**
+     * \return the Array chat.
+     */
+    public function Chat()
+    {
         $type = $this->getUpdateType();
         if ($type == self::CALLBACK_QUERY) {
-            return @$this->data['callback_query']['message']['chat']['id'];
+            return @$this->data['callback_query']['message']['chat'];
         }
         if ($type == self::CHANNEL_POST) {
-            return @$this->data['channel_post']['chat']['id'];
+            return @$this->data['channel_post']['chat'];
         }
         if ($type == self::EDITED_MESSAGE) {
-            return @$this->data['edited_message']['chat']['id'];
+            return @$this->data['edited_message']['chat'];
         }
         if ($type == self::INLINE_QUERY) {
-            return @$this->data['inline_query']['from']['id'];
+            return @$this->data['inline_query']['from'];
+        }
+        if ($type == self::MY_CHAT_MEMBER) {
+            return @$this->data['my_chat_member']['chat'];
         }
 
-        return $this->data['message']['chat']['id'];
+        return $this->data['message']['chat'];
     }
 
     /// Get the message_id of the current message
@@ -1095,6 +1112,7 @@ class Telegram
     }
 
     /// Get the contact phone number
+
     /**
      *  \return a String of the contact phone number.
      */
@@ -1133,10 +1151,10 @@ class Telegram
     public function buildKeyBoard(array $options, $onetime = false, $resize = false, $selective = true)
     {
         $replyMarkup = [
-            'keyboard'          => $options,
+            'keyboard' => $options,
             'one_time_keyboard' => $onetime,
-            'resize_keyboard'   => $resize,
-            'selective'         => $selective,
+            'resize_keyboard' => $resize,
+            'selective' => $selective,
         ];
         $encodedMarkup = json_encode($replyMarkup, true);
 
@@ -1179,7 +1197,8 @@ class Telegram
         $switch_inline_query_current_chat = null,
         $callback_game = '',
         $pay = ''
-    ) {
+    )
+    {
         $replyMarkup = [
             'text' => $text,
         ];
@@ -1211,8 +1230,8 @@ class Telegram
     public function buildKeyboardButton($text, $request_contact = false, $request_location = false)
     {
         $replyMarkup = [
-            'text'             => $text,
-            'request_contact'  => $request_contact,
+            'text' => $text,
+            'request_contact' => $request_contact,
             'request_location' => $request_location,
         ];
 
@@ -1229,7 +1248,7 @@ class Telegram
     {
         $replyMarkup = [
             'remove_keyboard' => true,
-            'selective'       => $selective,
+            'selective' => $selective,
         ];
         $encodedMarkup = json_encode($replyMarkup, true);
 
@@ -1245,7 +1264,7 @@ class Telegram
     {
         $replyMarkup = [
             'force_reply' => true,
-            'selective'   => $selective,
+            'selective' => $selective,
         ];
         $encodedMarkup = json_encode($replyMarkup, true);
 
@@ -1692,57 +1711,82 @@ class Telegram
      */
     public function getUpdateType()
     {
+        if ($this->update_type) {
+            return $this->update_type;
+        }
+
         $update = $this->data;
         if (isset($update['inline_query'])) {
-            return self::INLINE_QUERY;
+            $this->update_type = self::INLINE_QUERY;
+            return $this->update_type;
         }
         if (isset($update['callback_query'])) {
-            return self::CALLBACK_QUERY;
+            $this->update_type = self::CALLBACK_QUERY;
+            return $this->update_type;
         }
         if (isset($update['edited_message'])) {
-            return self::EDITED_MESSAGE;
+            $this->update_type = self::EDITED_MESSAGE;
+            return $this->update_type;
         }
         if (isset($update['message']['text'])) {
-            return self::MESSAGE;
+            $this->update_type = self::MESSAGE;
+            return $this->update_type;
         }
         if (isset($update['message']['photo'])) {
-            return self::PHOTO;
+            $this->update_type = self::PHOTO;
+            return $this->update_type;
         }
         if (isset($update['message']['video'])) {
-            return self::VIDEO;
+            $this->update_type = self::VIDEO;
+            return $this->update_type;
         }
         if (isset($update['message']['audio'])) {
-            return self::AUDIO;
+            $this->update_type = self::AUDIO;
+            return $this->update_type;
         }
         if (isset($update['message']['voice'])) {
-            return self::VOICE;
+            $this->update_type = self::VOICE;
+            return $this->update_type;
         }
         if (isset($update['message']['contact'])) {
-            return self::CONTACT;
+            $this->update_type = self::CONTACT;
+            return $this->update_type;
         }
         if (isset($update['message']['location'])) {
-            return self::LOCATION;
+            $this->update_type = self::LOCATION;
+            return $this->update_type;
         }
         if (isset($update['message']['reply_to_message'])) {
-            return self::REPLY;
+            $this->update_type = self::REPLY;
+            return $this->update_type;
         }
         if (isset($update['message']['animation'])) {
-            return self::ANIMATION;
+            $this->update_type = self::ANIMATION;
+            return $this->update_type;
         }
         if (isset($update['message']['sticker'])) {
-            return self::STICKER;
+            $this->update_type = self::STICKER;
+            return $this->update_type;
         }
         if (isset($update['message']['document'])) {
-            return self::DOCUMENT;
+            $this->update_type = self::DOCUMENT;
+            return $this->update_type;
         }
         if (isset($update['message']['new_chat_member'])) {
-            return self::NEW_CHAT_MEMBER;
+            $this->update_type = self::NEW_CHAT_MEMBER;
+            return $this->update_type;
         }
         if (isset($update['message']['left_chat_member'])) {
-            return self::LEFT_CHAT_MEMBER;
+            $this->update_type = self::LEFT_CHAT_MEMBER;
+            return $this->update_type;
+        }
+        if (isset($update['my_chat_member'])) {
+            $this->update_type = self::MY_CHAT_MEMBER;
+            return $this->update_type;
         }
         if (isset($update['channel_post'])) {
-            return self::CHANNEL_POST;
+            $this->update_type = self::CHANNEL_POST;
+            return $this->update_type;
         }
 
         return false;
@@ -1751,7 +1795,7 @@ class Telegram
     private function sendAPIRequest($url, array $content, $post = true)
     {
         if (isset($content['chat_id'])) {
-            $url = $url.'?chat_id='.$content['chat_id'];
+            $url = $url . '?chat_id=' . $content['chat_id'];
             unset($content['chat_id']);
         }
         $ch = curl_init();
@@ -1807,7 +1851,7 @@ if (!function_exists('curl_file_create')) {
     function curl_file_create($filename, $mimetype = '', $postname = '')
     {
         return "@$filename;filename="
-            .($postname ?: basename($filename))
-            .($mimetype ? ";type=$mimetype" : '');
+            . ($postname ?: basename($filename))
+            . ($mimetype ? ";type=$mimetype" : '');
     }
 }
