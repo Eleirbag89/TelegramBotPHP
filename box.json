@@ -1,6 +1,0 @@
-{
-	"files": ["Telegram.php", "TelegramErrorLogger.php"],
-	"output": "bin/telegram-bot-php.phar",
-	"stub": false,
-	"main": false
-}
