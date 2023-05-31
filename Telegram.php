@@ -1082,6 +1082,9 @@ class Telegram
         if ($type == self::EDITED_MESSAGE) {
             return @$this->data['edited_message']['from']['id'];
         }
+        if ($type == self::INLINE_QUERY) {
+            return @$this->data['inline_query']['from']['id'];
+        }
 
         return $this->data['message']['from']['id'];
     }
