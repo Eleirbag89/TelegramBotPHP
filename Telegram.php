@@ -1,5 +1,7 @@
 <?php
 
+use Psr\Http\Message\ServerRequestInterface;
+
 if (file_exists('TelegramErrorLogger.php')) {
     require_once 'TelegramErrorLogger.php';
 }
@@ -90,7 +92,7 @@ class Telegram
     private $log_errors;
     private $proxy;
     private $update_type;
-
+    private $request;
     /// Class constructor
 
     /**
@@ -100,9 +102,10 @@ class Telegram
      * \param $proxy array with the proxy configuration (url, port, type, auth)
      * \return an instance of the class.
      */
-    public function __construct($bot_token, $log_errors = true, array $proxy = [])
+    public function __construct($bot_token, ServerRequestInterface $request = null, $log_errors = true, array $proxy = [])
     {
         $this->bot_token = $bot_token;
+        $this->request = $request;
         $this->data = $this->getData();
         $this->log_errors = $log_errors;
         $this->proxy = $proxy;
@@ -792,7 +795,11 @@ class Telegram
     public function getData()
     {
         if (empty($this->data)) {
-            $rawData = file_get_contents('php://input');
+            if($this->request === null){
+                $rawData = file_get_contents('php://input');
+            }else{
+                $rawData = $this->request->getBody()->getContents();
+            } 
 
             return json_decode($rawData, true);
         } else {
