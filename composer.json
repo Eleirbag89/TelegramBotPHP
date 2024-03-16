@@ -11,9 +11,10 @@
     "license": "MIT",
     "minimum-stability": "alpha",
     "require": {
-        "php": ">=5.0",
+        "php": "^7.2 || ^8.0",
         "ext-json": "*",
-        "ext-curl": "*"
+        "ext-curl": "*",
+        "psr/http-message": "^1.0"
     },
     "autoload": {
         "files": ["Telegram.php", "TelegramErrorLogger.php"]
