@@ -1852,7 +1852,7 @@ class Telegram
             $curlErrorMsg = curl_error($ch);
             curl_close($ch);
 
-            if ($result === false && $curlError == 28 && strpos($curlErrorMsg, "Connection timed out") !== false) {
+            if ($result === false && $curlError == 28 && stripos($curlErrorMsg, "Connection timed out") !== false) {
                 // Connection timed out detected, increment retry count and try again
                 $retryCount++;
             } else {
