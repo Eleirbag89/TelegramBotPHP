@@ -119,7 +119,7 @@ class Telegram
      */
     public function endpoint($api, array $content, $post = true)
     {
-        $url = 'https://api.telegram.org/bot'.$this->bot_token.'/'.$api;
+        $url = 'https://api.telegram.org/bot' . $this->bot_token . '/' . $api;
         if ($post) {
             $reply = $this->sendAPIRequest($url, $content);
         } else {
@@ -741,7 +741,7 @@ class Telegram
      */
     public function downloadFile($telegram_file_path, $local_file_path)
     {
-        $file_url = 'https://api.telegram.org/file/bot'.$this->bot_token.'/'.$telegram_file_path;
+        $file_url = 'https://api.telegram.org/file/bot' . $this->bot_token . '/' . $telegram_file_path;
         $in = fopen($file_url, 'rb');
         $out = fopen($local_file_path, 'wb');
 
@@ -1815,47 +1815,57 @@ class Telegram
 
     private function sendAPIRequest($url, array $content, $post = true)
     {
-        if (isset($content['chat_id'])) {
-            $url = $url.'?chat_id='.$content['chat_id'];
-            unset($content['chat_id']);
-        }
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_HEADER, false);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        if ($post) {
-            curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
-        }
-        // 		echo "inside curl if";
-        if (!empty($this->proxy)) {
-            // 			echo "inside proxy if";
-            if (array_key_exists('type', $this->proxy)) {
-                curl_setopt($ch, CURLOPT_PROXYTYPE, $this->proxy['type']);
-            }
+        $retryCount = 0;
+        $maxRetries = 3;
+        $result = false;
 
-            if (array_key_exists('auth', $this->proxy)) {
-                curl_setopt($ch, CURLOPT_PROXYUSERPWD, $this->proxy['auth']);
+        while ($retryCount < $maxRetries) {
+            if (isset($content['chat_id'])) {
+                $url = $url . '?chat_id=' . $content['chat_id'];
+                unset($content['chat_id']);
             }
-
-            if (array_key_exists('url', $this->proxy)) {
-                // 				echo "Proxy Url";
-                curl_setopt($ch, CURLOPT_PROXY, $this->proxy['url']);
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_HEADER, false);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            if ($post) {
+                curl_setopt($ch, CURLOPT_POST, 1);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
             }
+            if (!empty($this->proxy)) {
+                if (array_key_exists('type', $this->proxy)) {
+                    curl_setopt($ch, CURLOPT_PROXYTYPE, $this->proxy['type']);
+                }
+                if (array_key_exists('auth', $this->proxy)) {
+                    curl_setopt($ch, CURLOPT_PROXYUSERPWD, $this->proxy['auth']);
+                }
+                if (array_key_exists('url', $this->proxy)) {
+                    curl_setopt($ch, CURLOPT_PROXY, $this->proxy['url']);
+                }
+                if (array_key_exists('port', $this->proxy)) {
+                    curl_setopt($ch, CURLOPT_PROXYPORT, $this->proxy['port']);
+                }
+            }
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            $result = curl_exec($ch);
+            $curlError = curl_errno($ch);
+            $curlErrorMsg = curl_error($ch);
+            curl_close($ch);
 
-            if (array_key_exists('port', $this->proxy)) {
-                // 				echo "Proxy port";
-                curl_setopt($ch, CURLOPT_PROXYPORT, $this->proxy['port']);
+            if ($result === false && $curlError == 28 && strpos($curlErrorMsg, "Connection timed out") !== false) {
+                // Connection timed out detected, increment retry count and try again
+                $retryCount++;
+            } else {
+                // If there is no error or different error, break the loop
+                break;
             }
         }
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        $result = curl_exec($ch);
-        if ($result === false) {
-            $result = json_encode(
-                ['ok' => false, 'curl_error_code' => curl_errno($ch), 'curl_error' => curl_error($ch)]
-            );
+
+        if ($retryCount == $maxRetries) {
+            // If max retries reached, return the last error
+            $result = json_encode(['ok' => false, 'curl_error_code' => $curlError, 'curl_error' => $curlErrorMsg]);
         }
-        curl_close($ch);
+
         if ($this->log_errors) {
             if (class_exists('TelegramErrorLogger')) {
                 $loggerArray = ($this->getData() == null) ? [$content] : [$this->getData(), $content];
@@ -1872,7 +1882,7 @@ if (!function_exists('curl_file_create')) {
     function curl_file_create($filename, $mimetype = '', $postname = '')
     {
         return "@$filename;filename="
-            .($postname ?: basename($filename))
-            .($mimetype ? ";type=$mimetype" : '');
+            . ($postname ?: basename($filename))
+            . ($mimetype ? ";type=$mimetype" : '');
     }
 }
